@@ -1,4 +1,6 @@
 .site-footer {
+	margin-top: 60px;
+
 	// TODO: Remove when flexbox detection is added.
 	// .flexbox & {
     @include display(flex);
