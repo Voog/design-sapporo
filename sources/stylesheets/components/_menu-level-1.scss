@@ -3,19 +3,30 @@
 
   li {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 5px;
 
     &:last-child {
       margin-right: 0;
-    }
-  }
 
-  a {
-    display: block;
-    padding: 5px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: .2em;
+      a {
+        padding-right: 0;
+      }
+    }
+
+    &.selected {
+      a {
+        color: rgba($color-black, 1);
+      }
+    }
+
+    a {
+      display: block;
+      padding: 10px;
+      color: rgba($color-black, .8);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+    }
   }
 
   .menu-cms {

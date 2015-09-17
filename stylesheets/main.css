@@ -11,7 +11,8 @@ a {
 }
 
 .site-container {
-  max-width: 1100px;
+  max-width: 1140px;
+  padding: 110px 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -80,14 +81,21 @@ a {
 }
 .menu-level-1 li {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 .menu-level-1 li:last-child {
   margin-right: 0;
 }
-.menu-level-1 a {
+.menu-level-1 li:last-child a {
+  padding-right: 0;
+}
+.menu-level-1 li.selected a {
+  color: black;
+}
+.menu-level-1 li a {
   display: block;
-  padding: 5px;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.8);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: .2em;
