@@ -1,0 +1,127 @@
+// Text type content area.
+.content-area {
+  @include clearfix;
+  @include hyphens(auto);
+  font-size: 18px;
+  color: rgba($color-black, .8);
+  line-height: 1.7;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  table,
+  pre,
+  code,
+  iframe,
+  table,
+  form,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-center-block,
+  .edy-positionable-container-right-block,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-right-block {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h2 {
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+  }
+
+  p {
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+  }
+
+  a {
+    &:hover {
+    }
+  }
+
+  pre,
+  code,
+  iframe,
+  table,
+  form {
+    @include hyphens(none);
+  }
+
+  pre,
+  code {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  pre {
+    overflow: auto;
+
+    code {
+      display: inline;
+      padding: 0;
+      white-space: pre;
+      line-height: inherit;
+      background-color: transparent;
+    }
+  }
+
+  code {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: auto;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .edy-positionable-container-center,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-right-block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .edy-positionable-container-maxwidth {
+    width: auto !important;
+    max-width: none !important;
+    margin-right: -200px !important;
+    margin-left: -200px !important;
+  }
+
+  .edy-image-container-with-title:after {
+    display: block;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 1.3em;
+    content: attr(data-title);
+  }
+}

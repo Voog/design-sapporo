@@ -17,6 +17,12 @@ a {
   margin-left: auto;
 }
 
+.page-content .inner {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .menu {
   margin-top: 0;
   margin-bottom: 0;
@@ -102,4 +108,133 @@ a {
 }
 .menu-level-1 .menu-cms li {
   margin-right: 15px;
+}
+
+.content-area {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.7;
+}
+.content-area::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.content-area h1:first-child,
+.content-area h2:first-child,
+.content-area h3:first-child,
+.content-area h4:first-child,
+.content-area h5:first-child,
+.content-area h6:first-child,
+.content-area p:first-child,
+.content-area ul:first-child,
+.content-area ol:first-child,
+.content-area dl:first-child,
+.content-area table:first-child,
+.content-area pre:first-child,
+.content-area code:first-child,
+.content-area iframe:first-child,
+.content-area table:first-child,
+.content-area form:first-child,
+.content-area .edy-positionable-container-left-block:first-child,
+.content-area .edy-positionable-container-center-block:first-child,
+.content-area .edy-positionable-container-right-block:first-child,
+.content-area .edy-texteditor-container-wrapper-left-block:first-child,
+.content-area .edy-texteditor-container-wrapper-center:first-child,
+.content-area .edy-texteditor-container-wrapper-right-block:first-child {
+  margin-top: 0;
+}
+.content-area h1:last-child,
+.content-area h2:last-child,
+.content-area h3:last-child,
+.content-area h4:last-child,
+.content-area h5:last-child,
+.content-area h6:last-child,
+.content-area p:last-child,
+.content-area ul:last-child,
+.content-area ol:last-child,
+.content-area dl:last-child,
+.content-area table:last-child,
+.content-area pre:last-child,
+.content-area code:last-child,
+.content-area iframe:last-child,
+.content-area table:last-child,
+.content-area form:last-child,
+.content-area .edy-positionable-container-left-block:last-child,
+.content-area .edy-positionable-container-center-block:last-child,
+.content-area .edy-positionable-container-right-block:last-child,
+.content-area .edy-texteditor-container-wrapper-left-block:last-child,
+.content-area .edy-texteditor-container-wrapper-center:last-child,
+.content-area .edy-texteditor-container-wrapper-right-block:last-child {
+  margin-bottom: 0;
+}
+.content-area h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.content-area p {
+  margin-top: 1.7em;
+  margin-bottom: 1.7em;
+}
+.content-area pre,
+.content-area code,
+.content-area iframe,
+.content-area table,
+.content-area form {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+.content-area pre,
+.content-area code {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.content-area pre {
+  overflow: auto;
+}
+.content-area pre code {
+  display: inline;
+  padding: 0;
+  white-space: pre;
+  line-height: inherit;
+  background-color: transparent;
+}
+.content-area code {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: auto;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.content-area iframe {
+  max-width: 100%;
+}
+.content-area .edy-positionable-container-center,
+.content-area .edy-positionable-container-left-block,
+.content-area .edy-positionable-container-right-block,
+.content-area .edy-texteditor-container-wrapper-center,
+.content-area .edy-texteditor-container-wrapper-left-block,
+.content-area .edy-texteditor-container-wrapper-right-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content-area .edy-positionable-container-maxwidth {
+  width: auto !important;
+  max-width: none !important;
+  margin-right: -200px !important;
+  margin-left: -200px !important;
+}
+.content-area .edy-image-container-with-title:after {
+  display: block;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 1.3em;
+  content: attr(data-title);
 }
