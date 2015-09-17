@@ -1,0 +1,6 @@
+{
+  "name": "voog-design-sapporo",
+  "devDependencies": {
+    "bourbon": "~4.2.4"
+  }
+}
