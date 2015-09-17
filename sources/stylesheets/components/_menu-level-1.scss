@@ -1,0 +1,26 @@
+.menu-level-1 {
+  text-align: right;
+
+  li {
+    display: inline-block;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+  }
+
+  .menu-cms {
+    li {
+      margin-right: 15px;
+    }
+  }
+}

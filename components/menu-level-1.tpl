@@ -10,7 +10,7 @@
   </ul>
 
   {% if editmode %}
-    <ul class="menu">
+    <ul class="menu menu-cms">
       {% if site.hidden_menuitems.size > 0 %}
         <li>{% menubtn site.hidden_menuitems %}</li>
       {% endif %}

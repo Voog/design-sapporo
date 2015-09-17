@@ -3,5 +3,7 @@
     {% editable site.header %}
   </div>
 
-  {% include "menu-level-1" %}
+	<div class="header-right">
+  	{% include "menu-level-1" %}
+	</div>
 </header>

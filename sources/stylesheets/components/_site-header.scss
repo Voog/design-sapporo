@@ -1,6 +1,42 @@
 .site-header {
+  @include hyphens(auto);
+
+	// TODO: Remove when flexbox detection is added.
+	// .flexbox & {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+    @include align-items(center);
+	// }
+
+	// TODO: Add flexbox fallback.
+	// .no-flexbox & {
+	// }
+
   .header-title {
+  	margin-right: 20px;
     font-size: 30px;
     font-weight: 700;
+    letter-spacing: .1em;
+
+		// TODO: Remove when flexbox detection is added.
+	  // .flexbox & {
+	    @include flex(1 0 auto);
+	  // }
+
+		// TODO: Add flexbox fallback.
+	  // .no-flexbox & {
+	  //   float: left;
+	  // }
+  }
+
+  .header-right {
+  	// TODO: Remove when flexbox detection is added.
+  	.flexbox & {
+		}
+
+		// TODO: Add flexbox fallback.
+		// .no-flexbox & {
+		// }
   }
 }
