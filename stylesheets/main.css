@@ -110,12 +110,64 @@ a {
   margin-right: 15px;
 }
 
+.site-footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+.site-footer .voog-reference {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.site-footer .voog-reference:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.site-footer .footer-body {
+  margin-left: 20px;
+  text-align: right;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .content-area {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1.7;
 }
@@ -123,6 +175,12 @@ a {
   clear: both;
   content: "";
   display: table;
+}
+.page-content .content-area {
+  font-size: 18px;
+}
+.site-footer .content-area {
+  font-size: 13px;
 }
 .content-area h1:first-child,
 .content-area h2:first-child,

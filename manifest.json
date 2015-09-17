@@ -36,6 +36,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-level-1.tpl",
       "layout_name": "menu-level-1",
       "title": "menu-level-1"
@@ -43,9 +50,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/html-head.tpl",
-      "layout_name": "html-head",
-      "title": "html-head"
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
     },
     {
       "content_type": "component",

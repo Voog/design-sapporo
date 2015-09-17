@@ -1,0 +1,45 @@
+.site-footer {
+	// TODO: Remove when flexbox detection is added.
+	// .flexbox & {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+    @include align-items(center);
+	// }
+
+	// TODO: Add flexbox fallback.
+	// .no-flexbox & {
+	// }
+
+  .voog-reference {
+  	font-size: 13px;
+    color: rgba($color-black, .5);
+
+  	// TODO: Remove when flexbox detection is added.
+  	.flexbox & {
+		}
+
+		// TODO: Add flexbox fallback.
+		// .no-flexbox & {
+		// }
+
+    &:hover {
+      color: rgba($color-black, .8);
+    }
+  }
+
+  .footer-body {
+  	margin-left: 20px;
+  	text-align: right;
+
+		// TODO: Remove when flexbox detection is added.
+	  // .flexbox & {
+	    @include flex(1 0 auto);
+	  // }
+
+		// TODO: Add flexbox fallback.
+	  // .no-flexbox & {
+	  //   float: left;
+	  // }
+  }
+}
