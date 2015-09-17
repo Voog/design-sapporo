@@ -11,10 +11,22 @@ a {
 }
 
 .site-container {
-  max-width: 1100px;
-  padding: 80px 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   margin-right: auto;
   margin-left: auto;
+
+  .front-page &,
+  .common-page &,
+  .blog-article-page & {
+    max-width: 1100px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .blog-listing-page & {
+    max-width: 1140px;
+  }
 }
 
 .page-content {

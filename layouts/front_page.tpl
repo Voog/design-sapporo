@@ -7,11 +7,9 @@
   <body class="front-page">
     <div class="site-container">
       {% include "site-header" %}
-      {% comment %}{% include "site-sidebar" %}{% endcomment %}
 
       <main class="page-content" role="main">
-        <section class="content-area">
-        </section>
+        <section class="content-area" data-search-indexing-allowed="true">{% content %}</section>
       </main>
 
       {% include "site-footer" %}

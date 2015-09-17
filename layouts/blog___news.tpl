@@ -10,9 +10,15 @@
 
       <main class="page-content" role="main">
         <section class="blog-articles content-area">
-          {% addbutton %}
+          {% if editmode %}
+            <div class="cms-add-article">{% addbutton %}</div>
+          {% endif %}
 
           {% for article in articles %}
+            <a class="blog-article" href="{{ article.url }}">
+              <img class="article-image" src="{{ article.image }}" alt="{{ article.title }}">
+              <h2 class="article-title">{{ article.title }}</h2>
+            </a>
           {% endfor %}
         </section>
       </main>
