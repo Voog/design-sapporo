@@ -4,6 +4,19 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    modernizr_builder: {
+      build: {
+        options: {
+          features: [
+            'flexbox',
+            'svg'
+          ],
+          dest: 'javascripts/modernizr-custom.min.js',
+          uglify: true
+        }
+      }
+    },
+
     // Compiles the stylesheet files.
     sass: {
       build: {
@@ -76,8 +89,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-modernizr-builder');
 
-  grunt.registerTask('default', ['sass', 'cssmin']);
+  grunt.registerTask('default', ['modernizr_builder:build', 'sass', 'cssmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
