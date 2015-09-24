@@ -2,13 +2,19 @@
 .menu-level-1 {
   text-align: right;
 
+  .menu {
+    li {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   li {
     display: inline-block;
     margin-right: 5px;
 
     &:last-child {
-      margin-right: 0;
-
       a {
         padding-right: 0;
       }

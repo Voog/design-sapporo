@@ -101,12 +101,12 @@ a {
 .menu-level-1 {
   text-align: right;
 }
+.menu-level-1 .menu li:last-child {
+  margin-right: 0;
+}
 .menu-level-1 li {
   display: inline-block;
   margin-right: 5px;
-}
-.menu-level-1 li:last-child {
-  margin-right: 0;
 }
 .menu-level-1 li:last-child a {
   padding-right: 0;
