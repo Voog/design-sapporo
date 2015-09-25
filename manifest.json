@@ -43,9 +43,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1.tpl",
-      "layout_name": "menu-level-1",
-      "title": "menu-level-1"
+      "file": "components/menu-main.tpl",
+      "layout_name": "menu-main",
+      "title": "menu-main"
     },
     {
       "content_type": "component",
