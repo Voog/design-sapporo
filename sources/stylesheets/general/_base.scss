@@ -15,11 +15,25 @@ a {
   padding-bottom: 80px;
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
+
+  .flexbox & {
+    @include display(flex);
+    @include flex-direction(column);
+  }
+
+  .editmode & {
+    min-height: calc(100vh - 40px);
+  }
+
+  .publicmode & {
+    min-height: 100vh;
+  }
 
   .front-page &,
   .common-page &,
   .blog-article-page & {
-    max-width: 1100px;
+    max-width: 1140px;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -31,6 +45,10 @@ a {
 
 .page-content {
   margin-top: 50px;
+
+  .flexbox & {
+    @include flex(1);
+  }
 
   .inner {
     max-width: 700px;
