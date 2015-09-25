@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: black;
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 a {
