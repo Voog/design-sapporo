@@ -163,6 +163,8 @@ a {
 
 .site-footer {
   margin-top: 60px;
+}
+.flexbox .site-footer {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -206,6 +208,8 @@ a {
 .site-footer .footer-body {
   margin-left: 20px;
   text-align: right;
+}
+.flexbox .site-footer .footer-body {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -228,7 +232,7 @@ a {
 .blog-listing-page .blog-article .article-image {
   height: 340px;
   width: 340px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .blog-article .article-title {
   text-align: center;

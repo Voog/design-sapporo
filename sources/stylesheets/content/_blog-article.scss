@@ -13,7 +13,7 @@
 	.article-image {
 		.blog-listing-page & {
 			@include size(340px);
-			object-fit: cover;
+			object-fit: contain;
 
 			// TODO: Add object-fit polyfill.
 		}
