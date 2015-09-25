@@ -7,10 +7,7 @@ module.exports = function(grunt) {
     modernizr_builder: {
       build: {
         options: {
-          features: [
-            'flexbox',
-            'svg'
-          ],
+          config: 'modernizr-config.json',
           dest: 'javascripts/modernizr-custom.min.js',
           uglify: true
         }

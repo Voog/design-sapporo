@@ -1,3 +1,6 @@
+{% comment %}TEMPLATE VARIABLES COMPONENT{% endcomment %}
+{% include "template-variables" %}
+
 {% comment %}IE SETTINGS{% endcomment %}
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 

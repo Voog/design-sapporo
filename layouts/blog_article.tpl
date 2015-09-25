@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="{% if editmode %}editmode{% else %}publicmode{% endif %}" lang="{{ page.language_code }}">
+<html class="blog-news-page blog-article-page" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
   </head>
 
-  <body class="blog-news-page blog-article-page">
+  <body class="{{ mode_class }}">
     <div class="site-container">
       {% include "site-header" %}
 

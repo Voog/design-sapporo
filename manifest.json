@@ -60,6 +60,13 @@
       "file": "components/site-header.tpl",
       "layout_name": "site-header",
       "title": "site-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     }
   ],
   "assets": [
