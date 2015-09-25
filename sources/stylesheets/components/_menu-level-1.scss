@@ -13,12 +13,6 @@
       }
     }
 
-    &:hover {
-      .menu-level-2 {
-        display: block;
-      }
-    }
-
     a {
       font-size: 13px;
     }
@@ -31,14 +25,12 @@
       letter-spacing: .2em;
       opacity: .8;
 
-      &.selected {
-        color: rgba($color-black, 1);
+      &:hover {
+        color: rgba($color-black, .8);
       }
 
-      &:not(.selected) {
-        &:hover {
-          color: rgba($color-black, .8);
-        }
+      &.selected {
+        color: rgba($color-black, 1);
       }
 
       &.untranslated {
