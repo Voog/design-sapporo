@@ -1,26 +1,30 @@
-<nav class="menu-level-1">
-  <ul class="menu menu-public">
+<nav>
+  <ul class="menu menu-horizontal menu-level-1 menu-public">
     {% unless site.root_item.hidden? %}
-      <li>{% menulink site.root_item %}</li>
+      <li class="menu-item">{% menulink site.root_item %}</li>
     {% endunless %}
 
-    {% for item in site.visible_menuitems %}
-      <li>
-        {% menulink item %}
-{% comment %}        {% if editmode or item.children? %}
-        bla
-        {% endif %}{% endcomment %}
-      <li>
+    {% for level_1 in site.visible_menuitems %}
+      <li class="menu-item">
+        {% menulink level_1 %}
+        {% if editmode or level_1.children? %}
+          <ul class="menu menu-vertical menu-level-2">
+            {% for level_2 in level_1.visible_children %}
+              <li class="menu-item">{% menulink level_2 %}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 
   {% if editmode %}
-    <ul class="menu menu-cms">
+    <ul class="menu menu-horizontal menu-cms">
       {% if site.hidden_menuitems.size > 0 %}
-        <li>{% menubtn site.hidden_menuitems %}</li>
+        <li class="menu-item">{% menubtn site.hidden_menuitems %}</li>
       {% endif %}
 
-      <li>{% menuadd %}</li>
+      <li class="menu-item">{% menuadd %}</li>
     </ul>
   {% endif %}
 </nav>

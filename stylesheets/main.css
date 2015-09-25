@@ -77,6 +77,14 @@ a {
   list-style-type: none;
 }
 
+.menu-horizontal > .menu-item {
+  display: inline-block;
+}
+
+.menu-vertical > .menu-item {
+  display: block;
+}
+
 .site-header {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -137,41 +145,57 @@ a {
   flex: 1 0 auto;
 }
 
-.menu-level-1 {
-  text-align: right;
-}
-.menu-level-1 .menu li {
-  display: inline-block;
-}
-.menu-level-1 .menu-public li {
+.menu-level-1 > .menu-item {
   margin-left: 5px;
 }
-.menu-level-1 .menu-public li:first-child {
+.menu-level-1 > .menu-item:first-child {
   margin-left: 0;
 }
-.menu-level-1 .menu-public li:last-child a {
+.menu-level-1 > .menu-item:last-child a {
   padding-right: 0;
 }
-.menu-level-1 .menu-public li a {
+.menu-level-1 > .menu-item:hover .menu-level-2 {
   display: block;
-  padding: 10px;
-  color: rgba(0, 0, 0, 0.5);
+}
+.menu-level-1 > .menu-item a {
   font-size: 13px;
+}
+.menu-level-1 > .menu-item > a {
+  display: block;
+  padding: 7px 10px;
+  color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: .2em;
   opacity: .8;
 }
-.menu-level-1 .menu-public li a.selected {
+.menu-level-1 > .menu-item > a.selected {
   color: black;
 }
-.menu-level-1 .menu-public li a:not(.selected):hover {
+.menu-level-1 > .menu-item > a:not(.selected):hover {
   color: rgba(0, 0, 0, 0.8);
 }
-.menu-level-1 .menu-public li a.untranslated {
+.menu-level-1 > .menu-item > a.untranslated {
   color: #cc0000;
 }
-.menu-level-1 .menu-cms li {
+
+.menu-cms {
+  text-align: right;
+}
+.menu-cms .menu-item {
   margin-right: 15px;
+}
+
+.menu-level-2 {
+  position: absolute;
+  display: none;
+  padding-right: 9px;
+  padding-left: 9px;
+  margin-left: -5px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.menu-level-2 .menu-item a {
+  display: block;
+  padding: 6px;
 }
 
 .site-footer {

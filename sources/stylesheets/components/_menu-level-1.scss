@@ -1,56 +1,57 @@
 // Site's main menu.
 .menu-level-1 {
+  > .menu-item {
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      a {
+        padding-right: 0;
+      }
+    }
+
+    &:hover {
+      .menu-level-2 {
+        display: block;
+      }
+    }
+
+    a {
+      font-size: 13px;
+    }
+
+    > a {
+      display: block;
+      padding: 7px 10px;
+      color: rgba($color-black, .5);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      opacity: .8;
+
+      &.selected {
+        color: rgba($color-black, 1);
+      }
+
+      &:not(.selected) {
+        &:hover {
+          color: rgba($color-black, .8);
+        }
+      }
+
+      &.untranslated {
+        color: rgba($color-error, 1)
+      }
+    }
+  }
+}
+
+.menu-cms {
   text-align: right;
 
-  .menu {
-    li {
-      display: inline-block;
-    }
-  }
-
-  .menu-public {
-    li {
-      margin-left: 5px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        a {
-          padding-right: 0;
-        }
-      }
-
-      a {
-        display: block;
-        padding: 10px;
-        color: rgba($color-black, .5);
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: .2em;
-        opacity: .8;
-
-        &.selected {
-          color: rgba($color-black, 1);
-        }
-
-        &:not(.selected) {
-          &:hover {
-            color: rgba($color-black, .8);
-          }
-        }
-
-        &.untranslated {
-          color: rgba($color-error, 1)
-        }
-      }
-    }
-  }
-
-  .menu-cms {
-    li {
-      margin-right: 15px;
-    }
+  .menu-item {
+    margin-right: 15px;
   }
 }

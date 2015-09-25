@@ -1,0 +1,15 @@
+.menu-level-2 {
+  position: absolute;
+  display: none;
+  padding-right: 9px;
+  padding-left: 9px;
+  margin-left: -5px;
+  background-color: rgba($color-white, .95);
+
+  .menu-item {
+    a {
+      display: block;
+      padding: 6px;
+    }
+  }
+}
