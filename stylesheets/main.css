@@ -140,26 +140,30 @@ a {
 .menu-level-1 {
   text-align: right;
 }
-.menu-level-1 .menu li:last-child {
-  margin-right: 0;
+.menu-level-1 .menu li:first-child {
+  margin-left: 0;
 }
 .menu-level-1 li {
   display: inline-block;
-  margin-right: 5px;
+  margin-left: 5px;
+  opacity: .8;
 }
 .menu-level-1 li:last-child a {
   padding-right: 0;
 }
-.menu-level-1 li.selected a {
-  color: black;
-}
 .menu-level-1 li a {
   display: block;
   padding: 10px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: .2em;
+}
+.menu-level-1 li a.selected {
+  color: black;
+}
+.menu-level-1 li a:not(.selected):hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 .menu-level-1 .menu-cms li {
   margin-right: 15px;

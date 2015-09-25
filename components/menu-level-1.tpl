@@ -1,11 +1,11 @@
 <nav class="menu-level-1">
   <ul class="menu">
     {% unless site.root_item.hidden? %}
-      {% menulink site.root_item wrapper-tag="li" %}
+      <li>{% menulink site.root_item %}</li>
     {% endunless %}
 
     {% for item in site.visible_menuitems %}
-      {% menulink item wrapper-tag="li" %}
+      <li>{% menulink item %}<li>
     {% endfor %}
   </ul>
 
