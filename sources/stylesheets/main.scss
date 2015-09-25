@@ -5,30 +5,18 @@
 // MODULES
 
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-// @import 'modules/_mixins';
 @import 'modules/_variables';
 
 // GENERAL
-// @import 'general/_fonts';
 @import 'general/_base';
-// @import 'general/_framework';
-// @import 'general/_cms-overrides';
+@import 'general/_navigation-menus';
 
 // COMPONENTS
-// @import 'components/_blog-article';
-// @import 'components/_blog-article-comments';
 @import 'components/_site-header';
 @import 'components/_menu-level-1';
 @import 'components/_menu-level-2';
-// @import 'components/_site-search';
-// @import 'components/_site-sidebar';
 @import 'components/_site-footer';
 
 // CONTENT AREAS
 @import 'content/_blog-article';
 @import 'content/_text';
-// @import 'content/_gallery';
-// @import 'content/_form';
-// @import 'content/_video';
-// @import 'content/_map';
-// @import 'content/_custom';

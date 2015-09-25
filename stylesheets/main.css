@@ -84,6 +84,29 @@ a {
   display: block;
 }
 
+.menu-main > .menu-cms {
+  text-align: right;
+}
+.menu-main > .menu-cms .menu-item {
+  margin-right: 15px;
+}
+
+.menu-sub {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  padding-right: 9px;
+  padding-left: 9px;
+  margin-left: -5px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.menu-item:hover .menu-sub {
+  display: block;
+}
+.menu-sub .menu-cms li {
+  padding: 6px;
+}
+
 .site-header {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -174,24 +197,6 @@ a {
   color: #cc0000;
 }
 
-.menu-cms {
-  text-align: right;
-}
-.menu-cms .menu-item {
-  margin-right: 15px;
-}
-
-.menu-level-2 {
-  position: absolute;
-  display: none;
-  padding-right: 9px;
-  padding-left: 9px;
-  margin-left: -5px;
-  background-color: rgba(255, 255, 255, 0.95);
-}
-.menu-item:hover .menu-level-2 {
-  display: block;
-}
 .menu-level-2 .menu-item a {
   display: block;
   padding: 6px;
