@@ -1,6 +1,16 @@
 .site-footer {
 	margin-top: 60px;
 
+	.voog-reference {
+		a {
+			color: rgba($color-black, .5);
+
+			&:hover {
+				color: rgba($color-black, 1);
+			}
+		}
+	}
+
 	.flexbox & {
     @include display(flex);
     @include flex-wrap(wrap);

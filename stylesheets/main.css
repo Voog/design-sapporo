@@ -207,6 +207,12 @@ a {
 .site-footer {
   margin-top: 60px;
 }
+.site-footer .voog-reference a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.site-footer .voog-reference a:hover {
+  color: black;
+}
 .flexbox .site-footer {
   display: -webkit-box;
   display: -moz-box;
