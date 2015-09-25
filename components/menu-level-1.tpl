@@ -1,11 +1,16 @@
 <nav class="menu-level-1">
-  <ul class="menu">
+  <ul class="menu menu-public">
     {% unless site.root_item.hidden? %}
       <li>{% menulink site.root_item %}</li>
     {% endunless %}
 
     {% for item in site.visible_menuitems %}
-      <li>{% menulink item %}<li>
+      <li>
+        {% menulink item %}
+{% comment %}        {% if editmode or item.children? %}
+        bla
+        {% endif %}{% endcomment %}
+      <li>
     {% endfor %}
   </ul>
 
