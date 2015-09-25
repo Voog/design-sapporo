@@ -2,47 +2,41 @@
 .site-header {
   @include hyphens(auto);
 
-	// TODO: Remove when flexbox detection is added.
-	// .flexbox & {
+  .flexbox & {
     @include display(flex);
     @include flex-wrap(wrap);
     @include justify-content(flex-end);
     @include align-items(center);
-	// }
+  }
 
-	// TODO: Add flexbox fallback.
-	// .no-flexbox & {
-	// }
+  // TODO: Add flexbox fallback.
+  // .no-flexbox & {
+  // }
 
-	.blog-listing-page & {
-		padding-right: 20px;
-		padding-left: 20px;
-	}
+  .blog-listing-page & {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 
   .header-title {
-  	margin-right: 20px;
+    margin-right: 20px;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: .1em;
 
-		// TODO: Remove when flexbox detection is added.
-	  // .flexbox & {
-	    @include flex(1 0 auto);
-	  // }
+    .flexbox & {
+      @include flex(1 0 auto);
+    }
 
-		// TODO: Add flexbox fallback.
-	  // .no-flexbox & {
-	  //   float: left;
-	  // }
+    // TODO: Add flexbox fallback.
+    // .no-flexbox & {
+    //   float: left;
+    // }
   }
 
   .header-right {
-  	// TODO: Remove when flexbox detection is added.
-  	.flexbox & {
-		}
-
-		// TODO: Add flexbox fallback.
-		// .no-flexbox & {
-		// }
+    // TODO: Add flexbox fallback.
+    // .no-flexbox & {
+    // }
   }
 }

@@ -6,7 +6,15 @@
   line-height: 1.7;
 
   .page-content & {
-    font-size: 18px;
+    .front-page &,
+    .common-page &,
+    .blog-article-page & {
+      font-size: 18px;
+    }
+
+    .blog-listing-page & {
+      font-size: 0;
+    }
   }
 
   .site-footer & {

@@ -82,6 +82,8 @@ a {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+.flexbox .site-header {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -124,6 +126,8 @@ a {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: .1em;
+}
+.flexbox .site-header .header-title {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -259,8 +263,11 @@ a {
   content: "";
   display: table;
 }
-.page-content .content-area {
+.front-page .page-content .content-area, .common-page .page-content .content-area, .blog-article-page .page-content .content-area {
   font-size: 18px;
+}
+.blog-listing-page .page-content .content-area {
+  font-size: 0;
 }
 .site-footer .content-area {
   font-size: 13px;
