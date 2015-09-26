@@ -14,7 +14,7 @@
 
       {% include "site-footer" %}
 
-      {% include "site-javascripts" %}
+      {% include "template-javascripts" %}
     </div>
   </body>
 </html>

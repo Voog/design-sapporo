@@ -2,5 +2,8 @@
   "name": "voog-design-sapporo",
   "devDependencies": {
     "bourbon": "~4.2.5"
+  },
+  "dependencies": {
+    "jquery": "~2.1.4"
   }
 }

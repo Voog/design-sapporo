@@ -36,16 +36,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/html-head.tpl",
-      "layout_name": "html-head",
-      "title": "html-head"
+      "file": "components/menu-main.tpl",
+      "layout_name": "menu-main",
+      "title": "menu-main"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-main.tpl",
-      "layout_name": "menu-main",
-      "title": "menu-main"
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
     },
     {
       "content_type": "component",
@@ -64,12 +64,31 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-javascripts.tpl",
+      "layout_name": "template-javascripts",
+      "title": "template-javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-variables.tpl",
       "layout_name": "template-variables",
       "title": "template-variables"
     }
   ],
   "assets": [
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/main.js",
+      "kind": "javascripts",
+      "filename": "main.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/main.min.js",
+      "kind": "javascripts",
+      "filename": "main.min.js"
+    },
     {
       "content_type": "application/javascript",
       "file": "javascripts/modernizr-custom.min.js",

@@ -1,4 +1,50 @@
 // Navigation menus.
+.menu-btn {
+  @include size(25px);
+  position: relative;
+  padding: 0;
+  font-size: 0;
+  background-color: rgba($color-white, 1);
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  border-color: rgba($color-black, 1);
+  cursor: pointer;
+
+  &:before {
+    @include size(9px);
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    display: block;
+    content: "";
+    background-color: rgba($color-black, 1);
+    border-radius: 100%;
+  }
+
+  &:hover {
+    background-color: rgba($color-black, .5);
+
+    &:before {
+      background-color: rgba($color-black, .5);
+    }
+  }
+
+  &:focus {
+    outline-style: none;
+  }
+
+  .menu-main-open & {
+    &:hover {
+      background-color: rgba($color-black, 1);
+
+      &:before {
+        background-color: rgba($color-white, 1);
+      }
+    }
+  }
+}
+
 .menu {
   padding-left: 0;
   margin-top: 0;
@@ -19,6 +65,10 @@
 }
 
 .menu-main {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+
   > .menu-cms {
     text-align: right;
 

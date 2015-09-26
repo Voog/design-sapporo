@@ -70,6 +70,46 @@ a {
   margin-left: auto;
 }
 
+.menu-btn {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  padding: 0;
+  font-size: 0;
+  background-color: white;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  border-color: black;
+  cursor: pointer;
+}
+.menu-btn:before {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  display: block;
+  content: "";
+  background-color: black;
+  border-radius: 100%;
+}
+.menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-btn:hover:before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-btn:focus {
+  outline-style: none;
+}
+.menu-main-open .menu-btn:hover {
+  background-color: black;
+}
+.menu-main-open .menu-btn:hover:before {
+  background-color: white;
+}
+
 .menu {
   padding-left: 0;
   margin-top: 0;
@@ -85,6 +125,11 @@ a {
   display: block;
 }
 
+@media screen and (max-width: 640px) {
+  .menu-main {
+    display: none;
+  }
+}
 .menu-main > .menu-cms {
   text-align: right;
 }

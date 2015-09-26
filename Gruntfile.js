@@ -14,6 +14,33 @@ module.exports = function(grunt) {
       }
     },
 
+    // Concatenates the javascript source files to the javascripts folder.
+    concat: {
+      build: {
+        src: [
+          'bower_components/jquery/dist/jquery.js',
+          'sources/javascripts/*.js'
+        ],
+        dest: 'javascripts/main.js'
+      }
+    },
+
+    // Minifies the javascript files.
+    uglify: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: 'javascripts/',
+          src: [
+            '*.js',
+            '!*.min.js'
+          ],
+          dest: 'javascripts/',
+          ext: '.min.js'
+        }]
+      }
+    },
+
     // Compiles the stylesheet files.
     sass: {
       build: {
@@ -65,6 +92,11 @@ module.exports = function(grunt) {
 
     // Watches the project for changes and recompiles the output files.
     watch: {
+      js: {
+        files: 'sources/javascripts/*.js',
+        tasks: ['concat:build', 'uglify:build', 'exec:kit:javascripts/*.js']
+      },
+
       css: {
         files: [
           'sources/stylesheets/*.scss',
@@ -82,13 +114,15 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-modernizr-builder');
 
-  grunt.registerTask('default', ['modernizr_builder:build', 'sass', 'cssmin']);
+  grunt.registerTask('default', ['modernizr_builder:build', 'concat', 'uglify', 'sass', 'cssmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
