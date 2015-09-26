@@ -89,7 +89,10 @@ a {
   text-align: right;
 }
 .menu-main > .menu-cms .menu-item {
-  margin-right: 15px;
+  margin-left: 15px;
+}
+.menu-main > .menu-cms .menu-item:first-child {
+  margin-left: 0;
 }
 
 .menu-sub {
