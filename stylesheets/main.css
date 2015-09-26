@@ -95,7 +95,7 @@ a {
   border-radius: 100%;
 }
 .menu-btn:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .menu-btn:hover:before {
   background-color: rgba(0, 0, 0, 0.5);
