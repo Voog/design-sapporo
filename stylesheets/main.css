@@ -367,6 +367,7 @@ a {
 .blog-listing-page .blog-article .article-image {
   height: 340px;
   width: 340px;
+  display: block;
   object-fit: contain;
 }
 .blog-article .article-title {
