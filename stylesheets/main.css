@@ -11,6 +11,9 @@ a {
 }
 
 .site-container {
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
   padding-top: 80px;
   padding-bottom: 80px;
   margin-right: auto;
@@ -49,6 +52,15 @@ a {
 }
 .blog-listing-page .site-container {
   max-width: 1140px;
+}
+@media screen and (max-width: 640px) {
+  .menu-main-open .site-container {
+    -webkit-transform: translate3d(-130px, 0, 0);
+    -moz-transform: translate3d(-130px, 0, 0);
+    -ms-transform: translate3d(-130px, 0, 0);
+    -o-transform: translate3d(-130px, 0, 0);
+    transform: translate3d(-130px, 0, 0);
+  }
 }
 
 .page-content {
@@ -103,11 +115,16 @@ a {
 .menu-btn:focus {
   outline-style: none;
 }
-.menu-main-open .menu-btn:hover {
+.menu-main-open .menu-btn {
   background-color: black;
 }
-.menu-main-open .menu-btn:hover:before {
+.menu-main-open .menu-btn:before {
   background-color: white;
+}
+@media screen and (min-width: 641px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .menu {
@@ -129,15 +146,31 @@ a {
   .menu-main {
     display: none;
   }
+  .menu-main-open .menu-main {
+    position: fixed;
+    top: 0;
+    right: -130px;
+    bottom: 0;
+    width: 130px;
+    display: block;
+    background-color: white;
+  }
 }
-.menu-main > .menu-cms {
-  text-align: right;
+@media screen and (min-width: 641px) {
+  .menu-main > .menu-cms {
+    text-align: right;
+  }
 }
-.menu-main > .menu-cms .menu-item {
-  margin-left: 15px;
+@media screen and (max-width: 640px) {
+  .menu-main > .menu-cms .menu-item {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
 }
-.menu-main > .menu-cms .menu-item:first-child {
-  margin-left: 0;
+@media screen and (min-width: 641px) {
+  .menu-main > .menu-cms .menu-item:not(:first-child) {
+    margin-left: 15px;
+  }
 }
 
 .menu-sub {
@@ -216,21 +249,20 @@ a {
   flex: 1 0 auto;
 }
 
-.menu-level-1 > .menu-item {
+.menu-level-1 > .menu-item:not(:first-child) {
   margin-left: 5px;
 }
-.menu-level-1 > .menu-item:first-child {
-  margin-left: 0;
-}
-.menu-level-1 > .menu-item:last-child a {
-  padding-right: 0;
+.menu-level-1 > .menu-item:not(:last-child) a {
+  padding-right: 10px;
 }
 .menu-level-1 > .menu-item a {
   font-size: 13px;
 }
 .menu-level-1 > .menu-item > a {
   display: block;
-  padding: 7px 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: .2em;

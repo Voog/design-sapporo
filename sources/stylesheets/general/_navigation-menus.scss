@@ -35,13 +35,15 @@
   }
 
   .menu-main-open & {
-    &:hover {
-      background-color: rgba($color-black, 1);
+    background-color: rgba($color-black, 1);
 
-      &:before {
-        background-color: rgba($color-white, 1);
-      }
+    &:before {
+      background-color: rgba($color-white, 1);
     }
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    display: none;
   }
 }
 
@@ -67,16 +69,33 @@
 .menu-main {
   @media screen and (max-width: $mobile) {
     display: none;
+
+    .menu-main-open & {
+      position: fixed;
+      top: 0;
+      right: -130px;
+      bottom: 0;
+      width: 130px;
+      display: block;
+      background-color: rgba($color-white, 1);
+    }
   }
 
   > .menu-cms {
-    text-align: right;
+    @media screen and (min-width: $mobile + 1) {
+      text-align: right;
+    }
 
     .menu-item {
-      margin-left: 15px;
+      @media screen and (max-width: $mobile) {
+        margin-top: 5px;
+        margin-left: 15px;
+      }
 
-      &:first-child {
-        margin-left: 0;
+      @media screen and (min-width: $mobile + 1) {
+        &:not(:first-child) {
+          margin-left: 15px;
+        }
       }
     }
   }

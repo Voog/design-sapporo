@@ -11,6 +11,7 @@ a {
 }
 
 .site-container {
+  @include transition(transform .5s);
   padding-top: 80px;
   padding-bottom: 80px;
   margin-right: auto;
@@ -40,6 +41,12 @@ a {
 
   .blog-listing-page & {
     max-width: 1140px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .menu-main-open & {
+      @include transform(translate3d(-130px, 0, 0));
+    }
   }
 }
 
