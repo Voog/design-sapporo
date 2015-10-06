@@ -3,13 +3,13 @@
   @include size(25px);
   position: relative;
   padding: 0;
+  vertical-align: top;
   font-size: 0;
   background-color: rgba($color-white, 1);
   border-style: solid;
   border-radius: 100%;
   border-width: 1px;
   border-color: rgba($color-black, 1);
-  cursor: pointer;
 
   &:before {
     @include size(9px);
@@ -30,10 +30,6 @@
     }
   }
 
-  &:focus {
-    outline-style: none;
-  }
-
   .menu-main-open & {
     background-color: rgba($color-black, 1);
 
@@ -47,6 +43,20 @@
   }
 }
 
+.menu-back-btn {
+  @include transform(rotate(180deg));
+  position: absolute;
+  top: 18px;
+
+  &.hidden {
+    display: none;
+  }
+
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+}
+
 .menu {
   padding-left: 0;
   margin-top: 0;
@@ -56,7 +66,9 @@
 
 .menu-horizontal {
   > .menu-item {
-    display: inline-block;
+    @media screen and (min-width: $mobile + 1) {
+      display: inline-block;
+    }
   }
 }
 
@@ -68,16 +80,62 @@
 
 .menu-main {
   @media screen and (max-width: $mobile) {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -130px;
+    bottom: 0;
+    width: 130px;
+    background-color: rgba($color-white, 1);
+  }
 
-    .menu-main-open & {
-      position: fixed;
-      top: 0;
-      right: -130px;
-      bottom: 0;
-      width: 130px;
+  .btn {
+    padding: 5px;
+    font-size: 0;
+    stroke: rgba($color-black, .5);
+    background-color: transparent;
+    border-style: none;
+
+    &:hover {
+      stroke: rgba($color-black, 1);
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .menu {
+    .menu-item {
+      @media screen and (max-width: $mobile) {
+        display: none;
+
+        &.item-current {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .menu-current {
+    > .menu-item {
       display: block;
-      background-color: rgba($color-white, 1);
+    }
+  }
+
+  .menu-public {
+    .menu-item {
+      position: relative;
+    }
+
+    .btn {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      z-index: 1;
+
+      @media screen and (min-width: $mobile) {
+        display: none;
+      }
     }
   }
 
@@ -99,16 +157,26 @@
       }
     }
   }
+
+  .item-current {
+    .menu {
+      > .menu-item {
+        display: block;
+      }
+    }
+  }
 }
 
 .menu-sub {
-  position: absolute;
-  z-index: 1;
-  display: none;
-  padding-right: 9px;
-  padding-left: 9px;
-  margin-left: -5px;
-  background-color: rgba($color-white, .95);
+  @media screen and (min-width: $mobile + 1) {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    padding-right: 9px;
+    padding-left: 9px;
+    margin-left: -5px;
+    background-color: rgba($color-white, .95);
+  }
 
   .menu-item:hover & {
     display: block;

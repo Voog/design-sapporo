@@ -20,9 +20,16 @@
 
   .header-title {
     margin-right: 20px;
-    font-size: 30px;
     font-weight: 700;
     letter-spacing: .1em;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      font-size: 30px;
+    }
 
     .flexbox & {
       @include flex(1 0 auto);

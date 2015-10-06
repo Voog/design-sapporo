@@ -1,10 +1,6 @@
 // Site's main menu.
 .menu-level-1 {
   > .menu-item {
-    &:not(:first-child) {
-      margin-left: 5px;
-    }
-
     &:not(:last-child) {
       a {
         padding-right: 10px;
@@ -37,5 +33,15 @@
         color: rgba($color-error, 1)
       }
     }
+
+    @media screen and (min-width: $mobile + 1) {
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-top: 50px;
   }
 }

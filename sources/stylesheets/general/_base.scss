@@ -10,6 +10,18 @@ a {
   text-decoration: none;
 }
 
+.svg-spritesheet {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+
+  &:focus {
+    outline-style: none;
+  }
+}
+
 .site-container {
   @include transition(transform .5s);
   padding-top: 80px;
@@ -44,9 +56,15 @@ a {
   }
 
   @media screen and (max-width: $mobile) {
+    padding-top: 50px;
+
     .menu-main-open & {
       @include transform(translate3d(-130px, 0, 0));
     }
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    padding-top: 80px;
   }
 }
 

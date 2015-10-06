@@ -71,6 +71,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-svg-spritesheet.tpl",
+      "layout_name": "template-svg-spritesheet",
+      "title": "template-svg-spritesheet"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-variables.tpl",
       "layout_name": "template-variables",
       "title": "template-variables"
