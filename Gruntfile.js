@@ -71,6 +71,27 @@ module.exports = function(grunt) {
       }
     },
 
+    // Minifies the image files.
+    imagemin: {
+      build_images: {
+        files: [{
+          expand: true,
+          cwd: 'sources/images/minify',
+          src: '*.{png,jpg,gif}',
+          dest: 'images/'
+        }]
+      },
+
+      build_svgs: {
+        files: [{
+          expand: true,
+          cwd: 'sources/assets/minify',
+          src: '*.svg',
+          dest: 'assets/'
+        }]
+      }
+    },
+
     // Executes the Voog Kit toolkit manifest generation and file upload commands.
     exec: {
       kitmanifest: {
@@ -118,11 +139,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-modernizr-builder');
 
-  grunt.registerTask('default', ['modernizr_builder:build', 'concat', 'uglify', 'sass', 'cssmin']);
+  grunt.registerTask('default', ['modernizr_builder:build', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
