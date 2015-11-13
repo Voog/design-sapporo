@@ -118,13 +118,17 @@
 
   .menu-current {
     > .menu-item {
-      display: block;
+      @media screen and (max-width: $mobile) {
+        display: block;
+      }
     }
   }
 
   .menu-public {
     .menu-item {
-      position: relative;
+      @media screen and (max-width: $mobile) {
+        position: relative;
+      }
     }
 
     .btn {
