@@ -14,8 +14,6 @@
 	.flexbox & {
     @include display(flex);
     @include flex-wrap(wrap);
-    @include justify-content(flex-end);
-    @include align-items(center);
 	}
 
 	// TODO: Add flexbox fallback.
@@ -23,6 +21,7 @@
 	// }
 
   .voog-reference {
+    margin-right: 20px;
   	font-size: 13px;
     color: rgba($color-black, .5);
 
@@ -36,8 +35,7 @@
   }
 
   .footer-body {
-  	margin-left: 20px;
-  	text-align: right;
+    max-width: 100%;
 
 	  .flexbox & {
 	    @include flex(1 0 auto);

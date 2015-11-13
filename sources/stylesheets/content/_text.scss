@@ -125,11 +125,36 @@
     margin-bottom: 45px;
   }
 
+  .edy-positionable-container-left,
+  .edy-texteditor-container-wrapper-left {
+    margin-right: 20px;
+  }
+
+  .edy-positionable-container-right,
+  .edy-texteditor-container-wrapper-right {
+    margin-left: 20px;
+  }
+
   .edy-positionable-container-maxwidth {
     width: auto !important;
     max-width: none !important;
-    margin-right: -200px !important;
-    margin-left: -200px !important;
+    margin-right: -20px !important;
+    margin-left: -20px !important;
+
+    @media screen and (min-width: 800px) {
+      margin-right: -50px !important;
+      margin-left: -50px !important;
+    }
+
+    @media screen and (min-width: 900px) {
+      margin-right: -100px !important;
+      margin-left: -100px !important;
+    }
+
+    @media screen and (min-width: 1100px) {
+      margin-right: -200px !important;
+      margin-left: -200px !important;
+    }
   }
 
   .edy-image-container-with-title:after {
@@ -140,3 +165,5 @@
     content: attr(data-title);
   }
 }
+
+
