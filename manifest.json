@@ -20,13 +20,6 @@
       "title": "Common page"
     },
     {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/categories_listing.tpl",
-      "layout_name": "page_default",
-      "title": "Categories listing"
-    },
-    {
       "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
@@ -114,12 +107,6 @@
       "file": "javascripts/main.min.js",
       "kind": "javascripts",
       "filename": "main.min.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/modernizr-custom.min.js",
-      "kind": "javascripts",
-      "filename": "modernizr-custom.min.js"
     },
     {
       "content_type": "text/css",

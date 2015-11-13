@@ -1,7 +1,7 @@
 // Text type content area.
 .content-area {
   @include clearfix;
-  @include hyphens(auto);
+  @include hyphenate();
   color: rgba($color-black, .8);
   line-height: 1.7;
 
@@ -81,7 +81,7 @@
   iframe,
   table,
   form {
-    @include hyphens(none);
+    @include hyphenate(false);
   }
 
   pre,
