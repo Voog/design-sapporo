@@ -2,7 +2,7 @@
   "classPrefix": "",
   "options": [
     "html5shiv",
-    "setClasses",
+    "setClasses"
   ],
   "feature-detects": [
     "css/backgroundsize",
