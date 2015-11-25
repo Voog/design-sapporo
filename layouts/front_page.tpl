@@ -4,7 +4,7 @@
     {% include "html-head" %}
   </head>
 
-  <body class="{{ mode_class }} menu-main-open">
+  <body class="{{ mode_class }}">
     <div class="site-container">
       {% include "site-header" %}
 

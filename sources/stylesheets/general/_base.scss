@@ -23,7 +23,7 @@ a {
 }
 
 .site-container {
-  @include transition(transform .5s);
+  @include transition(transform .1s);
   padding-top: 80px;
   padding-bottom: 80px;
   margin-right: auto;
