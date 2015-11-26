@@ -30,7 +30,7 @@
     }
   }
 
-  .menu-main-open & {
+  .menu-main-opened & {
     background-color: rgba($color-black, 1);
 
     &:before {
@@ -78,7 +78,25 @@
   }
 }
 
+.menu-popover {
+  position: absolute;
+  display: none;
+  background-color: rgba($color-white, 1);
+  // box-shadow: 0 0 5px rgba($color-black, .3);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba($color-black, .3)
+}
+
+.menu-options {
+  button {
+    @include button;
+  }
+}
+
 .menu-main {
+  display: inline-block;
+
   @media screen and (max-width: $mobile) {
     position: fixed;
     top: 0;
@@ -86,6 +104,11 @@
     bottom: 0;
     width: 130px;
     background-color: rgba($color-white, 1);
+
+    .menu-main-closed &,
+    .menu-main-opened {
+      display: none;
+    }
   }
 
   .btn {
@@ -145,6 +168,7 @@
 
   > .menu-cms {
     @media screen and (min-width: $mobile + 1) {
+      margin-top: 5px;
       text-align: right;
     }
 

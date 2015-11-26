@@ -1,4 +1,4 @@
-<nav class="menu-main js-menu-main">
+<nav class="menu-main js-menu-main js-prevent-sideclick">
   <button class="btn menu-back-btn js-toggle-menu-prev{% if page.level == 0 %} hidden{% endif %}">
     <svg width="7px" height="13px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="#ico-arrow"></use>

@@ -72,7 +72,10 @@
   }
 
   a {
+    color: rgba($color-black, 1);
+
     &:hover {
+      opacity: .8;
     }
   }
 

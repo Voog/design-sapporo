@@ -1,7 +1,3 @@
-{% comment %}TEMPLATE VARIABLES COMPONENT{% endcomment %}
-{% include "template-variables" %}
-{% include "template-svg-spritesheet" %}
-
 {% comment %}IE SETTINGS{% endcomment %}
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
@@ -34,5 +30,7 @@
 
 {% comment %}MISC{% endcomment %}
 {% include "site-meta" %}
+
 {% if blog %}{{ blog.rss_link }}{% endif %}
+
 {{ site.stats_header }}

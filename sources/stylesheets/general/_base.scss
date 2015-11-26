@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: rgba($color-black, 1);
-  background-color: rgba($color-black, .02);
 }
 
 a {
@@ -23,7 +22,21 @@ a {
 }
 
 .site-container {
-  @include transition(transform .1s);
+  @include transition(transform .2s);
+  background-color: rgba($color-black, .02);
+
+  .site-search-opened & {
+    @include transform(translate3d(-280px, 0, 0));
+  }
+
+  @media screen and (max-width: $mobile) {
+    .menu-main-opened & {
+      @include transform(translate3d(-130px, 0, 0));
+    }
+  }
+}
+
+.wrap {
   padding-top: 80px;
   padding-bottom: 80px;
   margin-right: auto;
@@ -57,10 +70,6 @@ a {
 
   @media screen and (max-width: $mobile) {
     padding-top: 50px;
-
-    .menu-main-open & {
-      @include transform(translate3d(-130px, 0, 0));
-    }
   }
 
   @media screen and (min-width: $mobile + 1) {

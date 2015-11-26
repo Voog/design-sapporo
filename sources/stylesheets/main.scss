@@ -9,12 +9,14 @@
 
 // GENERAL
 @import 'general/base';
-@import 'general/navigation-menus';
+@import 'general/menus';
 
 // COMPONENTS
 @import 'components/site-header';
+@import 'components/site-search';
 @import 'components/menu-level-1';
 @import 'components/menu-level-2';
+@import 'components/menu-language';
 @import 'components/site-footer';
 
 // CONTENT AREAS

@@ -2,8 +2,8 @@
 // Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
 
 // HYPHENATE
-@mixin hyphenate($boolean:true) {
-  @if $boolean == true {
+@mixin hyphenate($boolean: true) {
+  @if ($boolean == true) {
     @include hyphens(auto);
     word-break: break-word;
     word-wrap: break-word;
@@ -12,4 +12,33 @@
     word-break: normal;
     word-wrap: normal;
   }
+}
+
+// BUTTON ELEMENT RESET
+@mixin button {
+  margin: 0;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+}
+
+@mixin input-ios-reset {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+@mixin inherit-font {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
