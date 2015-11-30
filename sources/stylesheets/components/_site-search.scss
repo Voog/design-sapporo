@@ -1,5 +1,7 @@
 .site-search-btn {
   @include button;
+  vertical-align: top;
+  padding: 6px 5px 4px 5px;
 }
 
 .site-search {
@@ -7,12 +9,26 @@
   top: 0;
   right: -280px;
   bottom: 0;
-  width: 220px;
-  padding: 50px 30px 20px;
+  width: 280px;
+  // padding-right: 30px;
+  // padding-bottom: 20px;
+  // padding-left: 30px;
   background-color: rgba($color-white, 1);
+
+  // @media screen and (max-width: $mobile) {
+  //   padding-top: 50px;
+  // }
+
+  // @media screen and (min-width: $mobile + 1) {
+  //   padding-top: 90px;
+  // }
 
   .site-search-closed & {
     display: none;
+  }
+
+  .search-form {
+    position: fixed;
   }
 
   .search-input {
@@ -34,7 +50,8 @@
 
 // Site search results modal custom styles.
 .voog-search-modal {
-  margin-top: 20px;
+  height: 100vh;
+  overflow: auto;
 
   // Search modal has the following state classes:
   &.loading {
@@ -77,10 +94,20 @@
 
     h3 {
       // Search result's heading.
+      a {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgba($color-black, 1);
+      }
     }
 
     p {
       // Search result's excerpt.
+    }
+
+    em {
+      font-style: normal;
+      background-color: rgba($color-highlight, .5);
     }
   }
 

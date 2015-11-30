@@ -9315,9 +9315,11 @@ return jQuery;
       if ($html.hasClass('menu-main-opened')) {
         $html.removeClass('menu-main-opened site-search-closed');
         $html.addClass('site-search-opened menu-main-closed');
+        $('.js-search-input').focus();
       } else if ($html.hasClass('site-search-closed')) {
         $html.removeClass('site-search-closed');
         $html.addClass('site-search-opened');
+        $('.js-search-input').focus();
       } else if ($html.hasClass('site-search-opened')) {
         $html.removeClass('site-search-opened');
 

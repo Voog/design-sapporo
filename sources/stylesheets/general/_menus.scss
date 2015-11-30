@@ -2,6 +2,7 @@
 .menu-btn {
   @include size(25px);
   position: relative;
+  top: 3px;
   padding: 0;
   vertical-align: top;
   font-size: 0;

@@ -8,8 +8,3 @@
 # Folders
 bower_components/
 node_modules/
-
-# Build folders.
-/images/
-/javascripts/
-/stylesheets/
