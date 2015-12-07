@@ -13,9 +13,7 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          <header class="content-area">
-            {% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
-          </header>
+          <header class="content-area">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</header>
 
           <section class="inner content-area" data-search-indexing-allowed="true">{% content %}</section>
         </main>

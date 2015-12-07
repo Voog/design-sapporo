@@ -1,38 +1,49 @@
 .cms-add-article {
-	padding-right: 20px;
-	padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 
 }
 
 .blog-article {
-	.blog-listing-page & {
-		display: inline-block;
-		vertical-align: top;
-		width: 340px;
-		padding: 20px;
-	}
+  .blog-listing-page & {
+    display: inline-block;
+    vertical-align: top;
+    width: 340px;
+    padding: 20px;
+  }
+}
 
-	.article-image {
-		.blog-listing-page & {
-			@include size(340px);
-			display: block;
-			object-fit: contain;
+.article-header {
+  text-align: center;
+}
 
-			// TODO: Add object-fit polyfill.
-		}
-	}
+.article-image {
+  .blog-listing-page & {
+    @include size(340px);
+    display: block;
+    object-fit: contain;
 
-	.article-title {
+    // TODO: Add object-fit polyfill.
+  }
+}
+
+.article-title {
+  margin-bottom: 0;
+  color: rgba($color-black, .8);
+
+  .blog-listing-page & {
     text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+  }
 
-		.blog-listing-page & {
-			font-size: 18px;
-			font-weight: 100;
-			color: rgba($color-black, .8);
-		}
+  .blog-article-page & {
+    font-size: 50px;
+  }
+}
 
-		.blog-article-page & {
-			font-size: 50px;
-		}
-	}
+.article-date {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba($color-black, .5);
 }

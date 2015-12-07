@@ -13,7 +13,7 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          <section class="content-area" data-search-indexing-allowed="true">{% content %}</section>
+          <section class="inner content-area" data-search-indexing-allowed="true">{% content %}</section>
         </main>
 
         {% include "site-footer" %}

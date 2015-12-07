@@ -886,22 +886,35 @@ a {
   width: 340px;
   padding: 20px;
 }
-.blog-listing-page .blog-article .article-image {
+
+.article-header {
+  text-align: center;
+}
+
+.blog-listing-page .article-image {
   height: 340px;
   width: 340px;
   display: block;
   object-fit: contain;
 }
-.blog-article .article-title {
-  text-align: center;
-}
-.blog-listing-page .blog-article .article-title {
-  font-size: 18px;
-  font-weight: 100;
+
+.article-title {
+  margin-bottom: 0;
   color: rgba(0, 0, 0, 0.8);
 }
-.blog-article-page .blog-article .article-title {
+.blog-listing-page .article-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+}
+.blog-article-page .article-title {
   font-size: 50px;
+}
+
+.article-date {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .content-area {

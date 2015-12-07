@@ -20,7 +20,7 @@
             </header>
 
 
-            <div class="article-content content-area" data-search-indexing-allowed="true">
+            <div class="article-content inner content-area" data-search-indexing-allowed="true">
               <div class="article-excerpt">{% editable article.excerpt %}</div>
               <div class="article-body">{% editable article.body %}</div>
             </div>
