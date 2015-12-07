@@ -9237,49 +9237,49 @@ return jQuery;
     // that shouldn't trigger the sideclick events.
     $(document).on('click', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
-        var $html = $('html');
+        var $body = $('body');
 
-        $html.removeClass('menu-language-popover-open');
-        $html.removeClass('menu-main-opened');
-        $html.removeClass('site-search-opened');
+        $body.removeClass('menu-language-popover-open');
+        $body.removeClass('menu-main-opened');
+        $body.removeClass('site-search-opened');
 
         setTimeout(function(){
-          $html.addClass('menu-main-closed');
-          $html.addClass('site-search-closed');
+          $body.addClass('menu-main-closed');
+          $body.addClass('site-search-closed');
        }, 200);
       }
     });
 
     // Toggles main menu in mobile view.
   	$('.js-toggle-menu-main').click(function() {
-      var $html = $('html');
+      var $body = $('body');
 
-      if ($html.hasClass('site-search-opened')) {
-        $html.removeClass('site-search-opened menu-main-closed');
-        $html.addClass('menu-main-opened site-search-closed');
-      } else if ($html.hasClass('menu-main-closed')) {
-        $html.removeClass('menu-main-closed');
-        $html.addClass('menu-main-opened');
-      } else if ($html.hasClass('menu-main-opened')) {
-        $html.removeClass('menu-main-opened');
+      if ($body.hasClass('site-search-opened')) {
+        $body.removeClass('site-search-opened menu-main-closed');
+        $body.addClass('menu-main-opened site-search-closed');
+      } else if ($body.hasClass('menu-main-closed')) {
+        $body.removeClass('menu-main-closed');
+        $body.addClass('menu-main-opened');
+      } else if ($body.hasClass('menu-main-opened')) {
+        $body.removeClass('menu-main-opened');
 
         setTimeout(function(){
-          $html.addClass('menu-main-closed');
+          $body.addClass('menu-main-closed');
        }, 200);
       }
 
-      if ($html.hasClass('site-search-opened')) {
-        $html.removeClass('site-search-opened');
+      if ($body.hasClass('site-search-opened')) {
+        $body.removeClass('site-search-opened');
       }
   	});
 
     // Toggles language menu.
     $('.js-toggle-menu-language').click(function() {
-      if (!$('html').hasClass('menu-language-popover-open')) {
+      if (!$('body').hasClass('menu-language-popover-open')) {
         handleMenuLanguagePopoverPositioning();
-        $('html').addClass('menu-language-popover-open');
+        $('body').addClass('menu-language-popover-open');
       } else {
-        $('html').removeClass('menu-language-popover-open');
+        $('body').removeClass('menu-language-popover-open');
       }
     });
 
@@ -9310,26 +9310,26 @@ return jQuery;
 
     // Toggles site search.
     $('.js-toggle-site-search').click(function() {
-      var $html = $('html');
+      var $body = $('body');
 
-      if ($html.hasClass('menu-main-opened')) {
-        $html.removeClass('menu-main-opened site-search-closed');
-        $html.addClass('site-search-opened menu-main-closed');
+      if ($body.hasClass('menu-main-opened')) {
+        $body.removeClass('menu-main-opened site-search-closed');
+        $body.addClass('site-search-opened menu-main-closed');
         $('.js-search-input').focus();
-      } else if ($html.hasClass('site-search-closed')) {
-        $html.removeClass('site-search-closed');
-        $html.addClass('site-search-opened');
+      } else if ($body.hasClass('site-search-closed')) {
+        $body.removeClass('site-search-closed');
+        $body.addClass('site-search-opened');
         $('.js-search-input').focus();
-      } else if ($html.hasClass('site-search-opened')) {
-        $html.removeClass('site-search-opened');
+      } else if ($body.hasClass('site-search-opened')) {
+        $body.removeClass('site-search-opened');
 
         setTimeout(function(){
-          $html.addClass('site-search-closed');
+          $body.addClass('site-search-closed');
        }, 200);
       }
 
-      if ($html.hasClass('menu-main-opened')) {
-        $html.removeClass('menu-main-opened');
+      if ($body.hasClass('menu-main-opened')) {
+        $body.removeClass('menu-main-opened');
       }
     });
   };
@@ -9357,14 +9357,14 @@ return jQuery;
   //============================================================================
   var bindLanguageFlagsToggle = function() {
     $('.js-toggle-language-flags').click(function() {
-      if ($('html').hasClass('language-flags-disabled')) {
-        $('html')
+      if ($('body').hasClass('language-flags-disabled')) {
+        $('body')
           .removeClass('language-flags-disabled')
           .addClass('language-flags-enabled');
 
         siteData.set("language_flags_enabled", true);
       } else {
-        $('html')
+        $('body')
           .removeClass('language-flags-enabled')
           .addClass('language-flags-disabled');
 
