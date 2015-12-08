@@ -1,18 +1,12 @@
 // Basics.
 html {
   &.site-search-opened {
-    position: fixed;
-    right: 0;
-    left: 0;
     height: 100%;
     overflow: hidden;
   }
 
   &.menu-main-opened {
     @media screen and (max-width: $mobile) {
-      position: fixed;
-      right: 0;
-      left: 0;
       height: 100%;
       overflow: hidden;
     }
@@ -23,6 +17,24 @@ body {
   margin: 0;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: rgba($color-black, 1);
+
+  .site-search-opened & {
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .menu-main-opened & {
+    @media screen and (max-width: $mobile) {
+      position: fixed;
+      right: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
 }
 
 a {
@@ -42,16 +54,18 @@ a {
 }
 
 .site-container {
-  @include transition(transform .2s);
+  @include transition(right .2s);
+  position: relative;
+  right: 0;
   background-color: rgba($color-black, .02);
 
   .site-search-opened & {
-    @include transform(translate3d(-280px, 0, 0));
+    right: 280px;
   }
 
   @media screen and (max-width: $mobile) {
     .menu-main-opened & {
-      @include transform(translate3d(-130px, 0, 0));
+      right: 130px;
     }
   }
 }

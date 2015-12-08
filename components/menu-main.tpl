@@ -1,5 +1,5 @@
 <nav class="menu-main js-menu-main js-prevent-sideclick">
-  <button class="btn menu-back-btn js-toggle-menu-prev{% if page.level == 0 %} hidden{% endif %}">
+  <button class="btn btn-menu-back js-toggle-menu-prev{% if page.level == 0 %} hidden{% endif %}">
     <svg width="7px" height="13px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="#ico-arrow"></use>
     </svg>
@@ -13,7 +13,7 @@
     {% for level_1 in site.visible_menuitems %}
       <li class="menu-item{% if level_1.selected? %} item-current{% endif %}">
         {% if level_1.link? == false and editmode or level_1.children? %}
-          <button class="btn js-toggle-menu-sub{% if page.level > 0 %} hidden{% endif %}">
+          <button class="btn btn-menu-forward js-toggle-menu-sub{% if page.level > 0 %} hidden{% endif %}">
             <svg width="7px" height="13px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="#ico-arrow"></use>
             </svg>

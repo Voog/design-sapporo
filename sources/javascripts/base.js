@@ -26,49 +26,52 @@
     // that shouldn't trigger the sideclick events.
     $(document).on('click', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
-        var $body = $('body');
+        var $html = $('html'),
+            $searchInput = $('.js-search-input');
 
-        $body.removeClass('menu-language-popover-open');
-        $body.removeClass('menu-main-opened');
-        $body.removeClass('site-search-opened');
+        $html.removeClass('menu-language-popover-open');
+        $html.removeClass('menu-main-opened');
+        $html.removeClass('site-search-opened');
+
+        $searchInput.val('');
 
         setTimeout(function(){
-          $body.addClass('menu-main-closed');
-          $body.addClass('site-search-closed');
+          $html.addClass('menu-main-closed');
+          $html.addClass('site-search-closed');
        }, 200);
       }
     });
 
     // Toggles main menu in mobile view.
   	$('.js-toggle-menu-main').click(function() {
-      var $body = $('body');
+      var $html = $('html');
 
-      if ($body.hasClass('site-search-opened')) {
-        $body.removeClass('site-search-opened menu-main-closed');
-        $body.addClass('menu-main-opened site-search-closed');
-      } else if ($body.hasClass('menu-main-closed')) {
-        $body.removeClass('menu-main-closed');
-        $body.addClass('menu-main-opened');
-      } else if ($body.hasClass('menu-main-opened')) {
-        $body.removeClass('menu-main-opened');
+      if ($html.hasClass('site-search-opened')) {
+        $html.removeClass('site-search-opened menu-main-closed');
+        $html.addClass('menu-main-opened site-search-closed');
+      } else if ($html.hasClass('menu-main-closed')) {
+        $html.removeClass('menu-main-closed');
+        $html.addClass('menu-main-opened');
+      } else if ($html.hasClass('menu-main-opened')) {
+        $html.removeClass('menu-main-opened');
 
         setTimeout(function(){
-          $body.addClass('menu-main-closed');
+          $html.addClass('menu-main-closed');
        }, 200);
       }
 
-      if ($body.hasClass('site-search-opened')) {
-        $body.removeClass('site-search-opened');
+      if ($html.hasClass('site-search-opened')) {
+        $html.removeClass('site-search-opened');
       }
   	});
 
     // Toggles language menu.
     $('.js-toggle-menu-language').click(function() {
-      if (!$('body').hasClass('menu-language-popover-open')) {
+      if (!$('html').hasClass('menu-language-popover-open')) {
         handleMenuLanguagePopoverPositioning();
-        $('body').addClass('menu-language-popover-open');
+        $('html').addClass('menu-language-popover-open');
       } else {
-        $('body').removeClass('menu-language-popover-open');
+        $('html').removeClass('menu-language-popover-open');
       }
     });
 
@@ -99,26 +102,26 @@
 
     // Toggles site search.
     $('.js-toggle-site-search').click(function() {
-      var $body = $('body');
+      var $html = $('html');
 
-      if ($body.hasClass('menu-main-opened')) {
-        $body.removeClass('menu-main-opened site-search-closed');
-        $body.addClass('site-search-opened menu-main-closed');
+      if ($html.hasClass('menu-main-opened')) {
+        $html.removeClass('menu-main-opened site-search-closed');
+        $html.addClass('site-search-opened menu-main-closed');
         $('.js-search-input').focus();
-      } else if ($body.hasClass('site-search-closed')) {
-        $body.removeClass('site-search-closed');
-        $body.addClass('site-search-opened');
+      } else if ($html.hasClass('site-search-closed')) {
+        $html.removeClass('site-search-closed');
+        $html.addClass('site-search-opened');
         $('.js-search-input').focus();
-      } else if ($body.hasClass('site-search-opened')) {
-        $body.removeClass('site-search-opened');
+      } else if ($html.hasClass('site-search-opened')) {
+        $html.removeClass('site-search-opened');
 
         setTimeout(function(){
-          $body.addClass('site-search-closed');
+          $html.addClass('site-search-closed');
        }, 200);
       }
 
-      if ($body.hasClass('menu-main-opened')) {
-        $body.removeClass('menu-main-opened');
+      if ($html.hasClass('menu-main-opened')) {
+        $html.removeClass('menu-main-opened');
       }
     });
   };
@@ -146,14 +149,14 @@
   //============================================================================
   var bindLanguageFlagsToggle = function() {
     $('.js-toggle-language-flags').click(function() {
-      if ($('body').hasClass('language-flags-disabled')) {
-        $('body')
+      if ($('html').hasClass('language-flags-disabled')) {
+        $('html')
           .removeClass('language-flags-disabled')
           .addClass('language-flags-enabled');
 
         siteData.set("language_flags_enabled", true);
       } else {
-        $('body')
+        $('html')
           .removeClass('language-flags-enabled')
           .addClass('language-flags-disabled');
 

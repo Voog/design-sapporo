@@ -44,14 +44,37 @@
   }
 }
 
-.menu-back-btn {
+.btn-menu-back {
   @include transform(rotate(180deg));
   position: absolute;
-  top: 18px;
+  padding: 15px 10px;
+  font-size: 0;
+  stroke: rgba(0,0,0,.5);
+  background-color: rgba($color-white, 1);
+  border-style: none;
+  display: block;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
 
   &.hidden {
     display: none;
   }
+
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+}
+
+.btn-menu-forward {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  z-index: 1;
+  padding: 5px;
+  background-color: transparent;
 
   @media screen and (min-width: $mobile) {
     display: none;
@@ -99,6 +122,7 @@
   display: inline-block;
 
   @media screen and (max-width: $mobile) {
+    @include transition(right .2s);
     position: fixed;
     top: 0;
     right: -130px;
@@ -106,17 +130,14 @@
     width: 130px;
     background-color: rgba($color-white, 1);
 
-    .menu-main-closed &,
-    .menu-main-opened {
-      display: none;
+    .menu-main-opened & {
+      right: 0;
     }
   }
 
   .btn {
-    padding: 5px;
     font-size: 0;
     stroke: rgba($color-black, .5);
-    background-color: transparent;
     border-style: none;
 
     &:hover {
@@ -152,17 +173,6 @@
     .menu-item {
       @media screen and (max-width: $mobile) {
         position: relative;
-      }
-    }
-
-    .btn {
-      position: absolute;
-      top: 3px;
-      right: 0;
-      z-index: 1;
-
-      @media screen and (min-width: $mobile) {
-        display: none;
       }
     }
   }

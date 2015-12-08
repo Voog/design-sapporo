@@ -14,11 +14,6 @@
       </svg>
     </button>
 
-    <button class="site-search-btn js-toggle-site-search js-prevent-sideclick">
-      <svg class="ico-search" width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#ico-search"></use>
-      </svg>
-    </button>
     {% include "site-search" %}
 	</div>
 </header>

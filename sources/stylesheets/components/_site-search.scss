@@ -5,30 +5,32 @@
 }
 
 .site-search {
+  @include transition(right .2s);
   position: fixed;
   top: 0;
   right: -280px;
   bottom: 0;
   width: 280px;
-  // padding-right: 30px;
-  // padding-bottom: 20px;
-  // padding-left: 30px;
   background-color: rgba($color-white, 1);
 
-  // @media screen and (max-width: $mobile) {
-  //   padding-top: 50px;
-  // }
-
-  // @media screen and (min-width: $mobile + 1) {
-  //   padding-top: 90px;
-  // }
-
-  .site-search-closed & {
-    display: none;
+  .site-search-opened & {
+    right: 0;
   }
 
   .search-form {
-    position: fixed;
+    position: absolute;
+    right: 25px;
+    left: 25px;
+    z-index: 1;
+    background-color: rgba($color-white, 1);
+
+    @media screen and (max-width: $mobile) {
+      padding-top: 52px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      padding-top: 90px;
+    }
   }
 
   .search-input {
@@ -40,6 +42,11 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgba($color-black, .1);
+
+    &:focus {
+      outline: none;
+      border-color: rgba($color-black, .3);
+    }
   }
 
   .search-submit {
@@ -50,8 +57,21 @@
 
 // Site search results modal custom styles.
 .voog-search-modal {
-  height: 100vh;
+  -webkit-overflow-scrolling: touch;
   overflow: auto;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+
+  @media screen and (max-width: $mobile) {
+    height: calc(100% - 115px);
+    padding-top: 90px;
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    height: calc(100% - 190px);
+    padding-top: 165px;
+  }
 
   // Search modal has the following state classes:
   &.loading {
@@ -94,6 +114,10 @@
 
     h3 {
       // Search result's heading.
+      &:first-child {
+        margin-top: 0;
+      }
+
       a {
         font-size: 18px;
         font-weight: 600;
