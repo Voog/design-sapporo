@@ -1,7 +1,7 @@
 // Text type content area.
 .content-area {
   @include clearfix;
-  @include hyphenate();
+  @include hyphenate;
   color: rgba($color-black, .8);
   line-height: 1.7;
 

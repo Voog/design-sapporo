@@ -1,6 +1,6 @@
 // Header of the site.
 .site-header {
-  @include hyphenate();
+  @include hyphenate;
 
   .flexbox & {
     @include display(flex);

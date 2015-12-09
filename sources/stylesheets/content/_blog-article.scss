@@ -28,6 +28,7 @@
 }
 
 .article-title {
+  @include hyphenate;
   margin-bottom: 0;
   color: rgba($color-black, .8);
 
