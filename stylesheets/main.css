@@ -239,10 +239,8 @@ a {
   color: #cc0000;
 }
 
-@media screen and (min-width: 641px) {
-  .menu-horizontal > .menu-item {
-    display: inline-block;
-  }
+.menu-horizontal > .menu-item {
+  display: inline-block;
 }
 
 .menu-vertical > .menu-item {

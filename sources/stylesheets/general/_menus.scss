@@ -108,9 +108,7 @@
 
 .menu-horizontal {
   > .menu-item {
-    @media screen and (min-width: $mobile + 1) {
-      display: inline-block;
-    }
+    display: inline-block;
   }
 }
 
