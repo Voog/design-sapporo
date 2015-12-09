@@ -7,14 +7,17 @@
   }
 
   .ico-tags {
+    position: relative;
+    top: 4px;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     margin-right: 5px
   }
 
   .menu {
     display: inline-block;
-    vertical-align: middle
+    vertical-align: top;
+    max-width: calc(100% - 23px);
   }
 
   .menu-item {
