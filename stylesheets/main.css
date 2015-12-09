@@ -226,6 +226,19 @@ a {
   list-style-type: none;
 }
 
+.menu-public a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.menu-public a:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+.menu-public a.selected {
+  color: black;
+}
+.menu-public a.untranslated {
+  color: #cc0000;
+}
+
 @media screen and (min-width: 641px) {
   .menu-horizontal > .menu-item {
     display: inline-block;
@@ -530,19 +543,9 @@ a {
   padding-top: 7px;
   padding-bottom: 6px;
   padding-left: 10px;
-  color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: .2em;
   opacity: .8;
-}
-.menu-level-1 > .menu-item > a:hover {
-  color: rgba(0, 0, 0, 0.8);
-}
-.menu-level-1 > .menu-item > a.selected {
-  color: black;
-}
-.menu-level-1 > .menu-item > a.untranslated {
-  color: #cc0000;
 }
 @media screen and (min-width: 641px) {
   .menu-level-1 > .menu-item:not(:first-child) {
@@ -559,7 +562,6 @@ a {
 
 .menu-level-2 .menu-item a {
   display: block;
-  color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 640px) {
   .menu-level-2 .menu-item a {
@@ -570,12 +572,6 @@ a {
   .menu-level-2 .menu-item a {
     padding: 6px;
   }
-}
-.menu-level-2 .menu-item a:hover {
-  color: rgba(0, 0, 0, 0.8);
-}
-.menu-level-2 .menu-item a.selected {
-  color: black;
 }
 
 .menu-language-btn {
@@ -887,6 +883,22 @@ a {
   background-position: -126px;
 }
 
+.menu-blog-tags {
+  text-align: center;
+}
+.menu-blog-tags .ico-tags {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.menu-blog-tags .menu {
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu-blog-tags .menu-item a {
+  font-size: 14px;
+}
+
 .site-footer {
   margin-top: 60px;
 }
@@ -933,9 +945,21 @@ a {
   flex: 1 0 auto;
 }
 
-.cms-add-article {
+.cms-blog-article-add {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.cms-blog-article-tags {
+  position: relative;
+}
+.cms-blog-article-tags .edy-tageditor {
+  margin-left: 20px;
+}
+.cms-blog-article-tags .ico-tags {
+  position: absolute;
+  top: 6px;
+  left: 0;
 }
 
 .blog-listing-page .blog-article {
@@ -943,10 +967,6 @@ a {
   vertical-align: top;
   width: 340px;
   padding: 20px;
-}
-
-.article-header {
-  text-align: center;
 }
 
 .blog-listing-page .article-image {
@@ -957,17 +977,11 @@ a {
 }
 
 .article-title {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   margin-bottom: 0;
+  text-align: center;
   color: rgba(0, 0, 0, 0.8);
 }
 .blog-listing-page .article-title {
-  text-align: center;
   font-size: 18px;
   font-weight: 100;
 }
@@ -976,7 +990,9 @@ a {
 }
 
 .article-date {
+  display: block;
   text-transform: uppercase;
+  text-align: center;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
 }

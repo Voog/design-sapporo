@@ -1,0 +1,20 @@
+.menu-blog-tags {
+  text-align: center;
+
+  .ico-tags {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px
+  }
+
+  .menu {
+    display: inline-block;
+    vertical-align: middle
+  }
+
+  .menu-item {
+    a {
+      font-size: 14px;
+    }
+  }
+}

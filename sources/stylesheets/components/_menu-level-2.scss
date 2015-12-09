@@ -2,7 +2,6 @@
   .menu-item {
     a {
       display: block;
-      color: rgba($color-black, .5);
 
       @media screen and (max-width: $mobile) {
         padding: 7px 10px;
@@ -10,14 +9,6 @@
 
       @media screen and (min-width: $mobile + 1) {
         padding: 6px;
-      }
-
-      &:hover {
-        color: rgba($color-black, .8);
-      }
-
-      &.selected {
-        color: rgba($color-black, 1);
       }
     }
   }

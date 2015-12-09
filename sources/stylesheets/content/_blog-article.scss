@@ -1,7 +1,21 @@
-.cms-add-article {
+.cms-blog-article-add {
   padding-right: 20px;
   padding-left: 20px;
 
+}
+
+.cms-blog-article-tags {
+  position: relative;
+
+  .edy-tageditor {
+    margin-left: 20px;
+  }
+
+  .ico-tags {
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
 }
 
 .blog-article {
@@ -11,10 +25,6 @@
     width: 340px;
     padding: 20px;
   }
-}
-
-.article-header {
-  text-align: center;
 }
 
 .article-image {
@@ -28,12 +38,12 @@
 }
 
 .article-title {
-  @include hyphenate;
+  // @include hyphenate;
   margin-bottom: 0;
+  text-align: center;
   color: rgba($color-black, .8);
 
   .blog-listing-page & {
-    text-align: center;
     font-size: 18px;
     font-weight: 100;
   }
@@ -44,7 +54,9 @@
 }
 
 .article-date {
+  display: block;
   text-transform: uppercase;
+  text-align: center;
   font-size: 18px;
   color: rgba($color-black, .5);
 }

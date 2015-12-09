@@ -88,6 +88,24 @@
   list-style-type: none;
 }
 
+.menu-public {
+  a {
+    color: rgba($color-black, .5);
+
+    &:hover {
+      color: rgba($color-black, .75);
+    }
+
+    &.selected {
+      color: rgba($color-black, 1);
+    }
+
+    &.untranslated {
+      color: rgba($color-error, 1)
+    }
+  }
+}
+
 .menu-horizontal {
   > .menu-item {
     @media screen and (min-width: $mobile + 1) {

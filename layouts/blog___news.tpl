@@ -15,7 +15,7 @@
         <main class="page-content" role="main">
           <section class="blog-articles content-area">
             {% if editmode %}
-              <div class="cms-add-article">{% addbutton %}</div>
+              <div class="cms-blog-article-add">{% addbutton %}</div>
             {% endif %}
 
             {% for article in articles %}
