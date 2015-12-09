@@ -967,15 +967,101 @@ a {
 }
 
 .blog-listing-page .blog-article {
-  display: inline-block;
-  vertical-align: top;
-  width: 340px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .blog-listing-page .blog-article {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .blog-listing-page .blog-article {
+    display: inline-block;
+    vertical-align: top;
+    width: 340px;
+    width: calc(50% - 30px);
+  }
+  .blog-listing-page .blog-article:nth-child(odd) {
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+  .blog-listing-page .blog-article:nth-child(even) {
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 741px) {
+  .blog-listing-page .blog-article {
+    width: calc(33.3% - 40px);
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .article-top {
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+  .article-top:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 100%;
+  }
+  .article-top > .aspect-ratio-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .article-top > .aspect-ratio-inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .blog-listing-page .article-image {
-  height: 340px;
-  width: 340px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
   display: block;
   object-fit: contain;
 }

@@ -1,6 +1,5 @@
 // CUSTOM MIXINS
 // Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
-
 // HYPHENATE
 @mixin hyphenate($boolean: true) {
   @if ($boolean == true) {
@@ -41,4 +40,23 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .aspect-ratio-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }

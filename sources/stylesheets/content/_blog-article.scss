@@ -20,20 +20,64 @@
 
 .blog-article {
   .blog-listing-page & {
-    display: inline-block;
-    vertical-align: top;
-    width: 340px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media screen and (max-width: $blog-listing-mobile) {
+      display: block;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media screen and (min-width: $blog-listing-mobile + 1) {
+      display: inline-block;
+      vertical-align: top;
+      width: 340px;
+      width: calc(50% - 30px);
+
+      &:nth-child(odd) {
+        padding-right: 10px;
+        padding-left: 20px;
+      }
+
+      &:nth-child(even) {
+        padding-right: 20px;
+        padding-left: 10px;
+      }
+    }
+
+    @media screen and (min-width: $blog-listing-tablet + 1) {
+      width: calc(33.3% - 40px);
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+}
+
+.article-top {
+  @media screen and (min-width: $blog-listing-mobile + 1) {
+    @include aspect-ratio(1, 1);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+  }
+
+  > .aspect-ratio-inner {
+    @media screen and (min-width: $blog-listing-mobile + 1) {
+      @include display(flex);
+    }
   }
 }
 
 .article-image {
   .blog-listing-page & {
-    @include size(340px);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
     display: block;
-    object-fit: contain;
 
-    // TODO: Add object-fit polyfill.
+    object-fit: contain;
   }
 }
 
