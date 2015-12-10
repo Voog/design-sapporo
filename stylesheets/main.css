@@ -640,16 +640,16 @@ a {
 .language-flags-disabled .menu-language-btn:hover {
   opacity: .8;
 }
-.language-flags-enabled .menu-language-btn .ico-triangle {
+.language-flags-enabled .menu-language-btn .menu-language-btn-triangle {
   display: none;
 }
-.language-flags-disabled .menu-language-btn .ico-triangle {
+.language-flags-disabled .menu-language-btn .menu-language-btn-triangle {
   position: absolute;
   top: 50%;
   right: 10px;
   margin-top: -3px;
 }
-.menu-language-popover-open .menu-language-btn .ico-triangle {
+.menu-language-popover-open .menu-language-btn .menu-language-btn-triangle {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -925,7 +925,7 @@ a {
   padding-right: 20px;
   padding-left: 20px;
 }
-.menu-blog-tags .ico-tags {
+.menu-blog-tags .blog-tags-ico {
   position: relative;
   top: 4px;
   display: inline-block;
@@ -998,7 +998,7 @@ a {
 .cms-blog-article-tags .edy-tageditor {
   margin-left: 20px;
 }
-.cms-blog-article-tags .ico-tags {
+.cms-blog-article-tags .blog-tags-ico {
   position: absolute;
   top: 6px;
   left: 0;

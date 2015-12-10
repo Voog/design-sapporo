@@ -1,7 +1,7 @@
 {% if editmode or article.tags != empty %}
   {% if editmode %}
       <div class="cms-blog-article-tags">
-        <svg class="ico-tags" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14px" height="14px">
+        <svg class="blog-tags-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14px" height="14px">
           <use xlink:href="#ico-tags"></use>
         </svg>
 
@@ -9,7 +9,7 @@
       </div>
   {% else %}
     <nav class="menu-blog-tags">
-      <svg class="ico-tags" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14px" height="14px">
+      <svg class="blog-tags-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14px" height="14px">
         <use xlink:href="#ico-tags"></use>
       </svg>
 

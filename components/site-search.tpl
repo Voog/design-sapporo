@@ -1,7 +1,7 @@
 {% comment %}Site search settings are located in "sources/javascript/base.js" file –> "bindSiteSearch" function.{% endcomment %}
 {% if site.search.enabled %}
   <button class="site-search-btn js-toggle-site-search js-prevent-sideclick">
-    <svg class="ico-search" width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
+    <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="#ico-search"></use>
     </svg>
   </button>
