@@ -593,6 +593,7 @@ a {
   font-size: 0;
 }
 .language-flags-disabled .menu-language-btn {
+  margin-left: 5px;
   padding: 5px 25px 5px 10px;
   font-family: inherit;
   font-size: 14px;
