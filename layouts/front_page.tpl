@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-<html class="{{ view_mode }} menu-main-closed site-search-closed" lang="{{ page.language_code }}">
+<html class="{{ view_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
   </head>

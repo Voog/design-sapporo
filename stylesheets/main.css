@@ -433,7 +433,6 @@ a {
   border-style: none;
   cursor: pointer;
   vertical-align: top;
-  margin-left: 13px;
   padding: 6px 5px 4px 5px;
 }
 .site-search-btn:focus {
@@ -442,6 +441,11 @@ a {
 .site-search-btn::-moz-focus-inner {
   padding: 0;
   border-style: none;
+}
+@media screen and (min-width: 641px) {
+  .site-search-btn {
+    margin-left: 13px;
+  }
 }
 .site-search-btn:hover .search-ico, .site-search-opened .site-search-btn .search-ico {
   fill: rgba(0, 0, 0, 0.75);

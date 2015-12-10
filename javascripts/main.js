@@ -9245,11 +9245,6 @@ return jQuery;
         $html.removeClass('site-search-opened');
 
         $searchInput.val('');
-
-        setTimeout(function(){
-          $html.addClass('menu-main-closed');
-          $html.addClass('site-search-closed');
-       }, 200);
       }
     });
 
@@ -9257,32 +9252,24 @@ return jQuery;
   	$('.js-toggle-menu-main').click(function() {
       var $html = $('html');
 
-      if ($html.hasClass('site-search-opened')) {
-        $html.removeClass('site-search-opened menu-main-closed');
-        $html.addClass('menu-main-opened site-search-closed');
-      } else if ($html.hasClass('menu-main-closed')) {
-        $html.removeClass('menu-main-closed');
-        $html.addClass('menu-main-opened');
-      } else if ($html.hasClass('menu-main-opened')) {
-        $html.removeClass('menu-main-opened');
-
-        setTimeout(function(){
-          $html.addClass('menu-main-closed');
-       }, 200);
-      }
-
-      if ($html.hasClass('site-search-opened')) {
-        $html.removeClass('site-search-opened');
-      }
+      $html.removeClass('menu-language-popover-open site-search-opened');
+      $html.toggleClass('menu-main-opened');
   	});
 
     // Toggles language menu.
     $('.js-toggle-menu-language').click(function() {
-      if (!$('html').hasClass('menu-language-popover-open')) {
+      var $html = $('html');
+
+      $html.toggleClass('menu-language-popover-open');
+
+      if ($html.hasClass('menu-main-opened') || $html.hasClass('site-search-opened')) {
+        $html.removeClass('menu-main-opened site-search-opened');
+
+        setTimeout(function(){
+          handleMenuLanguagePopoverPositioning();  
+        }, 300);
+      } else if ($html.hasClass('menu-language-popover-open')) {
         handleMenuLanguagePopoverPositioning();
-        $('html').addClass('menu-language-popover-open');
-      } else {
-        $('html').removeClass('menu-language-popover-open');
       }
     });
 
@@ -9315,31 +9302,22 @@ return jQuery;
     $('.js-toggle-site-search').click(function() {
       var $html = $('html');
 
-      if ($html.hasClass('menu-main-opened')) {
-        $html.removeClass('menu-main-opened site-search-closed');
-        $html.addClass('site-search-opened menu-main-closed');
-        $('.js-search-input').focus();
-      } else if ($html.hasClass('site-search-closed')) {
-        $html.removeClass('site-search-closed');
-        $html.addClass('site-search-opened');
-        $('.js-search-input').focus();
-      } else if ($html.hasClass('site-search-opened')) {
-        $html.removeClass('site-search-opened');
+      $html.removeClass('menu-language-popover-open menu-main-opened');
+      $html.toggleClass('site-search-opened');
 
-        setTimeout(function(){
-          $html.addClass('site-search-closed');
-       }, 200);
-      }
-
-      if ($html.hasClass('menu-main-opened')) {
-        $html.removeClass('menu-main-opened');
+      if ($html.hasClass('site-search-opened')) {
+        $('.js-search-input').focus();
       }
     });
 
     $('.js-clear-search-input').click(function() {
       var $searchInput = $('.js-search-input');
 
-      $searchInput.val('').focus();
+      if ($searchInput.val().length > 0) {
+        $searchInput.val('').focus();
+      } else {
+        $('html').removeClass('site-search-opened');
+      }
     });
   };
 
