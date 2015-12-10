@@ -5,7 +5,7 @@
     {% include "template-head" %}
   </head>
 
-  <body class="front-page blog-news-page blog-listing-page {{ language_flags_mode }}">
+  <body class="front-page blog-news-page blog-listing-page {{ language_flags_mode }}" data-search-indexing-allowed="false">
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">
@@ -13,20 +13,22 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          <section class="inner content-area" data-search-indexing-allowed="true">{% content %}</section>
+          {% include "blog-listing-tags" %}
 
-          {% for article in site.latest_12_articles %}
-            <a class="blog-article" href="{{ article.url }}">
-              <div class="article-top">
-                <div class="aspect-ratio-inner">
-                  {% if article.image %}
-                    <img class="article-image" src="{{ article.image }}" alt="{{ article.title }}">
-                  {% endif %}
+          <section class="blog-articles content-area">
+            {% for article in site.latest_12_articles %}
+              <a class="blog-article" href="{{ article.url }}">
+                <div class="article-top">
+                  <div class="aspect-ratio-inner">
+                    {% if article.image %}
+                      <img class="article-image" src="{{ article.image }}" alt="{{ article.title }}">
+                    {% endif %}
+                  </div>
                 </div>
-              </div>
-              <h2 class="article-title">{{ article.title }}</h2>
-            </a>
-          {% endfor %}
+                <h2 class="article-title">{{ article.title }}</h2>
+              </a>
+            {% endfor %}
+          </section>
         </main>
 
         {% include "site-footer" %}
