@@ -13,8 +13,6 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          {% include "blog-listing-tags" %}
-
           <section class="blog-articles content-area">
             {% for article in site.latest_12_articles %}
               <a class="blog-article" href="{{ article.url }}">
