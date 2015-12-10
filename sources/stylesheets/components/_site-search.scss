@@ -3,6 +3,17 @@
   vertical-align: top;
   margin-left: 13px;
   padding: 6px 5px 4px 5px;
+
+  &:hover,
+  .site-search-opened & {
+    .search-ico {
+      fill: rgba($color-black, .75);
+    }
+  }
+}
+
+.search-ico {
+  fill: rgba($color-black, .5);
 }
 
 .site-search {

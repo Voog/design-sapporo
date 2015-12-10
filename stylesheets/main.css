@@ -443,6 +443,13 @@ a {
   padding: 0;
   border-style: none;
 }
+.site-search-btn:hover .search-ico, .site-search-opened .site-search-btn .search-ico {
+  fill: rgba(0, 0, 0, 0.75);
+}
+
+.search-ico {
+  fill: rgba(0, 0, 0, 0.5);
+}
 
 .site-search {
   -webkit-transition: right 0.2s;
