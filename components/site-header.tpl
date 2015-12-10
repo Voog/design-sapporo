@@ -4,7 +4,6 @@
   </div>
 
   <div class="header-menu">
-    <button class="btn menu-btn js-toggle-menu-main js-prevent-sideclick">{{ "menu" | lc }}</button>
     {% include "menu-main" %}
 
     {% if editmode or site.has_many_languages? %}
