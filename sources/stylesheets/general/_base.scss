@@ -71,7 +71,6 @@ a {
 }
 
 .wrap {
-  padding-top: 80px;
   padding-bottom: 80px;
   margin-right: auto;
   margin-left: auto;
@@ -107,7 +106,7 @@ a {
   }
 
   @media screen and (min-width: $mobile + 1) {
-    padding-top: 80px;
+    padding-top: 75px;
   }
 }
 
