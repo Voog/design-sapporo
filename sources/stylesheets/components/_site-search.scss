@@ -38,7 +38,8 @@
     @include inherit-font;
     display: block;
     width: 100%;
-    padding: 4px 5px 3px;
+    padding-top: 4px;
+    padding-bottom: 3px;
     border-width: 1px;
     border-style: solid;
     border-color: rgba($color-black, .1);
