@@ -982,7 +982,10 @@ a {
   .blog-listing-page .blog-article {
     display: inline-block;
     vertical-align: top;
-    width: 340px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 740px) {
+  .blog-listing-page .blog-article {
     width: calc(50% - 30px);
   }
   .blog-listing-page .blog-article:nth-child(odd) {
