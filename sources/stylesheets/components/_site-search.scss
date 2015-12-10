@@ -16,44 +16,74 @@
   .site-search-opened & {
     right: 0;
   }
+}
 
-  .search-form {
-    position: absolute;
-    right: 25px;
-    left: 25px;
-    z-index: 1;
-    background-color: rgba($color-white, 1);
+.search-form {
+  position: absolute;
+  right: 25px;
+  left: 25px;
+  z-index: 1;
+  background-color: rgba($color-white, 1);
 
-    @media screen and (max-width: $mobile) {
-      padding-top: 52px;
-    }
-
-    @media screen and (min-width: $mobile + 1) {
-      padding-top: 90px;
-    }
+  @media screen and (max-width: $mobile) {
+    padding-top: 52px;
   }
 
-  .search-input {
-    @include input-ios-reset;
-    @include inherit-font;
+  @media screen and (min-width: $mobile + 1) {
+    padding-top: 90px;
+  }
+}
+
+.search-input {
+  @include input-ios-reset;
+  @include inherit-font;
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 4px 29px 3px 5px;
+  font-weight: 500;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba($color-black, .1);
+
+  @include placeholder() {
+    font-weight: 400;
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba($color-black, .3);
+  }
+}
+
+.search-clear {
+  fill: rgba($color-black, .2);
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
+
+  .not-empty & {
     display: block;
-    width: 100%;
-    padding-top: 4px;
-    padding-bottom: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba($color-black, .1);
-
-    &:focus {
-      outline: none;
-      border-color: rgba($color-black, .3);
-    }
   }
 
-  .search-submit {
-    position: relative;
-    top: -1px;
+  &:hover {
+    fill: rgba($color-black, .5);
   }
+}
+
+.search-submit {
+  position: relative;
+  top: -1px;
 }
 
 // Site search results modal custom styles.

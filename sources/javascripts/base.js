@@ -124,6 +124,12 @@
         $html.removeClass('menu-main-opened');
       }
     });
+
+    $('.js-clear-search-input').click(function() {
+      var $searchInput = $('.js-search-input');
+
+      $searchInput.val('').focus();
+    });
   };
 
   //============================================================================
