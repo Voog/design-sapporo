@@ -1,5 +1,3 @@
-<button class="btn menu-btn js-toggle-menu-main js-prevent-sideclick">{{ "menu" | lc }}</button>
-
 <nav class="menu-main js-menu-main js-prevent-sideclick">
   <button class="btn btn-menu-back js-toggle-menu-prev{% if page.level == 0 %} hidden{% endif %}">
     <svg width="7px" height="13px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">

@@ -16,5 +16,7 @@
     {% endif %}
 
     {% include "site-search" %}
+
+    <button class="btn menu-btn js-toggle-menu-main js-prevent-sideclick">{{ "menu" | lc }}</button>
   </div>
 </header>
