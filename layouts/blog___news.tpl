@@ -13,8 +13,6 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          {% include "blog-listing-tags" %}
-
           <section class="blog-articles content-area">
             {% if editmode %}
               <div class="cms-blog-article-add">{% addbutton %}</div>

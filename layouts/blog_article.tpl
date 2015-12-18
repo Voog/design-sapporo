@@ -16,8 +16,7 @@
           <article class="blog-article">
             <header class="article-header">
               <h1 class="article-title">{% editable article.title %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: "long" }}</time>
-              {% include "blog-article-tags" %}
+              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: "long" }}</time>              
             </header>
 
 
@@ -25,6 +24,9 @@
               <div class="article-excerpt">{% editable article.excerpt %}</div>
               <div class="article-body">{% editable article.body %}</div>
             </div>
+
+            {% include "blog-article-tags" %}
+
           </article>
         </main>
 

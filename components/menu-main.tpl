@@ -5,7 +5,7 @@
     </svg>
   </button>
 
-  <ul class="menu menu-horizontal menu-level-1 menu-public{% if page.level == 0 %} menu-current{% endif %}">
+  <ul class="menu menu-horizontal menu-public menu-level-1{% if page.level == 0 %} menu-current{% endif %}">
     {% unless site.root_item.hidden? %}
       <li class="menu-item">{% menulink site.root_item %}</li>
     {% endunless %}
@@ -42,6 +42,8 @@
               {% endif %}
             </div>
           {% endif %}
+        {% else %}
+          {% include "blog-listing-tags" %}
         {% endunless %}
       </li>
     {% endfor %}
