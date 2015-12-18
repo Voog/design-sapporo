@@ -954,13 +954,7 @@ a {
 }
 
 .site-footer {
-  margin-top: 60px;
-}
-.site-footer .voog-reference a {
-  color: rgba(0, 0, 0, 0.5);
-}
-.site-footer .voog-reference a:hover {
-  color: black;
+  padding-top: 60px;
 }
 .flexbox .site-footer {
   display: -webkit-box;
@@ -978,18 +972,30 @@ a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.site-footer .voog-reference {
+.blog-listing-page .site-footer {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.voog-reference {
   margin-right: 20px;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.5);
 }
-.site-footer .voog-reference:hover {
+.voog-reference:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-.site-footer .footer-body {
+.voog-reference a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.voog-reference a:hover {
+  color: black;
+}
+
+.footer-body {
   max-width: 100%;
 }
-.flexbox .site-footer .footer-body {
+.flexbox .footer-body {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   box-flex: 1;
@@ -1162,6 +1168,7 @@ a {
   font-size: 0;
 }
 .site-footer .content-area {
+  text-align: right;
   font-size: 13px;
 }
 .content-area h1:first-child,

@@ -1,49 +1,52 @@
 .site-footer {
-	margin-top: 60px;
+  padding-top: 60px;
 
-	.voog-reference {
-		a {
-			color: rgba($color-black, .5);
-
-			&:hover {
-				color: rgba($color-black, 1);
-			}
-		}
-	}
-
-	.flexbox & {
+  .flexbox & {
     @include display(flex);
     @include flex-wrap(wrap);
-	}
+  }
 
-	// TODO: Add flexbox fallback.
-	// .no-flexbox & {
-	// }
+  // TODO: Add flexbox fallback.
+  // .no-flexbox & {
+  // }
 
-  .voog-reference {
-    margin-right: 20px;
-  	font-size: 13px;
+  .blog-listing-page & {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.voog-reference {
+  margin-right: 20px;
+  font-size: 13px;
+  color: rgba($color-black, .5);
+
+  // TODO: Add flexbox fallback.
+  // .no-flexbox & {
+  // }
+
+  &:hover {
+    color: rgba($color-black, .8);
+  }
+
+  a {
     color: rgba($color-black, .5);
 
-		// TODO: Add flexbox fallback.
-		// .no-flexbox & {
-		// }
-
     &:hover {
-      color: rgba($color-black, .8);
+      color: rgba($color-black, 1);
     }
   }
+}
 
-  .footer-body {
-    max-width: 100%;
+.footer-body {
+  max-width: 100%;
 
-	  .flexbox & {
-	    @include flex(1 0 auto);
-	  }
-
-		// TODO: Add flexbox fallback.
-	  // .no-flexbox & {
-	  //   float: left;
-	  // }
+  .flexbox & {
+    @include flex(1 0 auto);
   }
+
+  // TODO: Add flexbox fallback.
+  // .no-flexbox & {
+  //   float: left;
+  // }
 }
