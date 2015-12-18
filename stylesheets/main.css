@@ -1161,6 +1161,9 @@ a {
   content: "";
   display: table;
 }
+.site-header .content-area {
+  text-transform: uppercase;
+}
 .front-page .page-content .content-area, .common-page .page-content .content-area, .blog-article-page .page-content .content-area {
   font-size: 18px;
 }

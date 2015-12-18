@@ -5,6 +5,10 @@
   color: rgba($color-black, .8);
   line-height: 1.7;
 
+  .site-header & {
+    text-transform: uppercase;
+  }
+
   .page-content & {
     .front-page &,
     .common-page &,
