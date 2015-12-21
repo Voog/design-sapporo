@@ -115,7 +115,7 @@
   //============================================================================
   var handleMenuLanguagePopoverPositioning = function(button) {
     var $menuWrapper = $('.js-menu-language-popover'),
-        $offsetItem = $('.js-toggle-menu-language'),
+        $offsetItem = $('.js-menu-language-offset-item'),
         offsetItemOffsetTop = $offsetItem.offset().top,
         offsetItemOffsetLeft = $offsetItem.offset().left,
         offsetItemOuterWidth = $offsetItem.outerWidth(),
@@ -123,8 +123,8 @@
         windowWidth = $(window).width();
 
     $menuWrapper.css({
-      top: offsetItemOffsetTop + offsetItemOuterHeight,
-      right: windowWidth - offsetItemOffsetLeft - offsetItemOuterWidth
+      top: Math.round(offsetItemOffsetTop + offsetItemOuterHeight),
+      right: Math.round(windowWidth - offsetItemOffsetLeft - offsetItemOuterWidth)
     });
   };
 
@@ -146,6 +146,8 @@
 
         siteData.set("language_flags_enabled", false);
       }
+
+      handleMenuLanguagePopoverPositioning();
     });
   };
 
