@@ -48,8 +48,6 @@ a {
 }
 
 .site-container {
-  -webkit-transition: right 0.2s;
-  -moz-transition: right 0.2s;
   transition: right 0.2s;
   position: relative;
   right: 0;
@@ -78,11 +76,7 @@ a {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
   box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
   box-direction: normal;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
@@ -118,8 +112,6 @@ a {
   margin-top: 50px;
 }
 .flexbox .page-content {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
   -webkit-flex: 1;
   -moz-flex: 1;
@@ -178,9 +170,7 @@ a {
 
 .btn-menu-back {
   -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
   padding: 15px 10px;
@@ -276,8 +266,6 @@ a {
 }
 @media screen and (max-width: 640px) {
   .menu-main {
-    -webkit-transition: right 0.2s;
-    -moz-transition: right 0.2s;
     transition: right 0.2s;
     position: fixed;
     top: 0;
@@ -378,11 +366,8 @@ a {
   -moz-box-lines: multiple;
   box-lines: multiple;
   -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
   box-pack: end;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
@@ -390,8 +375,6 @@ a {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
-  -webkit-box-align: center;
-  -moz-box-align: center;
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -420,8 +403,6 @@ a {
   }
 }
 .flexbox .site-header .header-title {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
   -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
@@ -458,8 +439,6 @@ a {
 }
 
 .site-search {
-  -webkit-transition: right 0.2s;
-  -moz-transition: right 0.2s;
   transition: right 0.2s;
   position: fixed;
   top: 0;
@@ -492,7 +471,6 @@ a {
 
 .search-input {
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
   border-radius: 0;
   font-family: inherit;
   font-size: inherit;
@@ -1011,7 +989,6 @@ a {
   -moz-box-lines: multiple;
   box-lines: multiple;
   -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -1039,8 +1016,6 @@ a {
   max-width: 100%;
 }
 .flexbox .footer-body {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   box-flex: 1;
   -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
@@ -1113,18 +1088,12 @@ a {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
     box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
     box-direction: normal;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
     box-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
