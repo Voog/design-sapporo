@@ -1,16 +1,60 @@
 module.exports = function(grunt) {
-  "use strict";
+  'use strict';
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    // Removes old files.
+    clean: {
+      assets: ['assets'],
+      images: ['images'],
+      javascripts: ['javascripts'],
+      stylesheets: ['stylesheet']
+    },
 
     modernizr_builder: {
       build: {
         options: {
           config: 'modernizr-config.json',
-          dest: 'javascripts/modernizr-custom.min.js',
+          dest: 'javascripts/modernizr.min.js',
           uglify: true
         }
+      }
+    },
+
+    // Copys the files from the source folders to the layout folders.
+    copy: {
+      assets: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/assets/copy',
+            src: '*',
+            dest: 'assets/'
+          }
+        ]
+      },
+
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/images/copy',
+            src: '*',
+            dest: 'images/'
+          }
+        ]
+      },
+
+      javascripts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/javascripts/copy',
+            src: '*',
+            dest: 'javascripts/'
+          }
+        ]
       }
     },
 
@@ -19,7 +63,7 @@ module.exports = function(grunt) {
       build: {
         src: [
           'bower_components/jquery/dist/jquery.js',
-          'sources/javascripts/*.js'
+          'sources/javascripts/concat/*.js'
         ],
         dest: 'javascripts/main.js'
       }
@@ -58,13 +102,28 @@ module.exports = function(grunt) {
       }
     },
 
+    postcss: {
+      options: {
+        processors: [
+          require('autoprefixer')({browsers: 'last 4 versions'})
+        ]
+      },
+      dist: {
+        src: [
+          'stylesheets/*.css',
+          'stylesheets/!*.min.css'
+        ]
+      }
+    },
+
     // Minifies the stylesheet files.
     cssmin: {
       build: {
         expand: true,
         cwd: 'stylesheets/',
         src: [
-          'main.css'
+          '*.css',
+          '!*.min.css'
         ],
         dest: 'stylesheets/',
         ext: '.min.css'
@@ -82,7 +141,7 @@ module.exports = function(grunt) {
         }]
       },
 
-      build_svgs: {
+      build_assets: {
         files: [{
           expand: true,
           cwd: 'sources/assets/minify',
@@ -113,9 +172,19 @@ module.exports = function(grunt) {
 
     // Watches the project for changes and recompiles the output files.
     watch: {
-      js: {
-        files: 'sources/javascripts/*.js',
-        tasks: ['concat:build', 'uglify:build', 'exec:kit:javascripts/*.js']
+      modernizr: {
+        files: 'modernizr-config.json',
+        tasks: ['modernizr_builder:build']
+      },
+
+      js_copy: {
+        files: 'sources/javascripts/copy/*.js',
+        tasks: ['copy:javascripts', 'exec:kitmanifest']
+      },
+
+      js_concat: {
+        files: 'sources/javascripts/concat/*.js',
+        tasks: ['concat:build', 'uglify:build', 'exec:kitmanifest']
       },
 
       css: {
@@ -123,11 +192,31 @@ module.exports = function(grunt) {
           'sources/stylesheets/*.scss',
           'sources/stylesheets/*/*.scss'
         ],
-        tasks: ['sass:build', 'cssmin:build', 'exec:kit:stylesheets/*.css']
+        tasks: ['sass:build', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+      },
+
+      img_copy: {
+        files: 'sources/images/copy/*',
+        tasks: [ 'copy:images', 'exec:kitmanifest']
+      },
+
+      img_minify: {
+        files: 'sources/images/minify/*',
+        tasks: ['imagemin:build_images', 'exec:kitmanifest']
+      },
+
+      assets_copy: {
+        files: 'sources/assets/copy/*',
+        tasks: ['copy:assets', 'exec:kitmanifest']
+      },
+
+      assets_minify: {
+        files: 'sources/assets/minify/*',
+        tasks: ['imagemin:build_assets', 'exec:kitmanifest']
       },
 
       voog: {
-        files: ['layouts/*.tpl', 'components/*.tpl'],
+        files: ['javascripts/*.js', 'stylesheets/*.css', 'layouts/*.tpl', 'components/*.tpl'],
         options: {
           spawn: false
         }
@@ -135,16 +224,19 @@ module.exports = function(grunt) {
     },
   });
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-modernizr-builder');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
-  grunt.loadNpmTasks('grunt-modernizr-builder');
 
-  grunt.registerTask('default', ['modernizr_builder:build', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin']);
+  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
