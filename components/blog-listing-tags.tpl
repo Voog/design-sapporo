@@ -5,15 +5,15 @@
     <nav class="menu-sub">
       <ul class="menu menu-vertical menu-level-2">
         {% for tag in blog.tags %}
-          {% assign activestr = "" %}
+          {% assign active_item = "" %}
           {% for tmptag in tags %}
             {% if tmptag.name == tag.name %}
-              {% assign activestr = "active" %}
+              {% assign active_item = "active" %}
             {% endif %}
           {% endfor %}
 
           <li class="menu-item">
-            <a {% if activestr %}class="{{ activestr }}"{% endif %} href="/{{ level_1.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
+            <a {% if active_item %}class="{{ active_item }}"{% endif %} href="/{{ level_1.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
           </li>
         {% endfor %}
       </ul>
