@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       build: {
         options: {
           config: 'modernizr-config.json',
-          dest: 'javascripts/modernizr.min.js',
+          dest: 'javascripts/modernizr-custom.min.js',
           uglify: true
         }
       }
