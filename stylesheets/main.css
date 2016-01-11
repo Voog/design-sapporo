@@ -1129,8 +1129,9 @@ a {
   hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
-  color: rgba(0, 0, 0, 0.8);
+  font-weight: 100;
   line-height: 1.7;
+  color: rgba(0, 0, 0, 0.8);
 }
 .content-area::after {
   clear: both;
@@ -1147,8 +1148,8 @@ a {
   font-size: 0;
 }
 .site-footer .content-area {
-  text-align: right;
   font-size: 13px;
+  text-align: right;
 }
 .content-area h1:first-child,
 .content-area h2:first-child,
@@ -1236,16 +1237,16 @@ a {
 .content-area pre code {
   display: inline;
   padding: 0;
-  white-space: pre;
   line-height: inherit;
+  white-space: pre;
   background-color: transparent;
 }
 .content-area code {
   display: inline-block;
-  vertical-align: middle;
-  overflow: auto;
-  box-sizing: border-box;
   max-width: 100%;
+  overflow: auto;
+  vertical-align: middle;
+  box-sizing: border-box;
 }
 .content-area iframe {
   max-width: 100%;
@@ -1291,7 +1292,7 @@ a {
     margin-left: -200px !important;
   }
 }
-.content-area .edy-image-container-with-title:after {
+.content-area .edy-image-container-with-title::after {
   display: block;
   padding: 4px;
   font-size: 12px;
