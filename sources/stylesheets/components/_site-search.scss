@@ -41,11 +41,11 @@
   background-color: rgba($color-white, 1);
 
   @media screen and (max-width: $mobile) {
-    padding-top: 52px;
+    padding-top: 50px;
   }
 
   @media screen and (min-width: $mobile + 1) {
-    padding-top: 85px;
+    padding-top: 83px;
   }
 }
 
@@ -54,7 +54,7 @@
   @include inherit-font;
   display: block;
   width: 100%;
-  padding: 4px 29px 3px 5px;
+  padding: 6px 29px 5px 5px;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
@@ -160,12 +160,20 @@
 
 .voog-search-modal-result {
   // Single entity of the search result.
+  margin-top: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   h3 {
     // Search result's heading.
+    margin-bottom: 10px;
+
     &:first-child {
       margin-top: 0;
     }
+
 
     a {
       font-size: 18px;
@@ -176,7 +184,10 @@
 
   p {
     // Search result's excerpt.
+    margin-top: 0;
+    margin-bottom: 0;
     font-weight: 100;
+    line-height: 1.5;
   }
 
   em {

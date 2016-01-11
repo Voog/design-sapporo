@@ -414,8 +414,8 @@ a {
   background-color: transparent;
   border-style: none;
   cursor: pointer;
+  padding: 6px 5px 4px;
   vertical-align: top;
-  padding: 6px 5px 4px 5px;
 }
 .site-search-btn:focus {
   outline: none;
@@ -459,12 +459,12 @@ a {
 }
 @media screen and (max-width: 640px) {
   .search-form {
-    padding-top: 52px;
+    padding-top: 50px;
   }
 }
 @media screen and (min-width: 641px) {
   .search-form {
-    padding-top: 85px;
+    padding-top: 83px;
   }
 }
 
@@ -476,13 +476,13 @@ a {
   line-height: inherit;
   display: block;
   width: 100%;
+  padding: 6px 29px 5px 5px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 4px 29px 3px 5px;
   font-weight: 500;
-  border-width: 1px;
-  border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px;
 }
 .search-input::-webkit-input-placeholder {
   font-weight: 400;
@@ -500,17 +500,17 @@ a {
   display: none;
 }
 .search-input:focus {
-  outline: none;
   border-color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .search-clear {
-  fill: rgba(0, 0, 0, 0.2);
-  display: none;
   position: absolute;
-  bottom: 5px;
   right: 5px;
+  bottom: 5px;
+  display: none;
   cursor: pointer;
+  fill: rgba(0, 0, 0, 0.2);
 }
 .not-empty .search-clear {
   display: block;
@@ -525,11 +525,11 @@ a {
 }
 
 .voog-search-modal {
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 @media screen and (max-width: 640px) {
   .voog-search-modal {
@@ -543,18 +543,31 @@ a {
     padding-top: 165px;
   }
 }
-.voog-search-modal .voog-search-modal-result h3:first-child {
+
+.voog-search-modal-result {
+  margin-top: 20px;
+}
+.voog-search-modal-result:first-child {
   margin-top: 0;
 }
-.voog-search-modal .voog-search-modal-result h3 a {
+.voog-search-modal-result h3 {
+  margin-bottom: 10px;
+}
+.voog-search-modal-result h3:first-child {
+  margin-top: 0;
+}
+.voog-search-modal-result h3 a {
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-.voog-search-modal .voog-search-modal-result p {
+.voog-search-modal-result p {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 100;
+  line-height: 1.5;
 }
-.voog-search-modal .voog-search-modal-result em {
+.voog-search-modal-result em {
   font-style: normal;
   background-color: rgba(255, 224, 0, 0.5);
 }
