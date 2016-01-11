@@ -171,6 +171,12 @@
       "filename": "main.min.js"
     },
     {
+      "content_type": "application/javascript",
+      "file": "javascripts/modernizr-custom.min.js",
+      "kind": "javascripts",
+      "filename": "modernizr-custom.min.js"
+    },
+    {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
