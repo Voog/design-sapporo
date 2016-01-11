@@ -1,7 +1,7 @@
 .site-search-btn {
   @include button;
+  padding: 6px 5px 4px;
   vertical-align: top;
-  padding: 6px 5px 4px 5px;
 
   @media screen and (min-width: $mobile + 1) {
     margin-left: 13px;
@@ -54,38 +54,40 @@
   @include inherit-font;
   display: block;
   width: 100%;
+  padding: 4px 29px 3px 5px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 4px 29px 3px 5px;
   font-weight: 500;
-  border-width: 1px;
-  border-style: solid;
   border-color: rgba($color-black, .1);
+  border-style: solid;
+  border-width: 1px;
 
   @include placeholder() {
     font-weight: 400;
   }
 
+  // scss-lint:disable PseudoElement
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
   &::-webkit-search-results-button,
   &::-webkit-search-results-decoration {
     display: none;
   }
+  // scss-lint:enable PseudoElement
 
   &:focus {
-    outline: none;
     border-color: rgba($color-black, .3);
+    outline: none;
   }
 }
 
 .search-clear {
-  fill: rgba($color-black, .2);
-  display: none;
   position: absolute;
-  bottom: 5px;
   right: 5px;
+  bottom: 5px;
+  display: none;
   cursor: pointer;
+  fill: rgba($color-black, .2);
 
   .not-empty & {
     display: block;
@@ -103,11 +105,11 @@
 
 // Site search results modal custom styles.
 .voog-search-modal {
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   @media screen and (max-width: $mobile) {
     height: calc(100% - 115px);
@@ -146,44 +148,44 @@
     // Class form mobile mode. Class toggle breakpont is set in the "bindSiteSearch" function in the
     // "sources/javascript/base.js" file.
   }
+}
 
-  .voog-search-modal-inner {
-    // Inner container inside the search modal.
-  }
+.voog-search-modal-inner {
+  // Inner container inside the search modal.
+}
 
-  .voog-search-modal-results {
-    // Inner container inside the .search-modal-inner.
-  }
+.voog-search-modal-results {
+  // Inner container inside the .search-modal-inner.
+}
 
-  .voog-search-modal-result {
-    // Single entity of the search result.
+.voog-search-modal-result {
+  // Single entity of the search result.
 
-    h3 {
-      // Search result's heading.
-      &:first-child {
-        margin-top: 0;
-      }
-
-      a {
-        font-size: 18px;
-        font-weight: 500;
-        color: rgba($color-black, 1);
-      }
+  h3 {
+    // Search result's heading.
+    &:first-child {
+      margin-top: 0;
     }
 
-    p {
-      // Search result's excerpt.
-      font-weight: 100;
-    }
-
-    em {
-      font-style: normal;
-      background-color: rgba($color-highlight, .5);
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba($color-black, 1);
     }
   }
 
-  .voog-search-loader {
-    // Loader div at the end of the .voog-search-modal-inner div. By default it is shows a dot loader which is visible
-    // while search modal has class "loading".
+  p {
+    // Search result's excerpt.
+    font-weight: 100;
   }
+
+  em {
+    font-style: normal;
+    background-color: rgba($color-highlight, .5);
+  }
+}
+
+.voog-search-loader {
+  // Loader div at the end of the .voog-search-modal-inner div. By default it is shows a dot loader which is visible
+  // while search modal has class "loading".
 }
