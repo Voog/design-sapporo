@@ -15,14 +15,14 @@
 
   .language-flags-disabled & {
     top: 3px;
-    margin-left: 19px;
     padding: 3px 24px 2px 8px;
-    font-weight: 100;
+    margin-left: 19px;
     font-family: inherit;
     font-size: 13px;
+    font-weight: 100;
+    border-color: rgba($color-black, .1);
     border-style: solid;
     border-width: 1px;
-    border-color: rgba($color-black, .1);
     border-radius: 12px;
 
     &:hover {
@@ -30,8 +30,8 @@
     }
   }
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     $ico-offset: 5px;
     top: $ico-offset;
 
@@ -83,8 +83,8 @@
   }
 
   .menu-language-popover-open & {
-    display: block;
     z-index: 10;
+    display: block;
   }
 
   .menu-public {
@@ -107,22 +107,15 @@
       font-size: 13px;
       color: rgba($color-black, 1);
 
-      &:before,
-      &:after {
+      // scss-lint:disable NestingDepth
+      &::before,
+      &::after {
         top: 8px;
         right: 6px;
       }
 
       &:hover {
         color: rgba($color-black, .6);
-      }
-
-      .language-flags-enabled & {
-        padding: 6px 33px 6px 6px;
-      }
-
-      .language-flags-disabled & {
-        padding: 3px 25px;
       }
 
       &.selected {
@@ -140,8 +133,19 @@
       }
 
       &.untranslated {
-        color: rgba($color-error, 1)
+        color: rgba($color-error, 1);
       }
+
+      // scss-lint:disable SelectorDepth
+      .language-flags-enabled & {
+        padding: 6px 33px 6px 6px;
+      }
+
+      .language-flags-disabled & {
+        padding: 3px 25px;
+      }
+      // scss-lint:enable NestingDepth
+      // scss-lint:enable SelectorDepth
     }
 
     .menu-language-btn-circle {
@@ -154,6 +158,8 @@
       padding-bottom: 9px;
       padding-left: 6px;
 
+      // scss-lint:disable NestingDepth
+      // scss-lint:disable SelectorDepth
       .language-flags-disabled & {
         padding-top: 3px;
         padding-right: 22px;
@@ -163,6 +169,8 @@
         padding-top: 1px;
         padding-right: 12px;
       }
+      // scss-lint:enable NestingDepth
+      // scss-lint:enable SelectorDepth
     }
   }
 }
@@ -171,9 +179,9 @@
   button {
     display: block;
     width: 100%;
-    text-align: right;
     font-family: inherit;
     font-size: 11px;
+    text-align: right;
     border-top: 1px solid rgba($color-black, .05);
 
     &:hover {
@@ -210,18 +218,18 @@
   position: relative;
   background-color: transparent;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     .language-flags-enabled & {
       position: absolute;
       display: block;
-      height: 15px;
       width: 21px;
+      height: 15px;
       content: '';
     }
   }
 
-  &:before {
+  &::before {
     background-color: rgba($color-black, 1);
 
     .language-flags-disabled & {
@@ -229,7 +237,7 @@
     }
   }
 
-  &:after {
+  &::after {
     opacity: .95;
 
     .language-flags-enabled & {
@@ -239,6 +247,7 @@
 }
 
 // Language flag icons positioning in the spritemap.
+// scss-lint:disable TrailingSemicolon
 $flags:
   (sq, 0 0), // Albanian (Albania)
   (hy, -21px 0), // Armenian (Armenia)
@@ -294,10 +303,11 @@ $flags:
   // (xx, -147px, -60px), // Dutch, French, German (Kingdom of Belgium)
   // (xx, -168px, -60px), // Australian English (Commonwealth of Australia)
 ;
+// scss-lint:enable TrailingSemicolon
 
 // Loop for generationg flag classes for each flag in the $flags variable.
-@each $language_code, $position in $flags {
-  .ico-flag-#{$language_code}:after {
+@each $language-code, $position in $flags {
+  .ico-flag-#{$language-code}:after {
     background-position: $position;
   }
 }

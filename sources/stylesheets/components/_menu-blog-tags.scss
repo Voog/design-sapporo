@@ -8,14 +8,14 @@
     position: relative;
     top: 4px;
     display: inline-block;
+    margin-right: 5px;
     vertical-align: top;
-    margin-right: 5px
   }
 
   .menu {
     display: inline-block;
-    vertical-align: top;
     max-width: calc(100% - 23px);
+    vertical-align: top;
   }
 
   .menu-item {

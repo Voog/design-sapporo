@@ -3,10 +3,10 @@
   @include hyphenate;
 
   .flexbox & {
-    @include display(flex);
-    @include flex-wrap(wrap);
-    @include justify-content(flex-end);
-    @include align-items(center);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   // TODO: Add flexbox fallback.

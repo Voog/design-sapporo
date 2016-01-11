@@ -31,8 +31,7 @@
 }
 
 @mixin input-ios-reset {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  appearance: none;
   border-radius: 0;
 }
 
@@ -45,11 +44,11 @@
 @mixin aspect-ratio($width, $height) {
   position: relative;
 
-  &:before {
+  &::before {
     display: block;
-    content: '';
     width: 100%;
     padding-top: ($height / $width) * 100%;
+    content: '';
   }
 
   > .aspect-ratio-inner {

@@ -1,6 +1,7 @@
 //==============================================================================
 // "Form" type content area.
 //==============================================================================
+// scss-lint:disable SelectorFormat
 .edy-fe-field,
 .form_field {
   margin-bottom: 20px;
@@ -20,14 +21,14 @@
 .form_field_textarea {
   width: 30%;
   padding: 4px 5px;
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 1.67;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: rgba($color-black, .87);
-  border: none;
-  outline: none;
-  background: white;
+  background: rgba($color-white, 1);
+  border: 0;
   border-radius: 0;
+  outline: none;
   box-sizing: border-box;
 }
 
@@ -52,8 +53,7 @@
 
 .form_error,
 .form_notice {
-  padding: 0;
-  padding: 0 0 20px;
+  padding-bottom: 20px;
   font-weight: bold;
 }
 
@@ -78,16 +78,16 @@
 .form_submit input,
 .submit {
   padding: 8px 12px;
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 1.67;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  background: #2b2b2b;
-  -webkit-appearance: none;
-  border-radius: 0;
   color: rgba($color-white, .5);
+  cursor: pointer;
+  background: rgba($color-black, .83);
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  -webkit-appearance: none;
 
   &:hover {
     background-color: rgba($color-black, .84);
@@ -95,16 +95,18 @@
 }
 
 .form_field_required {
-  .form_field_label:after {
-    content: '*';
+  .form_field_labelafter {
+    &::after {
+      content: '*';
+    }
   }
 }
 
-/* custom checkboxes and radio buttons */
+// Custom checkboxes and radio buttons
 label {
   cursor: pointer;
 
-  &:before {
+  &::before {
     display: none;
     content: url('../images/check.png?1');
   }
@@ -112,19 +114,27 @@ label {
   .form_field_checkbox,
   .form_field_radio {
     display: none;
-    display: inline-block\9;
+    // display: inline-block9;
   }
 
   .form_field_checkbox {
-    + .form_control_indicator:before {
-      background: white;
+    + .form_control_indicator {
+      // scss-lint:disable NestingDepth
+      &::before {
+        background: rgba($color-white, 1);
+      }
+      // scss-lint:enable NestingDepth
     }
 
     &:checked {
-      + .form_control_indicator:before {
-        width: 100%;
-        height: 100%;
-        background: url('../images/check_small.png?1') no-repeat left bottom;
+      // scss-lint:disable NestingDepth
+      + .form_control_indicator {
+        &::before {
+          width: 100%;
+          height: 100%;
+          background: url('../images/check_small.png?1') no-repeat left bottom;
+        }
+
         .backgroundsize & {
           width: 100%;
           height: 100%;
@@ -132,40 +142,50 @@ label {
           background-size: 17px 18px;
         }
       }
+      // scss-lint:enable NestingDepth
     }
   }
 
   .form_field_radio {
-    + .form_control_indicator:before {
-      width: 9px;
-      height: 9px;
-      border: 3px solid white;
+    + .form_control_indicator {
+      // scss-lint:disable NestingDepth
+      &::before {
+        width: 9px;
+        height: 9px;
+        border: 3px solid rgba($color-white, 1);
+      }
+      // scss-lint:enable NestingDepth
     }
 
     &:checked {
-      + .form_control_indicator:before {
-        background-color: rgba($color-black, .84);
+      // scss-lint:disable NestingDepth
+      + .form_control_indicator {
+        &::before {
+          background-color: rgba($color-black, .84);
+        }
       }
+      // scss-lint:enable NestingDepth
     }
   }
 
   .form_control_indicator {
     position: relative;
     display: inline-block;
-    display: none\9;
+    // display: none\9;
     width: 18px;
     height: 18px;
     margin-right: 7px;
     vertical-align: 0;
-  }
 
-  .form_control_indicator:before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 15px;
-    height: 15px;
-    content: '';
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 15px;
+      height: 15px;
+      content: '';
+    }
   }
 }
+// scss-lint:enable SelectorFormat

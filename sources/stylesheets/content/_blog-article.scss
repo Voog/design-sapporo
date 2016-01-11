@@ -59,14 +59,14 @@
 .article-top {
   @media screen and (min-width: $blog-listing-mobile + 1) {
     @include aspect-ratio(1, 1);
-    @include display(flex);
-    @include flex-direction(column);
-    @include justify-content(center);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   > .aspect-ratio-inner {
     @media screen and (min-width: $blog-listing-mobile + 1) {
-      @include display(flex);
+      display: flex;
     }
   }
 }
