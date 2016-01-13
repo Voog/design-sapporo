@@ -20,8 +20,8 @@
 
 .blog-article {
   .blog-listing-page & {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     @media screen and (max-width: $blog-listing-mobile) {
       display: block;

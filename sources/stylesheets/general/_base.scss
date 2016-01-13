@@ -97,10 +97,6 @@ a {
     padding-left: 20px;
   }
 
-  .blog-listing-page & {
-    max-width: 1140px;
-  }
-
   @media screen and (max-width: $mobile) {
     padding-top: 50px;
   }
@@ -111,7 +107,7 @@ a {
 }
 
 .page-content {
-  margin-top: 45px;
+  margin-top: 50px;
 
   .flexbox & {
     flex: 1;
