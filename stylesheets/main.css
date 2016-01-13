@@ -62,7 +62,7 @@ a {
 }
 
 .wrap {
-  padding-bottom: 80px;
+  padding-bottom: 45px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -82,7 +82,7 @@ a {
   min-height: 100vh;
 }
 .front-page .wrap, .common-page .wrap, .blog-article-page .wrap {
-  max-width: 1140px;
+  max-width: 1170px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -101,7 +101,7 @@ a {
 }
 
 .page-content {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 .flexbox .page-content {
   -webkit-flex: 1;
@@ -1216,6 +1216,10 @@ a {
 }
 .content-area a:hover {
   opacity: .8;
+}
+.content-area b,
+.content-area strong {
+  font-weight: 400;
 }
 .content-area pre,
 .content-area code,

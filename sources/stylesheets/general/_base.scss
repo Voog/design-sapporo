@@ -71,7 +71,7 @@ a {
 }
 
 .wrap {
-  padding-bottom: 80px;
+  padding-bottom: 45px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -92,7 +92,7 @@ a {
   .front-page &,
   .common-page &,
   .blog-article-page & {
-    max-width: 1140px;
+    max-width: 1170px;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -111,7 +111,7 @@ a {
 }
 
 .page-content {
-  margin-top: 50px;
+  margin-top: 45px;
 
   .flexbox & {
     flex: 1;
