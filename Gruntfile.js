@@ -236,7 +236,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
+  // Modernizr builder fails for some reason. Added manually to the "sources/javascript/copy" at the moment.
+  // TODO: Find out why it fails and restore.
+  
+  // Imagemin task fails for some reason. Copys the images instead of minify at the moment
+  // TODO: Find out why it fails and restore.
+  grunt.registerTask('default', ['clean', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin']);
+  // grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
