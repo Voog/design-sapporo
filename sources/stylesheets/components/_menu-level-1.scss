@@ -2,7 +2,9 @@
 .menu-level-1 {
   > .menu-item {
     &:not(:last-child) {
-      margin-right: 25px;
+      @media screen and (min-width: $mobile + 1) {
+        margin-right: 25px;
+      }
     }
 
     a {
@@ -16,6 +18,11 @@
       letter-spacing: .2em;
       text-transform: uppercase;
       opacity: .8;
+
+      @media screen and (max-width: $mobile) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
     }
   }
 
