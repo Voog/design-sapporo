@@ -62,7 +62,10 @@ a {
 }
 
 .wrap {
+  max-width: 1170px;
+  padding-right: 20px;
   padding-bottom: 45px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -81,11 +84,6 @@ a {
 .publicmode .wrap {
   min-height: 100vh;
 }
-.front-page .wrap, .common-page .wrap, .blog-article-page .wrap {
-  max-width: 1170px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
 @media screen and (max-width: 640px) {
   .wrap {
     padding-top: 50px;
@@ -98,7 +96,7 @@ a {
 }
 
 .page-content {
-  margin-top: 65px;
+  margin-top: 50px;
 }
 .flexbox .page-content {
   -webkit-flex: 1;
@@ -110,6 +108,14 @@ a {
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
+}
+.page-content .content-bottom {
+  padding-top: 35px;
+}
+
+.blog-articles {
+  padding-top: 10px;
+  padding-bottom: 80px;
 }
 
 .menu-btn {
@@ -934,10 +940,6 @@ a {
   background-position: -126px;
 }
 
-.blog-listing-page .menu-blog-tags {
-  padding-right: 20px;
-  padding-left: 20px;
-}
 .menu-blog-tags .blog-tags-ico {
   position: relative;
   top: 4px;
@@ -955,7 +957,7 @@ a {
 }
 
 .site-footer {
-  padding-top: 105px;
+  padding-top: 25px;
 }
 .flexbox .site-footer {
   display: -webkit-flex;
@@ -1051,6 +1053,9 @@ a {
     padding-left: 20px;
   }
 }
+.blog-article-page .blog-article {
+  padding-bottom: 30px;
+}
 
 @media screen and (min-width: 481px) {
   .article-top {
@@ -1122,6 +1127,10 @@ a {
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
   text-transform: uppercase;
+}
+
+.article-body {
+  margin-top: 20px;
 }
 
 .content-area {
@@ -1200,6 +1209,20 @@ a {
 .content-area .edy-texteditor-container-wrapper-center:last-child,
 .content-area .edy-texteditor-container-wrapper-right-block:last-child {
   margin-bottom: 0;
+}
+.content-area h1 b,
+.content-area h1 strong,
+.content-area h2 b,
+.content-area h2 strong,
+.content-area h3 b,
+.content-area h3 strong,
+.content-area h4 b,
+.content-area h4 strong,
+.content-area h5 b,
+.content-area h5 strong,
+.content-area h6 b,
+.content-area h6 strong {
+  font-weight: 600;
 }
 .content-area h1 {
   font-size: 50px;

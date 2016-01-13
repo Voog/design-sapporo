@@ -54,6 +54,10 @@
       padding-left: 20px;
     }
   }
+
+  .blog-article-page & {
+    padding-bottom: 30px;
+  }
 }
 
 .article-top {
@@ -112,4 +116,8 @@
   color: rgba($color-black, .5);
   text-align: center;
   text-transform: uppercase;
+}
+
+.article-body {
+  margin-top: 20px;
 }

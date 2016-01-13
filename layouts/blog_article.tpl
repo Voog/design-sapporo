@@ -16,7 +16,7 @@
           <article class="blog-article">
             <header class="article-header">
               <h1 class="article-title">{% editable article.title %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: "long" }}</time>              
+              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: "long" }}</time>
             </header>
 
 

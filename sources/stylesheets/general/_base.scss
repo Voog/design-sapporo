@@ -71,7 +71,10 @@ a {
 }
 
 .wrap {
+  max-width: 1170px;
+  padding-right: 20px;
   padding-bottom: 45px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -89,14 +92,6 @@ a {
     min-height: 100vh;
   }
 
-  .front-page &,
-  .common-page &,
-  .blog-article-page & {
-    max-width: 1170px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
   @media screen and (max-width: $mobile) {
     padding-top: 50px;
   }
@@ -107,7 +102,7 @@ a {
 }
 
 .page-content {
-  margin-top: 65px;
+  margin-top: 50px;
 
   .flexbox & {
     flex: 1;
@@ -119,4 +114,13 @@ a {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .content-bottom {
+    padding-top: 35px;
+  }
+}
+
+.blog-articles {
+  padding-top: 10px;
+  padding-bottom: 80px;
 }
