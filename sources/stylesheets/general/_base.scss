@@ -71,10 +71,7 @@ a {
 }
 
 .wrap {
-  max-width: 1170px;
-  padding-right: 20px;
   padding-bottom: 45px;
-  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -92,8 +89,20 @@ a {
     min-height: 100vh;
   }
 
+  .front-page &,
+  .blog-listing-page & {
+    max-width: 1140px;
+  }
+
+  .common-page &,
+  .blog-article-page & {
+    max-width: 1170px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
   @media screen and (max-width: $mobile) {
-    padding-top: 50px;
+    padding-top: 45px;
   }
 
   @media screen and (min-width: $mobile + 1) {

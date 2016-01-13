@@ -62,10 +62,7 @@ a {
 }
 
 .wrap {
-  max-width: 1170px;
-  padding-right: 20px;
   padding-bottom: 45px;
-  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -84,9 +81,17 @@ a {
 .publicmode .wrap {
   min-height: 100vh;
 }
+.front-page .wrap, .blog-listing-page .wrap {
+  max-width: 1140px;
+}
+.common-page .wrap, .blog-article-page .wrap {
+  max-width: 1170px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 @media screen and (max-width: 640px) {
   .wrap {
-    padding-top: 50px;
+    padding-top: 45px;
   }
 }
 @media screen and (min-width: 641px) {
@@ -166,12 +171,13 @@ a {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   position: absolute;
+  top: 8px;
   right: 0;
   left: 0;
   z-index: 1;
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 12px 15px;
   font-size: 0;
   text-align: right;
   background-color: white;
@@ -189,10 +195,10 @@ a {
 
 .btn-menu-forward {
   position: absolute;
-  top: 5px;
+  top: 9px;
   right: 0;
   z-index: 1;
-  padding: 5px;
+  padding: 9px 10px 10px;
   background-color: transparent;
 }
 @media screen and (min-width: 640px) {
@@ -562,8 +568,8 @@ a {
 }
 .menu-level-1 > .menu-item > a {
   display: block;
-  padding-top: 7px;
-  padding-bottom: 6px;
+  padding-top: 12px;
+  padding-bottom: 11px;
   letter-spacing: .2em;
   text-transform: uppercase;
   opacity: .8;
@@ -577,7 +583,7 @@ a {
 @media screen and (max-width: 640px) {
   .menu-level-1 {
     height: calc(100% - 50px);
-    padding-top: 50px;
+    padding-top: 40px;
     overflow: auto;
   }
 }
@@ -587,7 +593,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .menu-level-2 .menu-item a {
-    padding: 7px 15px;
+    padding: 12px 15px;
   }
 }
 @media screen and (min-width: 641px) {

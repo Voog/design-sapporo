@@ -13,8 +13,8 @@
 
     > a {
       display: block;
-      padding-top: 7px;
-      padding-bottom: 6px;
+      padding-top: 12px;
+      padding-bottom: 11px;
       letter-spacing: .2em;
       text-transform: uppercase;
       opacity: .8;
@@ -28,7 +28,7 @@
 
   @media screen and (max-width: $mobile) {
     height: calc(100% - 50px);
-    padding-top: 50px;
+    padding-top: 40px;
     overflow: auto;
   }
 }
