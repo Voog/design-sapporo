@@ -25,7 +25,7 @@
 </ul>
 
 {% if editmode %}
-  <ul class="menu menu-horizontal menu-cms">
+  <ul class="menu menu-horizontal menu-cms{% if page.level == 0 %} menu-current{% endif %}">
     {% if site.hidden_menuitems.size > 0 %}
       <li class="menu-item">{% menubtn site.hidden_menuitems %}</li>
     {% endif %}

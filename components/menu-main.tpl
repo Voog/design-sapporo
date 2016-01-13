@@ -5,5 +5,7 @@
     </svg>
   </button>
 
-  {% include "menu-level-1" %}
+  <div class="inner">
+    {% include "menu-level-1" %}
+  </div>
 </nav>

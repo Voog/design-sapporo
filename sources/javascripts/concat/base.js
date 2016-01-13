@@ -55,7 +55,7 @@
         $html.removeClass('menu-main-opened site-search-opened');
 
         setTimeout(function(){
-          handleMenuLanguagePopoverPositioning();  
+          handleMenuLanguagePopoverPositioning();
         }, 300);
       } else if ($html.hasClass('menu-language-popover-open')) {
         handleMenuLanguagePopoverPositioning();
@@ -64,24 +64,24 @@
 
     // Goes one level up in mobile view navigation menu.
     $('.js-toggle-menu-prev').click(function() {
-      var $menuMain = $('.js-menu-main'),
+      var $menuMainInner = $('.js-menu-main .inner'),
           $currentBtn = $(this),
           $menuItems = $('.menu-item'),
           $menuSubBtns = $('.js-toggle-menu-sub');
 
       $currentBtn.addClass('hidden');
-      $menuMain.find('> .menu').addClass('menu-current');
+      $menuMainInner.find('> .menu').addClass('menu-current');
       $menuItems.removeClass('item-current');
       $menuSubBtns.removeClass('hidden');
     });
 
     // Goes one level deeper in mobile view navigation menu.
     $('.js-toggle-menu-sub').click(function() {
-      var $menuMain = $('.js-menu-main'),
+      var $menuMainInner = $('.js-menu-main'),
           $menuPrevBtn = $('.js-toggle-menu-prev'),
           $currentBtn = $(this);
 
-      $menuMain.find('.menu').removeClass('menu-current');
+      $menuMainInner.find('.menu').removeClass('menu-current');
       $menuPrevBtn.removeClass('hidden');
       $currentBtn.addClass('hidden');
       $currentBtn.closest('.menu-item').addClass('item-current');

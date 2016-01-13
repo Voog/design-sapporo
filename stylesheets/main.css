@@ -307,18 +307,18 @@ a {
   }
 }
 @media screen and (min-width: 641px) {
-  .menu-main > .menu-cms {
+  .menu-main .menu-cms {
     margin-top: 5px;
   }
 }
 @media screen and (max-width: 640px) {
-  .menu-main > .menu-cms .menu-item {
+  .menu-main .menu-cms .menu-item {
     margin-top: 5px;
     margin-left: 15px;
   }
 }
 @media screen and (min-width: 641px) {
-  .menu-main > .menu-cms .menu-item:not(:first-child) {
+  .menu-main .menu-cms .menu-item:not(:first-child) {
     margin-left: 15px;
   }
 }
