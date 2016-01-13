@@ -1015,8 +1015,8 @@ a {
 }
 
 .blog-listing-page .blog-article {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 480px) {
   .blog-listing-page .blog-article {
