@@ -1119,6 +1119,9 @@ a {
   }
 }
 
+.article-image {
+  border: 0;
+}
 .blog-listing-page .article-image {
   display: block;
   width: 100%;
