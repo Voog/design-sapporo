@@ -23,7 +23,17 @@
   {% comment %}Detects current page visible childnen size.{% endcomment %}
   {% assign page_children_size = page.menuitem.visible_children | size %}
 
-  {% if page.level == 0 or page.level == 1 and page_children_size == 0 %}
+  {% comment %}
+    Sets boolean to decide if menu level 1 is the currently active menu and
+    should be active in mobile menu.
+  {% endcomment %}
+  {% if page.blog? %}
+    {% assign blog_tags_size = blog.tags | size %}
+  {% endif %}
+
+  {% if blog.tags and blog_tags_size > 0 %}
+    {% assign menu_current = false %}
+  {% elsif page.level == 0 or page.level == 1 and page_children_size == 0 %}
     {% assign menu_current = true %}
   {% endif %}
 {% endcapture %}
