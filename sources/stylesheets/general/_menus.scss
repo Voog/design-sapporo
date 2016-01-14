@@ -232,6 +232,12 @@
       // scss-lint:disable SelectorDepth
       > .menu-item {
         display: block;
+
+        @media screen and (max-width: $mobile) {
+          &.hidden-mobile {
+            display: none;
+          }
+        }
       }
       // scss-lint:enable SelectorDepth
       // scss-lint:enable SelectorDepth

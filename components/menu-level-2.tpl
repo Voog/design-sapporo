@@ -1,6 +1,10 @@
 {% if editmode or level_1.children? %}
   <div class="menu-sub">
     <ul class="menu menu-vertical menu-level-2">
+      <li class="menu-item hidden-mobile">
+        <a class="{% if level_1.current? %} selected current{% endif %}" href="{{ level_1.url }}">{{ level_1.title }}</a>
+      </li>
+
       {% for level_2 in level_1.visible_children %}
         <li class="menu-item">{% menulink level_2 %}</li>
       {% endfor %}

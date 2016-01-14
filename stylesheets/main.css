@@ -332,6 +332,11 @@ a {
 .menu-main .item-current .menu > .menu-item {
   display: block;
 }
+@media screen and (max-width: 640px) {
+  .menu-main .item-current .menu > .menu-item.hidden-mobile {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 641px) {
   .menu-sub {
