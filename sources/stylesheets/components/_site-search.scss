@@ -27,6 +27,10 @@
   bottom: 0;
   width: 280px;
   background-color: rgba($color-white, 1);
+  background-image: url('../assets/bg-search.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: calc(50% + 55px);
 
   .site-search-opened & {
     right: 0;
@@ -132,6 +136,7 @@
 
   &.search-results-active {
     // Search has been triggered and the output is rendered into the modal (Both – with and without the results).
+    background-color: rgba($color-white, 1);
   }
 
   &.voog-search-aligned-below {

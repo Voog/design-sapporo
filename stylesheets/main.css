@@ -447,6 +447,10 @@ a {
   bottom: 0;
   width: 280px;
   background-color: white;
+  background-image: url("../assets/bg-search.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: calc(50% + 55px);
 }
 .site-search-opened .site-search {
   right: 0;
@@ -546,6 +550,9 @@ a {
     height: calc(100% - 190px);
     padding-top: 165px;
   }
+}
+.voog-search-modal.search-results-active {
+  background-color: white;
 }
 
 .voog-search-modal-result {

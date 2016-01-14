@@ -14,8 +14,6 @@
       </svg>
     </form>
 
-    <div class="voog-search-modal js-voog-search-modal">
-
-    </div>
+    <div class="voog-search-modal js-voog-search-modal"></div>
   </div>
 {% endif %}
