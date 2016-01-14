@@ -1,4 +1,4 @@
-<ul class="menu menu-horizontal menu-public menu-level-1{% if page.level == 0 or page.level == 1 and page_children_size == 0 %} menu-current{% endif %}">
+<ul class="menu menu-horizontal menu-public menu-level-1{% if menu_current %} menu-current{% endif %}">
   {% unless site.root_item.hidden? %}
     <li class="menu-item">{% menulink site.root_item %}</li>
   {% endunless %}

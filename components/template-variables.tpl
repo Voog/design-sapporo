@@ -22,4 +22,8 @@
 
   {% comment %}Detects current page visible childnen size.{% endcomment %}
   {% assign page_children_size = page.menuitem.visible_children | size %}
+
+  {% if page.level == 0 or page.level == 1 and page_children_size == 0 %}
+    {% assign menu_current = true %}
+  {% endif %}
 {% endcapture %}
