@@ -65,4 +65,11 @@
       position: static;
     }
   }
+
+  // MS Edge hack. Aspect ratio mixin is not working with FF by default.
+  @-moz-document url-prefix() {
+    > .aspect-ratio-inner {
+      position: static;
+    }
+  }
 }

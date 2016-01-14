@@ -1132,6 +1132,11 @@ a {
       position: static;
     }
   }
+  @-moz-document url-prefix() {
+    .article-top > .aspect-ratio-inner {
+      position: static;
+    }
+  }
 }
 @media screen and (min-width: 481px) {
   .article-top > .aspect-ratio-inner {
