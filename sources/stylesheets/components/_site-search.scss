@@ -41,7 +41,7 @@
   background-color: rgba($color-white, 1);
 
   @media screen and (max-width: $mobile) {
-    padding-top: 50px;
+    padding-top: 45px;
   }
 
   @media screen and (min-width: $mobile + 1) {
@@ -84,7 +84,7 @@
 .search-clear {
   position: absolute;
   right: 5px;
-  bottom: 5px;
+  bottom: 7px;
   display: none;
   cursor: pointer;
   fill: rgba($color-black, .2);

@@ -443,7 +443,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .search-form {
-    padding-top: 50px;
+    padding-top: 45px;
   }
 }
 @media screen and (min-width: 641px) {
@@ -493,7 +493,7 @@ a {
 .search-clear {
   position: absolute;
   right: 5px;
-  bottom: 5px;
+  bottom: 7px;
   display: none;
   cursor: pointer;
   fill: rgba(0, 0, 0, 0.2);
