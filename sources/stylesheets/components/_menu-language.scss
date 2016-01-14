@@ -72,13 +72,24 @@
   &.menu-popover {
     margin-right: -1px;
 
-    .language-flags-disabled & {
-      margin-top: -52px;
+    .publicmode.language-flags-disabled & {
+      margin-top: -40px;
+    }
+
+    .editmode.language-flags-disabled & {
+      margin-top: -32px;
     }
 
     .language-flags-enabled & {
-      margin-top: -56px;
-      margin-right: -2px
+      margin-right: -2px;
+    }
+
+    .editmode.language-flags-enabled & {
+      margin-top: -36px;
+    }
+
+    .publicmode.language-flags-enabled & {
+      margin-top: -44px;
     }
   }
 

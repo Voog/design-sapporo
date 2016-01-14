@@ -688,12 +688,20 @@ a {
 .menu-language.menu-popover {
   margin-right: -1px;
 }
-.language-flags-disabled .menu-language.menu-popover {
-  margin-top: -52px;
+.publicmode.language-flags-disabled .menu-language.menu-popover {
+  margin-top: -40px;
+}
+.editmode.language-flags-disabled .menu-language.menu-popover {
+  margin-top: -32px;
 }
 .language-flags-enabled .menu-language.menu-popover {
-  margin-top: -56px;
   margin-right: -2px;
+}
+.editmode.language-flags-enabled .menu-language.menu-popover {
+  margin-top: -36px;
+}
+.publicmode.language-flags-enabled .menu-language.menu-popover {
+  margin-top: -44px;
 }
 .menu-language-popover-open .menu-language {
   z-index: 10;
