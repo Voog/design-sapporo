@@ -9290,11 +9290,13 @@ return jQuery;
     $('.js-toggle-menu-sub').click(function() {
       var $menuMainInner = $('.js-menu-main'),
           $menuPrevBtn = $('.js-toggle-menu-prev'),
+          $menuItems = $('.menu-item'),
           $currentBtn = $(this);
 
       $menuMainInner.find('.menu').removeClass('menu-current');
       $menuPrevBtn.removeClass('hidden');
       $currentBtn.addClass('hidden');
+      $menuItems.removeClass('item-current');
       $currentBtn.closest('.menu-item').addClass('item-current');
     });
 

@@ -19,4 +19,7 @@
   {% else %}
     {% assign language_flags_mode = "language-flags-enabled" %}
   {% endif %}
+
+  {% comment %}Detects current page visible childnen size.{% endcomment %}
+  {% assign page_children_size = page.menuitem.visible_children | size %}
 {% endcapture %}
