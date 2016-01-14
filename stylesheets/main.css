@@ -277,6 +277,11 @@ a {
     right: 0;
   }
 }
+@media screen and (max-width: 640px) {
+  .menu-main .inner {
+    height: calc(100% - 50px);
+  }
+}
 .menu-main .btn {
   font-size: 0;
   border-style: none;
@@ -582,9 +587,10 @@ a {
 }
 @media screen and (max-width: 640px) {
   .menu-level-1 {
-    height: calc(100% - 50px);
+    height: 100%;
     padding-top: 40px;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 

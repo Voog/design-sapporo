@@ -27,8 +27,9 @@
   }
 
   @media screen and (max-width: $mobile) {
-    height: calc(100% - 50px);
+    height: 100%;
     padding-top: 40px;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }

@@ -153,6 +153,12 @@
     }
   }
 
+  .inner {
+    @media screen and (max-width: $mobile) {
+      height: calc(100% - 50px);
+    }
+  }
+
   .btn {
     font-size: 0;
     border-style: none;
