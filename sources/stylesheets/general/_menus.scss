@@ -155,7 +155,9 @@
 
   .inner {
     @media screen and (max-width: $mobile) {
-      height: calc(100% - 50px);
+      height: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
   }
 
