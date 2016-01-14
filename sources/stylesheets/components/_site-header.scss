@@ -9,9 +9,9 @@
     justify-content: flex-end;
   }
 
-  // TODO: Add flexbox fallback.
-  // .no-flexbox & {
-  // }
+  .no-flexbox & {
+    @include clearfix;
+  }
 
   .blog-listing-page & {
     padding-right: 20px;
@@ -35,15 +35,14 @@
       @include flex(1 0 auto);
     }
 
-    // TODO: Add flexbox fallback.
-    // .no-flexbox & {
-    //   float: left;
-    // }
+    .no-flexbox & {
+      float: left;
+    }
   }
 
   .header-menu {
-    // TODO: Add flexbox fallback.
-    // .no-flexbox & {
-    // }
+    .no-flexbox & {
+      float: right;
+    }
   }
 }

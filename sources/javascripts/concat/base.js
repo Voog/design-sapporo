@@ -1,5 +1,12 @@
 ;(function($) {
   //============================================================================
+  // Function to detect if user is in editmode.
+  //============================================================================
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
+
+  //============================================================================
   // Helper function to limit the rate at which a function can fire.
   //============================================================================
   var debounce = function(func, wait, immediate) {
@@ -177,6 +184,37 @@
     }
   };
 
+  // TODO: Convert these fallbacks to one function.
+  //============================================================================
+  // Binds site header content area fallback behaviour fonr no-flexbox
+  // browsers – calculates minimum width for the header content area.
+  //============================================================================
+  var bindFallbackHeaderContentAreaWidthCalculation = function() {
+    var $header = $('.js-site-header'),
+        headerWidth = $header.width(),
+        $headerMenu = $('.js-header-menu'),
+        headerMenuWidth = $headerMenu.width(),
+        $headerTitle = $('.js-header-title'),
+        headerTitleMargin = parseInt($headerTitle.css('margin-right')) + 1;
+
+    $headerTitle.css('min-width', headerWidth - headerMenuWidth - headerTitleMargin);
+  };
+
+  //============================================================================
+  // Binds site footer content area fallback behaviour fonr no-flexbox
+  // browsers – calculates minimum width for the footer content area.
+  //============================================================================
+  var bindFallbackFooterContentAreaWidthCalculation = function() {
+    var $footer = $('.js-site-footer'),
+        footerWidth = $footer.width(),
+        $footerVoogReference = $('.js-voog-reference'),
+        footerVoogReferenceWidth = $footerVoogReference.width(),
+        footerVoogReferenceMargin = parseInt($footerVoogReference.css('margin-right')) + 1,
+        $footerBody = $('.js-footer-body');
+
+    $footerBody.css('min-width', footerWidth - footerVoogReferenceWidth - footerVoogReferenceMargin);
+  };
+
   //============================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
@@ -190,6 +228,11 @@
   //============================================================================
   var init = function() {
     bindInterfaceButtons();
+
+    if (!Modernizr.flexbox && editmode()) {
+      bindFallbackHeaderContentAreaWidthCalculation();
+      bindFallbackFooterContentAreaWidthCalculation();
+     }
   };
 
   // Enables the usage of the initiations outside this file.

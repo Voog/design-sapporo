@@ -1,9 +1,9 @@
-<header class="site-header">
-  <div class="header-title content-area">
+<header class="site-header js-site-header">
+  <div class="header-title content-area js-header-title">
     {% editable site.header %}
   </div>
 
-  <div class="header-menu">
+  <div class="header-menu js-header-menu">
     {% include "menu-main" %}
 
     {% if editmode or site.has_many_languages? %}

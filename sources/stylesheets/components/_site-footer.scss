@@ -3,13 +3,13 @@
 
   .flexbox & {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
   }
 
-  // TODO: Add flexbox fallback.
-  // .no-flexbox & {
-  // }
+  .no-flexbox & {
+    @include clearfix;
+  }
 
   .blog-listing-page & {
     padding-right: 20px;
@@ -22,9 +22,9 @@
   font-size: 13px;
   color: rgba($color-black, .5);
 
-  // TODO: Add flexbox fallback.
-  // .no-flexbox & {
-  // }
+  .no-flexbox & {
+    float: left;
+  }
 
   &:hover {
     color: rgba($color-black, .8);
@@ -46,8 +46,7 @@
     flex: 1 0 auto;
   }
 
-  // TODO: Add flexbox fallback.
-  // .no-flexbox & {
-  //   float: left;
-  // }
+  .no-flexbox & {
+    float: right;
+  }
 }

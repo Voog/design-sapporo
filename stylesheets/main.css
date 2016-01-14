@@ -373,6 +373,11 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+.no-flexbox .site-header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
 .blog-listing-page .site-header {
   padding-right: 20px;
   padding-left: 20px;
@@ -398,6 +403,12 @@ a {
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+.no-flexbox .site-header .header-title {
+  float: left;
+}
+.no-flexbox .site-header .header-menu {
+  float: right;
 }
 
 .site-search-btn {
@@ -985,12 +996,17 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+}
+.no-flexbox .site-footer::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 .blog-listing-page .site-footer {
   padding-right: 20px;
@@ -1001,6 +1017,9 @@ a {
   margin-right: 20px;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.5);
+}
+.no-flexbox .voog-reference {
+  float: left;
 }
 .voog-reference:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -1019,6 +1038,9 @@ a {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+}
+.no-flexbox .footer-body {
+  float: right;
 }
 
 .cms-blog-article-add {
