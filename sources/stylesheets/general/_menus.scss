@@ -159,6 +159,20 @@
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
+
+    > .menu-cms {
+      // scss-lint:disable SelectorDepth
+      // scss-lint:disable NestingDepth
+      .menu-item {
+        @media screen and (min-width: $mobile + 1) {
+          &:not(:first-child) {
+            margin-left: 15px;
+          }
+          // scss-lint:enable NestingDepth
+          // scss-lint:enable SelectorDepth
+        }
+      }
+    }
   }
 
   .btn {
@@ -214,14 +228,6 @@
       @media screen and (max-width: $mobile) {
         margin-top: 5px;
         margin-left: 15px;
-      }
-
-      @media screen and (min-width: $mobile + 1) {
-        // scss-lint:disable NestingDepth
-        &:not(:first-child) {
-          margin-left: 15px;
-        }
-        // scss-lint:enable NestingDepth
       }
     }
   }
