@@ -13,7 +13,9 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          <section class="blog-articles content-area">
+          <section class="content-main content-area">{% content %}</section>
+
+          <section class="blog-articles">
             {% for article in site.latest_12_articles %}
               <a class="blog-article" href="{{ article.url }}">
                 <div class="article-top">

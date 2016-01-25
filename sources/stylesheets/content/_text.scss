@@ -11,15 +11,7 @@
   }
 
   .page-content & {
-    .front-page &,
-    .common-page &,
-    .blog-article-page & {
-      font-size: 18px;
-    }
-
-    .blog-listing-page & {
-      font-size: 0;
-    }
+    font-size: 18px;
   }
 
   .site-footer & {

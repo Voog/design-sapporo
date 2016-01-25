@@ -118,9 +118,22 @@ a {
   padding-top: 35px;
 }
 
+.content-main:empty {
+  display: none;
+}
+.front-page .content-main {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
+
 .blog-articles {
   padding-top: 10px;
   padding-bottom: 80px;
+  line-height: 1.3;
+}
+.blog-listing-page .blog-articles {
+  font-size: 0;
 }
 
 .menu-btn {
@@ -1229,11 +1242,8 @@ a {
 .site-header .content-area {
   text-transform: uppercase;
 }
-.front-page .page-content .content-area, .common-page .page-content .content-area, .blog-article-page .page-content .content-area {
+.page-content .content-area {
   font-size: 18px;
-}
-.blog-listing-page .page-content .content-area {
-  font-size: 0;
 }
 .site-footer .content-area {
   font-size: 13px;
