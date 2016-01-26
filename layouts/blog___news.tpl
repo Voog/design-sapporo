@@ -14,7 +14,7 @@
         {% include "site-header" %}
 
         <main class="page-content" role="main">
-          <section class="blog-articles content-area">
+          <section class="blog-articles">
             {% if editmode %}
               <div class="cms-blog-article-add">{% addbutton %}</div>
             {% endif %}
