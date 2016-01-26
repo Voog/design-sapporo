@@ -4,6 +4,10 @@
   {% blogcontext page_path %}
     <nav class="menu-sub">
       <ul class="menu menu-vertical menu-level-2">
+        <li class="menu-item hidden-mobile">
+          <a class="{% if level_1.current? %}{% unless tags %} selected current{% endunless %}{% endif %}" href="{{ level_1.url }}">{{ level_1.title }}</a>
+        </li>
+        
         {% for tag in blog.tags %}
           {% assign current_class = "" %}
           {% for tmptag in tags %}
