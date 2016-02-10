@@ -416,11 +416,9 @@ a {
   }
 }
 .flexbox .site-header .header-title {
-  box-flex: 1;
-  -webkit-flex: 1 0 auto;
-  -moz-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .no-flexbox .site-header .header-title {
   float: left;
@@ -1220,7 +1218,7 @@ a {
 
 .article-date {
   display: block;
-  padding-top: 4px;
+  margin-top: 4px;
   font-size: 18px;
   font-weight: 100;
   color: rgba(0, 0, 0, 0.5);
