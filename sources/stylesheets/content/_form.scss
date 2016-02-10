@@ -25,7 +25,7 @@
   font-size: 18px;
   line-height: 1.67;
   color: rgba($color-black, .87);
-  background: rgba($color-white, 1);
+  background-color: rgba($color-white, 1);
   border: 0;
   border-radius: 0;
   outline: none;
@@ -95,7 +95,7 @@
 }
 
 .form_field_required {
-  .form_field_labelafter {
+  .form_field_label {
     &::after {
       content: '*';
     }
@@ -114,7 +114,7 @@ label {
   .form_field_checkbox,
   .form_field_radio {
     display: none;
-    // display: inline-block9;
+    // display: inline-block\9;
   }
 
   .form_field_checkbox {
@@ -133,13 +133,13 @@ label {
           width: 100%;
           height: 100%;
           background: url('../images/check_small.png?1') no-repeat left bottom;
-        }
 
-        .backgroundsize & {
-          width: 100%;
-          height: 100%;
-          background: url('../images/check.png?1') no-repeat left bottom;
-          background-size: 17px 18px;
+          .backgroundsize & {
+            width: 100%;
+            height: 100%;
+            background: url('../images/check.png?1') no-repeat left bottom;
+            background-size: 17px 18px;
+          }
         }
       }
       // scss-lint:enable NestingDepth
