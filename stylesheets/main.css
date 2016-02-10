@@ -1192,12 +1192,13 @@ a {
 }
 
 .article-header {
-  margin-top: 5px;
+  margin-top: 9px;
 }
 
 .article-title {
   margin-top: 0;
   margin-bottom: 0;
+  line-height: 1.2;
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
 }
@@ -1206,12 +1207,20 @@ a {
   font-size: 18px;
   font-weight: 100;
 }
-.blog-article-page .article-title {
-  font-size: 50px;
+@media screen and (max-width: 640px) {
+  .blog-article-page .article-title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .blog-article-page .article-title {
+    font-size: 50px;
+  }
 }
 
 .article-date {
   display: block;
+  padding-top: 4px;
   font-size: 18px;
   font-weight: 100;
   color: rgba(0, 0, 0, 0.5);
