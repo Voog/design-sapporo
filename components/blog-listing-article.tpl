@@ -6,5 +6,6 @@
       {% endif %}
     </div>
   </div>
+
   <h2 class="article-title">{{ article.title }}</h2>
 </a>
