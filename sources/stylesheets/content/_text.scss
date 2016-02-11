@@ -157,28 +157,36 @@
     margin-left: 20px;
   }
 
-  .edy-positionable-container-maxwidth {
-    // scss-lint:disable ImportantRule
+  %content-area-image-common {
     width: auto !important;
     max-width: none !important;
-    margin-right: -20px !important;
-    margin-left: -20px !important;
+  }
 
-    @media screen and (min-width: 800px) {
-      margin-right: -50px !important;
-      margin-left: -50px !important;
-    }
+  &.area-normal {
+    .edy-positionable-container-maxwidth {
+      @extend %content-area-image-common;
+      // scss-lint:disable ImportantRule
+      @media screen and (min-width: 780px) {
+        margin-right: -20px !important;
+        margin-left: -20px !important;
+      }
 
-    @media screen and (min-width: 900px) {
-      margin-right: -100px !important;
-      margin-left: -100px !important;
-    }
+      @media screen and (min-width: 840px) {
+        margin-right: -50px !important;
+        margin-left: -50px !important;
+      }
 
-    @media screen and (min-width: 1100px) {
-      margin-right: -200px !important;
-      margin-left: -200px !important;
+      @media screen and (min-width: 940px) {
+        margin-right: -100px !important;
+        margin-left: -100px !important;
+      }
+
+      @media screen and (min-width: 1140px) {
+        margin-right: -215px !important;
+        margin-left: -215px !important;
+      }
+      // scss-lint:enable ImportantRule
     }
-    // scss-lint:enable ImportantRule
   }
 
   .edy-image-container-with-title {
