@@ -1341,6 +1341,7 @@ a {
   margin-bottom: 1.7em;
 }
 .content-area a {
+  font-weight: 400;
   color: black;
 }
 .content-area a:hover {
