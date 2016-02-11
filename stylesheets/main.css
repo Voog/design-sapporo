@@ -1094,6 +1094,11 @@ a {
 .blog-listing-page .blog-article {
   padding-top: 15px;
   padding-bottom: 15px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.blog-listing-page .blog-article:hover {
+  opacity: .8;
 }
 @media screen and (max-width: 480px) {
   .blog-listing-page .blog-article {

@@ -22,6 +22,12 @@
   .blog-listing-page & {
     padding-top: 15px;
     padding-bottom: 15px;
+    opacity: 1;
+    transition: opacity 1s;
+
+    &:hover {
+      opacity: .8;
+    }
 
     @media screen and (max-width: $blog-listing-mobile) {
       display: block;
