@@ -2,6 +2,13 @@
 // "Form" type content area.
 //==============================================================================
 // scss-lint:disable SelectorFormat
+.content-area {
+  .form,
+  form {
+    clear: both;
+  }
+}
+
 .edy-fe-field,
 .form_field {
   margin-bottom: 20px;

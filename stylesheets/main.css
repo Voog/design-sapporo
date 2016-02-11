@@ -1436,6 +1436,11 @@ a {
   content: attr(data-title);
 }
 
+.content-area .form,
+.content-area form {
+  clear: both;
+}
+
 .edy-fe-field,
 .form_field {
   margin-bottom: 20px;
