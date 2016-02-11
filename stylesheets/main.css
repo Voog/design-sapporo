@@ -1393,6 +1393,24 @@ a {
 .content-area iframe {
   max-width: 100%;
 }
+.content-area .custom-btn {
+  padding: 11px 12px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.83);
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}
+.content-area .custom-btn:hover {
+  background-color: rgba(0, 0, 0, 0.93);
+}
+.publicmode .content-area .custom-btn {
+  cursor: pointer;
+}
 .content-area .edy-positionable-container-center,
 .content-area .edy-positionable-container-left-block,
 .content-area .edy-positionable-container-right-block,

@@ -9395,6 +9395,11 @@ return jQuery;
     }
   };
 
+  var bindCustomContentFormats = function() {
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+  };
+
   // TODO: Convert these fallbacks to one function.
   //============================================================================
   // Binds site header content area fallback behaviour fonr no-flexbox
@@ -9443,6 +9448,10 @@ return jQuery;
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();
       bindFallbackFooterContentAreaWidthCalculation();
+     }
+
+     if (editmode()) {
+       bindCustomContentFormats();
      }
   };
 

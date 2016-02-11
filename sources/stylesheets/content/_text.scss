@@ -143,6 +143,27 @@
     max-width: 100%;
   }
 
+  .custom-btn {
+    padding: 11px 12px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba($color-white, .5);
+    background: rgba($color-black, .83);
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+
+    &:hover {
+      background-color: rgba($color-black, .93);
+    }
+
+    .publicmode & {
+      cursor: pointer;
+    }
+  }
+
   .edy-positionable-container-center,
   .edy-positionable-container-left-block,
   .edy-positionable-container-right-block,
