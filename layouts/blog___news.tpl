@@ -24,16 +24,7 @@
             {% endif %}
 
             {% for article in articles %}
-              <a class="blog-article" href="{{ article.url }}">
-                <div class="article-top">
-                  <div class="aspect-ratio-inner">
-                    {% if article.image %}
-                      <img class="article-image" src="{{ article.image }}" alt="{{ article.title }}">
-                    {% endif %}
-                  </div>
-                </div>
-                <h2 class="article-title">{{ article.title }}</h2>
-              </a>
+              {% include "blog-listing-article" %}
             {% endfor %}
           </section>
         </main>
