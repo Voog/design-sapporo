@@ -1385,6 +1385,11 @@ a {
   vertical-align: middle;
   box-sizing: border-box;
 }
+.content-area blockquote {
+  margin: 20px 40px 20px 0;
+  padding-left: 20px;
+  border-left: 2px solid;
+}
 .content-area iframe {
   max-width: 100%;
 }
