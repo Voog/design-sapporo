@@ -7,6 +7,16 @@
       }
     }
 
+    &.item-current {
+      > a {
+        // scss-lint:disable NestingDepth
+        @media screen and (max-width: $mobile) {
+          padding-right: 15px;
+        }
+        // scss-lint:enable NestingDepth
+      }
+    }
+
     a {
       font-size: 13px;
     }
@@ -18,7 +28,7 @@
       opacity: .8;
 
       @media screen and (max-width: $mobile) {
-        padding: 12px 15px 11px;
+        padding: 12px 25px 11px 15px;
       }
 
       @media screen and (min-width: $mobile + 1) {

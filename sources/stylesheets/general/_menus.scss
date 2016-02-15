@@ -143,9 +143,9 @@
     @include transition(right .2s);
     position: fixed;
     top: 0;
-    right: -130px;
+    right: -40%;
     bottom: 0;
-    width: 130px;
+    width: 40%;
     background-color: rgba($color-white, 1);
 
     .menu-main-opened & {

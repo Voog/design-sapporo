@@ -57,7 +57,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .menu-main-opened .site-container {
-    right: 130px;
+    right: 40%;
   }
 }
 
@@ -281,9 +281,9 @@ a {
     transition: right 0.2s;
     position: fixed;
     top: 0;
-    right: -130px;
+    right: -40%;
     bottom: 0;
-    width: 130px;
+    width: 40%;
     background-color: white;
   }
   .menu-main-opened .menu-main {
@@ -604,6 +604,11 @@ a {
     margin-right: 25px;
   }
 }
+@media screen and (max-width: 640px) {
+  .menu-level-1 > .menu-item.item-current > a {
+    padding-right: 15px;
+  }
+}
 .menu-level-1 > .menu-item a {
   font-size: 13px;
 }
@@ -615,7 +620,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .menu-level-1 > .menu-item > a {
-    padding: 12px 15px 11px;
+    padding: 12px 25px 11px 15px;
   }
 }
 @media screen and (min-width: 641px) {
