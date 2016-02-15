@@ -36,5 +36,6 @@
     {% include "menu-language-popover" %}
 
     {% include "template-javascripts" %}
+    {% include "blog-listing-tools" %}
   </body>
 </html>
