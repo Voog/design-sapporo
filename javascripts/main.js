@@ -9432,6 +9432,16 @@ return jQuery;
   };
 
   //============================================================================
+  // Wraps content area tables with the parent <div>. (Enables horizontal
+  // scrolling if table's width is wider than the content area itself).
+  //============================================================================
+  var wrapContentAreaTables = function() {
+    $.each($('.content-area'), function() {
+      $(this).find('table').wrap('<div class="table-container"></div>');
+    });
+  };
+
+  //============================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   //============================================================================
@@ -9452,6 +9462,8 @@ return jQuery;
 
      if (editmode()) {
        bindCustomContentFormats();
+     } else {
+       wrapContentAreaTables();
      }
   };
 

@@ -226,4 +226,25 @@
       content: attr(data-title);
     }
   }
+
+  .table-container {
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    td,
+    th {
+      padding: 10px;
+      border-color: rgba($color-alto, 1);
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  }
 }
