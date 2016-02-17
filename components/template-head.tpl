@@ -29,7 +29,7 @@
 <title>{{ page_title }}</title>
 
 {% comment %}MISC{% endcomment %}
-{% include "site-meta" %}
+{% comment %}{% include "template-meta" %}{% endcomment %}
 
 {% if blog %}{{ blog.rss_link }}{% endif %}
 
