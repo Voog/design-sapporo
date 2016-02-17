@@ -17,7 +17,7 @@
 
           <section class="blog-articles">
             {% for article in site.latest_12_articles %}
-              {% include "blog-lsting-article" %}
+              {% include "blog-listing-article" %}
             {% endfor %}
           </section>
         </main>
