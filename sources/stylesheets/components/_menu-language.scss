@@ -53,18 +53,11 @@
 }
 
 .menu-language-btn-circle {
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
   stroke: rgba($color-black, .3);
   fill: none;
-
-  .language-flags-enabled & {
-    display: none;
-  }
-
-  .language-flags-disabled & {
-    position: absolute;
-    top: 50%;
-    margin-top: -4px;
-  }
 }
 
 .menu-language {
@@ -82,7 +75,7 @@
     }
 
     .language-flags-enabled & {
-      margin-right: -2px;
+      margin-right: -22px;
     }
 
     .editmode.language-flags-enabled & {
@@ -123,7 +116,7 @@
       &::before,
       &::after {
         top: 8px;
-        right: 6px;
+        right: 26px;
       }
 
       &:hover {
@@ -150,7 +143,7 @@
 
       // scss-lint:disable SelectorDepth
       .language-flags-enabled & {
-        padding: 6px 33px 6px 6px;
+        padding: 6px 58px 6px 6px;
       }
 
       .language-flags-disabled & {

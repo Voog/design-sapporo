@@ -706,16 +706,11 @@ a {
 }
 
 .menu-language-btn-circle {
-  stroke: rgba(0, 0, 0, 0.3);
-  fill: none;
-}
-.language-flags-enabled .menu-language-btn-circle {
-  display: none;
-}
-.language-flags-disabled .menu-language-btn-circle {
   position: absolute;
   top: 50%;
   margin-top: -4px;
+  stroke: rgba(0, 0, 0, 0.3);
+  fill: none;
 }
 
 .menu-language {
@@ -731,7 +726,7 @@ a {
   margin-top: -32px;
 }
 .language-flags-enabled .menu-language.menu-popover {
-  margin-right: -2px;
+  margin-right: -22px;
 }
 .editmode.language-flags-enabled .menu-language.menu-popover {
   margin-top: -36px;
@@ -760,7 +755,7 @@ a {
 }
 .menu-language .menu-item a::before, .menu-language .menu-item a::after {
   top: 8px;
-  right: 6px;
+  right: 26px;
 }
 .menu-language .menu-item a:hover {
   color: rgba(0, 0, 0, 0.6);
@@ -769,7 +764,7 @@ a {
   color: #cc0000;
 }
 .language-flags-enabled .menu-language .menu-item a {
-  padding: 6px 33px 6px 6px;
+  padding: 6px 58px 6px 6px;
 }
 .language-flags-disabled .menu-language .menu-item a {
   padding: 3px 25px;
