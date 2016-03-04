@@ -5,7 +5,7 @@
     {% include "template-head" %}
   </head>
 
-  <body class="front-page blog-news-page blog-listing-page" data-search-indexing-allowed="false">
+  <body class="front-page blog-news-page blog-listing-page header-menu-wide" data-search-indexing-allowed="false">
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">

@@ -2,7 +2,7 @@
 {% include "template-tools" %}
 
 {% comment %}Main template functionality.{% endcomment %}
-<script src="{{ javascripts_path }}/main.min.js"></script>
+<script src="{{ javascripts_path }}/main.js"></script>
 
 {% comment %}Site search related javascript components.{% endcomment %}
 {% if site.search.enabled %}

@@ -2,15 +2,38 @@
 .site-header {
   @include hyphenate;
 
+  &.is-loading {
+    visibility: hidden;
+
+    .edy-cbtn {
+      &,
+      & > span,
+      & > div,
+      & > span > span,
+      & > span > div,
+      & > div > span,
+      & > div > div,
+      & > span:before,
+      & > div:before {
+        visibility: hidden !important;
+      }
+    }
+  }
+
   .flexbox & {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     justify-content: flex-end;
   }
 
   .no-flexbox & {
     @include clearfix;
+  }
+
+  .header-menu-compact & {
+    .flexbox & {
+      flex-wrap: wrap;
+    }
   }
 
   .blog-listing-page & {
@@ -32,15 +55,30 @@
     }
 
     .flexbox & {
-      flex: 1 1 auto;
+      flex-grow: 1;
     }
 
     .no-flexbox & {
       float: left;
     }
+
+    .header-menu-wide & {
+      .flexbox & {
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+      }
+    }
   }
 
   .header-menu {
+    .menu-invisible {
+      visibility: hidden;
+    }
+
+    .flexbox & {
+      flex-shrink: 0;
+    }
+
     .no-flexbox & {
       float: right;
     }

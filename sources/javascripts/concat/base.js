@@ -119,6 +119,42 @@
     });
   };
 
+  var setElementInitialWidthData = function(element) {
+    var $element = $(element),
+        elementInitialWidth = $element.outerWidth(true);
+
+    $element.attr('data-initial-width', elementInitialWidth);
+  };
+
+  //============================================================================
+  // Calculates if it is proper to use compact or wide header menu.
+  //============================================================================
+  var setHeaderMenuMode = function() {
+    var $body = $('body'),
+        $siteHeader = $('.js-site-header'),
+        $headerTitle = $('.js-header-title'),
+        $headerMenu = $('.js-header-menu'),
+        siteHeaderWidth = $siteHeader.width(),
+        headerTitleOuterWidth = $headerTitle.outerWidth(true),
+        headerMenuWidth = $headerMenu.data('initial-width');
+
+    if ($('body').hasClass('header-menu-compact')) {
+      headerTitleOuterWidth = $headerTitle.data('initial-width');
+    }
+
+    if (headerTitleOuterWidth + headerMenuWidth > siteHeaderWidth) {
+      $body.addClass('header-menu-compact');
+      $body.removeClass('header-menu-wide');
+    } else {
+      $body.addClass('header-menu-wide');
+      $body.removeClass('header-menu-compact');
+    }
+
+    if ($siteHeader.hasClass('is-loading')) {
+      $siteHeader.removeClass('is-loading');
+    }
+  };
+
   //============================================================================
   // Positions language menu popover under the toggleing button.
   //============================================================================
@@ -236,6 +272,7 @@
   //============================================================================
   var initWindowResize = function() {
     $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
+    $(window).resize(debounce(setHeaderMenuMode, 100));
   };
 
   //============================================================================
@@ -243,6 +280,9 @@
   //============================================================================
   var init = function() {
     bindInterfaceButtons();
+    setElementInitialWidthData('.js-header-title');
+    setElementInitialWidthData('.js-header-menu');
+    setHeaderMenuMode();
 
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();
@@ -254,6 +294,7 @@
      } else {
        wrapContentAreaTables();
      }
+
   };
 
   // Enables the usage of the initiations outside this file.

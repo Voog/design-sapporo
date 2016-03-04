@@ -5,7 +5,7 @@
     {% include "template-head" %}
   </head>
 
-  <body class="common-page">
+  <body class="common-page header-menu-wide">
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">

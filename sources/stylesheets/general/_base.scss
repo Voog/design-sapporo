@@ -6,7 +6,7 @@ html {
   }
 
   &.menu-main-opened {
-    @media screen and (max-width: $mobile) {
+    .header-menu-compact & {
       height: 100%;
       overflow: hidden;
     }
@@ -27,7 +27,7 @@ body {
   }
 
   .menu-main-opened & {
-    @media screen and (max-width: $mobile) {
+    .header-menu-compact & {
       position: fixed;
       right: 0;
       left: 0;
@@ -63,7 +63,7 @@ a {
     right: 280px;
   }
 
-  @media screen and (max-width: $mobile) {
+  .header-menu-compact & {
     .menu-main-opened & {
       right: 40%;
     }

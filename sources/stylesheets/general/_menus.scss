@@ -39,7 +39,7 @@
     }
   }
 
-  @media screen and (min-width: $mobile + 1) {
+  .header-menu-wide & {
     display: none;
   }
 }
@@ -153,7 +153,7 @@
 .menu-main {
   display: inline-block;
 
-  @media screen and (max-width: $mobile) {
+  .header-menu-compact & {
     @include transition(right .2s);
     position: fixed;
     top: 0;
@@ -168,25 +168,26 @@
   }
 
   .inner {
-    @media screen and (max-width: $mobile) {
+    .header-menu-compact & {
       height: 100%;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
 
-    > .menu-cms {
-      // scss-lint:disable SelectorDepth
-      // scss-lint:disable NestingDepth
-      .menu-item {
-        @media screen and (min-width: $mobile + 1) {
-          &:not(:first-child) {
-            margin-left: 15px;
-          }
-          // scss-lint:enable NestingDepth
-          // scss-lint:enable SelectorDepth
-        }
-      }
-    }
+    // TODO: Remove if not used.
+    // > .menu-cms {
+    //   // scss-lint:disable SelectorDepth
+    //   // scss-lint:disable NestingDepth
+    //   .menu-item {
+    //     .header-menu-wide & {
+    //       &:not(:first-child) {
+    //         margin-left: 15px;
+    //       }
+    //       // scss-lint:enable NestingDepth
+    //       // scss-lint:enable SelectorDepth
+    //     }
+    //   }
+    // }
   }
 
   .btn {
@@ -205,7 +206,7 @@
 
   .menu {
     .menu-item {
-      @media screen and (max-width: $mobile) {
+      .header-menu-compact & {
         display: none;
 
         // scss-lint:disable NestingDepth
@@ -219,7 +220,7 @@
 
   .menu-current {
     > .menu-item {
-      @media screen and (max-width: $mobile) {
+      .header-menu-compact & {
         display: block;
       }
     }
@@ -227,24 +228,25 @@
 
   .menu-public {
     .menu-item {
-      @media screen and (max-width: $mobile) {
+      .header-menu-compact & {
         position: relative;
       }
     }
   }
 
-  .menu-cms {
-    @media screen and (min-width: $mobile + 1) {
-      margin-top: 5px;
-    }
-
-    .menu-item {
-      @media screen and (max-width: $mobile) {
-        margin-top: 5px;
-        margin-left: 15px;
-      }
-    }
-  }
+  // TODO: Remove if not used.
+  // .menu-cms {
+  //   .header-menu-wide & {
+  //     margin-top: 5px;
+  //   }
+  //
+  //   .menu-item {
+  //     .header-menu-compact & {
+  //       margin-top: 5px;
+  //       margin-left: 15px;
+  //     }
+  //   }
+  // }
 
   .item-current {
     .menu {
@@ -253,7 +255,7 @@
       > .menu-item {
         display: block;
 
-        @media screen and (max-width: $mobile) {
+        .header-menu-compact & {
           &.hidden-mobile {
             display: none;
           }
@@ -266,7 +268,7 @@
 }
 
 .menu-sub {
-  @media screen and (min-width: $mobile + 1) {
+  .header-menu-wide & {
     position: absolute;
     z-index: 1;
     display: none;

@@ -4,18 +4,17 @@
 //==============================================================================
 .menu-language-btn {
   @include button;
+  top: 3px;
   display: inline-block;
   vertical-align: top;
 
   .language-flags-enabled & {
-    top: 3px;
     margin-left: 24px;
     padding: 12px 16px 13px 15px;
     font-size: 0;
   }
 
   .language-flags-disabled & {
-    top: 3px;
     padding: 3px 24px 2px 8px;
     margin-left: 19px;
     font-family: inherit;

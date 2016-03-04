@@ -2,18 +2,24 @@
 .menu-level-1 {
   > .menu-item {
     &:not(:last-child) {
-      @media screen and (min-width: $mobile + 1) {
-        margin-right: 25px;
+      .header-menu-wide & {
+        margin-right: 15px;
       }
     }
 
     &.item-current {
       > a {
         // scss-lint:disable NestingDepth
-        @media screen and (max-width: $mobile) {
+        .header-menu-compact & {
           padding-right: 15px;
         }
         // scss-lint:enable NestingDepth
+      }
+    }
+
+    &.menu-item-cms {
+      .header-menu-compact & {
+        padding: 10px 15px;
       }
     }
 
@@ -27,18 +33,17 @@
       text-transform: uppercase;
       opacity: .8;
 
-      @media screen and (max-width: $mobile) {
+      .header-menu-compact & {
         padding: 12px 25px 11px 15px;
       }
 
-      @media screen and (min-width: $mobile + 1) {
-        padding-top: 8px;
-        padding-bottom: 7px;
+      .header-menu-wide & {
+        padding: 8px 5px;
       }
     }
   }
 
-  @media screen and (max-width: $mobile) {
+  .header-menu-compact & {
     padding-top: 40px;
   }
 }

@@ -3,7 +3,11 @@
   padding: 6px 5px 4px;
   vertical-align: top;
 
-  @media screen and (min-width: $mobile + 1) {
+  .header-menu-compact & {
+    margin-right: 5px;
+  }
+
+  .header-menu-wide & {
     margin-left: 13px;
   }
 
