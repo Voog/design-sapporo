@@ -1,7 +1,8 @@
 {
   "name": "voog-design-sapporo",
   "devDependencies": {
-    "bourbon": "~4.2.5"
+    "bourbon": "~4.2.5",
+    "textarea-autosize": "^0.4.1"
   },
   "dependencies": {
     "jquery": "~2.1.4"

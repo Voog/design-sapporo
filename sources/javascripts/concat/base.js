@@ -34,13 +34,22 @@
     $(document).on('click touchstart', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html'),
-            $searchInput = $('.js-search-input');
+            $searchInput = $('.js-search-input'),
+            $commentFormDetails = $('.js-comment-form-details'),
+            $commentAuthorName = $('.js-comment-name'),
+            $commentAuthorEmail = $('.js-comment-email'),
+            commentAuthorNameValue = $commentAuthorName.val(),
+            commentAuthorEmailValue = $commentAuthorEmail.val();
 
         $html.removeClass('menu-language-popover-open');
         $html.removeClass('menu-main-opened');
         $html.removeClass('site-search-opened');
 
         $searchInput.val('');
+
+        if (commentAuthorNameValue.length === 0 && commentAuthorEmailValue.length === 0) {
+          $commentFormDetails.addClass('is-hidden');
+        }
       }
     });
 
@@ -108,6 +117,7 @@
       }
     });
 
+    // Clears site search input.
     $('.js-clear-search-input').click(function() {
       var $searchInput = $('.js-search-input');
 
@@ -116,6 +126,12 @@
       } else {
         $('html').removeClass('site-search-opened');
       }
+    });
+
+    // Toggles blog article comments author fields.
+    $('.js-comments-body').on('focus', function() {
+      $commentFormDetails = $('.js-comment-form-details');
+      $commentFormDetails.removeClass('is-hidden');
     });
   };
 
@@ -267,6 +283,43 @@
   };
 
   //============================================================================
+  // Scrolls to the form if submit failed or succeeded (to show the error
+  // messages or success notice to the user).
+  //============================================================================
+  var focusFormMessages = function() {
+    $(document).ready(function() {
+      if ($('.comment-form').hasClass('form_with_errors')) {
+        $('html, body')
+          .scrollTop($('.comment-form')
+          .offset().top)
+        ;
+      } else if ($('form').find('.form_error, .form_notice').length > 0) {
+        $('html, body')
+          .scrollTop($('.form_error, .form_notice').closest('form')
+          .offset().top)
+        ;
+      }
+    });
+  };
+
+  // ===========================================================================
+  // Removes error highlighting from form input if user modifies the faulty
+  // field.
+  // ===========================================================================
+  var removeFormInputErrorHighlight = function() {
+    $('[class^=form_field_]').on('input change', function() {
+      $(this).closest('.form_field_with_errors').removeClass('form_field_with_errors');
+    });
+  };
+
+  // ===========================================================================
+  // Resizes comment form message area if user adds/removes a line in textarea.
+  // ===========================================================================
+  var autoSizeFormCommentArea = function() {
+    $('.js-comments-body').textareaAutoSize();
+  };
+
+  //============================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   //============================================================================
@@ -283,6 +336,9 @@
     setElementInitialWidthData('.js-header-title');
     setElementInitialWidthData('.js-header-menu');
     setHeaderMenuMode();
+    focusFormMessages();
+    removeFormInputErrorHighlight();
+    autoSizeFormCommentArea();
 
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();

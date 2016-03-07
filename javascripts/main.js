@@ -9209,6 +9209,61 @@ return jQuery;
 
 }));
 
+/*!
+ * jQuery Textarea AutoSize plugin
+ * Author: Javier Julio
+ * Licensed under the MIT license
+ */
+;(function ($, window, document, undefined) {
+
+  var pluginName = "textareaAutoSize";
+  var pluginDataName = "plugin_" + pluginName;
+
+  var containsText = function (value) {
+    return (value.replace(/\s/g, '').length > 0);
+  };
+
+  function Plugin(element, options) {
+    this.element = element;
+    this.$element = $(element);
+    this.init();
+  }
+
+  Plugin.prototype = {
+    init: function() {
+      var height = this.$element.outerHeight();
+      var diff = parseInt(this.$element.css('paddingBottom')) +
+                 parseInt(this.$element.css('paddingTop')) || 0;
+
+      if (containsText(this.element.value)) {
+        this.$element.height(this.element.scrollHeight - diff);
+      }
+
+      // keyup is required for IE to properly reset height when deleting text
+      this.$element.on('input keyup', function(event) {
+        var $window = $(window);
+        var currentScrollPosition = $window.scrollTop();
+
+        $(this)
+          .height(0)
+          .height(this.scrollHeight - diff);
+
+        $window.scrollTop(currentScrollPosition);
+      });
+    }
+  };
+
+  $.fn[pluginName] = function (options) {
+    this.each(function() {
+      if (!$.data(this, pluginDataName)) {
+        $.data(this, pluginDataName, new Plugin(this, options));
+      }
+    });
+    return this;
+  };
+
+})(jQuery, window, document);
+
 ;(function($) {
   //============================================================================
   // Function to detect if user is in editmode.
@@ -9245,13 +9300,22 @@ return jQuery;
     $(document).on('click touchstart', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html'),
-            $searchInput = $('.js-search-input');
+            $searchInput = $('.js-search-input'),
+            $commentFormDetails = $('.js-comment-form-details'),
+            $commentAuthorName = $('.js-comment-name'),
+            $commentAuthorEmail = $('.js-comment-email'),
+            commentAuthorNameValue = $commentAuthorName.val(),
+            commentAuthorEmailValue = $commentAuthorEmail.val();
 
         $html.removeClass('menu-language-popover-open');
         $html.removeClass('menu-main-opened');
         $html.removeClass('site-search-opened');
 
         $searchInput.val('');
+
+        if (commentAuthorNameValue.length === 0 && commentAuthorEmailValue.length === 0) {
+          $commentFormDetails.addClass('is-hidden');
+        }
       }
     });
 
@@ -9319,6 +9383,7 @@ return jQuery;
       }
     });
 
+    // Clears site search input.
     $('.js-clear-search-input').click(function() {
       var $searchInput = $('.js-search-input');
 
@@ -9327,6 +9392,12 @@ return jQuery;
       } else {
         $('html').removeClass('site-search-opened');
       }
+    });
+
+    // Toggles blog article comments author fields.
+    $('.js-comments-body').on('focus', function() {
+      $commentFormDetails = $('.js-comment-form-details');
+      $commentFormDetails.removeClass('is-hidden');
     });
   };
 
@@ -9478,6 +9549,43 @@ return jQuery;
   };
 
   //============================================================================
+  // Scrolls to the form if submit failed or succeeded (to show the error
+  // messages or success notice to the user).
+  //============================================================================
+  var focusFormMessages = function() {
+    $(document).ready(function() {
+      if ($('.comment-form').hasClass('form_with_errors')) {
+        $('html, body')
+          .scrollTop($('.comment-form')
+          .offset().top)
+        ;
+      } else if ($('form').find('.form_error, .form_notice').length > 0) {
+        $('html, body')
+          .scrollTop($('.form_error, .form_notice').closest('form')
+          .offset().top)
+        ;
+      }
+    });
+  };
+
+  // ===========================================================================
+  // Removes error highlighting from form input if user modifies the faulty
+  // field.
+  // ===========================================================================
+  var removeFormInputErrorHighlight = function() {
+    $('[class^=form_field_]').on('input change', function() {
+      $(this).closest('.form_field_with_errors').removeClass('form_field_with_errors');
+    });
+  };
+
+  // ===========================================================================
+  // Resizes comment form message area if user adds/removes a line in textarea.
+  // ===========================================================================
+  var autoSizeFormCommentArea = function() {
+    $('.js-comments-body').textareaAutoSize();
+  };
+
+  //============================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   //============================================================================
@@ -9494,6 +9602,9 @@ return jQuery;
     setElementInitialWidthData('.js-header-title');
     setElementInitialWidthData('.js-header-menu');
     setHeaderMenuMode();
+    focusFormMessages();
+    removeFormInputErrorHighlight();
+    autoSizeFormCommentArea();
 
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();

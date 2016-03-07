@@ -4,12 +4,11 @@
       <div class="top-inner aspect-ratio-inner image-drop-area js-image-drop-area" data-image="{{ article.data.image.url }}"></div>
     </div>
 
-    <h2 class="article-title">{{ article.title }}</h2>
+    <h2 class="article-title">
+      <a href="{{ article.url }}">{{ article.title }}</a>
+    </h2>
   </div>
 {% else %}
-
-
-
   <a class="blog-article{% if article.data.image == nil or article.data.image == "" %} without-image{% endif %}" href="{{ article.url }}">
     <div class="article-top">
       <div class="top-inner aspect-ratio-inner">

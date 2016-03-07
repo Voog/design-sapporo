@@ -26,8 +26,9 @@
             </div>
 
             {% include "blog-article-tags" %}
-
           </article>
+
+          {% include "blog-article-comments" %}
         </main>
 
         {% include "site-footer" %}

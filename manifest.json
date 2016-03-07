@@ -36,9 +36,23 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1.tpl",
-      "layout_name": "menu-level-1",
-      "title": "menu-level-1"
+      "file": "components/menu-language-popover.tpl",
+      "layout_name": "menu-language-popover",
+      "title": "menu-language-popover"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-tags.tpl",
+      "layout_name": "blog-article-tags",
+      "title": "blog-article-tags"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-variables.tpl",
+      "layout_name": "blog-article-variables",
+      "title": "blog-article-variables"
     },
     {
       "content_type": "component",
@@ -71,16 +85,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-language-popover.tpl",
-      "layout_name": "menu-language-popover",
-      "title": "menu-language-popover"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-article-tags.tpl",
-      "layout_name": "blog-article-tags",
-      "title": "blog-article-tags"
+      "file": "components/menu-level-1.tpl",
+      "layout_name": "menu-level-1",
+      "title": "menu-level-1"
     },
     {
       "content_type": "component",
