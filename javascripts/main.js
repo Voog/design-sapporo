@@ -9282,15 +9282,25 @@ return jQuery;
   var debounce = function(func, wait, immediate) {
     var timeout;
     return function() {
-      var context = this, args = arguments;
+      var context = this,
+          args = arguments;
+
       var later = function() {
         timeout = null;
-        if (!immediate) func.apply(context, args);
+
+        if (!immediate) {
+          func.apply(context, args);
+        }
       };
+
       var callNow = immediate && !timeout;
+
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
+
+      if (callNow) {
+        func.apply(context, args);
+      }
     };
   };
 
@@ -9303,16 +9313,14 @@ return jQuery;
     // that shouldn't trigger the sideclick events.
     $(document).on('click touchstart', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
-        var $html = $('html'),
-            $searchInput = $('.js-search-input');
+        var $html = $('html');
 
         $html.removeClass('menu-language-popover-open');
         $html.removeClass('menu-main-opened');
         $html.removeClass('site-search-opened');
 
-        $searchInput.val('');
+        $('.js-search-input').val('');
 
-        // if (blogArticlePagecommentAuthorNameValue.length === 0 && commentAuthorEmailValue.length === 0) {
         if (blogArticlePage() && $('.js-comment-name').val().length === 0 && $('.js-comment-email').val().length === 0) {
           $('.js-comment-form-details').addClass('is-hidden');
         }
@@ -9346,28 +9354,20 @@ return jQuery;
 
     // Goes one level up in mobile view navigation menu.
     $('.js-toggle-menu-prev').click(function() {
-      var $menuMainInner = $('.js-menu-main .inner'),
-          $currentBtn = $(this),
-          $menuItems = $('.menu-item'),
-          $menuSubBtns = $('.js-toggle-menu-sub');
-
-      $currentBtn.addClass('hidden');
-      $menuMainInner.find('> .menu').addClass('menu-current');
-      $menuItems.removeClass('item-current');
-      $menuSubBtns.removeClass('hidden');
+      $(this).addClass('hidden');
+      $('.js-menu-main .inner').find('> .menu').addClass('menu-current');
+      $('.menu-item').removeClass('item-current');
+      $('.js-toggle-menu-sub').removeClass('hidden');
     });
 
     // Goes one level deeper in mobile view navigation menu.
     $('.js-toggle-menu-sub').click(function() {
-      var $menuMainInner = $('.js-menu-main'),
-          $menuPrevBtn = $('.js-toggle-menu-prev'),
-          $menuItems = $('.menu-item'),
-          $currentBtn = $(this);
+      var $currentBtn = $(this);
 
-      $menuMainInner.find('.menu').removeClass('menu-current');
-      $menuPrevBtn.removeClass('hidden');
+      $('.js-menu-main').find('.menu').removeClass('menu-current');
+      $('.js-toggle-menu-prev').removeClass('hidden');
       $currentBtn.addClass('hidden');
-      $menuItems.removeClass('item-current');
+      $('.menu-item').removeClass('item-current');
       $currentBtn.closest('.menu-item').addClass('item-current');
     });
 
@@ -9396,16 +9396,14 @@ return jQuery;
 
     // Toggles blog article comments author fields.
     $('.js-comments-body').on('focus', function() {
-      $commentFormDetails = $('.js-comment-form-details');
-      $commentFormDetails.removeClass('is-hidden');
+      $('.js-comment-form-details').removeClass('is-hidden');
     });
   };
 
   var setElementInitialWidthData = function(element) {
-    var $element = $(element),
-        elementInitialWidth = $element.outerWidth(true);
+    var $element = $(element);
 
-    $element.attr('data-initial-width', elementInitialWidth);
+    $element.attr('data-initial-width', $element.outerWidth(true));
   };
 
   //============================================================================
@@ -9415,16 +9413,15 @@ return jQuery;
     var $body = $('body'),
         $siteHeader = $('.js-site-header'),
         $headerTitle = $('.js-header-title'),
-        $headerMenu = $('.js-header-menu'),
-        siteHeaderWidth = $siteHeader.width(),
-        headerTitleOuterWidth = $headerTitle.outerWidth(true),
-        headerMenuWidth = $headerMenu.data('initial-width');
+        headerTitleWidth;
 
-    if ($('body').hasClass('header-menu-compact')) {
-      headerTitleOuterWidth = $headerTitle.data('initial-width');
+    if ($body.hasClass('header-menu-compact')) {
+      headerTitleWidth = $headerTitle.data('initial-width');
+    } else {
+      headerTitleWidth = $headerTitle.outerWidth(true);
     }
 
-    if (headerTitleOuterWidth + headerMenuWidth > siteHeaderWidth) {
+    if (headerTitleWidth + $('.js-header-menu').data('initial-width') > $siteHeader.width()) {
       $body.addClass('header-menu-compact');
       $body.removeClass('header-menu-wide');
     } else {
@@ -9441,17 +9438,11 @@ return jQuery;
   // Positions language menu popover under the toggleing button.
   //============================================================================
   var handleMenuLanguagePopoverPositioning = function(button) {
-    var $menuWrapper = $('.js-menu-language-popover'),
-        $offsetItem = $('.js-menu-language-offset-item'),
-        offsetItemOffsetTop = $offsetItem.offset().top,
-        offsetItemOffsetLeft = $offsetItem.offset().left,
-        offsetItemOuterWidth = $offsetItem.outerWidth(),
-        offsetItemOuterHeight = $offsetItem.outerHeight(),
-        windowWidth = $(window).width();
+    var $offsetItem = $('.js-menu-language-offset-item');
 
-    $menuWrapper.css({
-      top: Math.round(offsetItemOffsetTop + offsetItemOuterHeight),
-      right: Math.round(windowWidth - offsetItemOffsetLeft - offsetItemOuterWidth)
+    $('.js-menu-language-popover').css({
+      top: Math.round($offsetItem.offset().top + $offsetItem.outerHeight()),
+      right: Math.round($(window).width() - $offsetItem.offset().left - $offsetItem.outerWidth())
     });
   };
 
@@ -9513,14 +9504,9 @@ return jQuery;
   // browsers – calculates minimum width for the header content area.
   //============================================================================
   var bindFallbackHeaderContentAreaWidthCalculation = function() {
-    var $header = $('.js-site-header'),
-        headerWidth = $header.width(),
-        $headerMenu = $('.js-header-menu'),
-        headerMenuWidth = $headerMenu.width(),
-        $headerTitle = $('.js-header-title'),
-        headerTitleMargin = parseInt($headerTitle.css('margin-right')) + 1;
+    var $headerTitle = $('.js-header-title');
 
-    $headerTitle.css('min-width', headerWidth - headerMenuWidth - headerTitleMargin);
+    $headerTitle.css('min-width', $('.js-site-header').width() - $('.js-header-menu').width() - parseInt($headerTitle.css('margin-right')) + 1);
   };
 
   //============================================================================
@@ -9528,14 +9514,9 @@ return jQuery;
   // browsers – calculates minimum width for the footer content area.
   //============================================================================
   var bindFallbackFooterContentAreaWidthCalculation = function() {
-    var $footer = $('.js-site-footer'),
-        footerWidth = $footer.width(),
-        $footerVoogReference = $('.js-voog-reference'),
-        footerVoogReferenceWidth = $footerVoogReference.width(),
-        footerVoogReferenceMargin = parseInt($footerVoogReference.css('margin-right')) + 1,
-        $footerBody = $('.js-footer-body');
+    var $footerBody = $('.js-footer-body');
 
-    $footerBody.css('min-width', footerWidth - footerVoogReferenceWidth - footerVoogReferenceMargin);
+    $footerBody.css('min-width', $('.js-site-footer').width() - $('.js-voog-reference').width() - parseInt($footerVoogReference.css('margin-right')) + 1);
   };
 
   //============================================================================
