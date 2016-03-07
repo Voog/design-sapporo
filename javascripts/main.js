@@ -9272,6 +9272,10 @@ return jQuery;
     return $('html').hasClass('editmode');
   };
 
+  var blogArticlePage = function() {
+    return $('body').hasClass('blog-article-page');
+  }
+
   //============================================================================
   // Helper function to limit the rate at which a function can fire.
   //============================================================================
@@ -9300,12 +9304,7 @@ return jQuery;
     $(document).on('click touchstart', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html'),
-            $searchInput = $('.js-search-input'),
-            $commentFormDetails = $('.js-comment-form-details'),
-            $commentAuthorName = $('.js-comment-name'),
-            $commentAuthorEmail = $('.js-comment-email'),
-            commentAuthorNameValue = $commentAuthorName.val(),
-            commentAuthorEmailValue = $commentAuthorEmail.val();
+            $searchInput = $('.js-search-input');
 
         $html.removeClass('menu-language-popover-open');
         $html.removeClass('menu-main-opened');
@@ -9313,8 +9312,9 @@ return jQuery;
 
         $searchInput.val('');
 
-        if (commentAuthorNameValue.length === 0 && commentAuthorEmailValue.length === 0) {
-          $commentFormDetails.addClass('is-hidden');
+        // if (blogArticlePagecommentAuthorNameValue.length === 0 && commentAuthorEmailValue.length === 0) {
+        if (blogArticlePage() && $('.js-comment-name').val().length === 0 && $('.js-comment-email').val().length === 0) {
+          $('.js-comment-form-details').addClass('is-hidden');
         }
       }
     });
