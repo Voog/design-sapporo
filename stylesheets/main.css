@@ -352,7 +352,16 @@ a {
   display: block;
 }
 .menu-sub .menu-cms li {
-  padding: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.header-menu-compact .menu-sub .menu-cms li {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.header-menu-wide .menu-sub .menu-cms li {
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
 .site-header {
@@ -1579,6 +1588,7 @@ a {
 .form_field_textarea {
   width: 30%;
   height: 33px;
+  min-height: 33px;
   padding: 4px 7px 2px;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
