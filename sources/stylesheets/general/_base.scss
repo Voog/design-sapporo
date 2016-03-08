@@ -65,7 +65,13 @@ a {
 
   .header-menu-compact & {
     .menu-main-opened & {
-      right: 40%;
+      @media screen and (max-width: $mobile) {
+        right: 40%;
+      }
+
+      @media screen and (min-width: $mobile + 1) {
+        right: 256px;
+      }
     }
   }
 }

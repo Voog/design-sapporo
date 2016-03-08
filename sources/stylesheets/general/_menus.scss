@@ -157,10 +157,18 @@
     @include transition(right .2s);
     position: fixed;
     top: 0;
-    right: -40%;
     bottom: 0;
-    width: 40%;
     background-color: rgba($color-white, 1);
+
+    @media screen and (max-width: $mobile) {
+      right: -40%;
+      width: 40%;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      right: -256px;
+      width: 256px;
+    }
 
     .menu-main-opened & {
       right: 0;

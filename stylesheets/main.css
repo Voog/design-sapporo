@@ -51,8 +51,15 @@ a {
 .site-search-opened .site-container {
   right: 280px;
 }
-.menu-main-opened .header-menu-compact .site-container {
-  right: 40%;
+@media screen and (max-width: 640px) {
+  .menu-main-opened .header-menu-compact .site-container {
+    right: 40%;
+  }
+}
+@media screen and (min-width: 641px) {
+  .menu-main-opened .header-menu-compact .site-container {
+    right: 256px;
+  }
 }
 
 .wrap {
@@ -279,10 +286,20 @@ a {
   transition: right 0.2s;
   position: fixed;
   top: 0;
-  right: -40%;
   bottom: 0;
-  width: 40%;
   background-color: white;
+}
+@media screen and (max-width: 640px) {
+  .header-menu-compact .menu-main {
+    right: -40%;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 641px) {
+  .header-menu-compact .menu-main {
+    right: -256px;
+    width: 256px;
+  }
 }
 .menu-main-opened .header-menu-compact .menu-main {
   right: 0;
