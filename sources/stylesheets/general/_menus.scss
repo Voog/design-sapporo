@@ -64,7 +64,7 @@
     display: none;
   }
 
-  @media screen and (min-width: $mobile) {
+  .header-menu-wide & {
     display: none;
   }
 }
@@ -81,7 +81,7 @@
   text-align: right;
   background-color: transparent;
 
-  @media screen and (min-width: $mobile) {
+  .header-menu-wide & {
     display: none;
   }
 }
