@@ -1194,6 +1194,8 @@ a {
 }
 
 .article-placeholder {
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 20px;
 }
 
@@ -1550,10 +1552,11 @@ a {
 .form_field_textfield,
 .form_field_textarea {
   width: 30%;
-  padding: 2px 7px 1px;
+  height: 33px;
+  padding: 4px 7px 2px;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
   background-color: white;
   border: 0;
