@@ -306,7 +306,7 @@
   //============================================================================
   var initWindowResize = function() {
     $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
-    $(window).resize(debounce(setHeaderMenuMode, 100));
+    $(window).resize(debounce(setHeaderMenuMode, 25));
   };
 
   //============================================================================
