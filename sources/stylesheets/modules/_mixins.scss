@@ -58,18 +58,4 @@
     bottom: 0;
     left: 0;
   }
-
-  // MS Edge hack. Aspect ratio mixin is not working with Edge by default.
-  @supports (-ms-accelerator:true) {
-    > .aspect-ratio-inner {
-      position: static;
-    }
-  }
-
-  // MS Edge hack. Aspect ratio mixin is not working with FF by default.
-  @-moz-document url-prefix() {
-    > .aspect-ratio-inner {
-      position: static;
-    }
-  }
 }

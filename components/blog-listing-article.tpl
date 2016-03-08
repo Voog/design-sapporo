@@ -5,7 +5,7 @@
     </div>
 
     <h2 class="article-title">
-      <a href="{{ article.url }}">{{ article.title }}</a>
+      <a class="article-link" href="{{ article.url }}">{{ article.title }}</a>
     </h2>
   </div>
 {% else %}
