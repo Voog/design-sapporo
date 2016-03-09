@@ -1446,6 +1446,7 @@ a {
   padding: 10px;
   font-size: 14px;
   font-weight: 400;
+  background-color: white;
 }
 .content-area pre {
   overflow: auto;
