@@ -49,11 +49,11 @@
   background-color: rgba($color-white, 1);
 
   @media screen and (max-width: $mobile) {
-    padding-top: 45px;
+    padding-top: 43px;
   }
 
   @media screen and (min-width: $mobile + 1) {
-    padding-top: 83px;
+    padding-top: 80px;
   }
 }
 
@@ -126,7 +126,7 @@
 
   @media screen and (min-width: $mobile + 1) {
     height: calc(100% - 190px);
-    padding-top: 165px;
+    padding-top: 160px;
   }
 
   // Search modal has the following state classes:
