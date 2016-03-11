@@ -1509,6 +1509,9 @@ a {
 .content-area .edy-texteditor-container-wrapper-right {
   margin-left: 20px;
 }
+.content-area .edy-positionable-container-maxwidth.edy-image-container-with-title::after {
+  text-align: center;
+}
 .content-area.area-normal .edy-positionable-container-maxwidth {
   width: auto !important;
   max-width: none !important;

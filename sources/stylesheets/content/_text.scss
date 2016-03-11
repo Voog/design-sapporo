@@ -186,6 +186,14 @@
     margin-left: 20px;
   }
 
+  .edy-positionable-container-maxwidth {
+    &.edy-image-container-with-title {
+      &::after {
+        text-align: center;
+      }
+    }
+  }
+
   %content-area-image-common {
     width: auto !important;
     max-width: none !important;
