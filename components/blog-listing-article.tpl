@@ -15,7 +15,7 @@
         {% if article.data.image and article.data.image != "" %}
           <img class="article-image" src="{{ article.data.image.url }}" alt="{{ article.title }}">
         {% else %}
-          <div class="article-placeholder">{{ article.title }}</div>
+          <div class="article-placeholder">{{ article.title | truncate: 50 }}</div>
         {% endif %}
       </div>
     </div>
