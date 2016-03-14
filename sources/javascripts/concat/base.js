@@ -151,8 +151,14 @@
         $siteHeader = $('.js-site-header'),
         $headerTitle = $('.js-header-title'),
         $headerTitleEditable = $siteHeader.find('.edy-editable'),
-        headerTitleHtml = $headerTitleEditable.html(),
+        headerTitleHtml,
         clonedElement;
+
+    if (editmode()) {
+      headerTitleHtml = $headerTitleEditable.html();
+    } else {
+      headerTitleHtml = $headerTitle.html();
+    }
 
     if (headerTitleHtml.length > 0) {
       clonedElementContent = headerTitleHtml;
