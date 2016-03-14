@@ -9421,16 +9421,10 @@ return jQuery;
         clonedElement;
 
     if (headerTitleHtml.length > 0) {
-      console.log(1);
       clonedElementContent = headerTitleHtml;
     } else {
-      console.log(2);
       clonedElementContent = $headerTitleEditable.attr('data-placeholder');
     }
-
-    console.log('HTML');
-    console.log(headerTitleHtml);
-    console.log(headerTitleHtml.length);
 
     clonedElement = '<div class="site-header header-title-clone js-header-title-clone"><div class="header-title content-area">' + clonedElementContent + '</div></div>';
 
