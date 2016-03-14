@@ -27,14 +27,27 @@
   @include transition(right .2s);
   position: fixed;
   top: 0;
-  right: -280px;
   bottom: 0;
-  width: 280px;
   background-color: rgba($color-white, 1);
   background-image: url('../assets/bg-search.svg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: calc(50% + 55px);
+
+  @media screen and (max-width: 400px) {
+    right: -200px;
+    width: 200px;
+  }
+
+  @media screen and (min-width: 401px) and (max-width: $mobile) {
+    right: -50%;
+    width: 50%;
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    right: -280px;
+    width: 280px;
+  }
 
   .site-search-opened & {
     right: 0;

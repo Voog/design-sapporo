@@ -60,7 +60,17 @@ a {
   background-color: rgba($color-black, .02);
 
   .site-search-opened & {
-    right: 280px;
+    @media screen and (max-width: 400px) {
+      right: 200px;
+    }
+
+    @media screen and (min-width: 401px) and (max-width: $mobile) {
+      right: 50%;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      right: 280px;
+    }
   }
 
   .header-menu-compact & {
