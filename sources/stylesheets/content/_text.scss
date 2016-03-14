@@ -146,19 +146,20 @@
   }
 
   .custom-btn {
-    padding: 11px 12px;
-    font-family: inherit;
+    padding: 4px 20px 3px;
+    font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    color: rgba($color-white, .5);
-    background: rgba($color-black, .83);
-    border: 0;
-    border-radius: 0;
+    color: rgba($color-black, .5);
+    background-color: transparent;
+    border-color: rgba($color-black, .1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
     outline: 0;
     -webkit-appearance: none;
 
     &:hover {
-      background-color: rgba($color-black, .93);
+      border-color: rgba($color-black, .3);
     }
 
     .publicmode & {
