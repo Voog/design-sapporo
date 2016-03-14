@@ -1,5 +1,5 @@
 <header class="site-header is-loading js-site-header">
-  <div class="header-title content-area js-header-title" data-initial-width="unset">
+  <div class="header-title content-area js-header-title">
     {% editable site.header %}
   </div>
 

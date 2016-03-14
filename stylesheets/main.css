@@ -448,6 +448,13 @@ a {
   float: right;
 }
 
+.header-title-clone {
+  position: absolute;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+}
+
 .site-search-btn {
   margin: 0;
   background-color: transparent;

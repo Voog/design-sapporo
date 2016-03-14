@@ -8,7 +8,7 @@
 
   var blogArticlePage = function() {
     return $('body').hasClass('blog-article-page');
-  }
+  };
 
   //============================================================================
   // Helper function to limit the rate at which a function can fire.
@@ -134,10 +134,13 @@
     });
   };
 
-  var setElementInitialWidthData = function(element) {
-    var $element = $(element);
+  //============================================================================
+  // Sets header menu initial width attribute for menu mode calculation.
+  //============================================================================
+  var setHeaderMenuInitialWidth = function() {
+    var $headerMenu = $('.js-header-menu');
 
-    $element.attr('data-initial-width', $element.outerWidth(true));
+    $headerMenu.attr('data-initial-width', $headerMenu.outerWidth(true));
   };
 
   //============================================================================
@@ -147,15 +150,28 @@
     var $body = $('body'),
         $siteHeader = $('.js-site-header'),
         $headerTitle = $('.js-header-title'),
-        headerTitleWidth;
+        $headerTitleEditable = $siteHeader.find('.edy-editable'),
+        headerTitleHtml = $headerTitleEditable.html(),
+        clonedElement;
 
-    if ($body.hasClass('header-menu-compact')) {
-      headerTitleWidth = $headerTitle.data('initial-width');
+    if (headerTitleHtml.length > 0) {
+      console.log(1);
+      clonedElementContent = headerTitleHtml;
     } else {
-      headerTitleWidth = $headerTitle.outerWidth(true);
+      console.log(2);
+      clonedElementContent = $headerTitleEditable.attr('data-placeholder');
     }
 
-    if (headerTitleWidth + $('.js-header-menu').data('initial-width') > $siteHeader.width()) {
+    console.log('HTML');
+    console.log(headerTitleHtml);
+    console.log(headerTitleHtml.length);
+
+    clonedElement = '<div class="site-header header-title-clone js-header-title-clone"><div class="header-title content-area">' + clonedElementContent + '</div></div>';
+
+    $('.js-header-title-clone').remove();
+    $body.append(clonedElement);
+
+    if ($('.js-header-title-clone').width() + $('.js-header-menu').data('initial-width') > $siteHeader.width()) {
       $body.addClass('header-menu-compact');
       $body.removeClass('header-menu-wide');
     } else {
@@ -166,6 +182,12 @@
     if ($siteHeader.hasClass('is-loading')) {
       $siteHeader.removeClass('is-loading');
     }
+  };
+
+  var bindHeaderTitleChange = function() {
+    $('.js-site-header').on('input blur change', function() {
+      setHeaderMenuMode();
+    });
   };
 
   //============================================================================
@@ -314,8 +336,7 @@
   //============================================================================
   var init = function() {
     bindInterfaceButtons();
-    setElementInitialWidthData('.js-header-title');
-    setElementInitialWidthData('.js-header-menu');
+    setHeaderMenuInitialWidth();
     setHeaderMenuMode();
     focusFormMessages();
     removeFormInputErrorHighlight();
@@ -328,6 +349,7 @@
 
      if (editmode()) {
        bindCustomContentFormats();
+       bindHeaderTitleChange();
      } else {
        wrapContentAreaTables();
      }
