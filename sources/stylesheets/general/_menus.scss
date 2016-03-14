@@ -152,6 +152,7 @@
 
 .menu-main {
   display: inline-block;
+  text-align: left;
 
   .header-menu-compact & {
     @include transition(right .2s);

@@ -75,9 +75,7 @@
   }
 
   .header-menu {
-    .menu-invisible {
-      visibility: hidden;
-    }
+    text-align: right;
 
     .flexbox & {
       flex-shrink: 0;
@@ -86,12 +84,16 @@
     .no-flexbox & {
       float: right;
     }
+
+    .menu-invisible {
+      visibility: hidden;
+    }
   }
 }
 
 .header-title-clone {
   position: absolute;
-  visibility: hidden;
   bottom: 0;
   left: 0;
+  visibility: hidden;
 }
