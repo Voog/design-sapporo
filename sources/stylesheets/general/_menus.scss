@@ -284,6 +284,14 @@
     padding-left: 9px;
     margin-left: -5px;
     background-color: rgba($color-white, .95);
+
+    .publicmode & {
+      margin-bottom: 20px;
+    }
+
+    .editmode & {
+      margin-bottom: 60px;
+    }
   }
 
   .menu-item:hover & {

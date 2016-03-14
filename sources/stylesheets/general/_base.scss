@@ -17,6 +17,7 @@ body {
   margin: 0;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: rgba($color-black, 1);
+  background-color: rgba($color-black, .02);
 
   .site-search-opened & {
     position: fixed;
@@ -57,7 +58,6 @@ a {
   @include transition(right .2s);
   position: relative;
   right: 0;
-  background-color: rgba($color-black, .02);
 
   .site-search-opened & {
     @media screen and (max-width: 400px) {

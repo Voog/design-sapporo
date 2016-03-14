@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: black;
+  background-color: rgba(0, 0, 0, 0.02);
 }
 .site-search-opened body {
   position: fixed;
@@ -46,7 +47,6 @@ a {
   transition: right 0.2s;
   position: relative;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.02);
 }
 @media screen and (max-width: 400px) {
   .site-search-opened .site-container {
@@ -355,6 +355,12 @@ a {
   padding-left: 9px;
   margin-left: -5px;
   background-color: rgba(255, 255, 255, 0.95);
+}
+.publicmode .header-menu-wide .menu-sub {
+  margin-bottom: 20px;
+}
+.editmode .header-menu-wide .menu-sub {
+  margin-bottom: 60px;
 }
 .menu-item:hover .menu-sub {
   display: block;
