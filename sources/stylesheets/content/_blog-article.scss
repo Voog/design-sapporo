@@ -74,8 +74,32 @@
 }
 
 .article-add-ico {
-  margin-bottom: 10px;
   stroke: rgba($color-black, .3);
+
+  @media screen and (max-width: $nano) {
+    @include size(82px);
+  }
+
+  @media screen and (min-width: $nano + 1) {
+    @include size(22px);
+  }
+
+  @media screen and (min-width: $micro + 1) {
+    @include size(42px);
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: $tiny + 1) {
+    @include size(62px);
+  }
+
+  @media screen and (min-width: $small) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet + 1) {
+    @include size(82px);
+  }
 }
 
 .article-top {
@@ -141,6 +165,16 @@
       border-style: dashed;
       border-width: 1px;
     }
+
+    .edy-img-drop-area-placeholder {
+      @media screen and (max-width: $mobile) {
+        font-size: 13px;
+      }
+
+      @media screen and (min-width: $mobile + 1) {
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -185,9 +219,15 @@
   }
 
   .blog-listing-page & {
-    margin-top: 20px;
-    font-size: 18px;
     font-weight: 100;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 13px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      font-size: 18px;
+    }
   }
 
   .blog-article-page & {
@@ -198,6 +238,10 @@
     @media screen and (min-width: $mobile + 1) {
       font-size: 50px;
     }
+  }
+
+  .blog-article > & {
+    margin-top: 20px;
   }
 }
 
