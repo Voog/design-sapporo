@@ -86,11 +86,19 @@
   }
 
   a {
-    color: rgba($color-black, 1);
+
+    .site-header & {
+      color: rgba($color-black, .8);
+
+      &:hover {
+        color: rgba($color-black, 1);
+      }
+    }
 
     .page-content &,
     .site-footer & {
       font-weight: 400;
+      color: rgba($color-black, 1);
     }
 
     &:hover {
