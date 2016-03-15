@@ -1765,7 +1765,7 @@ label .form_field_checkbox + .form_control_indicator::before {
   background: white;
   border-color: black;
   border-style: solid;
-  border-width: .5px;
+  border-width: 1px;
 }
 .form_field_with_errors label .form_field_checkbox + .form_control_indicator::before {
   border-color: rgba(204, 0, 0, 0.5);
@@ -1793,7 +1793,7 @@ label .form_field_radio + .form_control_indicator::before {
   border-width: 3px;
   outline-color: black;
   outline-style: solid;
-  outline-width: .5px;
+  outline-width: 1px;
 }
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: rgba(0, 0, 0, 0.84);
