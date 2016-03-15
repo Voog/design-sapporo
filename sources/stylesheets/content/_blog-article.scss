@@ -29,7 +29,8 @@
 
     &:hover {
       // scss-lint:disable NestingDepth
-      .publicmode & {
+      .publicmode &,
+      &.add-button {
         opacity: .8;
       }
       // scss-lint:enable NestingDepth
@@ -72,6 +73,11 @@
   }
 }
 
+.article-add-ico {
+  margin-bottom: 10px;
+  stroke: rgba($color-black, .3);
+}
+
 .article-top {
   @include aspect-ratio(1, 1);
 
@@ -85,22 +91,25 @@
     font-weight: 300;
     line-height: 1.2;
     text-align: center;
-    background-color: rgba($color-white, 1);
+
+    .with-image & {
+      background-color: rgba($color-white, 1);
+    }
 
     .without-image & {
       border-color: rgba($color-black, .1);
       border-style: solid;
       border-width: 1px;
     }
-    
+
     @media screen and (max-width: $nano) {
       font-size: 16px;
     }
-    
+
     @media screen and (min-width: $nano + 1) {
       font-size: 13px;
     }
-    
+
     @media screen and (min-width: $micro + 1) {
       font-size: 16px;
     }
@@ -112,8 +121,13 @@
     @media screen and (min-width: $tablet + 1) {
       font-size: 30px;
     }
-  }
 
+    .add-button & {
+      border-color: rgba($color-black, .4);
+      border-style: dashed;
+      border-width: 1px;
+    }
+  }
 
   .image-drop-area {
     // scss-lint:disable ImportantRule
@@ -139,7 +153,6 @@
     height: auto;
     max-width: 100%;
     max-height: 100%;
-
     object-fit: contain;
   }
 }

@@ -1156,7 +1156,7 @@ a {
   opacity: 1;
   transition: opacity 1s;
 }
-.publicmode .blog-listing-page .blog-article:hover {
+.publicmode .blog-listing-page .blog-article:hover, .blog-listing-page .blog-article:hover.add-button {
   opacity: .8;
 }
 @media screen and (max-width: 240px) {
@@ -1196,6 +1196,11 @@ a {
   padding-bottom: 30px;
 }
 
+.article-add-ico {
+  margin-bottom: 10px;
+  stroke: rgba(0, 0, 0, 0.3);
+}
+
 .article-top {
   position: relative;
 }
@@ -1231,6 +1236,8 @@ a {
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
+}
+.with-image .article-top .top-inner {
   background-color: white;
 }
 .without-image .article-top .top-inner {
@@ -1262,6 +1269,11 @@ a {
   .article-top .top-inner {
     font-size: 30px;
   }
+}
+.add-button .article-top .top-inner {
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: dashed;
+  border-width: 1px;
 }
 .article-top .image-drop-area {
   background-position: center !important;

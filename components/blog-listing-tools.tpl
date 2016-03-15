@@ -13,11 +13,9 @@ Adds article specific JS tools.
       //==========================================================================
       // Sets the variable for saving article custom data.
       //==========================================================================
-      var $blogArticle = $(imgDropArea).closest('.blog-article');
-      var blogArticleId = $blogArticle.data('article-id');
       var articleData = new Edicy.CustomData({
         type: 'article',
-        id: blogArticleId
+        id: $(imgDropArea).closest('.blog-article').data('article-id')
       });
 
       var imgDropArea = new Edicy.ImgDropArea($(imgDropArea), {
@@ -25,8 +23,23 @@ Adds article specific JS tools.
         target_width: 1280,
 
         change: function(data) {
-          var saveObj = {};
+          var saveObj = {},
+              $currentArticle = $(imgDropArea.$el.get(0).closest('.js-blog-article'));
+
           saveObj['image'] = data || '';
+
+          if (saveObj['image'] === '') {
+            $currentArticle
+              .addClass('without-image')
+              .removeClass('with-image')
+            ;
+          } else {
+            $currentArticle
+              .addClass('with-image')
+              .removeClass('without-image')
+            ;
+          }
+
           articleData.set(saveObj);
         }
       });
