@@ -35,18 +35,18 @@
       // scss-lint:enable NestingDepth
     }
 
-    @media screen and (max-width: $blog-listing-mobile) {
+    @media screen and (max-width: $nano) {
       display: block;
       padding-right: 20px;
       padding-left: 20px;
     }
 
-    @media screen and (min-width: $blog-listing-mobile + 1) {
+    @media screen and (min-width: $nano + 1) {
       display: inline-block;
       vertical-align: top;
     }
 
-    @media screen and (min-width: $blog-listing-mobile + 1) and (max-width: $blog-listing-tablet) {
+    @media screen and (min-width: $nano + 1) and (max-width: $mobile) {
       width: calc(50% - 30px);
 
       &:nth-child(odd) {
@@ -60,7 +60,7 @@
       }
     }
 
-    @media screen and (min-width: $blog-listing-tablet + 1) {
+    @media screen and (min-width: $mobile + 1) {
       width: calc(33.3% - 40px);
       padding-right: 20px;
       padding-left: 20px;
@@ -76,7 +76,7 @@
   @include aspect-ratio(1, 1);
 
   .top-inner {
-    @include hyphenate(true);
+    @include hyphenate;
     // scss-lint:disable ImportantRule
     display: flex !important;
     // scss-lint:enable ImportantRule
@@ -92,8 +92,20 @@
       border-style: solid;
       border-width: 1px;
     }
+    
+    @media screen and (max-width: $nano) {
+      font-size: 16px;
+    }
+    
+    @media screen and (min-width: $nano + 1) {
+      font-size: 13px;
+    }
+    
+    @media screen and (min-width: $micro + 1) {
+      font-size: 16px;
+    }
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (min-width: $tiny + 1) {
       font-size: 20px;
     }
 
@@ -143,7 +155,7 @@
 }
 
 .article-title {
-  // @include hyphenate;
+  @include hyphenate;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.2;
