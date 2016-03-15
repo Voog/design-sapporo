@@ -86,8 +86,12 @@
   }
 
   a {
-    font-weight: 400;
     color: rgba($color-black, 1);
+
+    .page-content &,
+    .site-footer & {
+      font-weight: 400;
+    }
 
     &:hover {
       opacity: .8;
