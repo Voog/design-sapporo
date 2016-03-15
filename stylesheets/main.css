@@ -1567,9 +1567,6 @@ a {
 .site-header .content-area a {
   color: rgba(0, 0, 0, 0.8);
 }
-.site-header .content-area a:hover {
-  color: black;
-}
 .page-content .content-area a, .site-footer .content-area a {
   font-weight: 400;
   color: black;
