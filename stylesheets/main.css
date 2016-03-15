@@ -74,7 +74,16 @@ a {
   }
 }
 
+.container-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .wrap {
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   padding-bottom: 45px;
   margin-right: auto;
   margin-left: auto;

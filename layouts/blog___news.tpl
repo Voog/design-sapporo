@@ -10,24 +10,26 @@
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">
-      <div class="wrap">
-        {% include "site-header" %}
+      <div class="container-inner">
+        <div class="wrap">
+          {% include "site-header" %}
 
-        <main class="page-content" role="main">
-          <section class="blog-articles">
-            {% if tags %}
-              <h1>{{ tags_title }}</h1>
-            {% endif %}
+          <main class="page-content" role="main">
+            <section class="blog-articles">
+              {% if tags %}
+                <h1>{{ tags_title }}</h1>
+              {% endif %}
 
-            {% include "blog-listing-article-add" %}
+              {% include "blog-listing-article-add" %}
 
-            {% for article in articles %}
-              {% include "blog-listing-article" %}
-            {% endfor %}
-          </section>
-        </main>
+              {% for article in articles %}
+                {% include "blog-listing-article" %}
+              {% endfor %}
+            </section>
+          </main>
 
-        {% include "site-footer" %}
+          {% include "site-footer" %}
+        </div>
       </div>
     </div>
 

@@ -9,29 +9,31 @@
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">
-      <div class="wrap">
-        {% include "site-header" %}
+      <div class="container-inner">
+        <div class="wrap">
+          {% include "site-header" %}
 
-        <main class="page-content" role="main">
-          <article class="blog-article">
-            <header class="article-header">
-              <h1 class="article-title">{% editable article.title %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: "long" }}</time>
-            </header>
+          <main class="page-content" role="main">
+            <article class="blog-article">
+              <header class="article-header">
+                <h1 class="article-title">{% editable article.title %}</h1>
+                <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: "long" }}</time>
+              </header>
 
 
-            <div class="article-content inner content-area" data-search-indexing-allowed="true">
-              <div class="article-excerpt">{% editable article.excerpt %}</div>
-              <div class="article-body">{% editable article.body %}</div>
-            </div>
+              <div class="article-content inner content-area" data-search-indexing-allowed="true">
+                <div class="article-excerpt">{% editable article.excerpt %}</div>
+                <div class="article-body">{% editable article.body %}</div>
+              </div>
 
-            {% include "blog-article-tags" %}
-          </article>
+              {% include "blog-article-tags" %}
+            </article>
 
-          {% include "blog-article-comments" %}
-        </main>
+            {% include "blog-article-comments" %}
+          </main>
 
-        {% include "site-footer" %}
+          {% include "site-footer" %}
+        </div>
       </div>
     </div>
 
