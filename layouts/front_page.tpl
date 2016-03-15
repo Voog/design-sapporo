@@ -16,6 +16,15 @@
           <section class="content-main content-area">{% content %}</section>
 
           <section class="blog-articles">
+            {% if editmode %}
+              {% for item in site.menuitems_with_hidden %}
+                {% if item.blog? %}
+                  {% include "blog-listing-article-add" with "item" %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+            
             {% for article in site.latest_12_articles %}
               {% include "blog-listing-article" %}
             {% endfor %}

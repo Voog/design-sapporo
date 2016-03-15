@@ -15,13 +15,11 @@
 
         <main class="page-content" role="main">
           <section class="blog-articles">
-            {% if editmode %}
-              <div class="cms-blog-article-add">{% addbutton %}</div>
-            {% endif %}
-
             {% if tags %}
               <h1>{{ tags_title }}</h1>
             {% endif %}
+
+            {% include "blog-listing-article-add" %}
 
             {% for article in articles %}
               {% include "blog-listing-article" %}
