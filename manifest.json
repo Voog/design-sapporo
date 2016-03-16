@@ -196,15 +196,15 @@
     },
     {
       "content_type": "image/png",
-      "file": "images/check.png",
+      "file": "images/ico-check-small.png",
       "kind": "images",
-      "filename": "check.png"
+      "filename": "ico-check-small.png"
     },
     {
       "content_type": "image/png",
-      "file": "images/check_small.png",
+      "file": "images/ico-check.png",
       "kind": "images",
-      "filename": "check_small.png"
+      "filename": "ico-check.png"
     },
     {
       "content_type": "application/javascript",

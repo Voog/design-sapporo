@@ -1860,7 +1860,7 @@ label {
 }
 label::before {
   display: none;
-  content: url("../images/check.png?1");
+  content: url("../images/ico-check.png");
 }
 label .form_field_checkbox,
 label .form_field_radio {
@@ -1878,17 +1878,17 @@ label .form_field_checkbox + .form_control_indicator::before {
 label .form_field_checkbox:checked + .form_control_indicator::before {
   width: 100%;
   height: 100%;
-  background: url("../images/check_small.png?1") no-repeat left bottom;
+  background-color: black;
+  background-position: left bottom;
+  background-repeat: no-repeat;
   border-style: none;
 }
 .backgroundsize label .form_field_checkbox:checked + .form_control_indicator::before {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  background-image: url("../images/check.png?1");
-  background-position: left bottom;
-  background-repeat: no-repeat;
+  background-image: url("../images/ico-check.png");
   background-size: 17px 19px;
+}
+.no-backgroundsize label .form_field_checkbox:checked + .form_control_indicator::before {
+  background-image: url("../images/ico-check-small.png");
 }
 label .form_field_radio + .form_control_indicator::before {
   width: 9px;
