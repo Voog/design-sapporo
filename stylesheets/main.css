@@ -1558,8 +1558,43 @@ a {
   font-weight: 600;
 }
 .content-area h1 {
-  font-size: 50px;
   text-align: center;
+}
+@media screen and (max-width: 640px) {
+  .content-area h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .content-area h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .content-area h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .content-area h2 {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .content-area h3,
+  .content-area h4,
+  .content-area h5,
+  .content-area h6 {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .content-area h3,
+  .content-area h4,
+  .content-area h5,
+  .content-area h6 {
+    font-size: 24px;
+  }
 }
 .content-area p {
   margin-top: 1.7em;

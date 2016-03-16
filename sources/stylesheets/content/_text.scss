@@ -65,19 +65,38 @@
   }
 
   h1 {
-    font-size: 50px;
     text-align: center;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 32px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      font-size: 50px;
+    }
   }
 
   h2 {
-    // Heading 2
+    @media screen and (max-width: $mobile) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      font-size: 27px;
+    }
   }
 
   h3,
   h4,
   h5,
   h6 {
-    // Headings 3-6
+    @media screen and (max-width: $mobile) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      font-size: 24px;
+    }
   }
 
   p {
