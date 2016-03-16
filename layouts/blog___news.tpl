@@ -20,7 +20,9 @@
                 <h1>{{ tags_title }}</h1>
               {% endif %}
 
-              {% include "blog-listing-article-add" %}
+              {% if editmode %}
+                {% include "blog-listing-article-add" %}
+              {% endif %}
 
               {% for article in articles %}
                 {% include "blog-listing-article" %}
