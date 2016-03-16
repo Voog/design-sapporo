@@ -9311,7 +9311,7 @@ return jQuery;
     // Triggers the events when clicked anywhere on the document. Used for
     // sideclick functionality. Use the class "js-prevent-sideclick" on elements
     // that shouldn't trigger the sideclick events.
-    $(document).on('click touchstart', function(event) {
+    $(document).on('click', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html');
 
