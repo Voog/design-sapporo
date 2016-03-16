@@ -3,7 +3,7 @@
   "description": "The Sapporo design template for Voog",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Edicy/design-sapporo.git"
+    "url": "git://github.com/voog/design-sapporo.git"
   },
   "license": "MIT",
   "devDependencies": {
