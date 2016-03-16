@@ -33,16 +33,3 @@
     <li class="menu-item menu-item-cms">{% menuadd %}</li>
   {% endif %}
 </ul>
-
-{% comment %}
-TODO: Remove if not used.
-{% if editmode %}
-  <ul class="menu menu-horizontal menu-cms{% if page.level == 0 %} menu-current{% endif %}">
-    {% if site.hidden_menuitems.size > 0 %}
-      <li class="menu-item">{% menubtn site.hidden_menuitems %}</li>
-    {% endif %}
-
-    <li class="menu-item">{% menuadd %}</li>
-  </ul>
-{% endif %}
-{% endcomment %}

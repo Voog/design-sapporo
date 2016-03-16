@@ -182,21 +182,6 @@
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
-
-    // TODO: Remove if not used.
-    // > .menu-cms {
-    //   // scss-lint:disable SelectorDepth
-    //   // scss-lint:disable NestingDepth
-    //   .menu-item {
-    //     .header-menu-wide & {
-    //       &:not(:first-child) {
-    //         margin-left: 15px;
-    //       }
-    //       // scss-lint:enable NestingDepth
-    //       // scss-lint:enable SelectorDepth
-    //     }
-    //   }
-    // }
   }
 
   .btn {
@@ -242,20 +227,6 @@
       }
     }
   }
-
-  // TODO: Remove if not used.
-  // .menu-cms {
-  //   .header-menu-wide & {
-  //     margin-top: 5px;
-  //   }
-  //
-  //   .menu-item {
-  //     .header-menu-compact & {
-  //       margin-top: 5px;
-  //       margin-left: 15px;
-  //     }
-  //   }
-  // }
 
   .item-current {
     .menu {
