@@ -9311,7 +9311,7 @@ return jQuery;
     // Triggers the events when clicked anywhere on the document. Used for
     // sideclick functionality. Use the class "js-prevent-sideclick" on elements
     // that shouldn't trigger the sideclick events.
-    $('body').on('click', function(event) {
+    $(document).on('click touchstart', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html');
 
@@ -9320,10 +9320,6 @@ return jQuery;
         $html.removeClass('site-search-opened');
 
         $('.js-search-input').val('');
-
-        if (blogArticlePage() && $('.js-comment-name').val().length === 0 && $('.js-comment-email').val().length === 0) {
-          $('.js-comment-form-details').addClass('is-hidden');
-        }
       }
     });
 
@@ -9395,9 +9391,20 @@ return jQuery;
     });
 
     // Toggles blog article comments author fields.
-    $('.js-comments-body').on('focus', function() {
-      $('.js-comment-form-details').removeClass('is-hidden');
-    });
+    $('.js-comment-field')
+      .on('focus', function() {
+        $('.js-comment-form-details').removeClass('is-hidden');
+      })
+      .on('blur', function() {
+        if ($('.js-comment-name').val().length === 0 && $('.js-comment-email').val().length === 0) {
+          setTimeout(function() {
+            if (!$(document.activeElement).is('.js-comment-field')) {
+              $('.js-comment-form-details').addClass('is-hidden');
+            }
+          }, 0);
+        }
+      })
+    ;
   };
 
   //============================================================================
@@ -9585,7 +9592,7 @@ return jQuery;
   // Resizes comment form message area if user adds/removes a line in textarea.
   // ===========================================================================
   var autoSizeFormCommentArea = function() {
-    $('.js-comments-body').textareaAutoSize();
+    $('.js-comment-body').textareaAutoSize();
   };
 
   //============================================================================

@@ -8,22 +8,22 @@
       <div class="form_area">
         <div class="form_fields">
           <div class="form_field{% if comment_body_error %} form_field_with_errors{% endif %}">
-            <textarea id="comment-body" class="form_field_textarea form_field_size_large js-comments-body js-prevent-sideclick" name="comment[body]" rows="1" placeholder="{% if article.comments_count == 0 %}{{ 'write_first_comment' | lc }}{% else %}{{ 'comment' | lc }}{% endif %}">{{ comment.body }}</textarea>
+            <textarea id="comment-body" class="form_field_textarea form_field_size_large js-comment-field js-comment-body" name="comment[body]" rows="1" placeholder="{% if article.comments_count == 0 %}{{ 'write_first_comment' | lc }}{% else %}{{ 'comment' | lc }}{% endif %}">{{ comment.body }}</textarea>
           </div>
 
           <div class="comment-form-details{% if comment.valid? %} is-hidden{% endif %} js-comment-form-details">
             <div>
               <div class="form_field form_field_inline{% if comment_name_error %} form_field_with_errors{% endif %}">
-                <input id="comment-name" class="form_field_textfield form_field_size_large js-comment-name js-prevent-sideclick" name="comment[author]" value="{{ comment.author }}" placeholder="{{ 'name' | lc }}">
+                <input id="comment-name" class="form_field_textfield form_field_size_large js-comment-field js-comment-name" name="comment[author]" value="{{ comment.author }}" placeholder="{{ 'name' | lc }}">
               </div>
 
               <div class="form_field form_field_inline{% if comment_email_error %} form_field_with_errors{% endif %}">
-                <input id="comment-email" class="form_field_textfield form_field_size_large js-comment-email js-prevent-sideclick" name="comment[author_email]" value="{{ comment.author_email }}" placeholder="{{ 'email' | lc }}">
+                <input id="comment-email" class="form_field_textfield form_field_size_large js-comment-field js-comment-email" name="comment[author_email]" value="{{ comment.author_email }}" placeholder="{{ 'email' | lc }}">
               </div>
             </div>
 
             <div class="form_submit">
-              <input class="js-prevent-sideclick" type="submit" value="{{ "submit" | lc }}">
+              <input type="submit" value="{{ "submit" | lc }}">
             </div>
           </div>
         </div>
