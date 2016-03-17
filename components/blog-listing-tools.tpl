@@ -21,6 +21,7 @@ Adds article specific JS tools.
       var imgDropArea = new Edicy.ImgDropArea($(imgDropArea), {
         positionable: false,
         target_width: 1280,
+        removeBtn: '',
 
         change: function(data) {
           var saveObj = {},
@@ -44,5 +45,7 @@ Adds article specific JS tools.
         }
       });
     });
+
+    site.bindArticleImageCropToggle();
   </script>
 {% endeditorjsblock %}

@@ -333,6 +333,44 @@
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   //============================================================================
+  var bindArticleImageCropToggle = function() {
+    $('.js-toggle-crop-state').on('click', function() {
+      var $currentArticle = $(this).closest('.js-blog-article'),
+          $currentImageDropArea = $currentArticle.find('.js-image-drop-area'),
+          imageCropState;
+
+      var articleData = new Edicy.CustomData({
+        type: 'article',
+        id: $currentArticle.data('article-id')
+      });
+
+      // $currentImageDropArea.toggleClass('is-cropped not-cropped');
+
+      if ($currentImageDropArea.hasClass('is-cropped')) {
+        $currentImageDropArea
+          .removeClass('is-cropped')
+          .addClass('not-cropped')
+        ;
+
+        imageCropState = 'not-cropped';
+
+      } else {
+        $currentImageDropArea
+          .removeClass('not-cropped')
+          .addClass('is-cropped')
+        ;
+
+        imageCropState = 'is-cropped';
+      }
+
+      articleData.set('image_crop_state', imageCropState);
+    });
+  };
+
+  //============================================================================
+  // Sets functions that will be initiated globally when resizing the browser
+  // window.
+  //============================================================================
   var initWindowResize = function() {
     $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
     $(window).resize(debounce(setHeaderMenuMode, 25));
@@ -360,7 +398,6 @@
      } else {
        wrapContentAreaTables();
      }
-
   };
 
   // Enables the usage of the initiations outside this file.
@@ -372,7 +409,8 @@
     // initFrontPage: initFrontPage,
     // Initiations for specific functions.
     bindLanguageFlagsToggle: bindLanguageFlagsToggle,
-    bindSiteSearch: bindSiteSearch
+    bindSiteSearch: bindSiteSearch,
+    bindArticleImageCropToggle: bindArticleImageCropToggle
   });
 
   //============================================================================
