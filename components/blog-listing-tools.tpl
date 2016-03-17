@@ -25,7 +25,8 @@ Adds article specific JS tools.
 
         change: function(data) {
           var saveObj = {},
-              $currentArticle = $(imgDropArea.$el.get(0).closest('.js-blog-article'));
+              $currentArticle = $(imgDropArea.$el.get(0).closest('.js-blog-article')),
+              $currentImageDropArea = $currentArticle.find('.js-image-drop-area');
 
           saveObj['image'] = data || '';
 
@@ -39,9 +40,15 @@ Adds article specific JS tools.
               .addClass('with-image')
               .removeClass('without-image')
             ;
+
+            $currentImageDropArea
+              .removeClass('is-cropped')
+              .addClass('not-cropped')
+            ;
           }
 
           articleData.set(saveObj);
+          articleData.set('image_crop_state', 'not-cropped');
         }
       });
     });
