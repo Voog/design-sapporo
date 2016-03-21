@@ -112,7 +112,9 @@
   }
 
   .btn {
+    padding: 0;
     background-color: rgba($color-science-blue, .3);
+    border: 0;
     opacity: 0;
     transition: background-color .5s, opacity .5s;
 
@@ -131,11 +133,9 @@
     top: 0;
     right: 0;
     z-index: 9;
-    padding: 0;
     margin-top: 10px;
     margin-right: 10px;
     cursor: pointer;
-    border: 0;
     border-radius: 100%;
     fill: rgba($color-white, 1);
 

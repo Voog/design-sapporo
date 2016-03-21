@@ -1267,7 +1267,9 @@ a {
   opacity: 1;
 }
 .article-top .btn {
+  padding: 0;
   background-color: rgba(0, 102, 187, 0.3);
+  border: 0;
   opacity: 0;
   transition: background-color .5s, opacity .5s;
 }
@@ -1284,11 +1286,9 @@ a {
   top: 0;
   right: 0;
   z-index: 9;
-  padding: 0;
   margin-top: 10px;
   margin-right: 10px;
   cursor: pointer;
-  border: 0;
   border-radius: 100%;
   fill: white;
 }
