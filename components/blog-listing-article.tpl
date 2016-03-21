@@ -1,5 +1,5 @@
 <!-- TODO: Convert to article.image -->
-{% if article.image == nil or article.image == "" %}
+{% unless article.image %}
   {% assign article_image_state = "without-image" %}
 {% else %}
   {% assign article_image_state = "with-image" %}
@@ -13,7 +13,7 @@
   {% endif %}
 
   {% assign article_image_crop_state = article.data.image_crop_state %}
-{% endif %}
+{% endunless %}
 
 {% if editmode %}
   <div class="blog-article {{ article_image_state }} js-blog-article" data-article-id="{{ article.id }}">
@@ -37,7 +37,7 @@
   <a class="blog-article {{ article_image_state }}" href="{{ article.url }}">
     <div class="article-top">
       <div class="top-inner aspect-ratio-inner">
-        {% if article.data.image and article.data.image != "" %}
+        {% if article.image %}
           <img class="article-image {{ article_image_orientation }} {{ article_image_crop_state }}" src="{{ article.image.for-width-680.url }}" alt="{{ article.title }}">
         {% else %}
           <div class="article-placeholder">{{ article.title | truncate: 50 }}</div>
