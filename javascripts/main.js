@@ -9636,9 +9636,6 @@ return jQuery;
   };
 
   var setArticleImage = function(articleId, imageId) {
-    console.log(articleId);
-    console.log(imageId);
-
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
@@ -9672,7 +9669,7 @@ return jQuery;
           setImageOrientation($article, data.width, data.height);
 
           $bgPickerArea.eq(0).data('imgDropArea').setData({
-            id: data.id,
+            id: data.original_id,
             url: data.image,
             width: data.width,
             height: data.height
@@ -9685,8 +9682,7 @@ return jQuery;
         },
 
         commit: function(data) {
-          console.log(data);
-          setArticleImage(articleId, data.id);
+          setArticleImage(articleId, data.original_id);
         }
       });
 
@@ -9714,8 +9710,6 @@ return jQuery;
         removeBtn: '',
 
         change: function(data) {
-          console.log(data);
-
           var $bgPickerButton = $article.find('.js-bg-settings');
 
           $article
@@ -9732,13 +9726,13 @@ return jQuery;
 
 
           $bgPickerArea.eq(0).data('bgpicker').setData({
-            id: data.id,
+            id: data.original_id,
             image: data.url,
             width: data.width,
             height: data.height
           });
 
-          setArticleImage(articleId, data.id);
+          setArticleImage(articleId, data.original_id);
           articleData.set('image_crop_state', 'not-cropped');
         }
       });

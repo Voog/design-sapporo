@@ -370,9 +370,6 @@
   };
 
   var setArticleImage = function(articleId, imageId) {
-    console.log(articleId);
-    console.log(imageId);
-
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
@@ -398,15 +395,13 @@
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
-          console.log(data);
-
           var $article = $bgPickerArea.closest('.js-blog-article'),
               $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
 
           setImageOrientation($article, data.width, data.height);
 
           $bgPickerArea.eq(0).data('imgDropArea').setData({
-            id: data.id,
+            id: data.original_id,
             url: data.image,
             width: data.width,
             height: data.height
@@ -419,8 +414,7 @@
         },
 
         commit: function(data) {
-          console.log(data);
-          setArticleImage(articleId, data.id);
+          setArticleImage(articleId, data.original_id);
         }
       });
 
@@ -448,8 +442,6 @@
         removeBtn: '',
 
         change: function(data) {
-          console.log(data);
-
           var $bgPickerButton = $article.find('.js-bg-settings');
 
           $article
@@ -466,13 +458,13 @@
 
 
           $bgPickerArea.eq(0).data('bgpicker').setData({
-            id: data.id,
+            id: data.original_id,
             image: data.url,
             width: data.width,
             height: data.height
           });
 
-          setArticleImage(articleId, data.id);
+          setArticleImage(articleId, data.original_id);
           articleData.set('image_crop_state', 'not-cropped');
         }
       });
