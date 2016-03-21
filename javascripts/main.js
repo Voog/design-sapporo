@@ -9265,9 +9265,9 @@ return jQuery;
 })(jQuery, window, document);
 
 ;(function($) {
-  //============================================================================
+  // ===========================================================================
   // Function to detect if user is in editmode.
-  //============================================================================
+  // ===========================================================================
   var editmode = function () {
     return $('html').hasClass('editmode');
   };
@@ -9276,9 +9276,9 @@ return jQuery;
     return $('body').hasClass('blog-article-page');
   };
 
-  //============================================================================
+  // ===========================================================================
   // Helper function to limit the rate at which a function can fire.
-  //============================================================================
+  // ===========================================================================
   var debounce = function(func, wait, immediate) {
     var timeout;
     return function() {
@@ -9304,9 +9304,9 @@ return jQuery;
     };
   };
 
-  //============================================================================
+  // ===========================================================================
   // Bind site buttons functionality.
-  //============================================================================
+  // ===========================================================================
   var bindInterfaceButtons = function() {
     // Triggers the events when clicked anywhere on the document. Used for
     // sideclick functionality. Use the class "js-prevent-sideclick" on elements
@@ -9407,18 +9407,18 @@ return jQuery;
     ;
   };
 
-  //============================================================================
+  // ===========================================================================
   // Sets header menu initial width attribute for menu mode calculation.
-  //============================================================================
+  // ===========================================================================
   var setHeaderMenuInitialWidth = function() {
     var $headerMenu = $('.js-header-menu');
 
     $headerMenu.attr('data-initial-width', $headerMenu.outerWidth(true));
   };
 
-  //============================================================================
+  // ===========================================================================
   // Calculates if it is proper to use compact or wide header menu.
-  //============================================================================
+  // ===========================================================================
   var setHeaderMenuMode = function() {
     var $body = $('body'),
         $siteHeader = $('.js-site-header'),
@@ -9463,9 +9463,9 @@ return jQuery;
     });
   };
 
-  //============================================================================
+  // ===========================================================================
   // Positions language menu popover under the toggleing button.
-  //============================================================================
+  // ===========================================================================
   var handleMenuLanguagePopoverPositioning = function(button) {
     var $offsetItem = $('.js-menu-language-offset-item');
 
@@ -9475,10 +9475,16 @@ return jQuery;
     });
   };
 
-  //============================================================================
+  // ===========================================================================
   // Toggles language menu flags.
-  //============================================================================
+  // ===========================================================================
   var bindLanguageFlagsToggle = function() {
+    // Sets the variable for saving global custom data.
+    var siteData = new Edicy.CustomData({
+      type: 'site'
+    });
+
+    // Toggles language flags visibility.
     $('.js-toggle-language-flags').click(function() {
       if ($('html').hasClass('language-flags-disabled')) {
         $('html')
@@ -9498,9 +9504,9 @@ return jQuery;
     });
   };
 
-  //============================================================================
+  // ===========================================================================
   // Binds site search functionality.
-  //============================================================================
+  // ===========================================================================
   var bindSiteSearch = function(searchForm, languageCode) {
     if (searchForm) {
       var search = new VoogSearch(searchForm, {
@@ -9528,40 +9534,40 @@ return jQuery;
   };
 
   // TODO: Convert these fallbacks to one function.
-  //============================================================================
+  // ===========================================================================
   // Binds site header content area fallback behaviour fonr no-flexbox
   // browsers – calculates minimum width for the header content area.
-  //============================================================================
+  // ===========================================================================
   var bindFallbackHeaderContentAreaWidthCalculation = function() {
     var $headerTitle = $('.js-header-title');
 
     $headerTitle.css('min-width', $('.js-site-header').width() - $('.js-header-menu').width() - parseInt($headerTitle.css('margin-right')) + 1);
   };
 
-  //============================================================================
+  // ===========================================================================
   // Binds site footer content area fallback behaviour fonr no-flexbox
   // browsers – calculates minimum width for the footer content area.
-  //============================================================================
+  // ===========================================================================
   var bindFallbackFooterContentAreaWidthCalculation = function() {
     var $footerBody = $('.js-footer-body');
 
     $footerBody.css('min-width', $('.js-site-footer').width() - $('.js-voog-reference').width() - parseInt($footerVoogReference.css('margin-right')) + 1);
   };
 
-  //============================================================================
+  // ===========================================================================
   // Wraps content area tables with the parent <div>. (Enables horizontal
   // scrolling if table's width is wider than the content area itself).
-  //============================================================================
+  // ===========================================================================
   var wrapContentAreaTables = function() {
     $.each($('.content-area'), function() {
       $(this).find('table').wrap('<div class="table-container"></div>');
     });
   };
 
-  //============================================================================
+  // ===========================================================================
   // Scrolls to the form if submit failed or succeeded (to show the error
   // messages or success notice to the user).
-  //============================================================================
+  // ===========================================================================
   var focusFormMessages = function() {
     $(document).ready(function() {
       if ($('.comment-form').hasClass('form_with_errors')) {
@@ -9595,25 +9601,169 @@ return jQuery;
     $('.js-comment-body').textareaAutoSize();
   };
 
-  //============================================================================
+  var setImageOrientation = function($article, width, height) {
+    var $imgDropAreaTarget = $article.find('.js-img-drop-area'),
+        $cropToggleButton = $article.find('.js-toggle-crop-state');
+
+    if (width > height) {
+      $imgDropAreaTarget
+        .removeClass('image-landscape image-square image-portrait')
+        .addClass('image-landscape')
+      ;
+    } else if (width === height) {
+      $imgDropAreaTarget
+        .removeClass('image-landscape image-square image-portrait')
+        .addClass('image-square')
+      ;
+    } else {
+      $imgDropAreaTarget
+        .removeClass('image-landscape image-square image-portrait')
+        .addClass('image-portrait')
+      ;
+    }
+
+    if ($imgDropAreaTarget.hasClass('image-square')) {
+      $cropToggleButton
+        .removeClass('is-visible')
+        .addClass('is-hidden')
+      ;
+    } else {
+      $cropToggleButton
+        .removeClass('is-hidden')
+        .addClass('is-visible')
+      ;
+    }
+  };
+
+  var setArticleImage = function(articleId, imageId) {
+    console.log(articleId);
+    console.log(imageId);
+
+    $.ajax({
+       type: 'PATCH',
+       contentType: 'application/json',
+       url: '/admin/api/articles/' + articleId,
+       data: JSON.stringify({'image_id': imageId}),
+       dataType: 'json'
+    });
+  };
+
+  // ===========================================================================
+  // Binds editmode backgroun picker areas.
+  // ===========================================================================
+  var bindBgPickers = function() {
+    $('.js-bg-picker-area').each(function(index, bgPickerArea) {
+      var $bgPickerArea = $(bgPickerArea),
+          $bgPickerButton = $bgPickerArea.find('.js-bg-settings'),
+          articleId = $bgPickerArea.closest('.blog-article').data('article-id'),
+          dataBgKey = $bgPickerButton.data('bg-key');
+
+      var bgPicker = new Edicy.BgPicker($bgPickerButton, {
+        picture: $bgPickerButton.data('bg-picture-boolean'),
+        target_width: $bgPickerButton.data('bg-target-width'),
+        color: $bgPickerButton.data('bg-color-boolean'),
+
+        preview: function(data) {
+          console.log(data);
+
+          var $article = $bgPickerArea.closest('.js-blog-article'),
+              $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
+
+          setImageOrientation($article, data.width, data.height);
+
+          $bgPickerArea.eq(0).data('imgDropArea').setData({
+            id: data.id,
+            url: data.image,
+            width: data.width,
+            height: data.height
+          });
+
+          $imgDropArea
+            .removeClass('is-cropped')
+            .addClass('not-cropped')
+          ;
+        },
+
+        commit: function(data) {
+          console.log(data);
+          setArticleImage(articleId, data.id);
+        }
+      });
+
+      $bgPickerArea.data('bgpicker', bgPicker);
+    });
+  };
+
+  // ===========================================================================
+  // Binds editmode image drop areas.
+  // ===========================================================================
+  var bindImgDropAreas = function() {
+    $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
+      var $imgDropAreaTarget = $(imgDropAreaTarget),
+          $article = $imgDropAreaTarget.closest('.blog-article'),
+          $bgPickerArea = $article.find('.js-bg-picker-area'),
+          articleId = $article.data('article-id'),
+          articleData = new Edicy.CustomData({
+            type: 'article',
+            id: articleId
+          });
+
+      var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
+        positionable: false,
+        target_width: 1280,
+        removeBtn: '',
+
+        change: function(data) {
+          console.log(data);
+
+          var $bgPickerButton = $article.find('.js-bg-settings');
+
+          $article
+            .addClass('with-image')
+            .removeClass('without-image')
+          ;
+
+          $imgDropAreaTarget
+            .removeClass('is-cropped')
+            .addClass('not-cropped')
+          ;
+
+          setImageOrientation($article, data.width, data.height);
+
+
+          $bgPickerArea.eq(0).data('bgpicker').setData({
+            id: data.id,
+            image: data.url,
+            width: data.width,
+            height: data.height
+          });
+
+          setArticleImage(articleId, data.id);
+          articleData.set('image_crop_state', 'not-cropped');
+        }
+      });
+
+      $bgPickerArea.data('imgDropArea', imgDropArea);
+    });
+  };
+
+  // ===========================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
-  //============================================================================
+  // ===========================================================================
   var bindArticleImageCropToggle = function() {
     $('.js-toggle-crop-state').on('click', function() {
-      var $currentArticle = $(this).closest('.js-blog-article'),
-          $currentImageDropArea = $currentArticle.find('.js-image-drop-area'),
+      var $article = $(this).closest('.js-blog-article'),
+          $imgDropAreaTarget = $article.find('.js-img-drop-area'),
           imageCropState;
 
       var articleData = new Edicy.CustomData({
         type: 'article',
-        id: $currentArticle.data('article-id')
+        id: $article.data('article-id')
       });
 
-      // $currentImageDropArea.toggleClass('is-cropped not-cropped');
-
-      if ($currentImageDropArea.hasClass('is-cropped')) {
-        $currentImageDropArea
+      if ($imgDropAreaTarget.hasClass('is-cropped')) {
+        $imgDropAreaTarget
           .removeClass('is-cropped')
           .addClass('not-cropped')
         ;
@@ -9621,7 +9771,7 @@ return jQuery;
         imageCropState = 'not-cropped';
 
       } else {
-        $currentImageDropArea
+        $imgDropAreaTarget
           .removeClass('not-cropped')
           .addClass('is-cropped')
         ;
@@ -9633,18 +9783,18 @@ return jQuery;
     });
   };
 
-  //============================================================================
+  // ===========================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
-  //============================================================================
+  // ===========================================================================
   var initWindowResize = function() {
     $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
     $(window).resize(debounce(setHeaderMenuMode, 25));
   };
 
-  //============================================================================
+  // ===========================================================================
   // Sets functions that will be initiated globally.
-  //============================================================================
+  // ===========================================================================
   var init = function() {
     bindInterfaceButtons();
     setHeaderMenuInitialWidth();
@@ -9667,7 +9817,7 @@ return jQuery;
   };
 
   // Enables the usage of the initiations outside this file.
-  window.site = $.extend(window.site || {}, {
+  window.template = $.extend(window.template || {}, {
     // Initiations for layouts.
     // initBlogPage: initBlogPage,
     // initArticlePage: initArticlePage,
@@ -9676,12 +9826,14 @@ return jQuery;
     // Initiations for specific functions.
     bindLanguageFlagsToggle: bindLanguageFlagsToggle,
     bindSiteSearch: bindSiteSearch,
+    bindBgPickers: bindBgPickers,
+    bindImgDropAreas: bindImgDropAreas,
     bindArticleImageCropToggle: bindArticleImageCropToggle
   });
 
-  //============================================================================
+  // ===========================================================================
   // Initiates global functions.
-  //============================================================================
+  // ===========================================================================
   initWindowResize();
   init();
 })(jQuery);

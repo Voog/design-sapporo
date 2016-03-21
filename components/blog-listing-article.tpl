@@ -1,25 +1,32 @@
-{% if article.data.image == nil or article.data.image == "" %}
+<!-- TODO: Convert to article.image -->
+{% if article.image == nil or article.image == "" %}
   {% assign article_image_state = "without-image" %}
 {% else %}
   {% assign article_image_state = "with-image" %}
 
-  {% if article.data.image.width > article.data.image.height %}
+  {% if article.image.width > article.image.height %}
     {% assign article_image_orientation = "image-landscape" %}
-  {% elsif article.data.image.width == article.data.image.height %}
+  {% elsif article.image.width == article.image.height %}
     {% assign article_image_orientation = "image-square" %}
   {% else %}
     {% assign article_image_orientation = "image-portrait" %}
   {% endif %}
+
+  {% assign article_image_crop_state = article.data.image_crop_state %}
 {% endif %}
 
 {% if editmode %}
   <div class="blog-article {{ article_image_state }} js-blog-article" data-article-id="{{ article.id }}">
-    <div class="article-top">
-      <svg class="btn image-crop-btn {% if article_image_orientation == "image-square" %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state" width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#ico-toggle"></use>
-      </svg>
+    <div class="article-top js-bg-picker-area">
+      <button class="voog-bg-picker-btn js-bg-settings" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.url }}" data-bg-target-width="680"></button>
 
-      <div class="top-inner aspect-ratio-inner image-drop-area {{ article_image_orientation }} {{ article.data.image_crop_state }} js-image-drop-area" data-image="{{ article.data.image.url }}"></div>
+      <button class="btn image-crop-btn {% if article_image_orientation == "image-square" %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
+        <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="#ico-toggle"></use>
+        </svg>
+      </button>
+
+      <div class="top-inner aspect-ratio-inner image-drop-area {{ article_image_orientation }} {{ article_image_crop_state }} js-img-drop-area" data-image="{{ article.image.for-width-680.url }}"></div>
     </div>
 
     <h2 class="article-title">
@@ -31,7 +38,7 @@
     <div class="article-top">
       <div class="top-inner aspect-ratio-inner">
         {% if article.data.image and article.data.image != "" %}
-          <img class="article-image {{ article_image_orientation }} {{ article.data.image_crop_state }}" src="{{ article.data.image.url }}" alt="{{ article.title }}">
+          <img class="article-image {{ article_image_orientation }} {{ article_image_crop_state }}" src="{{ article.image.for-width-680.url }}" alt="{{ article.title }}">
         {% else %}
           <div class="article-placeholder">{{ article.title | truncate: 50 }}</div>
         {% endif %}
