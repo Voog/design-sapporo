@@ -9396,7 +9396,7 @@ return jQuery;
         $('.js-comment-form-details').removeClass('is-hidden');
       })
       .on('blur', function() {
-        if ($('.js-comment-name').val().length === 0 && $('.js-comment-email').val().length === 0) {
+        if ($('.js-comment-body').val().length === 0 && $('.js-comment-name').val().length === 0 && $('.js-comment-email').val().length === 0) {
           setTimeout(function() {
             if (!$(document.activeElement).is('.js-comment-field')) {
               $('.js-comment-form-details').addClass('is-hidden');
