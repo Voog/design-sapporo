@@ -105,6 +105,49 @@
 .article-top {
   @include aspect-ratio(1, 1);
 
+  &:hover {
+    .btn {
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    background-color: rgba($color-science-blue, .3);
+    opacity: 0;
+    transition: background-color .5s, opacity .5s;
+
+    &:hover {
+      background-color: rgba($color-science-blue, 1);
+    }
+  }
+
+  .bg-picker-btn {
+    top: 0;
+  }
+
+  .bg-crop-btn {
+    @include size(45px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    padding: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 100%;
+    fill: rgba($color-white, 1);
+
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
   .top-inner {
     @include hyphenate;
     // scss-lint:disable ImportantRule
@@ -184,39 +227,6 @@
       border-color: rgba($color-black, .4);
       border-style: dashed;
       border-width: 1px;
-    }
-  }
-
-  .voog-bg-picker-btn {
-    top: 0;
-  }
-
-  .image-crop-btn {
-    @include size(45px);
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-    margin-right: 10px;
-    z-index: 9;
-    padding: 0;
-    cursor: pointer;
-    background-color: rgba($color-science-blue, .3);
-    border: 0;
-    border-radius: 100%;
-    fill: rgba($color-white, 1);
-    transition: background-color .5s;
-
-    &:hover {
-      background-color: rgba($color-science-blue, 1);
-    }
-
-    &.is-visible {
-      display: block;
-    }
-
-    &.is-hidden {
-      display: none;
     }
   }
 

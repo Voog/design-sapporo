@@ -9651,7 +9651,7 @@ return jQuery;
   var bindBgPickers = function() {
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
-          $bgPickerButton = $bgPickerArea.find('.js-bg-settings'),
+          $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
           articleId = $bgPickerArea.closest('.blog-article').data('article-id'),
           dataBgKey = $bgPickerButton.data('bg-key');
 
@@ -9661,8 +9661,6 @@ return jQuery;
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
-          console.log(data);
-
           var $article = $bgPickerArea.closest('.js-blog-article'),
               $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
 
@@ -9710,7 +9708,7 @@ return jQuery;
         removeBtn: '',
 
         change: function(data) {
-          var $bgPickerButton = $article.find('.js-bg-settings');
+          var $bgPickerButton = $article.find('.js-bg-picker-btn');
 
           $article
             .addClass('with-image')

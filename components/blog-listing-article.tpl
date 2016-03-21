@@ -18,9 +18,9 @@
 {% if editmode %}
   <div class="blog-article {{ article_image_state }} js-blog-article" data-article-id="{{ article.id }}">
     <div class="article-top js-bg-picker-area">
-      <button class="voog-bg-picker-btn js-bg-settings" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.url }}" data-bg-target-width="680"></button>
+      <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.url }}" data-bg-target-width="680"></button>
 
-      <button class="btn image-crop-btn {% if article_image_orientation == "image-square" %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
+      <button class="btn bg-crop-btn {% if article_image_orientation == "image-square" %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
         <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#ico-toggle"></use>
         </svg>

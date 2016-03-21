@@ -1263,6 +1263,41 @@ a {
   bottom: 0;
   left: 0;
 }
+.article-top:hover .btn {
+  opacity: 1;
+}
+.article-top .btn {
+  background-color: rgba(0, 102, 187, 0.3);
+  opacity: 0;
+  transition: background-color .5s, opacity .5s;
+}
+.article-top .btn:hover {
+  background-color: #0066bb;
+}
+.article-top .bg-picker-btn {
+  top: 0;
+}
+.article-top .bg-crop-btn {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 100%;
+  fill: white;
+}
+.article-top .bg-crop-btn.is-visible {
+  display: block;
+}
+.article-top .bg-crop-btn.is-hidden {
+  display: none;
+}
 .article-top .top-inner {
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
@@ -1341,35 +1376,6 @@ a {
   border-color: rgba(0, 0, 0, 0.4);
   border-style: dashed;
   border-width: 1px;
-}
-.article-top .voog-bg-picker-btn {
-  top: 0;
-}
-.article-top .image-crop-btn {
-  height: 45px;
-  width: 45px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 10px;
-  margin-right: 10px;
-  z-index: 9;
-  padding: 0;
-  cursor: pointer;
-  background-color: rgba(0, 102, 187, 0.3);
-  border: 0;
-  border-radius: 100%;
-  fill: white;
-  transition: background-color .5s;
-}
-.article-top .image-crop-btn:hover {
-  background-color: #0066bb;
-}
-.article-top .image-crop-btn.is-visible {
-  display: block;
-}
-.article-top .image-crop-btn.is-hidden {
-  display: none;
 }
 .article-top .image-drop-area {
   background-position: center !important;
