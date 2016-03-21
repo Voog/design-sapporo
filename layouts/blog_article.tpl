@@ -21,10 +21,16 @@
               </header>
 
 
-              <div class="article-content inner content-area" data-search-indexing-allowed="true">
+              <div class="inner content-area area-normal" data-search-indexing-allowed="true">
                 <div class="article-excerpt">{% editable article.excerpt %}</div>
                 <div class="article-body">{% editable article.body %}</div>
               </div>
+
+              {% unless article.new_record? %}
+                <div class="content-bottom">
+                  <div class="content-area">{% content name="bottom" bind="Article" %}</div>
+                </div>
+              {% endunless %}
 
               {% include "blog-article-tags" %}
             </article>
