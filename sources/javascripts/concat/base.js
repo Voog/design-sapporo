@@ -518,6 +518,12 @@
   // viewport.
   // ===========================================================================
   var bindArticleImageLazyload = function() {
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.js-blog-article-newer').addClass('not-loaded')
+      }, 3000);
+    });
+
     $('.js-lazyload').lazyload({
       threshold : 500,
       effect : "fadeIn",

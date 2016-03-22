@@ -37,7 +37,7 @@
     </h2>
   </div>
 {% else %}
-  <a class="blog-article-newer {{ article_image_state }} not-loaded js-blog-article-newer" href="{{ article.url }}">
+  <a class="blog-article-newer {{ article_image_state }} js-blog-article-newer" href="{{ article.url }}">
     <div class="article-top">
       <div class="top-inner aspect-ratio-inner">
         {% if article.image %}
