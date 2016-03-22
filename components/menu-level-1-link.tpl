@@ -11,9 +11,9 @@
 
   {% menulink level_1 %}
 
-  {% unless level_1.blog? %}
-    {% include "menu-level-2" %}
+  {% if level_1.blog? %}
+    {% include "blog-listing-tags" with level_1.path %}
   {% else %}
-    {% include "blog-listing-tags" %}
-  {% endunless %}
+    {% include "menu-level-2" %}
+  {% endif %}
 </li>

@@ -1,6 +1,12 @@
 <ul class="menu menu-horizontal menu-public menu-level-1{% if menu_current %} menu-current{% endif %}">
   {% unless site.root_item.hidden? %}
-    <li class="menu-item">{% menulink site.root_item %}</li>
+    <li class="menu-item">
+      {% menulink site.root_item %}
+
+      {% if blog_pages_size == 1 %}
+        {% include "blog-listing-tags" with blog_first.path %}
+      {% endif %}
+    </li>
   {% endunless %}
 
   {% for level_1 in site.visible_menuitems %}
