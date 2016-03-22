@@ -1,4 +1,3 @@
-<!-- TODO: Convert to article.image -->
 {% unless article.image %}
   {% assign article_image_state = "without-image" %}
 {% else %}
@@ -12,7 +11,11 @@
     {% assign article_image_orientation = "image-portrait" %}
   {% endif %}
 
-  {% assign article_image_crop_state = article.data.image_crop_state %}
+  {% if article.data.image_crop_state %}
+    {% assign article_image_crop_state = article.data.image_crop_state %}
+  {% else %}
+    {% assign article_image_crop_state = "not-cropped" %}
+  {% endif %}
 {% endunless %}
 
 {% if editmode %}
@@ -20,7 +23,7 @@
     <div class="article-top js-bg-picker-area">
       <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.url }}" data-bg-target-width="680"></button>
 
-      <button class="btn bg-crop-btn {% if article_image_orientation == "image-square" %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
+      <button class="btn bg-crop-btn {% if article_image_orientation == "image-square" or article.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
         <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#ico-toggle"></use>
         </svg>
