@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
+{% include "blog-listing-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
@@ -26,8 +27,8 @@
                 {% endfor %}
               {% endif %}
 
-              {% for article in site.latest_12_articles %}
-                {% include "blog-listing-article-newer" %}
+              {% for article in site.latest_99999_articles %}
+                {% include "blog-listing-article" %}
               {% endfor %}
             </section>
           </main>
