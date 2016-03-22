@@ -36,4 +36,11 @@
   {% elsif page.level == 0 or page.level == 1 and page_children_size == 0 %}
     {% assign menu_current = true %}
   {% endif %}
+
+  {% assign blog_pages_size = 0 %}
+  {% for item in site.menuitems_with_hidden %}
+    {% if item.blog? %}
+      {% assign blog_pages_size = blog_pages_size | plus: 1 %}
+    {% endif %}
+  {% endfor %}
 {% endcapture %}
