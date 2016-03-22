@@ -212,8 +212,11 @@
     // Search result's excerpt.
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 100;
     line-height: 1.5;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+      font-weight: 100;
+    }
   }
 
   em {

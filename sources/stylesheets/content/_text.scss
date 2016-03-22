@@ -2,9 +2,12 @@
 .content-area {
   @include clearfix;
   @include hyphenate;
-  font-weight: 100;
   line-height: 1.7;
   color: rgba($color-black, .8);
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+    font-weight: 100;
+  }
 
   .site-header & {
     text-transform: uppercase;
