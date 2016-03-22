@@ -1102,16 +1102,18 @@ a {
 .site-footer {
   padding-top: 25px;
 }
-.flexbox .site-footer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+@media screen and (min-width: 641px) {
+  .flexbox .site-footer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
 }
 .no-flexbox .site-footer::after {
   clear: both;
@@ -1124,12 +1126,31 @@ a {
 }
 
 .voog-reference {
-  margin-right: 20px;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.5);
 }
-.no-flexbox .voog-reference {
-  float: left;
+@media screen and (max-width: 640px) {
+  .voog-reference {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 641px) {
+  .voog-reference {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .flexbox .voog-reference {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+@media screen and (min-width: 641px) {
+  .no-flexbox .voog-reference {
+    float: left;
+  }
 }
 .voog-reference:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -1144,13 +1165,20 @@ a {
 .footer-body {
   max-width: 100%;
 }
-.flexbox .footer-body {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+@media screen and (min-width: 641px) {
+  .flexbox .footer-body {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
 }
-.no-flexbox .footer-body {
-  float: right;
+@media screen and (min-width: 641px) {
+  .no-flexbox .footer-body {
+    float: right;
+  }
 }
 
 .cms-blog-article-add {
@@ -1571,7 +1599,16 @@ a {
 }
 .site-footer .content-area {
   font-size: 13px;
-  text-align: right;
+}
+@media screen and (max-width: 640px) {
+  .site-footer .content-area {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 641px) {
+  .site-footer .content-area {
+    text-align: right;
+  }
 }
 .content-area h1:first-child,
 .content-area h2:first-child,

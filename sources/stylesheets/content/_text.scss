@@ -19,7 +19,14 @@
 
   .site-footer & {
     font-size: 13px;
-    text-align: right;
+
+    @media screen and (max-width: $mobile) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      text-align: right;
+    }
   }
 
   h1,

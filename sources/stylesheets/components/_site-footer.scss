@@ -2,9 +2,11 @@
   padding-top: 25px;
 
   .flexbox & {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    @media screen and (min-width: $mobile + 1) {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 
   .no-flexbox & {
@@ -18,12 +20,28 @@
 }
 
 .voog-reference {
-  margin-right: 20px;
   font-size: 13px;
   color: rgba($color-black, .5);
 
+  @media screen and (max-width: $mobile) {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    margin-right: 20px;
+  }
+
+  .flexbox & {
+    @media screen and (min-width: $mobile + 1) {
+      order: 1;
+    }
+  }
+
   .no-flexbox & {
-    float: left;
+    @media screen and (min-width: $mobile + 1) {
+      float: left;
+    }
   }
 
   &:hover {
@@ -43,10 +61,15 @@
   max-width: 100%;
 
   .flexbox & {
-    flex: 1 0 auto;
+    @media screen and (min-width: $mobile + 1) {
+      order: 2;
+      flex: 1 0 auto;
+    }
   }
 
   .no-flexbox & {
-    float: right;
+    @media screen and (min-width: $mobile + 1) {
+      float: right;
+    }
   }
 }
