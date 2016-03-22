@@ -16,8 +16,6 @@
           <main class="page-content" role="main">
             <section class="content-main content-area">{% content %}</section>
 
-            <h1>{{ blog_counter }}</h1>
-
             <section class="blog-articles">
               {% if editmode %}
                 {% for item in site.menuitems_with_hidden %}
