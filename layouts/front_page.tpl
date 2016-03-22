@@ -42,5 +42,7 @@
 
     {% include "template-javascripts" %}
     {% include "blog-listing-tools" %}
+
+    <script>template.initBlogPage();</script>
   </body>
 </html>

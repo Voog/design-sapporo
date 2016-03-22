@@ -514,6 +514,29 @@
   };
 
   // ===========================================================================
+  // Load article cover images only when they are close or appearing in the
+  // viewport.
+  // ===========================================================================
+  var bindArticleImageLazyload = function() {
+    $('.js-lazyload').lazyload({
+      threshold : 500,
+      effect : "fadeIn",
+      placeholder: '/assets/article-image-placeholder.svg',
+
+      load : function() {
+        var $article = $(this).closest('.js-blog-article-newer');
+
+        $article.removeClass('not-loaded').addClass('is-loaded');
+
+        setTimeout(function() {
+          $article.find('.js-loader').remove();
+        }, 3000);
+      }
+    });
+  };
+
+
+  // ===========================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   // ===========================================================================
@@ -523,6 +546,13 @@
     }
 
     $(window).resize(debounce(setHeaderMenuMode, 25));
+  };
+
+  // ===========================================================================
+  // Sets functions that will be initiated on blog listing layouts.
+  // ===========================================================================
+  var initBlogPage = function() {
+    bindArticleImageLazyload();
   };
 
   // ===========================================================================
@@ -552,7 +582,7 @@
   // Enables the usage of the initiations outside this file.
   window.template = $.extend(window.template || {}, {
     // Initiations for layouts.
-    // initBlogPage: initBlogPage,
+    initBlogPage: initBlogPage,
     // initArticlePage: initArticlePage,
     // initCommonPage: initCommonPage,
     // initFrontPage: initFrontPage,

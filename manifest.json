@@ -205,6 +205,12 @@
   "assets": [
     {
       "content_type": "image/svg+xml",
+      "file": "assets/article-image-placeholder.svg",
+      "kind": "assets",
+      "filename": "article-image-placeholder.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/bg-search.svg",
       "kind": "assets",
       "filename": "bg-search.svg"

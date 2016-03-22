@@ -37,11 +37,12 @@
     </h2>
   </div>
 {% else %}
-  <a class="blog-article-newer {{ article_image_state }}" href="{{ article.url }}">
+  <a class="blog-article-newer {{ article_image_state }} not-loaded js-blog-article-newer" href="{{ article.url }}">
     <div class="article-top">
       <div class="top-inner aspect-ratio-inner">
         {% if article.image %}
-          <img class="article-image {{ article_image_orientation }} {{ article_image_crop_state }}" src="{{ article.image.for-width-680.url }}" alt="{{ article.title }}">
+          <div class="loader js-loader"></div>
+          <img class="article-image {{ article_image_orientation }} {{ article_image_crop_state }} js-lazyload" data-original="{{ article.image.for-width-680.url }}">
         {% else %}
           <div class="article-placeholder">{{ article.title | truncate: 50 }}</div>
         {% endif %}
