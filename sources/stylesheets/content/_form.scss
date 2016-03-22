@@ -30,7 +30,7 @@
   height: 33px;
   min-height: 33px;
   padding: 4px 7px 2px;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: $font-base;
   font-size: 18px;
   line-height: 1.5;
   color: rgba($color-black, .87);
@@ -94,7 +94,7 @@
 .form_submit {
   input {
     padding: 4px 20px 3px;
-    font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: $font-base;
     font-size: 18px;
     color: rgba($color-black, .5);
     cursor: pointer;

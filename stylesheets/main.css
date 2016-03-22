@@ -9,7 +9,7 @@ html.site-search-opened {
 
 body {
   margin: 0;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   color: black;
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -1747,7 +1747,7 @@ a {
 }
 .content-area .custom-btn {
   padding: 4px 20px 3px;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
   background-color: transparent;
@@ -1863,7 +1863,7 @@ a {
   height: 33px;
   min-height: 33px;
   padding: 4px 7px 2px;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   font-size: 18px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
@@ -1922,7 +1922,7 @@ a {
 
 .form_submit input {
   padding: 4px 20px 3px;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;

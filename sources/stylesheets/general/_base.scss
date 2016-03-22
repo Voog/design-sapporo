@@ -15,7 +15,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: $font-base;
   color: rgba($color-black, 1);
   background-color: rgba($color-black, .05);
 
