@@ -9276,6 +9276,10 @@ return jQuery;
     return $('body').hasClass('blog-article-page');
   };
 
+  var languageMenuPopoverOpen = function() {
+    return $('html').hasClass('menu-language-popover-open');
+  };
+
   // ===========================================================================
   // Helper function to limit the rate at which a function can fire.
   // ===========================================================================
@@ -9780,7 +9784,10 @@ return jQuery;
   // window.
   // ===========================================================================
   var initWindowResize = function() {
-    $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
+    if (languageMenuPopoverOpen()) {
+      $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
+    }
+
     $(window).resize(debounce(setHeaderMenuMode, 25));
   };
 
