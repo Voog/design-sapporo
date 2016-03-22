@@ -27,7 +27,7 @@
               {% endif %}
 
               {% for article in site.latest_12_articles %}
-                {% include "blog-listing-article" %}
+                {% include "blog-listing-article-newer" %}
               {% endfor %}
             </section>
           </main>

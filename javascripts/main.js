@@ -9652,7 +9652,7 @@ return jQuery;
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
           $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
-          articleId = $bgPickerArea.closest('.blog-article').data('article-id'),
+          articleId = $bgPickerArea.closest('.js-blog-article-newer').data('article-id'),
           dataBgKey = $bgPickerButton.data('bg-key');
 
       var bgPicker = new Edicy.BgPicker($bgPickerButton, {
@@ -9661,7 +9661,7 @@ return jQuery;
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
-          var $article = $bgPickerArea.closest('.js-blog-article'),
+          var $article = $bgPickerArea.closest('.js-blog-article-newer'),
               $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
 
           setImageOrientation($article, data.width, data.height);
@@ -9694,7 +9694,7 @@ return jQuery;
   var bindImgDropAreas = function() {
     $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
-          $article = $imgDropAreaTarget.closest('.blog-article'),
+          $article = $imgDropAreaTarget.closest('.js-blog-article-newer'),
           $bgPickerArea = $article.find('.js-bg-picker-area'),
           articleId = $article.data('article-id'),
           articleData = new Edicy.CustomData({
@@ -9745,7 +9745,7 @@ return jQuery;
   // ===========================================================================
   var bindArticleImageCropToggle = function() {
     $('.js-toggle-crop-state').on('click', function() {
-      var $article = $(this).closest('.js-blog-article'),
+      var $article = $(this).closest('.js-blog-article-newer'),
           $imgDropAreaTarget = $article.find('.js-img-drop-area'),
           imageCropState;
 

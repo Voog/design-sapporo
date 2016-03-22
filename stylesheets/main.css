@@ -152,11 +152,13 @@ a {
 
 .blog-articles {
   padding-top: 10px;
-  padding-bottom: 80px;
+  font-size: 0;
   line-height: 1.3;
 }
-.blog-listing-page .blog-articles {
-  font-size: 0;
+@media screen and (min-width: 641px) {
+  .blog-articles {
+    padding-bottom: 80px;
+  }
 }
 
 .menu-btn {
@@ -1198,52 +1200,67 @@ a {
   left: 0;
 }
 
-.blog-article {
+.blog-article-newer {
   color: rgba(0, 0, 0, 0.8);
 }
-.blog-listing-page .blog-article {
+.blog-listing-page .blog-article-newer {
   padding-top: 15px;
   padding-bottom: 15px;
   opacity: 1;
 }
-.publicmode .blog-listing-page .blog-article:hover, .blog-listing-page .blog-article:hover.add-button {
+.publicmode .blog-listing-page .blog-article-newer:hover, .blog-listing-page .blog-article-newer:hover.add-button {
   opacity: .8;
 }
 @media screen and (max-width: 240px) {
-  .blog-listing-page .blog-article {
+  .blog-listing-page .blog-article-newer {
     display: block;
     padding-right: 20px;
     padding-left: 20px;
   }
 }
 @media screen and (min-width: 241px) {
-  .blog-listing-page .blog-article {
+  .blog-listing-page .blog-article-newer {
     display: inline-block;
     vertical-align: top;
   }
 }
 @media screen and (min-width: 241px) and (max-width: 640px) {
-  .blog-listing-page .blog-article {
+  .blog-listing-page .blog-article-newer {
     width: calc(50% - 30px);
   }
-  .blog-listing-page .blog-article:nth-child(odd) {
+  .blog-listing-page .blog-article-newer:nth-child(odd) {
     padding-right: 10px;
     padding-left: 20px;
   }
-  .blog-listing-page .blog-article:nth-child(even) {
+  .blog-listing-page .blog-article-newer:nth-child(even) {
     padding-right: 20px;
     padding-left: 10px;
   }
 }
 @media screen and (min-width: 641px) {
-  .blog-listing-page .blog-article {
+  .blog-listing-page .blog-article-newer {
     width: calc(33.3% - 40px);
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-.blog-article-page .blog-article {
+.blog-article-page .blog-article-newer {
   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 640px) {
+  .blog-articles-older {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .blog-articles-older {
+    margin-top: 100px;
+  }
+}
+
+.blog-article-older {
+  margin-bottom: 15px;
 }
 
 .article-add-ico {
@@ -1480,27 +1497,39 @@ a {
 .article-title .article-link {
   color: inherit;
   opacity: 1;
-  transition: opacity 1s;
 }
 .article-title .article-link:hover {
   opacity: .8;
 }
+.blog-article-newer .article-title .article-link {
+  display: block;
+}
 .blog-listing-page .article-title {
   font-weight: 400;
-}
-@media screen and (max-width: 640px) {
-  .blog-listing-page .article-title {
-    font-size: 13px;
-  }
-}
-@media screen and (min-width: 641px) {
-  .blog-listing-page .article-title {
-    font-size: 18px;
-  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
   .blog-listing-page .article-title {
     font-weight: 100;
+  }
+}
+@media screen and (max-width: 640px) {
+  .blog-article-newer .article-title {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .blog-article-newer .article-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .blog-article-older .article-title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .blog-article-older .article-title {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1513,22 +1542,24 @@ a {
     font-size: 50px;
   }
 }
-.blog-article > .article-title {
+.blog-article-newer > .article-title {
   margin-top: 20px;
 }
 
 .article-date {
-  display: block;
-  margin-top: 4px;
-  font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
-  text-align: center;
   text-transform: uppercase;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
   .article-date {
     font-weight: 100;
   }
+}
+.blog-article-page .article-date {
+  display: block;
+  margin-top: 4px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .article-body {
