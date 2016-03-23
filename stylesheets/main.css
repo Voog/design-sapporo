@@ -196,7 +196,7 @@ a {
   opacity: 0;
   -webkit-animation: rotation .7s infinite linear;
           animation: rotation .7s infinite linear;
-  transition: opacity .1s;
+  transition: opacity .3s;
 }
 .loader::before {
   position: absolute;
@@ -1519,7 +1519,7 @@ a {
 }
 
 .article-placeholder {
-  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
   padding: .5em;
 }

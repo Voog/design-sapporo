@@ -196,7 +196,7 @@ a {
   border-radius: 100%;
   opacity: 0;
   animation: rotation .7s infinite linear;
-  transition: opacity .1s;
+  transition: opacity .3s;
 
   &::before {
     position: absolute;
