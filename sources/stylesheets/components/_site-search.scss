@@ -1,14 +1,27 @@
 .site-search-btn {
   @include button;
-  padding: 6px 5px 4px;
+  padding: 2px;
   vertical-align: top;
 
   .header-menu-compact & {
-    margin-right: 5px;
+    position: absolute;
+    right: 35px;
+
+    @media screen and (max-width: $mobile) {
+      top: 2px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      top: 8px;
+    }
   }
 
   .header-menu-wide & {
     margin-left: 13px;
+
+    @media screen and (min-width: $mobile + 1) {
+      margin-top: 6px;
+    }
   }
 
   &:hover,

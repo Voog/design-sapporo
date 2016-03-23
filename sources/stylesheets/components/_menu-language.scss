@@ -4,14 +4,40 @@
 //==============================================================================
 .menu-language-btn {
   @include button;
-  top: 3px;
   display: inline-block;
   vertical-align: top;
+
+  .header-menu-compact & {
+    position: absolute;
+
+    @media screen and (max-width: $mobile) {
+      top: 0;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      top: 6px;
+    }
+
+    .site-search-disabled & {
+      right: 35px;
+    }
+
+    .site-search-enabled & {
+      right: 65px;
+    }
+  }
+
+  .header-menu-wide & {
+    top: 4px;
+
+    .language-flags-enabled & {
+      margin-left: 24px;
+    }
+  }
 
   .language-flags-enabled & {
     width: 0;
     padding: 12px 16px 13px 15px;
-    margin-left: 24px;
     font-size: 0;
   }
 

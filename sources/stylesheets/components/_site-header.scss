@@ -42,43 +42,56 @@
   }
 
   .blog-listing-page & {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  .header-title {
     margin-right: 20px;
+    margin-left: 20px;
+  }
+}
 
-    .flexbox & {
-      flex-grow: 1;
+.header-title {
+  .flexbox & {
+    flex-grow: 1;
+  }
+
+  .no-flexbox & {
+    float: left;
+  }
+
+  .header-menu-compact & {
+    .site-search-disabled & {
+      margin-right: 35px;
     }
 
-    .no-flexbox & {
-      float: left;
+    .site-search-enabled & {
+      margin-right: 70px;
     }
 
-    .header-menu-wide & {
-      .flexbox & {
-        flex-shrink: 0;
-        flex-wrap: nowrap;
-      }
+    .menu-language-enabled & {
+      margin-right: 165px;
     }
   }
 
-  .header-menu {
-    text-align: right;
-
+  .header-menu-wide & {
+    margin-right: 20px;
     .flexbox & {
       flex-shrink: 0;
+      flex-wrap: nowrap;
     }
+  }
+}
 
-    .no-flexbox & {
-      float: right;
-    }
+.header-menu {
+  text-align: right;
 
-    .menu-invisible {
-      visibility: hidden;
-    }
+  .flexbox & {
+    flex-shrink: 0;
+  }
+
+  .no-flexbox & {
+    float: right;
+  }
+
+  .menu-invisible {
+    visibility: hidden;
   }
 }
 

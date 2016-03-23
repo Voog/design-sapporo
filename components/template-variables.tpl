@@ -13,11 +13,25 @@
     {% endif %}
   {% endfor %}
 
-  {% comment %}Detects language flags visibility settings.{% endcomment %}
+  {% comment %}Detects language flags visibility setting.{% endcomment %}
   {% if site.data.language_flags_enabled == nil or site.data.language_flags_enabled == false %}
     {% assign language_flags_mode = "language-flags-disabled" %}
   {% else %}
     {% assign language_flags_mode = "language-flags-enabled" %}
+  {% endif %}
+
+  {% comment %}Detects language flags visibility settings.{% endcomment %}
+  {% if site.search.enabled %}
+    {% assign site_search_mode = "site-search-enabled" %}
+  {% else %}
+    {% assign site_search_mode = "site-search-disabled" %}
+  {% endif %}
+
+  {% comment %}Detects language flags visibility settings.{% endcomment %}
+  {% if editmode or site.has_many_languages? %}
+    {% assign language_menu_mode = "menu-language-enabled" %}
+  {% else %}
+    {% assign language_menu_mode = "menu-language-disabled" %}
   {% endif %}
 
   {% comment %}Detects current page visible childnen size.{% endcomment %}
