@@ -182,16 +182,10 @@
     $('.js-header-title-clone').remove();
     $body.append(clonedElement);
 
-    console.log($('.js-header-title-clone').width());
-    console.log($('.js-header-menu').data('initial-width'));
-    console.log($siteHeader.width());
-
     if ($('.js-header-title-clone').width() + $('.js-header-menu').data('initial-width') > $siteHeader.width()) {
-      console.log('1');
       $body.addClass('header-menu-compact');
       $body.removeClass('header-menu-wide');
     } else {
-      console.log(2);
       $body.addClass('header-menu-wide');
       $body.removeClass('header-menu-compact');
     }
