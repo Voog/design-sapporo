@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: $font-base;
   color: rgba($color-black, 1);
-  background-color: rgba($color-black, .05);
+  background-color: rgba($color-black, .02);
 
   .site-search-opened & {
     position: fixed;
