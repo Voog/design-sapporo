@@ -496,19 +496,6 @@ a {
 }
 .site-header .header-title {
   margin-right: 20px;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: .1em;
-}
-@media screen and (max-width: 640px) {
-  .site-header .header-title {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 641px) {
-  .site-header .header-title {
-    font-size: 30px;
-  }
 }
 .flexbox .site-header .header-title {
   -webkit-flex-grow: 1;
@@ -1682,7 +1669,18 @@ a {
   }
 }
 .site-header .content-area {
-  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: .1em;
+}
+@media screen and (max-width: 640px) {
+  .site-header .content-area {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .site-header .content-area {
+    font-size: 30px;
+  }
 }
 .page-content .content-area {
   font-size: 18px;

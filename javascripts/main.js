@@ -10029,7 +10029,7 @@ return jQuery;
   var bindArticleImageLazyload = function() {
     $(document).ready(function() {
       setTimeout(function() {
-        $('.js-blog-article-newer').addClass('not-loaded')
+        $('.js-blog-article-newer').addClass('not-loaded');
       }, 3000);
     });
 

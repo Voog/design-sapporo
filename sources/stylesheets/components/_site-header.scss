@@ -46,17 +46,6 @@
 
   .header-title {
     margin-right: 20px;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: .1em;
-
-    @media screen and (max-width: $mobile) {
-      font-size: 20px;
-    }
-
-    @media screen and (min-width: $mobile + 1) {
-      font-size: 30px;
-    }
 
     .flexbox & {
       flex-grow: 1;
