@@ -1668,11 +1668,6 @@ a {
   content: "";
   display: table;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
-  .content-area {
-    font-weight: 100;
-  }
-}
 .site-header .content-area {
   line-height: 1.3;
   letter-spacing: .1em;
@@ -1690,6 +1685,11 @@ a {
 .page-content .content-area {
   font-size: 18px;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
+  .page-content .content-area {
+    font-weight: 100;
+  }
+}
 .site-footer .content-area {
   font-size: 13px;
 }
@@ -1701,6 +1701,11 @@ a {
 @media screen and (min-width: 641px) {
   .site-footer .content-area {
     text-align: right;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-resolution: 120dpi) {
+  .site-footer .content-area {
+    font-weight: 100;
   }
 }
 .content-area h1:first-child,
