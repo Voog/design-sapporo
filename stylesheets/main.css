@@ -2074,8 +2074,8 @@ a {
 .form_field_textfield,
 .form_field_textarea {
   width: 30%;
-  height: 33px;
-  min-height: 33px;
+  height: 35px;
+  min-height: 35px;
   padding: 4px 7px 2px;
   font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   font-size: 18px;
