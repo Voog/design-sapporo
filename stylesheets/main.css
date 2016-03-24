@@ -815,15 +815,8 @@ a {
     padding-bottom: 8px;
   }
 }
-@media screen and (max-width: 640px) {
-  .header-menu-compact .menu-level-1 {
-    padding-top: 40px;
-  }
-}
-@media screen and (min-width: 641px) {
-  .header-menu-compact .menu-level-1 {
-    padding-top: 80px;
-  }
+.header-menu-compact .menu-level-1 {
+  padding-top: 40px;
 }
 
 .menu-level-2 .menu-item a {

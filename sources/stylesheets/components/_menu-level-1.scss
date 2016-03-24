@@ -55,12 +55,6 @@
   }
 
   .header-menu-compact & {
-    @media screen and (max-width: $mobile) {
-      padding-top: 40px;
-    }
-
-    @media screen and (min-width: $mobile + 1) {
-      padding-top: 80px;
-    }
+    padding-top: 40px;
   }
 }
