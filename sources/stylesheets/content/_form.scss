@@ -35,7 +35,9 @@
   line-height: 1.5;
   color: rgba($color-black, .87);
   background-color: rgba($color-white, 1);
-  border: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba($color-black, .05);
   border-radius: 0;
   outline: none;
   box-sizing: border-box;

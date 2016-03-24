@@ -2089,7 +2089,9 @@ a {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
   background-color: white;
-  border: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.05);
   border-radius: 0;
   outline: none;
   box-sizing: border-box;
