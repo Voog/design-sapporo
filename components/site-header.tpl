@@ -1,6 +1,8 @@
 <header class="site-header is-loading js-site-header">
   <div class="header-title content-area js-header-title">
-    {% editable site.header %}
+    {% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}
+      {% editable site.header %}
+    {% unless editmode %}</a>{% endunless %}
   </div>
 
   <div class="header-menu js-header-menu" data-initial-width="unset">
