@@ -10050,6 +10050,13 @@ return jQuery;
     });
   };
 
+  var preventMenuMainLinkTouchInit = function() {
+    $('.js-prevent-link-click > a').on('touchstart', function(event) {
+      if ($(this).parent().find('.js-menu-sub').length > 0) {
+        event.preventDefault();
+      }
+    });
+  };
 
   // ===========================================================================
   // Sets functions that will be initiated globally when resizing the browser
@@ -10080,6 +10087,7 @@ return jQuery;
     focusFormMessages();
     removeFormInputErrorHighlight();
     autoSizeFormCommentArea();
+    preventMenuMainLinkTouchInit();
 
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();

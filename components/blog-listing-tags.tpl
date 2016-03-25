@@ -2,7 +2,7 @@
   {% assign page_path = blog-listing-tags %}
 
   {% blogcontext page_path %}
-    <nav class="menu-sub">
+    <nav class="menu-sub js-menu-sub">
       <ul class="menu menu-vertical menu-level-2">
         {% unless blog_pages_size == 1 %}
           <li class="menu-item hidden-mobile">

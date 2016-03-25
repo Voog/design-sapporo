@@ -1,5 +1,5 @@
 {% if editmode or level_1.children? %}
-  <div class="menu-sub">
+  <div class="menu-sub js-menu-sub">
     <ul class="menu menu-vertical menu-level-2">
       {% if level_1.children? %}
         <li class="menu-item hidden-mobile">
