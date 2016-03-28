@@ -51,7 +51,12 @@
     {% assign menu_current = true %}
   {% endif %}
 
-  {% assign blog_pages_size = 0 %}
+  {% if site.root_item.blog? %}
+    {% assign blog_pages_size = 1 %}
+  {% else %}
+    {% assign blog_pages_size = 0 %}
+  {% endif %}
+
   {% for item in site.menuitems_with_hidden %}
     {% if item.blog? %}
       {% assign blog_first = item %}
