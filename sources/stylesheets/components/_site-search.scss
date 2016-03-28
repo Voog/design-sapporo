@@ -43,9 +43,8 @@
   bottom: 0;
   background-color: rgba($color-white, 1);
   background-image: url('../assets/bg-search.svg');
+  background-position: center;
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: calc(50% + 55px);
 
   @media screen and (max-width: 400px) {
     right: -200px;
