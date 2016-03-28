@@ -864,8 +864,15 @@ a {
 .site-search-enabled .header-menu-compact .menu-language-btn {
   right: 65px;
 }
-.header-menu-wide .menu-language-btn {
-  top: 4px;
+@media screen and (max-width: 640px) {
+  .header-menu-wide .menu-language-btn {
+    top: 0;
+  }
+}
+@media screen and (min-width: 641px) {
+  .header-menu-wide .menu-language-btn {
+    top: 4px;
+  }
 }
 .language-flags-enabled .header-menu-wide .menu-language-btn {
   margin-left: 24px;

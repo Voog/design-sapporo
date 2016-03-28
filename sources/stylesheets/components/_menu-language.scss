@@ -28,7 +28,13 @@
   }
 
   .header-menu-wide & {
-    top: 4px;
+    @media screen and (max-width: $mobile) {
+      top: 0;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      top: 4px;
+    }
 
     .language-flags-enabled & {
       margin-left: 24px;
