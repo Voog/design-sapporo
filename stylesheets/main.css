@@ -805,8 +805,8 @@ a {
 }
 @media screen and (max-width: 640px) {
   .header-menu-wide .menu-level-1 > .menu-item > a {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 7px;
+    padding-bottom: 5px;
   }
 }
 @media screen and (min-width: 641px) {
@@ -883,10 +883,11 @@ a {
   font-size: 0;
 }
 .language-flags-disabled .menu-language-btn {
-  padding: 3px 24px 2px 8px;
+  padding: 4px 24px 3px 8px;
   margin-left: 19px;
   font-family: inherit;
   font-size: 13px;
+  line-height: 1;
   border-color: rgba(0, 0, 0, 0.1);
   border-style: solid;
   border-width: 1px;
@@ -962,8 +963,9 @@ a {
   color: black;
 }
 .menu-language .menu-item a::before, .menu-language .menu-item a::after {
-  top: 8px;
+  top: 50%;
   right: 26px;
+  margin-top: -7.5px;
 }
 .menu-language .menu-item a:hover {
   color: rgba(0, 0, 0, 0.6);
