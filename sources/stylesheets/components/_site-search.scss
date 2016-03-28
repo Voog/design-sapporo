@@ -1,27 +1,14 @@
 .site-search-btn {
   @include button;
-  padding: 2px;
+  padding: 6px 5px 4px;
   vertical-align: top;
 
   .header-menu-compact & {
-    position: absolute;
-    right: 35px;
-
-    @media screen and (max-width: $mobile) {
-      top: 2px;
-    }
-
-    @media screen and (min-width: $mobile + 1) {
-      top: 8px;
-    }
+    margin-right: 5px;
   }
 
   .header-menu-wide & {
     margin-left: 13px;
-
-    @media screen and (min-width: $mobile + 1) {
-      margin-top: 6px;
-    }
   }
 
   &:hover,
@@ -43,8 +30,9 @@
   bottom: 0;
   background-color: rgba($color-white, 1);
   background-image: url('../assets/bg-search.svg');
-  background-position: center;
   background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: calc(50% + 55px);
 
   @media screen and (max-width: 400px) {
     right: -200px;

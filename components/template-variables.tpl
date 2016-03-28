@@ -20,20 +20,6 @@
     {% assign language_flags_mode = "language-flags-enabled" %}
   {% endif %}
 
-  {% comment %}Detects language flags visibility settings.{% endcomment %}
-  {% if site.search.enabled %}
-    {% assign site_search_mode = "site-search-enabled" %}
-  {% else %}
-    {% assign site_search_mode = "site-search-disabled" %}
-  {% endif %}
-
-  {% comment %}Detects language flags visibility settings.{% endcomment %}
-  {% if editmode or site.has_many_languages? %}
-    {% assign language_menu_mode = "menu-language-enabled" %}
-  {% else %}
-    {% assign language_menu_mode = "menu-language-disabled" %}
-  {% endif %}
-
   {% comment %}Detects current page visible childnen size.{% endcomment %}
   {% assign page_children_size = page.menuitem.visible_children | size %}
 

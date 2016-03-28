@@ -38,19 +38,6 @@
     }
   }
 
-  .header-menu-compact & {
-    position: absolute;
-    right: 0;
-
-    @media screen and (max-width: $mobile) {
-      top: 0;
-    }
-
-    @media screen and (min-width: $mobile + 1) {
-      top: 7px;
-    }
-  }
-
   .header-menu-wide & {
     display: none;
   }
@@ -266,7 +253,6 @@
     display: none;
     padding-right: 9px;
     padding-left: 9px;
-    margin-right: 20px;
     margin-left: -5px;
     background-color: rgba($color-white, .95);
 

@@ -35,63 +35,48 @@
 
   .header-menu-compact & {
     position: relative;
-
-    .flexbox & {
-      flex-wrap: wrap;
-    }
   }
 
   .blog-listing-page & {
     margin-right: 20px;
     margin-left: 20px;
   }
-}
 
-.header-title {
-  .flexbox & {
-    flex-grow: 1;
-  }
-
-  .no-flexbox & {
-    float: left;
-  }
-
-  .header-menu-compact & {
-    .site-search-disabled & {
-      margin-right: 35px;
-    }
-
-    .site-search-enabled & {
-      margin-right: 70px;
-    }
-
-    .menu-language-enabled & {
-      margin-right: 165px;
-    }
-  }
-
-  .header-menu-wide & {
+  .header-title {
     margin-right: 20px;
+
+    .flexbox & {
+      flex-grow: 1;
+    }
+
+    .no-flexbox & {
+      float: left;
+    }
+
+    .header-menu-wide & {
+      .flexbox & {
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    text-align: right;
+
     .flexbox & {
       flex-shrink: 0;
-      flex-wrap: nowrap;
     }
-  }
-}
 
-.header-menu {
-  text-align: right;
+    .no-flexbox & {
+      float: right;
+    }
 
-  .flexbox & {
-    flex-shrink: 0;
-  }
-
-  .no-flexbox & {
-    float: right;
-  }
-
-  .menu-invisible {
-    visibility: hidden;
+    .menu-invisible {
+      visibility: hidden;
+    }
   }
 }
 

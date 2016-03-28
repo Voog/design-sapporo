@@ -10050,6 +10050,9 @@ return jQuery;
     });
   };
 
+  // ===========================================================================
+  // Prevent menu main item link visiting if item has sub pages.
+  // ===========================================================================
   var preventMenuMainLinkTouchInit = function() {
     $('.js-prevent-link-click > a').on('touchstart', function(event) {
       if ($(this).parent().find('.js-menu-sub').length > 0) {
