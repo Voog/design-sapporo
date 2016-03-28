@@ -87,7 +87,11 @@ a {
 }
 
 .container-inner {
-  display: flex;
+  // Hack to trigger CSS only for IE 10 and 11. This will fix the sticky footer
+  // issue on IE (min-height of the flexbox).
+  @media all and (-ms-high-contrast: none) {
+    display: flex;
+  }
 }
 
 .wrap {

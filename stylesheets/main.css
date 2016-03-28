@@ -74,10 +74,12 @@ a {
   }
 }
 
-.container-inner {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+@media all and (-ms-high-contrast: none) {
+  .container-inner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .wrap {
