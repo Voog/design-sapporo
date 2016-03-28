@@ -7,6 +7,7 @@
   display: inline-block;
   vertical-align: top;
   margin-right: 5px;
+  flex: 1 0 auto;
 
   .language-flags-enabled & {
     width: 0;

@@ -1,7 +1,5 @@
 // Header of the site.
 .site-header {
-  @include hyphenate;
-
   &.is-loading {
     visibility: hidden;
 
@@ -22,6 +20,7 @@
 
   .flexbox & {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
 
     @media screen and (min-width: $mobile + 1) {

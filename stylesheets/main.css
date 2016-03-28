@@ -449,14 +449,6 @@ a {
   padding-left: 6px;
 }
 
-.site-header {
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
-}
 .site-header.is-loading {
   visibility: hidden;
 }
@@ -467,6 +459,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -789,6 +784,9 @@ a {
   display: inline-block;
   vertical-align: top;
   margin-right: 5px;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .menu-language-btn:focus {
   outline: none;
