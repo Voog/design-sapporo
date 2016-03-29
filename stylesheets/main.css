@@ -799,7 +799,7 @@ a {
   border-style: none;
 }
 .language-flags-enabled .menu-language-btn {
-  width: 0;
+  width: 1px;
   padding: 12px 16px 13px 15px;
   font-size: 0;
 }
