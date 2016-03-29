@@ -27,17 +27,15 @@
 .form_field_textfield,
 .form_field_textarea {
   width: 30%;
-  height: 35px;
-  min-height: 35px;
   padding: 4px 7px 2px;
   font-family: $font-base;
   font-size: 18px;
   line-height: 1.5;
   color: rgba($color-black, .87);
   background-color: rgba($color-white, 1);
-  border-width: 1px;
-  border-style: solid;
   border-color: rgba($color-black, .05);
+  border-style: solid;
+  border-width: 1px;
   border-radius: 0;
   outline: none;
   box-sizing: border-box;
@@ -52,6 +50,8 @@
 
 .form_field_textarea {
   .comment-form & {
+    height: 35px;
+    min-height: 35px;
     resize: none;
   }
 }

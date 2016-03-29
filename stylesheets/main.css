@@ -2014,17 +2014,15 @@ a {
 .form_field_textfield,
 .form_field_textarea {
   width: 30%;
-  height: 35px;
-  min-height: 35px;
   padding: 4px 7px 2px;
   font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   font-size: 18px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
   background-color: white;
-  border-width: 1px;
-  border-style: solid;
   border-color: rgba(0, 0, 0, 0.05);
+  border-style: solid;
+  border-width: 1px;
   border-radius: 0;
   outline: none;
   box-sizing: border-box;
@@ -2038,6 +2036,8 @@ a {
 }
 
 .comment-form .form_field_textarea {
+  height: 35px;
+  min-height: 35px;
   resize: none;
 }
 
