@@ -8,7 +8,7 @@ Adds article specific JS tools.
 {% editorjsblock %}
   <script>
     template.bindBgPickers();
-    template.bindImgDropAreas();
+    template.bindImgDropAreas('{{ "drag_picture_here" | lc }}');
     template.bindArticleImageCropToggle();
   </script>
 {% endeditorjsblock %}

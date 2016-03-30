@@ -9938,7 +9938,7 @@ return jQuery;
   // ===========================================================================
   // Binds editmode image drop areas.
   // ===========================================================================
-  var bindImgDropAreas = function() {
+  var bindImgDropAreas = function(placeholderText) {
     $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
           $article = $imgDropAreaTarget.closest('.js-blog-article-newer'),
@@ -9952,6 +9952,7 @@ return jQuery;
       var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
         positionable: false,
         target_width: 1280,
+        placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
         removeBtn: '',
 
         change: function(data) {
@@ -10084,7 +10085,7 @@ return jQuery;
   // Sets functions that will be initiated globally.
   // ===========================================================================
   var init = function() {
-    bindInterfaceButtons();
+    // bindInterfaceButtons();
     setHeaderMenuInitialWidth();
     setHeaderMenuMode();
     focusFormMessages();
