@@ -1,0 +1,18 @@
+// =============================================================================
+// TEMPLATE DESIGN EDITOR STYLES.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+:root {
+  /* VoogStyle
+     "path": ["Main Styles"],
+     "title": "Bg color",
+     "editor": "colorPicker",
+     "scope": "page"
+  */
+  --page-color: red;
+}
