@@ -10050,7 +10050,7 @@ return jQuery;
     $('.js-lazyload').lazyload({
       threshold : 500,
       effect : "fadeIn",
-      placeholder: '../assets/article-image-placeholder.svg',
+      placeholder: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
 
       load : function() {
         var $article = $(this).closest('.js-blog-article-newer');
