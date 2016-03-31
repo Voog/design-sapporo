@@ -541,7 +541,7 @@
     $('.js-lazyload').lazyload({
       threshold : 500,
       effect : "fadeIn",
-      placeholder: '/assets/article-image-placeholder.svg',
+      placeholder: '../assets/article-image-placeholder.svg',
 
       load : function() {
         var $article = $(this).closest('.js-blog-article-newer');
