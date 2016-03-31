@@ -87,6 +87,7 @@ a {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   width: 100%;
+  max-width: 1140px;
   padding-bottom: 45px;
   margin-right: auto;
   margin-left: auto;
@@ -106,11 +107,7 @@ a {
 .publicmode .wrap {
   min-height: 100vh;
 }
-.front-page .wrap, .blog-listing-page .wrap {
-  max-width: 1140px;
-}
 .common-page .wrap, .blog-article-page .wrap {
-  max-width: 1170px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -1962,8 +1959,8 @@ a {
 }
 @media screen and (min-width: 1140px) {
   .content-area.area-normal .edy-positionable-container-maxwidth {
-    margin-right: -215px !important;
-    margin-left: -215px !important;
+    margin-right: -200px !important;
+    margin-left: -200px !important;
   }
 }
 .content-area .edy-image-container-with-title::after {
