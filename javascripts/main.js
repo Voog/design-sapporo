@@ -10058,7 +10058,7 @@ return jQuery;
         $article.removeClass('not-loaded').addClass('is-loaded');
 
         setTimeout(function() {
-          $article.removeClass('not-loaded')
+          $article.removeClass('not-loaded');
           $article.find('.js-loader').remove();
         }, 3000);
       }
