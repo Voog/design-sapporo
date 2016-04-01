@@ -15,7 +15,9 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
-            <section class="content-main content-area">{% content %}</section>
+            <section class="content-body">
+              <div class="content-area">{% content %}</div>
+            </section>
 
             <section class="blog-articles">
               {% if editmode %}

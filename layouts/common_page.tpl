@@ -14,13 +14,15 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
-            <header class="content-area">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</header>
+            <header class="content-header">
+              <div class="content-area">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
+            </header>
 
-            <section class="inner content-area area-normal" data-search-indexing-allowed="true">{% content %}</section>
+            <section class="content-body">
+              <div class="content-area area-normal inner" data-search-indexing-allowed="true">{% content %}</div>
 
-            <div class="content-bottom">
-              <div class="content-area">{% content name="bottom" %}</div>
-            </div>
+              <div class="content-bottom content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
+            </section>
           </main>
 
 

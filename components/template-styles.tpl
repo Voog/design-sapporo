@@ -7,23 +7,48 @@ Adds template design editor style overrides.
 <style data-voog-style>
 :root {
   /* VoogStyle
-     "path": ["Main Styles"],
-     "title": "Bg color",
-     "editor": "colorPicker",
-     "scope": "global"
+    "path": ["Main Styles"],
+    "title": "Bg color",
+    "editor": "colorPicker",
+    "scope": "global"
   */
-  --site-background-color: rgba(0, 0, 0, 0.02);
+  --global-background-color: rgba(0, 0, 0, 0.02);
   /* VoogStyle
-     "path": ["Main Styles"],
-     "title": "Site padding",
-     "editor": "rangePicker",
-     "scope": "global"
+    "path": ["Main Styles"],
+    "title": "Page padding",
+    "editor": "rangePicker",
+    "min": 20,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
   */
-  --site-padding: 10px;
+  --global-padding: 20;
+  /* VoogStyle
+    "path": ["Main Styles"],
+    "title": "Page alignment",
+    "editor": "listPicker",
+    "list": [
+      { "title": "Left", "value": "left" },
+      { "title": "Center", "value": "center" },
+      { "title": "Right", "value": "right" }
+    ],
+    "scope": "global"
+  */
+  --global-alignment: left;
 }
 
 body {
-  background-color: var(--site-background-color);
+  background-color: var(--global-background-color);
+}
+
+.wrap {
+  padding-right: var(--global-padding);
+  padding-left: var(--global-padding);
+}
+
+.content-header .content-area,
+.content-body .content-area {
+  text-align: var(--global-alignment);
 }
 </style>
 
