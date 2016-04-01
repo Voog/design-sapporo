@@ -10,9 +10,20 @@ Adds template design editor style overrides.
      "path": ["Main Styles"],
      "title": "Bg color",
      "editor": "colorPicker",
-     "scope": "page"
+     "scope": "global"
   */
-  --page-color: red;
+  --site-background-color: rgba(0, 0, 0, 0.02);
+  /* VoogStyle
+     "path": ["Main Styles"],
+     "title": "Site padding",
+     "editor": "rangePicker",
+     "scope": "global"
+  */
+  --site-padding: 10px;
+}
+
+body {
+  background-color: var(--site-background-color);
 }
 </style>
 

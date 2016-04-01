@@ -7,12 +7,28 @@
 // The output component can be included in any "layout" or "component".
 // =============================================================================
 
+// MODULES
+@import '../stylesheets/modules/variables';
+
+// Overrides
 :root {
   /* VoogStyle
      "path": ["Main Styles"],
      "title": "Bg color",
      "editor": "colorPicker",
-     "scope": "page"
+     "scope": "global"
   */
-  --page-color: red;
+  --site-background-color: rgba($color-black, .02);
+
+  /* VoogStyle
+     "path": ["Main Styles"],
+     "title": "Site padding",
+     "editor": "rangePicker",
+     "scope": "global"
+  */
+  --site-padding: 10px;
+}
+
+body {
+  background-color: var(--site-background-color);
 }
