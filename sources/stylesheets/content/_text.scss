@@ -248,14 +248,11 @@
     }
   }
 
-  %content-area-image-common {
-    width: auto !important;
-    max-width: none !important;
-  }
-
   &.area-normal {
     .edy-positionable-container-maxwidth {
-      @extend %content-area-image-common;
+      width: auto !important;
+      max-width: none !important;
+
       // scss-lint:disable ImportantRule
       @media screen and (min-width: 780px) {
         margin-right: -20px !important;
@@ -273,8 +270,8 @@
       }
 
       @media screen and (min-width: 1140px) {
-        margin-right: -215px !important;
-        margin-left: -215px !important;
+        margin-right: -200px !important;
+        margin-left: -200px !important;
       }
       // scss-lint:enable ImportantRule
     }

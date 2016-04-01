@@ -5,8 +5,7 @@ Adds template specific JS tools.
 ================================================================================
 {% endcomment %}
 {% editorjsblock %}
-  {% comment %}TODO: Replace with 'latest' before live.{% endcomment %}
-  <script src="{{ site.static_asset_host }}/libs/edicy-tools/1.1.3/edicy-tools.js"></script>
+  <script src="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js"></script>
 
   <script>
     //==========================================================================

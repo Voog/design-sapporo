@@ -1,17 +1,30 @@
 ;(function($) {
   // ===========================================================================
-  // Function to detect if user is in editmode.
+  // Function to detect if site is displayed in editmode.
   // ===========================================================================
   var editmode = function () {
     return $('html').hasClass('editmode');
   };
 
+  // ===========================================================================
+  // Function to detect if site language menu popover is open.
+  // ===========================================================================
+  var languageMenuPopoverOpen = function() {
+    return $('html').hasClass('menu-language-popover-open');
+  };
+
+  // ===========================================================================
+  // Function to detect if current page is article.
+  // ===========================================================================
   var blogArticlePage = function() {
     return $('body').hasClass('blog-article-page');
   };
 
-  var languageMenuPopoverOpen = function() {
-    return $('html').hasClass('menu-language-popover-open');
+  // ===========================================================================
+  // Function to detect if current page is article.
+  // ===========================================================================
+  var headerMenuWide = function() {
+    return $('body').hasClass('header-menu-wide');
   };
 
   // ===========================================================================
@@ -528,7 +541,7 @@
     $('.js-lazyload').lazyload({
       threshold : 500,
       effect : "fadeIn",
-      placeholder: '/assets/article-image-placeholder.svg',
+      placeholder: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
 
       load : function() {
         var $article = $(this).closest('.js-blog-article-newer');
@@ -536,6 +549,7 @@
         $article.removeClass('not-loaded').addClass('is-loaded');
 
         setTimeout(function() {
+          $article.removeClass('not-loaded');
           $article.find('.js-loader').remove();
         }, 3000);
       }
@@ -547,7 +561,7 @@
   // ===========================================================================
   var preventMenuMainLinkTouchInit = function() {
     $('.js-prevent-link-click > a').on('touchstart', function(event) {
-      if ($(this).parent().find('.js-menu-sub').length > 0) {
+      if (headerMenuWide() && $(this).parent().find('.js-menu-sub').length > 0) {
         event.preventDefault();
       }
     });
@@ -576,7 +590,7 @@
   // Sets functions that will be initiated globally.
   // ===========================================================================
   var init = function() {
-    // bindInterfaceButtons();
+    bindInterfaceButtons();
     setHeaderMenuInitialWidth();
     setHeaderMenuMode();
     focusFormMessages();
