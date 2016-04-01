@@ -162,6 +162,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-editor-styles.tpl",
+      "layout_name": "template-editor-styles",
+      "title": "template-editor-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-head.tpl",
       "layout_name": "template-head",
       "title": "template-head"

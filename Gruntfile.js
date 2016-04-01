@@ -189,7 +189,7 @@ module.exports = function(grunt) {
       template_editor: {
         files: [
           {
-            prepend: "{% comment %}\n================================================================================\nTEMPLATE DESIGN EDITOR STYLES.\nAdds template design editor style overrides.\n================================================================================\n{% endcomment %}\n<style type=\"text/css+voog\" data-edy-stylesheet=\"true\">\n",
+            prepend: "{% comment %}\n================================================================================\nTEMPLATE DESIGN EDITOR STYLES.\nAdds template design editor style overrides.\n================================================================================\n{% endcomment %}\n<style data-voog-style>\n",
             append: "</style>",
             input: 'components/template-editor-styles.tpl',
             output: 'components/template-editor-styles.tpl'
