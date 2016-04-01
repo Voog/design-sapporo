@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
 {% endif %}
 
+{% include "template-styles" %}
+
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>
 
