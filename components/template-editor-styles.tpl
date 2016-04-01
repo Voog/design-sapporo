@@ -15,3 +15,5 @@ Adds template design editor style overrides.
   --page-color: red;
 }
 </style>
+
+{{ site.style_tag }}
