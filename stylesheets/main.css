@@ -88,6 +88,8 @@ a {
           flex: 1 1 100%;
   width: 100%;
   max-width: 1140px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-bottom: 45px;
   margin-right: auto;
   margin-left: auto;
@@ -106,10 +108,6 @@ a {
 }
 .publicmode .wrap {
   min-height: 100vh;
-}
-.common-page .wrap, .blog-article-page .wrap {
-  padding-right: 20px;
-  padding-left: 20px;
 }
 @media screen and (max-width: 640px) {
   .wrap {
@@ -144,8 +142,6 @@ a {
   display: none;
 }
 .front-page .content-main {
-  padding-right: 20px;
-  padding-left: 20px;
   margin-bottom: 50px;
 }
 
@@ -480,10 +476,6 @@ a {
 }
 .header-menu-compact .site-header {
   position: relative;
-}
-.blog-listing-page .site-header {
-  margin-right: 20px;
-  margin-left: 20px;
 }
 .site-header .header-title {
   margin-right: 20px;
@@ -1177,10 +1169,6 @@ a {
   content: "";
   display: table;
 }
-.blog-listing-page .site-footer {
-  padding-right: 20px;
-  padding-left: 20px;
-}
 
 .voog-reference {
   font-size: 13px;
@@ -1238,11 +1226,6 @@ a {
   }
 }
 
-.cms-blog-article-add {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .cms-blog-article-tags {
   position: relative;
 }
@@ -1269,8 +1252,6 @@ a {
 @media screen and (max-width: 240px) {
   .blog-listing-page .blog-article-newer {
     display: block;
-    padding-right: 20px;
-    padding-left: 20px;
   }
 }
 @media screen and (min-width: 241px) {
@@ -1281,22 +1262,22 @@ a {
 }
 @media screen and (min-width: 241px) and (max-width: 640px) {
   .blog-listing-page .blog-article-newer {
-    width: calc(50% - 30px);
+    width: calc(50% - 10px);
   }
   .blog-listing-page .blog-article-newer:nth-child(odd) {
     padding-right: 10px;
-    padding-left: 20px;
   }
   .blog-listing-page .blog-article-newer:nth-child(even) {
-    padding-right: 20px;
     padding-left: 10px;
   }
 }
 @media screen and (min-width: 641px) {
   .blog-listing-page .blog-article-newer {
-    width: calc(33.3% - 40px);
-    padding-right: 20px;
-    padding-left: 20px;
+    width: calc(33.3% - 26.5px);
+  }
+  .blog-listing-page .blog-article-newer:nth-child(3n+2) {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 .blog-article-page .blog-article-newer {

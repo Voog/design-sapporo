@@ -12,11 +12,6 @@
   .no-flexbox & {
     @include clearfix;
   }
-
-  .blog-listing-page & {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
 }
 
 .voog-reference {

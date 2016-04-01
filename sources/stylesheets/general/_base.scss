@@ -98,6 +98,8 @@ a {
   flex: 1 1 100%;
   width: 100%;
   max-width: 1140px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-bottom: 45px;
   margin-right: auto;
   margin-left: auto;
@@ -114,12 +116,6 @@ a {
 
   .publicmode & {
     min-height: 100vh;
-  }
-
-  .common-page &,
-  .blog-article-page & {
-    padding-right: 20px;
-    padding-left: 20px;
   }
 
   @media screen and (max-width: $mobile) {
@@ -156,8 +152,6 @@ a {
   }
 
   .front-page & {
-    padding-right: 20px;
-    padding-left: 20px;
     margin-bottom: 50px;
   }
 }
