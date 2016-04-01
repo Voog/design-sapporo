@@ -1821,9 +1821,6 @@ a {
   margin-top: 1.7em;
   margin-bottom: 1.7em;
 }
-.content-area a:hover {
-  color: rgba(0, 0, 0, 0.8);
-}
 .site-header .content-area a {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -1833,6 +1830,9 @@ a {
 .page-content .content-area a, .site-footer .content-area a {
   font-weight: 400;
   color: black;
+}
+.page-content .content-area a:hover, .site-footer .content-area a:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 .content-area b,
 .content-area strong {
