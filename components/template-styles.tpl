@@ -61,6 +61,7 @@ Adds template design editor style overrides.
     "editor": "rangePicker",
     "min": 1,
     "max": 5,
+    "step": 0.1,
     "unit": "",
     "scope": "global"
   */
@@ -164,6 +165,7 @@ Adds template design editor style overrides.
     "editor": "rangePicker",
     "min": 1,
     "max": 5,
+    "step": 0.1,
     "unit": "",
     "scope": "global"
   */
@@ -178,7 +180,10 @@ Adds template design editor style overrides.
     "unit": "px",
     "scope": "global",
     "featured": true,
-    "boundVariables": ["--global-link-hover-font-size"]
+    "boundVariables": [
+      "--global-link-hover-font-size",
+      "--global-link-active-font-size"
+    ]
   */
   --global-link-font-size: 18px;
   /* VoogStyle
@@ -189,9 +194,21 @@ Adds template design editor style overrides.
     "min": 8,
     "max": 80,
     "unit": "px",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": ["--global-link-active-font-size"]
   */
   --global-link-hover-font-size: 18px;
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Active"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-link-active-font-size: 18px;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Font size",
@@ -203,7 +220,10 @@ Adds template design editor style overrides.
     },
     "icon": "bold",
     "scope": "global",
-    "boundVariables": ["--global-link-font-hover-weight"]
+    "boundVariables": [
+      "--global-link-hover-font-weight",
+      "--global-link-active-font-weight"
+    ]
   */
   --global-link-font-weight: 400;
   /* VoogStyle
@@ -216,9 +236,23 @@ Adds template design editor style overrides.
       "off": "400"
     },
     "icon": "bold",
+    "scope": "global",
+    "boundVariables": ["--global-link-active-font-weight"]
+  */
+  --global-link-hover-font-weight: 400;
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Active"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
     "scope": "global"
   */
-  --global-link-font-hover-weight: 400;
+  --global-link-active-font-weight: 400;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Font style",
@@ -230,7 +264,10 @@ Adds template design editor style overrides.
     },
     "icon": "italic",
     "scope": "global",
-    "boundVariables": ["--global-link-hover-font-style"]
+    "boundVariables": [
+      "--global-link-hover-font-style",
+      "--global-link-active-font-style"
+    ]
   */
   --global-link-font-style: normal;
   /* VoogStyle
@@ -243,9 +280,23 @@ Adds template design editor style overrides.
       "off": "normal"
     },
     "icon": "italic",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": ["--global-link-active-font-style"]
   */
   --global-link-hover-font-style: normal;
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Active"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-link-active-font-style: normal;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Text decoration",
@@ -257,7 +308,10 @@ Adds template design editor style overrides.
     },
     "icon": "underline",
     "scope": "global",
-    "boundVariables": ["--global-link-hover-text-decoration"]
+    "boundVariables": [
+      "--global-link-hover-text-decoration",
+      "--global-link-active-text-decoration"
+    ]
   */
   --global-link-text-decoration: none;
   /* VoogStyle
@@ -270,9 +324,23 @@ Adds template design editor style overrides.
       "off": "none"
     },
     "icon": "underline",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": ["--global-link-active-text-decoration"]
   */
   --global-link-hover-text-decoration: none;
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Active"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-link-active-text-decoration: none;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Text transform",
@@ -284,7 +352,10 @@ Adds template design editor style overrides.
     },
     "icon": "uppercase",
     "scope": "global",
-    "boundVariables": ["--global-link-hover-text-transform"]
+    "boundVariables": [
+      "--global-link-hover-text-transform",
+      "--global-link-active-text-transform"
+    ]
   */
   --global-link-text-transform: none;
   /* VoogStyle
@@ -297,9 +368,23 @@ Adds template design editor style overrides.
       "off": "none"
     },
     "icon": "uppercase",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": ["--global-link-active-text-transform"]
   */
   --global-link-hover-text-transform: none;
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Active"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-link-active-text-transform: none;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Text transform",
@@ -307,7 +392,10 @@ Adds template design editor style overrides.
     "editor": "colorPicker",
     "scope": "global",
     "featured": true,
-    "boundVariables": ["--global-link-hover-color"]
+    "boundVariables": [
+      "--global-link-hover-color",
+      "--global-link-active-color"
+    ]
   */
   --global-link-color: black;
   /* VoogStyle
@@ -315,9 +403,18 @@ Adds template design editor style overrides.
     "title": "Text transform",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": ["--global-link-active-color"]
   */
   --global-link-hover-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Active"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-link-active-color: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -361,10 +458,18 @@ body {
 .page-content .content-area a:hover, .site-footer .content-area a:hover {
   font-size: var(--global-link-hover-font-size);
   font-style: var(--global-link-hover-font-style);
-  font-weight: var(--global-link-font-hover-weight);
+  font-weight: var(--global-link-hover-font-weight);
   color: var(--global-link-hover-color);
   text-decoration: var(--global-link-hover-text-decoration);
   text-transform: var(--global-link-hover-text-transform);
+}
+.page-content .content-area a:active, .site-footer .content-area a:active {
+  font-size: var(--global-link-active-font-size);
+  font-style: var(--global-link-active-font-style);
+  font-weight: var(--global-link-active-font-weight);
+  color: var(--global-link-active-color);
+  text-decoration: var(--global-link-active-text-decoration);
+  text-transform: var(--global-link-active-text-transform);
 }
 </style>
 
