@@ -24,18 +24,6 @@ Adds template design editor style overrides.
   */
   --global-padding: 20;
   /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Page alignment",
-    "editor": "listPicker",
-    "list": [
-      { "title": "Left", "value": "left" },
-      { "title": "Center", "value": "center" },
-      { "title": "Right", "value": "right" }
-    ],
-    "scope": "global"
-  */
-  --global-alignment: left;
-  /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Padding",
     "editor": "rangePicker",
@@ -44,7 +32,96 @@ Adds template design editor style overrides.
     "unit": "px",
     "scope": "global"
   */
-  --global-content-padding: 0;
+  --global-text-padding: 0;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": [
+      {
+        "title": "Default",
+        "value": "'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif"
+      },
+      {
+        "title": "Fira Sans",
+        "value": "'Fira Sans', sans-serif"
+      },
+      {
+        "title": "Lato",
+        "value": "'Lato', sans-serif"
+      },
+      {
+        "title": "Montserrat",
+        "value": "'Montserrat', sans-serif"
+      },
+      {
+        "title": "Open Sans",
+        "value": "'Open Sans', sans-serif"
+      },
+      {
+        "title": "Roboto",
+        "value": "'Roboto', sans-serif"
+      },
+      {
+        "title": "Source Sans Pro",
+        "value": "'Source Sans Pro', sans-serif"
+      },
+      {
+        "title": "Ubuntu",
+        "value": "'Ubuntu', sans-serif"
+      },
+      {
+        "title": "Arvo",
+        "value": "'Arvo', sans-serif"
+      },
+      {
+        "title": "Crimson Text",
+        "value": "'Crimson Text', sans-serif"
+      },
+      {
+        "title": "Lora",
+        "value": "'Lora', sans-serif"
+      },
+      {
+        "title": "Noto Serif",
+        "value": "'Noto Serif', sans-serif"
+      },
+      {
+        "title": "Playfair Display",
+        "value": "'Playfair Display', sans-serif"
+      },
+      {
+        "title": "PT Serif",
+        "value": "'PT Serif', sans-serif"
+      },
+      {
+        "title": "Roboto Slab",
+        "value": "'Roboto Slab', sans-serif"
+      },
+      {
+        "title": "Anonymous Pro",
+        "value": "'Anonymous Pro', monospace"
+      },
+      {
+        "title": "Cousine",
+        "value": "'Cousine', monospace"
+      },
+      {
+        "title": "Roboto Mono",
+        "value": "'Roboto Mono', monospace"
+      },
+      {
+        "title": "Ubuntu Mono",
+        "value": "'Ubuntu Mono', monospace"
+      }
+    ],
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-font-family"
+    ]
+  */
+  --global-text-font-family: "'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif";
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Character spacing",
@@ -52,9 +129,12 @@ Adds template design editor style overrides.
     "min": 0,
     "max": 50,
     "unit": "px",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-letter-spacing"
+    ]
   */
-  --global-content-letter-spacing: 0;
+  --global-text-letter-spacing: 0;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Line height",
@@ -63,9 +143,12 @@ Adds template design editor style overrides.
     "max": 5,
     "step": 0.1,
     "unit": "",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-line-height"
+    ]
   */
-  --global-content-line-height: 1.7;
+  --global-text-line-height: 1.7;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Font size",
@@ -75,9 +158,12 @@ Adds template design editor style overrides.
     "max": 80,
     "unit": "px",
     "scope": "global",
-    "featured": true
+    "featured": true,
+    "boundVariables": [
+      "--global-link-font-size"
+    ]
   */
-  --global-content-font-size: 18px;
+  --global-text-font-size: 18;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Font size",
@@ -88,9 +174,12 @@ Adds template design editor style overrides.
       "off": "400"
     },
     "icon": "bold",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-font-weight"
+    ]
   */
-  --global-content-font-weight: 400;
+  --global-text-font-weight: 400;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Font style",
@@ -101,9 +190,12 @@ Adds template design editor style overrides.
       "off": "normal"
     },
     "icon": "italic",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-letter-spacing"
+    ]
   */
-  --global-content-font-style: normal;
+  --global-text-font-style: normal;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Text decoration",
@@ -114,9 +206,12 @@ Adds template design editor style overrides.
       "off": "none"
     },
     "icon": "underline",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-text-decoration"
+    ]
   */
-  --global-content-text-decoration: none;
+  --global-text-text-decoration: none;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Text transform",
@@ -127,9 +222,12 @@ Adds template design editor style overrides.
       "off": "none"
     },
     "icon": "uppercase",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-link-text-transform"
+    ]
   */
-  --global-content-text-transform: none;
+  --global-text-text-transform: none;
   /* VoogStyle
     "path": ["Main Styles", "Text"],
     "title": "Text transform",
@@ -138,7 +236,7 @@ Adds template design editor style overrides.
     "scope": "global",
     "featured": true
   */
-  --global-content-color: black;
+  --global-text-color: black;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Padding",
@@ -149,6 +247,92 @@ Adds template design editor style overrides.
     "scope": "global"
   */
   --global-link-padding: 0;
+  /* VoogStyle
+    "path": ["Main Styles", "Links", "Normal"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": [
+      {
+        "title": "Default",
+        "value": "'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif"
+      },
+      {
+        "title": "Fira Sans",
+        "value": "'Fira Sans', sans-serif"
+      },
+      {
+        "title": "Lato",
+        "value": "'Lato', sans-serif"
+      },
+      {
+        "title": "Montserrat",
+        "value": "'Montserrat', sans-serif"
+      },
+      {
+        "title": "Open Sans",
+        "value": "'Open Sans', sans-serif"
+      },
+      {
+        "title": "Roboto",
+        "value": "'Roboto', sans-serif"
+      },
+      {
+        "title": "Source Sans Pro",
+        "value": "'Source Sans Pro', sans-serif"
+      },
+      {
+        "title": "Ubuntu",
+        "value": "'Ubuntu', sans-serif"
+      },
+      {
+        "title": "Arvo",
+        "value": "'Arvo', sans-serif"
+      },
+      {
+        "title": "Crimson Text",
+        "value": "'Crimson Text', sans-serif"
+      },
+      {
+        "title": "Lora",
+        "value": "'Lora', sans-serif"
+      },
+      {
+        "title": "Noto Serif",
+        "value": "'Noto Serif', sans-serif"
+      },
+      {
+        "title": "Playfair Display",
+        "value": "'Playfair Display', sans-serif"
+      },
+      {
+        "title": "PT Serif",
+        "value": "'PT Serif', sans-serif"
+      },
+      {
+        "title": "Roboto Slab",
+        "value": "'Roboto Slab', sans-serif"
+      },
+      {
+        "title": "Anonymous Pro",
+        "value": "'Anonymous Pro', monospace"
+      },
+      {
+        "title": "Cousine",
+        "value": "'Cousine', monospace"
+      },
+      {
+        "title": "Roboto Mono",
+        "value": "'Roboto Mono', monospace"
+      },
+      {
+        "title": "Ubuntu Mono",
+        "value": "'Ubuntu Mono', monospace"
+      }
+    ],
+    "featured": true,
+    "scope": "global"
+  */
+  --global-link-font-family: "'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif";
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Character spacing",
@@ -185,7 +369,7 @@ Adds template design editor style overrides.
       "--global-link-active-font-size"
     ]
   */
-  --global-link-font-size: 18px;
+  --global-link-font-size: 18;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Hover"],
     "title": "Font size",
@@ -197,7 +381,7 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": ["--global-link-active-font-size"]
   */
-  --global-link-hover-font-size: 18px;
+  --global-link-hover-font-size: 18;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Active"],
     "title": "Font size",
@@ -208,7 +392,7 @@ Adds template design editor style overrides.
     "unit": "px",
     "scope": "global"
   */
-  --global-link-active-font-size: 18px;
+  --global-link-active-font-size: 18;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Font size",
@@ -418,6 +602,8 @@ Adds template design editor style overrides.
 }
 
 body {
+  font-family: var(--global-text-font-family);
+  color: var(--global-text-color);
   background-color: var(--global-background-color);
 }
 
@@ -426,26 +612,24 @@ body {
   padding-left: var(--global-padding);
 }
 
-.content-header .content-area,
-.content-body .content-area {
-  text-align: var(--global-alignment);
+.content-area {
+  line-height: var(--global-text-line-height);
+  color: var(--global-text-color);
 }
-
 .page-content .content-area {
-  padding-right: var(--global-content-padding);
-  padding-left: var(--global-content-padding);
-  font-size: var(--global-content-font-size);
-  font-style: var(--global-content-font-style);
-  font-weight: var(--global-content-font-weight);
-  line-height: var(--global-content-line-height);
-  letter-spacing: var(--global-content-letter-spacing);
-  color: var(--global-content-color);
-  text-decoration: var(--global-content-text-decoration);
-  text-transform: var(--global-content-text-transform);
+  padding-right: var(--global-text-padding);
+  padding-left: var(--global-text-padding);
+  font-size: var(--global-text-font-size);
+  font-style: var(--global-text-font-style);
+  font-weight: var(--global-text-font-weight);
+  letter-spacing: var(--global-text-letter-spacing);
+  text-decoration: var(--global-text-text-decoration);
+  text-transform: var(--global-text-text-transform);
 }
 .page-content .content-area a, .site-footer .content-area a {
   padding-right: var(--global-link-padding);
   padding-left: var(--global-link-padding);
+  font-family: var(--global-link-font-family);
   font-size: var(--global-link-font-size);
   font-style: var(--global-link-font-style);
   font-weight: var(--global-link-font-weight);
