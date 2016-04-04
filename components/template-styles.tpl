@@ -5,13 +5,6 @@ Adds template design editor style overrides.
 ================================================================================
 {% endcomment %}
 <style data-voog-style>
-{% comment %}
-================================================================================
-TEMPLATE DESIGN EDITOR STYLES.
-Adds template design editor style overrides.
-================================================================================
-{% endcomment %}
-<style data-voog-style>
 :root {
   /* VoogStyle
     "path": ["Main Styles"],
@@ -42,6 +35,109 @@ Adds template design editor style overrides.
     "scope": "global"
   */
   --global-alignment: left;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 50,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-padding: 0;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 50,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-line-height: 1.7;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --global-content-font-size: 18px;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-font-weight: 400;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-font-style: normal;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-text-decoration: none;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-text-transform: none;
+  /* VoogStyle
+    "path": ["Main Styles", "Text"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --global-content-color: black;
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Padding",
@@ -81,6 +177,7 @@ Adds template design editor style overrides.
     "max": 80,
     "unit": "px",
     "scope": "global",
+    "featured": true,
     "boundVariables": ["--global-link-hover-font-size"]
   */
   --global-link-font-size: 18px;
@@ -209,6 +306,7 @@ Adds template design editor style overrides.
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
+    "featured": true,
     "boundVariables": ["--global-link-hover-color"]
   */
   --global-link-color: black;
@@ -236,6 +334,18 @@ body {
   text-align: var(--global-alignment);
 }
 
+.page-content .content-area {
+  padding-right: var(--global-content-padding);
+  padding-left: var(--global-content-padding);
+  font-size: var(--global-content-font-size);
+  font-style: var(--global-content-font-style);
+  font-weight: var(--global-content-font-weight);
+  line-height: var(--global-content-line-height);
+  letter-spacing: var(--global-content-letter-spacing);
+  color: var(--global-content-color);
+  text-decoration: var(--global-content-text-decoration);
+  text-transform: var(--global-content-text-transform);
+}
 .page-content .content-area a, .site-footer .content-area a {
   padding-right: var(--global-link-padding);
   padding-left: var(--global-link-padding);
@@ -257,7 +367,5 @@ body {
   text-transform: var(--global-link-hover-text-transform);
 }
 </style>
-
-{{ site.style_tag }}</style>
 
 {{ site.style_tag }}
