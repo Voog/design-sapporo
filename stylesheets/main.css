@@ -1762,6 +1762,7 @@ a {
 .content-area h4,
 .content-area h5,
 .content-area h6 {
+  font-weight: 600;
   line-height: 1.3;
 }
 .content-area h1 b,
