@@ -418,7 +418,7 @@ Adds template design editor style overrides.
     "scope": "global",
     "featured": true
   */
-  --global-text-color: black;
+  --global-text-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "path": ["Main Styles", "Links", "Normal"],
     "title": "Padding",
@@ -757,11 +757,7 @@ Adds template design editor style overrides.
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
-    "featured": true,
-    "boundVariables": [
-      "--global-link-hover-color",
-      "--global-link-active-color"
-    ]
+    "featured": true
   */
   --global-link-color: black;
   /* VoogStyle

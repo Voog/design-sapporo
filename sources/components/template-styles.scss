@@ -455,7 +455,7 @@
     "scope": "global",
     "featured": true
   */
-  --global-text-color: rgba($color-black, 1);
+  --global-text-color: rgba($color-black, .8);
 
   // ===========================================================================
   // Global content area link styles.
@@ -817,11 +817,7 @@
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
-    "featured": true,
-    "boundVariables": [
-      "--global-link-hover-color",
-      "--global-link-active-color"
-    ]
+    "featured": true
   */
   --global-link-color: rgba($color-black, 1);
 
