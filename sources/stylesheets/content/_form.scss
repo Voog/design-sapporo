@@ -28,8 +28,8 @@
 .form_field_textarea {
   width: 30%;
   padding: 4px 7px 2px;
-  font-family: $font-base;
-  font-size: 18px;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
   line-height: 1.5;
   color: rgba($color-black, 1);
   background-color: rgba($color-white, 1);
@@ -97,8 +97,8 @@
 .form_submit {
   input {
     padding: 4px 20px 3px;
-    font-family: $font-base;
-    font-size: 18px;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
     color: rgba($color-black, .5);
     cursor: pointer;
     background-color: transparent;

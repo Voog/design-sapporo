@@ -265,7 +265,7 @@
       }
 
       @media screen and (min-width: $mobile + 1) {
-        font-size: 18px;
+        font-size: $base-font-size;
       }
     }
   }
@@ -336,13 +336,13 @@
     }
 
     @media screen and (min-width: $mobile + 1) {
-      font-size: 18px;
+      font-size: $base-font-size;
     }
   }
 
   .blog-article-older & {
     @media screen and (max-width: $mobile) {
-      font-size: 18px;
+      font-size: $base-font-size;
     }
 
     @media screen and (min-width: $mobile + 1) {
@@ -378,7 +378,7 @@
   .blog-article-page & {
     display: block;
     margin-top: 4px;
-    font-size: 18px;
+    font-size: $base-font-size;
     text-align: center;
   }
 }

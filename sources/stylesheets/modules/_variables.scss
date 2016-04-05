@@ -15,7 +15,8 @@ $color-error: #c00;
 $color-success: #409e13;
 
 // Fonts
-$font-base: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+$base-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+$base-font-size: 18px;
 
 // Media query breakpoints.
 $tablet: 1024px;
