@@ -5,6 +5,13 @@ Adds template design editor style overrides.
 ================================================================================
 {% endcomment %}
 <style data-voog-style>
+{% comment %}
+================================================================================
+TEMPLATE DESIGN EDITOR STYLES.
+Adds template design editor style overrides.
+================================================================================
+{% endcomment %}
+<style data-voog-style>
 :root {
   /* VoogStyle
     "path": ["Main Styles"],
@@ -37,6 +44,15 @@ Adds template design editor style overrides.
   --global-wrap-padding: 20px;
   /* VoogStyle
     "path": ["Main Styles"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {% include "template-fonts" %},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Main Styles"],
     "title": "Main color",
     "editor": "colorPicker",
     "scope": "global"
@@ -52,6 +68,7 @@ Adds template design editor style overrides.
 }
 
 body {
+  font-family: var(--global-main-font-family);
   color: var(--global-secondary-color);
   background-color: var(--global-body-background-color);
 }
@@ -151,10 +168,18 @@ body {
 .page-content .content-area a:hover, .site-footer .content-area a:hover {
   color: var(--global-main-color);
 }
+.content-area .custom-btn {
+  font-family: var(--global-main-font-family);
+}
 
 .form_field_textfield,
 .form_field_textarea {
+  font-family: var(--global-main-font-family);
   color: var(--global-secondary-color);
+}
+
+.form_submit input {
+  font-family: var(--global-main-font-family);
 }
 
 label .form_field_checkbox + .form_control_indicator::before {
@@ -170,5 +195,7 @@ label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--global-secondary-color);
 }
 </style>
+
+{{ site.style_tag }}</style>
 
 {{ site.style_tag }}

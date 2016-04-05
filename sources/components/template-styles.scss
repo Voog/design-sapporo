@@ -51,6 +51,16 @@
 
   /* VoogStyle
     "path": ["Main Styles"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {% include "template-fonts" %},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-main-font-family: $font-base;
+
+  /* VoogStyle
+    "path": ["Main Styles"],
     "title": "Main color",
     "editor": "colorPicker",
     "scope": "global"
@@ -74,6 +84,7 @@
 // Basics.
 // =============================================================================
 body {
+  font-family: var(--global-main-font-family);
   color: var(--global-secondary-color);
   background-color: var(--global-body-background-color);
 }
@@ -227,6 +238,10 @@ body {
       // scss-lint:enable NestingDepth
     }
   }
+
+  .custom-btn {
+    font-family: var(--global-main-font-family);
+  }
 }
 
 //==============================================================================
@@ -235,7 +250,14 @@ body {
 // scss-lint:disable SelectorFormat
 .form_field_textfield,
 .form_field_textarea {
+  font-family: var(--global-main-font-family);
   color: var(--global-secondary-color);
+}
+
+.form_submit {
+  input {
+    font-family: var(--global-main-font-family);
+  }
 }
 
 label {
