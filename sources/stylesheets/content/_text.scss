@@ -1,4 +1,6 @@
+// =============================================================================
 // Text type content area.
+// =============================================================================
 .content-area {
   @include clearfix;
   @include hyphenate;
@@ -142,9 +144,11 @@
     .site-header & {
       color: rgba($color-black, .8);
 
+      // scss-lint:disable NestingDepth
       &:hover {
         color: rgba($color-black, 1);
       }
+      // scss-lint:enable NestingDepth
     }
 
     .page-content &,
@@ -152,9 +156,11 @@
       font-weight: 400;
       color: rgba($color-black, 1);
 
+      // scss-lint:disable NestingDepth
       &:hover {
         color: rgba($color-black, .8);
       }
+      // scss-lint:enable NestingDepth
     }
   }
 

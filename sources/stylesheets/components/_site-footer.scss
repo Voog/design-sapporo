@@ -1,3 +1,6 @@
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
 .site-footer {
   padding-top: 25px;
 
@@ -16,7 +19,8 @@
 
 .voog-reference {
   font-size: 13px;
-  color: rgba($color-black, .5);
+  color: rgba($color-black, 1);
+  opacity: .5;
 
   @media screen and (max-width: $mobile) {
     margin-top: 10px;
@@ -39,15 +43,12 @@
     }
   }
 
-  &:hover {
-    color: rgba($color-black, .8);
-  }
-
   a {
-    color: rgba($color-black, .5);
+    color: rgba($color-black, 1);
+    opacity: .5;
 
     &:hover {
-      color: rgba($color-black, 1);
+      opacity: 1;
     }
   }
 }
