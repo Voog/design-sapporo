@@ -5,13 +5,6 @@ Adds template design editor style overrides.
 ================================================================================
 {% endcomment %}
 <style data-voog-style>
-{% comment %}
-================================================================================
-TEMPLATE DESIGN EDITOR STYLES.
-Adds template design editor style overrides.
-================================================================================
-{% endcomment %}
-<style data-voog-style>
 :root {
   /* VoogStyle
     "path": ["Main Styles"],
@@ -571,6 +564,116 @@ Adds template design editor style overrides.
     "featured": true
   */
   --global-subheading-color: black;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-content-background-color: transparent;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 50,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --global-content-font-size: 18;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-font-weight: 400;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-font-style: normal;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-text-decoration: none;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-text-transform: none;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --global-content-color: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -661,6 +764,19 @@ body {
 
 .content-area {
   color: var(--global-main-color);
+}
+.page-content .content-area {
+  font-family: var(--global-content-font-family);
+  font-size: var(--global-content-font-size);
+  font-style: var(--global-content-font-style);
+  font-weight: var(--global-content-font-weight);
+  line-height: var(--global-content-line-height);
+  letter-spacing: var(--global-content-letter-spacing);
+  color: var(--global-content-color);
+  text-align: var(--global-content-text-alignment);
+  text-decoration: var(--global-content-text-decoration);
+  text-transform: var(--global-content-text-transform);
+  background-color: var(--global-content-background-color);
 }
 .content-area h1,
 .content-area h2,
@@ -757,7 +873,5 @@ label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--global-secondary-color);
 }
 </style>
-
-{{ site.style_tag }}</style>
 
 {{ site.style_tag }}
