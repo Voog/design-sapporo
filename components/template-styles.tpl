@@ -81,7 +81,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-background-color",
-      "--global-heading-background-color"
+      "--global-heading-background-color",
+      "--global-subheading-background-color"
     ]
   */
   --global-headings-background-color: transparent;
@@ -94,22 +95,11 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-font-family",
-      "--global-heading-font-family"
+      "--global-heading-font-family",
+      "--global-subheading-font-family"
     ]
   */
   --global-headings-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Alignment",
-    "editor": "listPicker",
-    "list": {{ base_alignment_set }},
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-text-alignment",
-      "--global-heading-text-alignment"
-    ]
-  */
-  --global-headings-text-alignment: left;
   /* VoogStyle
     "path": ["Headings", "Text"],
     "title": "Character spacing",
@@ -120,7 +110,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-letter-spacing",
-      "--global-heading-letter-spacing"
+      "--global-heading-letter-spacing",
+      "--global-subheading-letter-spacing"
     ]
   */
   --global-headings-letter-spacing: 0;
@@ -135,7 +126,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-line-height",
-      "--global-heading-line-height"
+      "--global-heading-line-height",
+      "--global-subheading-line-height"
     ]
   */
   --global-headings-line-height: 1.3;
@@ -152,7 +144,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-font-weight",
-      "--global-heading-font-weight"
+      "--global-heading-font-weight",
+      "--global-subheading-font-weight"
     ]
   */
   --global-headings-font-weight: 600;
@@ -169,7 +162,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-font-style",
-      "--global-heading-font-style"
+      "--global-heading-font-style",
+      "--global-subheading-font-style"
     ]
   */
   --global-headings-font-style: normal;
@@ -186,7 +180,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-text-decoration",
-      "--global-heading-text-decoration"
+      "--global-heading-text-decoration",
+      "--global-subheading-text-decoration"
     ]
   */
   --global-headings-text-decoration: none;
@@ -203,7 +198,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-title-text-transform",
-      "--global-heading-text-transform"
+      "--global-heading-text-transform",
+      "--global-subheading-text-transform"
     ]
   */
   --global-headings-text-transform: none;
@@ -216,7 +212,8 @@ Adds template design editor style overrides.
     "featured": true,
     "boundVariables": [
       "--global-title-color",
-      "--global-heading-color"
+      "--global-heading-color",
+      "--global-subheading-color"
     ]
   */
   --global-headings-color: black;
@@ -394,7 +391,7 @@ Adds template design editor style overrides.
     "scope": "global",
     "featured": true
   */
-  --global-heading-font-size: 50;
+  --global-heading-font-size: 27;
   /* VoogStyle
     "path": ["Headings", "Heading"],
     "title": "Font size",
@@ -456,6 +453,124 @@ Adds template design editor style overrides.
     "featured": true
   */
   --global-heading-color: black;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-subheading-background-color: transparent;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-subheading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-subheading-text-alignment: center;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 50,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-subheading-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-subheading-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --global-subheading-font-size: 24;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-subheading-font-weight: 600;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-subheading-font-style: normal;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-subheading-text-decoration: none;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-subheading-text-transform: none;
+  /* VoogStyle
+    "path": ["Headings", "Subheading"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --global-subheading-color: black;
 }
 
 body {
@@ -563,13 +678,6 @@ body {
   text-transform: var(--global-headings-text-transform);
   background-color: var(--global-headings-background-color);
 }
-.content-area h2,
-.content-area h3,
-.content-area h4,
-.content-area h5,
-.content-area h6 {
-  text-align: var(--global-headings-text-alignment);
-}
 .content-area h1 {
   font-family: var(--global-title-font-family);
   font-size: var(--global-title-font-size);
@@ -578,6 +686,7 @@ body {
   line-height: var(--global-title-line-height);
   letter-spacing: var(--global-title-letter-spacing);
   color: var(--global-title-color);
+  text-align: var(--global-title-text-alignment);
   text-decoration: var(--global-title-text-decoration);
   text-transform: var(--global-title-text-transform);
   background-color: var(--global-title-background-color);
@@ -593,6 +702,21 @@ body {
   text-decoration: var(--global-heading-text-decoration);
   text-transform: var(--global-heading-text-transform);
   background-color: var(--global-heading-background-color);
+}
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+  font-family: var(--global-subheading-font-family);
+  font-size: var(--global-subheading-font-size);
+  font-style: var(--global-subheading-font-style);
+  font-weight: var(--global-subheading-font-weight);
+  line-height: var(--global-subheading-line-height);
+  letter-spacing: var(--global-subheading-letter-spacing);
+  color: var(--global-subheading-color);
+  text-decoration: var(--global-subheading-text-decoration);
+  text-transform: var(--global-subheading-text-transform);
+  background-color: var(--global-subheading-background-color);
 }
 .site-header .content-area a {
   color: var(--global-main-color);
