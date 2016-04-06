@@ -39,16 +39,22 @@ Adds template design editor style overrides.
     "path": ["Main Styles"],
     "title": "Font",
     "editor": "listPicker",
-    "list": {% include "template-fonts" %},
+    "list": {{ base_font_set }},
     "featured": true,
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-headings-font-family"
+    ]
   */
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "path": ["Main Styles"],
     "title": "Main color",
     "editor": "colorPicker",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-headings-color"
+    ]
   */
   --global-main-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
@@ -63,15 +69,199 @@ Adds template design editor style overrides.
   --global-secondary-color: black;
   /* VoogStyle
     "path": ["Headings"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-background-color"
+    ]
+  */
+  --global-headings-background-color: transparent;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
     "title": "Font",
     "editor": "listPicker",
-    "list": {% include "template-fonts" %},
+    "list": {{ base_font_set }},
     "featured": true,
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-font-family"
+    ]
   */
   --global-headings-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Headings"],
+    "path": ["Headings", "Text"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-text-alignment"
+    ]
+  */
+  --global-headings-text-alignment: left;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 50,
+    "unit": "px",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-letter-spacing"
+    ]
+  */
+  --global-headings-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-line-height"
+    ]
+  */
+  --global-headings-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-font-weight"
+    ]
+  */
+  --global-headings-font-weight: 600;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-font-style"
+    ]
+  */
+  --global-headings-font-style: normal;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-text-decoration"
+    ]
+  */
+  --global-headings-text-decoration: none;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-text-transform"
+    ]
+  */
+  --global-headings-text-transform: none;
+  /* VoogStyle
+    "path": ["Headings", "Text"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true,
+    "boundVariables": [
+      "--global-title-color"
+    ]
+  */
+  --global-headings-color: black;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-title-background-color: transparent;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-title-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-title-text-alignment: center;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 50,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-title-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-title-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --global-title-font-size: 50;
+  /* VoogStyle
+    "path": ["Headings", "Title"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -82,9 +272,9 @@ Adds template design editor style overrides.
     "icon": "bold",
     "scope": "global"
   */
-  --global-headings-font-weight: 600;
+  --global-title-font-weight: 600;
   /* VoogStyle
-    "path": ["Headings"],
+    "path": ["Headings", "Title"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -95,9 +285,9 @@ Adds template design editor style overrides.
     "icon": "italic",
     "scope": "global"
   */
-  --global-headings-font-style: normal;
+  --global-title-font-style: normal;
   /* VoogStyle
-    "path": ["Headings"],
+    "path": ["Headings", "Title"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -108,9 +298,9 @@ Adds template design editor style overrides.
     "icon": "underline",
     "scope": "global"
   */
-  --global-headings-text-decoration: none;
+  --global-title-text-decoration: none;
   /* VoogStyle
-    "path": ["Headings"],
+    "path": ["Headings", "Title"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -121,16 +311,16 @@ Adds template design editor style overrides.
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-headings-text-transform: none;
+  --global-title-text-transform: none;
   /* VoogStyle
-    "path": ["Headings"],
-    "title": "Text transform",
+    "path": ["Headings", "Title"],
+    "title": "Color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
     "featured": true
   */
-  --global-headings-color: black;
+  --global-title-color: black;
 }
 
 body {
@@ -236,6 +426,25 @@ body {
   color: var(--global-headings-color);
   text-decoration: var(--global-headings-text-decoration);
   text-transform: var(--global-headings-text-transform);
+  background-color: var(--global-headings-background-color);
+}
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+  text-align: var(--global-headings-text-alignment);
+}
+.content-area h1 {
+  font-family: var(--global-title-font-family);
+  font-style: var(--global-title-font-style);
+  font-weight: var(--global-title-font-weight);
+  line-height: var(--global-title-line-height);
+  letter-spacing: var(--global-title-letter-spacing);
+  color: var(--global-title-color);
+  text-decoration: var(--global-title-text-decoration);
+  text-transform: var(--global-title-text-transform);
+  background-color: var(--global-title-background-color);
 }
 .site-header .content-area a {
   color: var(--global-main-color);

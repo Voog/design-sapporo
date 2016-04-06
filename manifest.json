@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1-link.tpl",
-      "layout_name": "menu-level-1-link",
-      "title": "menu-level-1-link"
+      "file": "components/menu-language-popover.tpl",
+      "layout_name": "menu-language-popover",
+      "title": "menu-language-popover"
     },
     {
       "content_type": "component",
@@ -106,16 +106,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-language-popover.tpl",
-      "layout_name": "menu-language-popover",
-      "title": "menu-language-popover"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-article-comments.tpl",
-      "layout_name": "blog-article-comments",
-      "title": "blog-article-comments"
+      "file": "components/menu-level-1-link.tpl",
+      "layout_name": "menu-level-1-link",
+      "title": "menu-level-1-link"
     },
     {
       "content_type": "component",
@@ -158,13 +158,6 @@
       "file": "components/site-search.tpl",
       "layout_name": "site-search",
       "title": "site-search"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-fonts.tpl",
-      "layout_name": "template-fonts",
-      "title": "template-fonts"
     },
     {
       "content_type": "component",
