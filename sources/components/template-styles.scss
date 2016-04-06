@@ -57,7 +57,10 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-headings-font-family"
+      "--global-title-font-family",
+      "--global-heading-font-family",
+      "--global-subheading-font-family",
+      "--global-content-font-family"ˇ
     ]
   */
   --global-main-font-family: $base-font-family;
@@ -66,10 +69,7 @@
     "path": ["Main Styles"],
     "title": "Main color",
     "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-headings-color"
-    ]
+    "scope": "global"
   */
   --global-main-color: rgba($color-black, .8);
 
@@ -79,166 +79,12 @@
     "editor": "colorPicker",
     "scope": "global",
     "boundVariables": [
-      "--global-headings-color"
-    ]
-  */
-  --global-secondary-color: rgba($color-black, 1);
-
-  // ===========================================================================
-  // Global content area Headings styles.
-  // ===========================================================================
-  /* VoogStyle
-    "path": ["Headings"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-background-color",
-      "--global-heading-background-color",
-      "--global-subheading-background-color"
-    ]
-  */
-  --global-headings-background-color: transparent;
-
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-font-family",
-      "--global-heading-font-family",
-      "--global-subheading-font-family"
-    ]
-  */
-  --global-headings-font-family: $base-font-family;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Character spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 50,
-    "unit": "px",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-letter-spacing",
-      "--global-heading-letter-spacing",
-      "--global-subheading-letter-spacing"
-    ]
-  */
-  --global-headings-letter-spacing: 0;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Line height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-line-height",
-      "--global-heading-line-height",
-      "--global-subheading-line-height"
-    ]
-  */
-  --global-headings-line-height: 1.3;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Font size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-font-weight",
-      "--global-heading-font-weight",
-      "--global-subheading-font-weight"
-    ]
-  */
-  --global-headings-font-weight: 600;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Font style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-font-style",
-      "--global-heading-font-style",
-      "--global-subheading-font-style"
-    ]
-  */
-  --global-headings-font-style: normal;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Text decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-text-decoration",
-      "--global-heading-text-decoration",
-      "--global-subheading-text-decoration"
-    ]
-  */
-  --global-headings-text-decoration: none;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Text transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-text-transform",
-      "--global-heading-text-transform",
-      "--global-subheading-text-transform"
-    ]
-  */
-  --global-headings-text-transform: none;
-
-  /* VoogStyle
-    "path": ["Headings", "Text"],
-    "title": "Color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true,
-    "boundVariables": [
       "--global-title-color",
       "--global-heading-color",
       "--global-subheading-color"
     ]
   */
-  --global-headings-color: rgba($color-black, 1);
+  --global-secondary-color: rgba($color-black, 1);
 
   // ===========================================================================
   // Global content area "Title" (<h1>) styles.
@@ -304,7 +150,7 @@
     "scope": "global",
     "featured": true
   */
-  --global-title-font-size: 50;
+  --global-title-font-size: 50px;
 
   /* VoogStyle
     "path": ["Headings", "Title"],
@@ -400,7 +246,7 @@
     "list": {{ base_alignment_set }},
     "scope": "global"
   */
-  --global-heading-text-alignment: center;
+  --global-heading-text-alignment: left;
 
   /* VoogStyle
     "path": ["Headings", "Heading"],
@@ -436,7 +282,7 @@
     "scope": "global",
     "featured": true
   */
-  --global-heading-font-size: 27;
+  --global-heading-font-size: 27px;
 
   /* VoogStyle
     "path": ["Headings", "Heading"],
@@ -532,7 +378,7 @@
     "list": {{ base_alignment_set }},
     "scope": "global"
   */
-  --global-subheading-text-alignment: center;
+  --global-subheading-text-alignment: left;
 
   /* VoogStyle
     "path": ["Headings", "Subheading"],
@@ -568,7 +414,7 @@
     "scope": "global",
     "featured": true
   */
-  --global-subheading-font-size: 24;
+  --global-subheading-font-size: 24px;
 
   /* VoogStyle
     "path": ["Headings", "Subheading"],
@@ -916,23 +762,6 @@ body {
     background-color: var(--global-content-background-color);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--global-headings-font-family);
-    font-style: var(--global-headings-font-style);
-    font-weight: var(--global-headings-font-weight);
-    line-height: var(--global-headings-line-height);
-    letter-spacing: var(--global-headings-letter-spacing);
-    color: var(--global-headings-color);
-    text-decoration: var(--global-headings-text-decoration);
-    text-transform: var(--global-headings-text-transform);
-    background-color: var(--global-headings-background-color);
-  }
-
   h1 {
     font-family: var(--global-title-font-family);
     font-size: var(--global-title-font-size);
@@ -955,6 +784,7 @@ body {
     line-height: var(--global-heading-line-height);
     letter-spacing: var(--global-heading-letter-spacing);
     color: var(--global-heading-color);
+    text-align: var(--global-heading-text-alignment);
     text-decoration: var(--global-heading-text-decoration);
     text-transform: var(--global-heading-text-transform);
     background-color: var(--global-heading-background-color);
@@ -971,6 +801,7 @@ body {
     line-height: var(--global-subheading-line-height);
     letter-spacing: var(--global-subheading-letter-spacing);
     color: var(--global-subheading-color);
+    text-align: var(--global-subheading-text-alignment);
     text-decoration: var(--global-subheading-text-decoration);
     text-transform: var(--global-subheading-text-transform);
     background-color: var(--global-subheading-background-color);
