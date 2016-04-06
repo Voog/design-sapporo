@@ -44,7 +44,7 @@
 .btn-menu-back {
   @include transform(rotate(180deg));
   position: absolute;
-  top: 8px;
+  top: 2px;
   right: 0;
   left: 0;
   z-index: 1;
