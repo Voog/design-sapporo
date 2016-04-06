@@ -12,7 +12,6 @@ Adds template design editor style overrides.
 ================================================================================
 {% endcomment %}
 <style data-voog-style>
-@charset "UTF-8";
 :root {
   /* VoogStyle
     "path": ["Main Styles"],
@@ -54,7 +53,7 @@ Adds template design editor style overrides.
       "--global-title-font-family",
       "--global-heading-font-family",
       "--global-subheading-font-family",
-      "--global-content-font-family"ˇ
+      "--global-content-font-family"
     ]
   */
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
