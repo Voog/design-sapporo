@@ -568,6 +568,15 @@
   };
 
   // ===========================================================================
+  // Detects design editor changes.
+  // ===========================================================================
+  var detectDesignEditorChanges = function() {
+    document.addEventListener('edicy:customstyles:change', function() {
+      setHeaderMenuMode();
+    });
+  };
+
+  // ===========================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   // ===========================================================================
@@ -597,6 +606,7 @@
     removeFormInputErrorHighlight();
     autoSizeFormCommentArea();
     preventMenuMainLinkTouchInit();
+    detectDesignEditorChanges();
 
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();
