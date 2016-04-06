@@ -539,32 +539,26 @@ Adds template design editor style overrides.
   --global-content-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-menu-main-hover-background-color",
-      "--global-menu-main-active-background-color"
-    ]
-  */
-  --global-menu-main-background-color: transparent;
-  /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-menu-main-active-background-color"
-    ]
-  */
-  --global-menu-main-hover-background-color: transparent;
-  /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
-    "title": "Background color",
-    "editor": "colorPicker",
+    "title": "Margin",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
     "scope": "global"
   */
-  --global-menu-main-active-background-color: transparent;
+  --global-menu-main-margin: 15px;
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-menu-main-padding: 5px;
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
     "title": "Font",
@@ -596,6 +590,34 @@ Adds template design editor style overrides.
     "scope": "global"
   */
   --global-menu-main-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-background-color",
+      "--global-menu-main-active-background-color"
+    ]
+  */
+  --global-menu-main-background-color: transparent;
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Hover"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-active-background-color"
+    ]
+  */
+  --global-menu-main-hover-background-color: transparent;
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Active"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-menu-main-active-background-color: transparent;
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
     "title": "Size",
@@ -909,7 +931,32 @@ body {
   color: var(--global-secondary-color);
 }
 
+.header-menu-wide .menu-level-1 > .menu-item:not(:last-child) {
+  margin-right: var(--global-menu-main-margin);
+}
+.menu-level-1 > .menu-item:hover > a {
+  font-size: var(--global-menu-main-hover-font-size);
+  font-style: var(--global-menu-main-hover-font-style);
+  font-weight: var(--global-menu-main-hover-font-weight);
+  color: var(--global-menu-main-hover-color);
+  text-decoration: var(--global-menu-main-hover-text-decoration);
+  text-transform: var(--global-menu-main-hover-text-transform);
+  background-color: var(--global-menu-main-hover-background-color);
+}
+.menu-level-1 > .menu-item.item-current {
+  font-size: var(--global-menu-main-active-font-size);
+  font-style: var(--global-menu-main-active-font-style);
+  font-weight: var(--global-menu-main-active-font-weight);
+  color: var(--global-menu-main-active-color);
+  text-decoration: var(--global-menu-main-active-text-decoration);
+  text-transform: var(--global-menu-main-active-text-transform);
+}
+.menu-level-1 > .menu-item.item-current > a {
+  background-color: var(--global-menu-main-active-background-color);
+}
 .menu-level-1 > .menu-item > a {
+  padding-right: var(--global-menu-main-padding);
+  padding-left: var(--global-menu-main-padding);
   font-family: var(--global-menu-main-font-family);
   font-size: var(--global-menu-main-font-size);
   font-style: var(--global-menu-main-font-style);
@@ -920,24 +967,6 @@ body {
   text-decoration: var(--global-menu-main-text-decoration);
   text-transform: var(--global-menu-main-text-transform);
   background-color: var(--global-menu-main-background-color);
-}
-.menu-level-1 > .menu-item > a.active {
-  font-size: var(--global-menu-main-active-font-size);
-  font-style: var(--global-menu-main-active-font-style);
-  font-weight: var(--global-menu-main-active-font-weight);
-  color: var(--global-menu-main-active-color);
-  text-decoration: var(--global-menu-main-active-text-decoration);
-  text-transform: var(--global-menu-main-active-text-transform);
-  background-color: var(--global-menu-main-active-background-color);
-}
-.menu-level-1 > .menu-item:hover > a {
-  font-size: var(--global-menu-main-hover-font-size);
-  font-style: var(--global-menu-main-hover-font-style);
-  font-weight: var(--global-menu-main-hover-font-weight);
-  color: var(--global-menu-main-hover-color);
-  text-decoration: var(--global-menu-main-hover-text-decoration);
-  text-transform: var(--global-menu-main-hover-text-transform);
-  background-color: var(--global-menu-main-hover-background-color);
 }
 
 .menu-language-btn {

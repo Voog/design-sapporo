@@ -95,22 +95,21 @@
     // scss-lint:disable NestingDepth
     &:hover {
       > a {
-        opacity: .75;
+        color: rgba($color-black, .75);
       }
     }
     // scss-lint:enable NestingDepth
   }
 
   a {
-    color: rgba($color-black, 1);
-    opacity: .5;
+    color: rgba($color-black, .5);
 
     &:hover {
-      opacity: .75;
+      color: rgba($color-black, .75);
     }
 
     &.selected {
-      opacity: 1;
+      color: rgba($color-black, 1);
     }
 
     &.untranslated {

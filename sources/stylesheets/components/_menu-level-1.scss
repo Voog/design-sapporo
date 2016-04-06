@@ -4,9 +4,11 @@
 .menu-level-1 {
   > .menu-item {
     &:not(:last-child) {
+      // scss-lint:disable NestingDepth
       .header-menu-wide & {
         margin-right: 15px;
       }
+      // scss-lint:enable NestingDepth
     }
 
     &.item-current {

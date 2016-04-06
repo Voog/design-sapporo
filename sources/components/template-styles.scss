@@ -622,34 +622,27 @@
   // ===========================================================================
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-menu-main-hover-background-color",
-      "--global-menu-main-active-background-color"
-    ]
+    "title": "Margin",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
   */
-  --global-menu-main-background-color: transparent;
+  --global-menu-main-margin: 15px;
 
-      /* VoogStyle
-        "path": ["Menus", "Main menu", "Hover"],
-        "title": "Background color",
-        "editor": "colorPicker",
-        "scope": "global",
-        "boundVariables": [
-          "--global-menu-main-active-background-color"
-        ]
-      */
-      --global-menu-main-hover-background-color: transparent;
-
-      /* VoogStyle
-        "path": ["Menus", "Main menu", "Active"],
-        "title": "Background color",
-        "editor": "colorPicker",
-        "scope": "global"
-      */
-      --global-menu-main-active-background-color: transparent;
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-menu-main-padding: 5px;
 
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
@@ -684,6 +677,37 @@
     "scope": "global"
   */
   --global-menu-main-line-height: 1.3;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-background-color",
+      "--global-menu-main-active-background-color"
+    ]
+  */
+  --global-menu-main-background-color: transparent;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Background color",
+        "editor": "colorPicker",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-background-color"
+        ]
+      */
+      --global-menu-main-hover-background-color: transparent;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Background color",
+        "editor": "colorPicker",
+        "scope": "global"
+      */
+      --global-menu-main-active-background-color: transparent;
 
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
@@ -1067,27 +1091,10 @@ body {
 // =============================================================================
 .menu-level-1 {
   > .menu-item {
-    > a {
-      font-family: var(--global-menu-main-font-family);
-      font-size: var(--global-menu-main-font-size);
-      font-style: var(--global-menu-main-font-style);
-      font-weight: var(--global-menu-main-font-weight);
-      line-height: var(--global-menu-main-line-height);
-      letter-spacing: var(--global-menu-main-letter-spacing);
-      color: var(--global-menu-main-color);
-      text-decoration: var(--global-menu-main-text-decoration);
-      text-transform: var(--global-menu-main-text-transform);
-      background-color: var(--global-menu-main-background-color);
-
+    &:not(:last-child) {
       // scss-lint:disable NestingDepth
-      &.active {
-        font-size: var(--global-menu-main-active-font-size);
-        font-style: var(--global-menu-main-active-font-style);
-        font-weight: var(--global-menu-main-active-font-weight);
-        color: var(--global-menu-main-active-color);
-        text-decoration: var(--global-menu-main-active-text-decoration);
-        text-transform: var(--global-menu-main-active-text-transform);
-        background-color: var(--global-menu-main-active-background-color);
+      .header-menu-wide & {
+        margin-right: var(--global-menu-main-margin);
       }
       // scss-lint:enable NestingDepth
     }
@@ -1104,6 +1111,36 @@ body {
         background-color: var(--global-menu-main-hover-background-color);
       }
       // scss-lint:enable NestingDepth
+    }
+
+    // scss-lint:disable NestingDepth
+    &.item-current {
+      font-size: var(--global-menu-main-active-font-size);
+      font-style: var(--global-menu-main-active-font-style);
+      font-weight: var(--global-menu-main-active-font-weight);
+      color: var(--global-menu-main-active-color);
+      text-decoration: var(--global-menu-main-active-text-decoration);
+      text-transform: var(--global-menu-main-active-text-transform);
+
+      > a {
+        background-color: var(--global-menu-main-active-background-color);
+      }
+    }
+    // scss-lint:enable NestingDepth
+
+    > a {
+      padding-right: var(--global-menu-main-padding);
+      padding-left: var(--global-menu-main-padding);
+      font-family: var(--global-menu-main-font-family);
+      font-size: var(--global-menu-main-font-size);
+      font-style: var(--global-menu-main-font-style);
+      font-weight: var(--global-menu-main-font-weight);
+      line-height: var(--global-menu-main-line-height);
+      letter-spacing: var(--global-menu-main-letter-spacing);
+      color: var(--global-menu-main-color);
+      text-decoration: var(--global-menu-main-text-decoration);
+      text-transform: var(--global-menu-main-text-transform);
+      background-color: var(--global-menu-main-background-color);
     }
   }
 }
