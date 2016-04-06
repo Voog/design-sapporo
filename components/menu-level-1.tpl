@@ -1,6 +1,6 @@
 <ul class="menu menu-horizontal menu-public menu-level-1{% if menu_current %} menu-current{% endif %}">
   {% unless site.root_item.hidden? %}
-    <li class="menu-item js-prevent-link-click">
+    <li class="menu-item{% if site.root_item.selected? %} item-current{% endif %} js-prevent-link-click">
       {% menulink site.root_item %}
 
       {% if blog_pages_size == 1 %}
