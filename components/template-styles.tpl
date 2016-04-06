@@ -943,15 +943,13 @@ body {
   text-transform: var(--global-menu-main-hover-text-transform);
   background-color: var(--global-menu-main-hover-background-color);
 }
-.menu-level-1 > .menu-item.item-current {
+.menu-level-1 > .menu-item.item-current > a {
   font-size: var(--global-menu-main-active-font-size);
   font-style: var(--global-menu-main-active-font-style);
   font-weight: var(--global-menu-main-active-font-weight);
   color: var(--global-menu-main-active-color);
   text-decoration: var(--global-menu-main-active-text-decoration);
   text-transform: var(--global-menu-main-active-text-transform);
-}
-.menu-level-1 > .menu-item.item-current > a {
   background-color: var(--global-menu-main-active-background-color);
 }
 .menu-level-1 > .menu-item > a {

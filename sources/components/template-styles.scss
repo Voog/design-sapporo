@@ -1115,14 +1115,13 @@ body {
 
     // scss-lint:disable NestingDepth
     &.item-current {
-      font-size: var(--global-menu-main-active-font-size);
-      font-style: var(--global-menu-main-active-font-style);
-      font-weight: var(--global-menu-main-active-font-weight);
-      color: var(--global-menu-main-active-color);
-      text-decoration: var(--global-menu-main-active-text-decoration);
-      text-transform: var(--global-menu-main-active-text-transform);
-
       > a {
+        font-size: var(--global-menu-main-active-font-size);
+        font-style: var(--global-menu-main-active-font-style);
+        font-weight: var(--global-menu-main-active-font-weight);
+        color: var(--global-menu-main-active-color);
+        text-decoration: var(--global-menu-main-active-text-decoration);
+        text-transform: var(--global-menu-main-active-text-transform);
         background-color: var(--global-menu-main-active-background-color);
       }
     }
