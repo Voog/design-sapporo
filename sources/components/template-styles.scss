@@ -680,6 +680,42 @@
 
   /* VoogStyle
     "path": ["Menus", "Main menu", "Normal"],
+    "title": "Opacity",
+    "editor": "rangePicker",
+    "min": 0.1,
+    "max": 1,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-menu-main-opacity: .5;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Opacity",
+        "editor": "rangePicker",
+        "min": 0.1,
+        "max": 1,
+        "step": 0.1,
+        "unit": "",
+        "scope": "global"
+      */
+      --global-menu-main-hover-opacity: .75;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Opacity",
+        "editor": "rangePicker",
+        "min": 0.1,
+        "max": 1,
+        "step": 0.1,
+        "unit": "",
+        "scope": "global"
+      */
+      --global-menu-main-active-opacity: 1;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global",
@@ -1109,6 +1145,7 @@ body {
         text-decoration: var(--global-menu-main-hover-text-decoration);
         text-transform: var(--global-menu-main-hover-text-transform);
         background-color: var(--global-menu-main-hover-background-color);
+        opacity: var(--global-menu-main-hover-opacity);
       }
       // scss-lint:enable NestingDepth
     }
@@ -1123,6 +1160,7 @@ body {
         text-decoration: var(--global-menu-main-active-text-decoration);
         text-transform: var(--global-menu-main-active-text-transform);
         background-color: var(--global-menu-main-active-background-color);
+        opacity: var(--global-menu-main-active-opacity);
       }
     }
     // scss-lint:enable NestingDepth
@@ -1140,6 +1178,7 @@ body {
       text-decoration: var(--global-menu-main-text-decoration);
       text-transform: var(--global-menu-main-text-transform);
       background-color: var(--global-menu-main-background-color);
+      opacity: var(--global-menu-main-opacity);
     }
   }
 }

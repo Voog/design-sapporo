@@ -294,16 +294,17 @@ a {
 }
 
 .menu-public > .menu-item:hover > a {
-  color: rgba(0, 0, 0, 0.75);
+  opacity: .75;
 }
 .menu-public a {
-  color: rgba(0, 0, 0, 0.5);
+  color: black;
+  opacity: .5;
 }
 .menu-public a:hover {
-  color: rgba(0, 0, 0, 0.75);
+  opacity: .75;
 }
 .menu-public a.selected {
-  color: black;
+  opacity: 1;
 }
 .menu-public a.untranslated {
   color: #cc0000;
