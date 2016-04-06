@@ -121,8 +121,9 @@
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
-    "max": 50,
-    "unit": "px",
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
     "scope": "global"
   */
   --global-title-letter-spacing: 0;
@@ -253,8 +254,9 @@
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
-    "max": 50,
-    "unit": "px",
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
     "scope": "global"
   */
   --global-heading-letter-spacing: 0;
@@ -385,8 +387,9 @@
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
-    "max": 50,
-    "unit": "px",
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
     "scope": "global"
   */
   --global-subheading-letter-spacing: 0;
@@ -509,8 +512,9 @@
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
-    "max": 50,
-    "unit": "px",
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
     "scope": "global"
   */
   --global-content-letter-spacing: 0;
@@ -538,7 +542,7 @@
     "scope": "global",
     "featured": true
   */
-  --global-content-font-size: 18;
+  --global-content-font-size: 18px;
 
   /* VoogStyle
     "path": ["Content"],
@@ -605,6 +609,371 @@
     "featured": true
   */
   --global-content-color: rgba($color-black, .8);
+
+
+
+
+
+
+
+
+  // ===========================================================================
+  // Global main menu styles.
+  // ===========================================================================
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-background-color",
+      "--global-menu-main-active-background-color"
+    ]
+  */
+  --global-menu-main-background-color: transparent;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Background color",
+        "editor": "colorPicker",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-background-color"
+        ]
+      */
+      --global-menu-main-hover-background-color: transparent;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Background color",
+        "editor": "colorPicker",
+        "scope": "global"
+      */
+      --global-menu-main-active-background-color: transparent;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-menu-main-font-family: $base-font-family;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-menu-main-letter-spacing: .2em;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-menu-main-line-height: 1.3;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true,
+    "boundVariables": [
+      "--global-menu-main-hover-font-size",
+      "--global-menu-main-active-font-size"
+    ]
+  */
+  --global-menu-main-font-size: 13px;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Size",
+        "type": "button",
+        "editor": "rangePicker",
+        "min": 8,
+        "max": 80,
+        "unit": "px",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-font-size"
+        ]
+      */
+      --global-menu-main-hover-font-size: 13px;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Size",
+        "type": "button",
+        "editor": "rangePicker",
+        "min": 8,
+        "max": 80,
+        "unit": "px",
+        "scope": "global"
+      */
+      --global-menu-main-active-font-size: 13px;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-font-weight",
+      "--global-menu-main-active-font-weight"
+    ]
+  */
+  --global-menu-main-font-weight: 400;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Font size",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "600",
+          "off": "400"
+        },
+        "icon": "bold",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-font-weight"
+        ]
+      */
+      --global-menu-main-hover-font-weight: 400;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Font size",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "600",
+          "off": "400"
+        },
+        "icon": "bold",
+        "scope": "global"
+      */
+      --global-menu-main-active-font-weight: 400;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-font-style",
+      "--global-menu-main-active-font-style"
+    ]
+  */
+  --global-menu-main-font-style: normal;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Font style",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "italic",
+          "off": "normal"
+        },
+        "icon": "italic",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-font-style"
+        ]
+      */
+      --global-menu-main-hover-font-style: normal;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Font style",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "italic",
+          "off": "normal"
+        },
+        "icon": "italic",
+        "scope": "global"
+      */
+      --global-menu-main-active-font-style: normal;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-text-decoration",
+      "--global-menu-main-active-text-decoration"
+    ]
+  */
+  --global-menu-main-text-decoration: none;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Text decoration",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "underline",
+          "off": "none"
+        },
+        "icon": "underline",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-text-decoration"
+        ]
+      */
+      --global-menu-main-hover-text-decoration: none;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Text decoration",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "underline",
+          "off": "none"
+        },
+        "icon": "underline",
+        "scope": "global"
+      */
+      --global-menu-main-active-text-decoration: none;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global",
+    "boundVariables": [
+      "--global-menu-main-hover-text-transform",
+      "--global-menu-main-active-text-transform"
+    ]
+  */
+  --global-menu-main-text-transform: uppercase;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Text transform",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "uppercase",
+          "off": "none"
+        },
+        "icon": "uppercase",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-text-transform"
+        ]
+      */
+      --global-menu-main-hover-text-transform: uppercase;
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Text transform",
+        "type": "button",
+        "editor": "toggleIcon",
+        "states": {
+          "on": "uppercase",
+          "off": "none"
+        },
+        "icon": "uppercase",
+        "scope": "global"
+      */
+      --global-menu-main-active-text-transform: uppercase;
+
+  /* VoogStyle
+    "path": ["Menus", "Main menu", "Normal"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true,
+    "boundVariables": [
+      "--global-menu-main-hover-color",
+      "--global-menu-main-active-color"
+    ]
+  */
+  --global-menu-main-color: rgba($color-black, .8);
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Hover"],
+        "title": "Color",
+        "type": "button",
+        "editor": "colorPicker",
+        "scope": "global",
+        "boundVariables": [
+          "--global-menu-main-active-color"
+        ]
+      */
+      --global-menu-main-hover-color: rgba($color-black, .8);
+
+      /* VoogStyle
+        "path": ["Menus", "Main menu", "Active"],
+        "title": "Color",
+        "type": "button",
+        "editor": "colorPicker",
+        "scope": "global"
+      */
+      --global-menu-main-active-color: rgba($color-black, .8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // scss-lint:enable Comment, Indentation
 }
@@ -689,6 +1058,52 @@ body {
   h3 {
     a {
       color: var(--global-secondary-color);
+    }
+  }
+}
+
+// =============================================================================
+// SITE'S MAIN MENU
+// =============================================================================
+.menu-level-1 {
+  > .menu-item {
+    > a {
+      font-family: var(--global-menu-main-font-family);
+      font-size: var(--global-menu-main-font-size);
+      font-style: var(--global-menu-main-font-style);
+      font-weight: var(--global-menu-main-font-weight);
+      line-height: var(--global-menu-main-line-height);
+      letter-spacing: var(--global-menu-main-letter-spacing);
+      color: var(--global-menu-main-color);
+      text-decoration: var(--global-menu-main-text-decoration);
+      text-transform: var(--global-menu-main-text-transform);
+      background-color: var(--global-menu-main-background-color);
+
+      // scss-lint:disable NestingDepth
+      &.active {
+        font-size: var(--global-menu-main-active-font-size);
+        font-style: var(--global-menu-main-active-font-style);
+        font-weight: var(--global-menu-main-active-font-weight);
+        color: var(--global-menu-main-active-color);
+        text-decoration: var(--global-menu-main-active-text-decoration);
+        text-transform: var(--global-menu-main-active-text-transform);
+        background-color: var(--global-menu-main-active-background-color);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    &:hover {
+      // scss-lint:disable NestingDepth
+      > a {
+        font-size: var(--global-menu-main-hover-font-size);
+        font-style: var(--global-menu-main-hover-font-style);
+        font-weight: var(--global-menu-main-hover-font-weight);
+        color: var(--global-menu-main-hover-color);
+        text-decoration: var(--global-menu-main-hover-text-decoration);
+        text-transform: var(--global-menu-main-hover-text-transform);
+        background-color: var(--global-menu-main-hover-background-color);
+      }
+      // scss-lint:enable NestingDepth
     }
   }
 }
