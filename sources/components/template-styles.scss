@@ -71,7 +71,8 @@
     "editor": "colorPicker",
     "scope": "global",
     "boundVariables": [
-      "--global-content-color"
+      "--global-content-color",
+      "--global-menu-main-color"
     ]
   */
   --global-main-color: rgba($color-black, .8);
@@ -613,13 +614,6 @@
   */
   --global-content-color: rgba($color-black, .8);
 
-
-
-
-
-
-
-
   // ===========================================================================
   // Global main menu styles.
   // ===========================================================================
@@ -1023,20 +1017,14 @@
       */
       --global-menu-main-active-color: rgba($color-black, .8);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /* VoogStyle
+    "path": ["Menus", "Compact menu"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --global-menu-main-compact-background-color: rgba($color-white, 1);
 
   // scss-lint:enable Comment, Indentation
 }
@@ -1086,6 +1074,10 @@ body {
 }
 
 .menu-main {
+  .header-menu-compact & {
+    background-color: var(--global-menu-main-compact-background-color);
+  }
+
   .btn {
     &:hover {
       stroke: var(--global-secondary-color);

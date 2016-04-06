@@ -56,7 +56,8 @@ Adds template design editor style overrides.
     "editor": "colorPicker",
     "scope": "global",
     "boundVariables": [
-      "--global-content-color"
+      "--global-content-color",
+      "--global-menu-main-color"
     ]
   */
   --global-main-color: rgba(0, 0, 0, 0.8);
@@ -911,6 +912,14 @@ Adds template design editor style overrides.
     "scope": "global"
   */
   --global-menu-main-active-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Menus", "Compact menu"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --global-menu-main-compact-background-color: white;
 }
 
 body {
@@ -943,6 +952,9 @@ body {
   color: var(--global-secondary-color);
 }
 
+.header-menu-compact .menu-main {
+  background-color: var(--global-menu-main-compact-background-color);
+}
 .menu-main .btn:hover {
   stroke: var(--global-secondary-color);
 }
