@@ -54,7 +54,10 @@ Adds template design editor style overrides.
     "path": ["Main Styles"],
     "title": "Main color",
     "editor": "colorPicker",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-content-color"
+    ]
   */
   --global-main-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle

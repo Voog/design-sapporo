@@ -10081,7 +10081,7 @@ return jQuery;
   // ===========================================================================
   var detectDesignEditorChanges = function() {
     document.addEventListener('edicy:customstyles:change', function() {
-     setHeaderMenuMode();
+      setHeaderMenuMode();
     });
   };
 

@@ -69,7 +69,10 @@
     "path": ["Main Styles"],
     "title": "Main color",
     "editor": "colorPicker",
-    "scope": "global"
+    "scope": "global",
+    "boundVariables": [
+      "--global-content-color"
+    ]
   */
   --global-main-color: rgba($color-black, .8);
 
