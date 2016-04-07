@@ -1,4 +1,4 @@
-<a class="blog-article-newer without-image add-button" href="{% if blog-listing-article-add == "item" %}{{ item.url }}{% else %}{{ page.path }}{% endif %}?new">
+<a class="blog-article-newer without-image cms-blog-article-add-button" href="{% if blog-listing-article-add == "item" %}{{ item.url }}{% else %}{{ page.path }}{% endif %}?new">
   <div class="article-top">
     <div class="top-inner aspect-ratio-inner">
       <div class="article-placeholder">

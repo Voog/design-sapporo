@@ -1,6 +1,12 @@
 // =============================================================================
 // BLOG ARTICLE
 // =============================================================================
+.cms-blog-article-add-button {
+  &:hover {
+    opacity: .5;
+  }
+}
+
 .cms-blog-article-tags {
   position: relative;
 
@@ -21,16 +27,6 @@
   .blog-listing-page & {
     padding-top: 15px;
     padding-bottom: 15px;
-    opacity: 1;
-
-    &:hover {
-      // scss-lint:disable NestingDepth
-      .publicmode &,
-      &.add-button {
-        opacity: .8;
-      }
-      // scss-lint:enable NestingDepth
-    }
 
     @media screen and (max-width: $nano) {
       display: block;
@@ -57,6 +53,16 @@
   .blog-article-page & {
     padding-bottom: 30px;
   }
+
+  .top-inner {
+    opacity: 1;
+  }
+
+  &:hover {
+    .top-inner {
+      opacity: .8;
+    }
+  }
 }
 
 .blog-articles-older {
@@ -77,8 +83,8 @@
 }
 
 .article-add-ico {
-  stroke: rgba($color-black, 1);
   opacity: .3;
+  stroke: rgba($color-black, 1);
 
   @media screen and (max-width: $nano) {
     @include size(82px);
@@ -227,7 +233,7 @@
       font-size: 30px;
     }
 
-    .add-button & {
+    .cms-blog-article-add-button & {
       border-color: rgba($color-black, .4);
       border-style: dashed;
       border-width: 1px;
@@ -302,11 +308,6 @@
 
   .article-link {
     color: inherit;
-    opacity: 1;
-
-    &:hover {
-      opacity: .8;
-    }
 
     .blog-article-newer & {
       display: block;
