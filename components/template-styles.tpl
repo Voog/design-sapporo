@@ -13,7 +13,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "boundVariables": [
       "--global-content-color",
-      "--global-menu-main-color"
+      "--global-menu-main-color",
+      "--global-menu-sub-color"
     ]
   */
   --global-main-color: rgba(0, 0, 0, 0.8);
@@ -437,6 +438,17 @@ Adds template design editor style overrides.
     "scope": "global"
   */
   --global-content-background-color: transparent;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-padding: 0;
   /* VoogStyle
     "path": ["Content"],
     "title": "Font",
@@ -1298,7 +1310,8 @@ Adds template design editor style overrides.
     "max": 100,
     "step": 1,
     "unit": "%",
-    "scope": "global"
+    "scope": "global",
+    "featured": true
   */
   --global-blog-image-corners: 0;
 }
@@ -1313,6 +1326,11 @@ body {
   max-width: var(--global-wrap-max-width);
   padding-right: var(--global-wrap-padding);
   padding-left: var(--global-wrap-padding);
+}
+
+.page-content {
+  padding: var(--global-content-padding);
+  background-color: var(--global-content-background-color);
 }
 
 .loader::before {
@@ -1479,7 +1497,6 @@ body {
   text-align: var(--global-content-text-alignment);
   text-decoration: var(--global-content-text-decoration);
   text-transform: var(--global-content-text-transform);
-  background-color: var(--global-content-background-color);
 }
 .content-area h1 {
   font-family: var(--global-title-font-family);
