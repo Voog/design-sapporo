@@ -96,14 +96,6 @@
   // ===========================================================================
   /* VoogStyle
     "path": ["Headings", "Title"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-title-background-color: transparent;
-
-  /* VoogStyle
-    "path": ["Headings", "Title"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
@@ -229,14 +221,6 @@
   // ===========================================================================
   /* VoogStyle
     "path": ["Headings", "Heading"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-heading-background-color: transparent;
-
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
@@ -360,14 +344,6 @@
   // ===========================================================================
   // Global content area "Subheading" (<h3> - <h6>) styles.
   // ===========================================================================
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-subheading-background-color: transparent;
-
   /* VoogStyle
     "path": ["Headings", "Subheading"],
     "title": "Font",
@@ -1766,7 +1742,6 @@ body {
     text-align: var(--global-title-text-alignment);
     text-decoration: var(--global-title-text-decoration);
     text-transform: var(--global-title-text-transform);
-    background-color: var(--global-title-background-color);
   }
 
   h2 {
@@ -1780,7 +1755,6 @@ body {
     text-align: var(--global-heading-text-alignment);
     text-decoration: var(--global-heading-text-decoration);
     text-transform: var(--global-heading-text-transform);
-    background-color: var(--global-heading-background-color);
   }
 
   h3,
@@ -1797,7 +1771,6 @@ body {
     text-align: var(--global-subheading-text-alignment);
     text-decoration: var(--global-subheading-text-decoration);
     text-transform: var(--global-subheading-text-transform);
-    background-color: var(--global-subheading-background-color);
   }
 
   a {

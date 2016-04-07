@@ -76,13 +76,6 @@ Adds template design editor style overrides.
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "path": ["Headings", "Title"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-title-background-color: transparent;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
@@ -195,13 +188,6 @@ Adds template design editor style overrides.
   --global-title-color: black;
   /* VoogStyle
     "path": ["Headings", "Heading"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-heading-background-color: transparent;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
@@ -312,13 +298,6 @@ Adds template design editor style overrides.
     "featured": true
   */
   --global-heading-color: black;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-subheading-background-color: transparent;
   /* VoogStyle
     "path": ["Headings", "Subheading"],
     "title": "Font",
@@ -1509,7 +1488,6 @@ body {
   text-align: var(--global-title-text-alignment);
   text-decoration: var(--global-title-text-decoration);
   text-transform: var(--global-title-text-transform);
-  background-color: var(--global-title-background-color);
 }
 .content-area h2 {
   font-family: var(--global-heading-font-family);
@@ -1522,7 +1500,6 @@ body {
   text-align: var(--global-heading-text-alignment);
   text-decoration: var(--global-heading-text-decoration);
   text-transform: var(--global-heading-text-transform);
-  background-color: var(--global-heading-background-color);
 }
 .content-area h3,
 .content-area h4,
@@ -1538,7 +1515,6 @@ body {
   text-align: var(--global-subheading-text-alignment);
   text-decoration: var(--global-subheading-text-decoration);
   text-transform: var(--global-subheading-text-transform);
-  background-color: var(--global-subheading-background-color);
 }
 .site-header .content-area a {
   color: var(--global-main-color);
