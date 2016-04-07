@@ -42,24 +42,15 @@
     }
 
     @media screen and (min-width: $nano + 1) and (max-width: $mobile) {
-      width: calc(50% - 10px);
-
-      &:nth-child(odd) {
-        padding-right: 10px;
-      }
-
-      &:nth-child(even) {
-        padding-left: 10px;
-      }
+      width: calc(50% - 20px);
+      padding-right: 10px;
+      padding-left: 10px;
     }
 
     @media screen and (min-width: $mobile + 1) {
-      width: calc(33.3% - 26.5px);
-
-      &:nth-child(3n+2) {
-        margin-left: 40px;
-        margin-right: 40px;
-      }
+      width: calc(33.3% - 40px);
+      padding-right: 20px;
+      padding-left: 20px;
     }
   }
 
