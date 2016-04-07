@@ -9572,6 +9572,7 @@ return jQuery;
     // sideclick functionality. Use the class "js-prevent-sideclick" on elements
     // that shouldn't trigger the sideclick events.
     $(document).on('click touchstart', function(event) {
+      console.log($(event.target).closest('.edy-design-editor-panel').length);
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html');
 
