@@ -920,6 +920,17 @@ Adds template design editor style overrides.
     "featured": true
   */
   --global-menu-main-compact-background-color: white;
+  /* VoogStyle
+    "path": ["Blog", "Articles listing"],
+    "title": "Image radius",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "%",
+    "scope": "global"
+  */
+  --global-blog-image-corners: 0;
 }
 
 body {
@@ -1145,6 +1156,10 @@ label .form_field_radio + .form_control_indicator::before {
 }
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--global-secondary-color);
+}
+
+.article-top .top-inner {
+  border-radius: var(--global-blog-image-corners);
 }
 </style>
 

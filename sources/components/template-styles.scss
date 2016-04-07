@@ -1017,6 +1017,8 @@
       */
       --global-menu-main-active-color: rgba($color-black, .8);
 
+  // TODO: Add sub menu design editor.
+
   /* VoogStyle
     "path": ["Menus", "Compact menu"],
     "title": "Background color",
@@ -1025,6 +1027,18 @@
     "featured": true
   */
   --global-menu-main-compact-background-color: rgba($color-white, 1);
+
+  /* VoogStyle
+    "path": ["Blog", "Articles listing"],
+    "title": "Image radius",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "%",
+    "scope": "global"
+  */
+  --global-blog-image-corners: 0;
 
   // scss-lint:enable Comment, Indentation
 }
@@ -1377,3 +1391,11 @@ label {
   }
 }
 // scss-lint:enable SelectorFormat
+
+// TODO: Add proper comment style header.
+
+.article-top {
+  .top-inner {
+    border-radius: var(--global-blog-image-corners);
+  }
+}
