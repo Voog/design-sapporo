@@ -36,10 +36,10 @@ Adds template design editor style overrides.
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-title-font-family",
-      "--global-heading-font-family",
-      "--global-subheading-font-family",
-      "--global-content-font-family"
+      "--global-content-title-font-family",
+      "--global-content-heading-font-family",
+      "--global-content-subheading-font-family",
+      "--global-content-body-font-family"
     ]
   */
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
@@ -64,9 +64,9 @@ Adds template design editor style overrides.
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-title-color",
-      "--global-heading-color",
-      "--global-subheading-color"
+      "--global-content-title-color",
+      "--global-content-heading-color",
+      "--global-content-subheading-color"
     ]
   */
   --global-secondary-color: black;
@@ -79,465 +79,7 @@ Adds template design editor style overrides.
   */
   --global-body-background-color: rgba(0, 0, 0, 0.02);
   /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-title-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Alignment",
-    "editor": "listPicker",
-    "list": {{ base_alignment_set }},
-    "scope": "global"
-  */
-  --global-title-text-alignment: center;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Character spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-title-letter-spacing: 0;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Line height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global"
-  */
-  --global-title-line-height: 1.3;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Size",
-    "type": "button",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 80,
-    "unit": "px",
-    "scope": "global",
-    "featured": true
-  */
-  --global-title-font-size: 50px;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Font size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
-  --global-title-font-weight: 600;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Font style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global"
-  */
-  --global-title-font-style: normal;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Text decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
-  --global-title-text-decoration: none;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Text transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global"
-  */
-  --global-title-text-transform: none;
-  /* VoogStyle
-    "path": ["Headings", "Title"],
-    "title": "Color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
-  */
-  --global-title-color: black;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-heading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Alignment",
-    "editor": "listPicker",
-    "list": {{ base_alignment_set }},
-    "scope": "global"
-  */
-  --global-heading-text-alignment: left;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Character spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-heading-letter-spacing: 0;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Line height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global"
-  */
-  --global-heading-line-height: 1.3;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Size",
-    "type": "button",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 80,
-    "unit": "px",
-    "scope": "global",
-    "featured": true
-  */
-  --global-heading-font-size: 27px;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Font size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
-  --global-heading-font-weight: 600;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Font style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global"
-  */
-  --global-heading-font-style: normal;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Text decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
-  --global-heading-text-decoration: none;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Text transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global"
-  */
-  --global-heading-text-transform: none;
-  /* VoogStyle
-    "path": ["Headings", "Heading"],
-    "title": "Color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
-  */
-  --global-heading-color: black;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-subheading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Alignment",
-    "editor": "listPicker",
-    "list": {{ base_alignment_set }},
-    "scope": "global"
-  */
-  --global-subheading-text-alignment: left;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Character spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-subheading-letter-spacing: 0;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Line height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global"
-  */
-  --global-subheading-line-height: 1.3;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Size",
-    "type": "button",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 80,
-    "unit": "px",
-    "scope": "global",
-    "featured": true
-  */
-  --global-subheading-font-size: 24px;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Font size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
-  --global-subheading-font-weight: 600;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Font style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global"
-  */
-  --global-subheading-font-style: normal;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Text decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
-  --global-subheading-text-decoration: none;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Text transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global"
-  */
-  --global-subheading-text-transform: none;
-  /* VoogStyle
-    "path": ["Headings", "Subheading"],
-    "title": "Color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
-  */
-  --global-subheading-color: black;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-content-background-color: transparent;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Padding",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 200,
-    "step": 1,
-    "unit": "px",
-    "scope": "global"
-  */
-  --global-content-padding: 0;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-content-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Character spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-content-letter-spacing: 0;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Line height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global"
-  */
-  --global-content-line-height: 1.3;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Size",
-    "type": "button",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 80,
-    "unit": "px",
-    "scope": "global",
-    "featured": true
-  */
-  --global-content-font-size: 18px;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Font size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
-  --global-content-font-weight: 400;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Font style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global"
-  */
-  --global-content-font-style: normal;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Text decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
-  --global-content-text-decoration: none;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Text transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global"
-  */
-  --global-content-text-transform: none;
-  /* VoogStyle
-    "path": ["Content"],
-    "title": "Color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
-  */
-  --global-content-color: rgba(0, 0, 0, 0.8);
-  /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Margin",
     "editor": "rangePicker",
     "min": 0,
@@ -548,7 +90,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-margin: 15px;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Padding",
     "editor": "rangePicker",
     "min": 0,
@@ -559,7 +101,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-padding: 5px;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
@@ -568,7 +110,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
@@ -579,7 +121,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-letter-spacing: .2em;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Line height",
     "editor": "rangePicker",
     "min": 1,
@@ -590,7 +132,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-line-height: 1.3;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Opacity",
     "editor": "rangePicker",
     "min": 0.1,
@@ -601,7 +143,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-opacity: .5;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Opacity",
     "editor": "rangePicker",
     "min": 0.1,
@@ -612,7 +154,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-opacity: .75;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Opacity",
     "editor": "rangePicker",
     "min": 0.1,
@@ -623,7 +165,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-opacity: 1;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global",
@@ -634,7 +176,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-background-color: transparent;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global",
@@ -644,22 +186,22 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-background-color: transparent;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global"
   */
   --global-menu-main-active-background-color: transparent;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
     "max": 80,
     "unit": "px",
-    "scope": "global",
     "featured": true,
+    "scope": "global",
     "boundVariables": [
       "--global-menu-main-hover-font-size",
       "--global-menu-main-active-font-size"
@@ -667,7 +209,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-font-size: 13px;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
@@ -681,7 +223,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-font-size: 13px;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
@@ -692,7 +234,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-font-size: 13px;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -709,7 +251,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-font-weight: 400;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -725,7 +267,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-font-weight: 400;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -738,7 +280,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-font-weight: 400;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -755,7 +297,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-font-style: normal;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -771,7 +313,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-font-style: normal;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -784,7 +326,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-font-style: normal;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -801,7 +343,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-text-decoration: none;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -817,7 +359,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-text-decoration: none;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -830,7 +372,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-text-decoration: none;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -847,7 +389,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-text-transform: uppercase;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -863,7 +405,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-text-transform: uppercase;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -876,12 +418,12 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-text-transform: uppercase;
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Normal"],
+    "path": ["Header", "Main menu", "Normal"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global",
     "featured": true,
+    "scope": "global",
     "boundVariables": [
       "--global-menu-main-hover-color",
       "--global-menu-main-active-color"
@@ -889,7 +431,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Hover"],
+    "path": ["Header", "Main menu", "Hover"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
@@ -900,7 +442,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-hover-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Menus", "Main menu", "Active"],
+    "path": ["Header", "Main menu", "Active"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
@@ -908,7 +450,7 @@ Adds template design editor style overrides.
   */
   --global-menu-main-active-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
@@ -917,7 +459,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
@@ -928,7 +470,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-letter-spacing: 0;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Line height",
     "editor": "rangePicker",
     "min": 1,
@@ -939,7 +481,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-line-height: 1.4;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Opacity",
     "editor": "rangePicker",
     "min": 0.1,
@@ -950,7 +492,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-opacity: .5;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Opacity",
     "editor": "rangePicker",
     "min": 0.1,
@@ -961,7 +503,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-opacity: .75;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Opacity",
     "editor": "rangePicker",
     "min": 0.1,
@@ -972,7 +514,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-opacity: 1;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global",
@@ -983,7 +525,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-background-color: transparent;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global",
@@ -993,22 +535,22 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-background-color: transparent;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Background color",
     "editor": "colorPicker",
     "scope": "global"
   */
   --global-menu-sub-active-background-color: transparent;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
     "max": 80,
     "unit": "px",
-    "scope": "global",
     "featured": true,
+    "scope": "global",
     "boundVariables": [
       "--global-menu-sub-hover-font-size",
       "--global-menu-sub-active-font-size"
@@ -1016,7 +558,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-font-size: 13px;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
@@ -1030,7 +572,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-font-size: 13px;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
@@ -1041,7 +583,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-font-size: 13px;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -1058,7 +600,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-font-weight: 400;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -1074,7 +616,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-font-weight: 400;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -1087,7 +629,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-font-weight: 400;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -1104,7 +646,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-font-style: normal;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -1120,7 +662,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-font-style: normal;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -1133,7 +675,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-font-style: normal;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -1150,7 +692,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-text-decoration: none;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -1166,7 +708,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-text-decoration: none;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -1179,7 +721,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-text-decoration: none;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -1196,7 +738,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-text-transform: none;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -1212,7 +754,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-text-transform: none;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -1225,12 +767,12 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-text-transform: none;
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Normal"],
+    "path": ["Header", "Sub menu", "Normal"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global",
     "featured": true,
+    "scope": "global",
     "boundVariables": [
       "--global-menu-sub-hover-color",
       "--global-menu-sub-active-color"
@@ -1238,7 +780,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Hover"],
+    "path": ["Header", "Sub menu", "Hover"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
@@ -1249,7 +791,7 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-hover-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Menus", "Sub menu", "Active"],
+    "path": ["Header", "Sub menu", "Active"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
@@ -1257,13 +799,462 @@ Adds template design editor style overrides.
   */
   --global-menu-sub-active-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Menus"],
+    "path": ["Header"],
     "title": "Sidebar menu bg color",
     "editor": "colorPicker",
     "scope": "global",
     "featured": true
   */
   --global-menu-main-compact-background-color: white;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-padding: 0;
+  /* VoogStyle
+    "path": ["Content"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-content-background-color: transparent;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "scope": "global"
+  */
+  --global-content-title-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-content-title-text-alignment: center;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-content-title-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-title-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-title-font-size: 50px;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-title-font-weight: 600;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-title-font-style: normal;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-title-text-decoration: none;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-title-text-transform: none;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Title"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-content-title-color: black;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "scope": "global"
+  */
+  --global-content-heading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-content-heading-text-alignment: left;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-content-heading-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-heading-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-heading-font-size: 27px;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-heading-font-weight: 600;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-heading-font-style: normal;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-heading-text-decoration: none;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-heading-text-transform: none;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Heading"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-content-heading-color: black;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "scope": "global"
+  */
+  --global-content-subheading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-content-subheading-text-alignment: left;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-content-subheading-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-subheading-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-subheading-font-size: 24px;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-subheading-font-weight: 600;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-subheading-font-style: normal;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-subheading-text-decoration: none;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-subheading-text-transform: none;
+  /* VoogStyle
+    "path": ["Content", "Headings", "Subheading"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-content-subheading-color: black;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-content-body-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-body-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-body-font-size: 18px;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-body-font-weight: 400;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-body-font-style: normal;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-body-text-decoration: none;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-body-text-transform: none;
+  /* VoogStyle
+    "path": ["Content", "Body"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-body-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "path": ["Blog"],
     "title": "Nr of rows",
@@ -1386,8 +1377,8 @@ Adds template design editor style overrides.
     "min": 8,
     "max": 80,
     "unit": "px",
-    "scope": "global",
     "featured": true,
+    "scope": "global",
     "boundVariables": [
       "--global-article-box-hover-font-size"
     ]
@@ -1525,8 +1516,8 @@ Adds template design editor style overrides.
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global",
     "featured": true,
+    "scope": "global",
     "boundVariables": [
       "--global-article-box-hover-color"
     ]
@@ -1540,6 +1531,129 @@ Adds template design editor style overrides.
     "scope": "global"
   */
   --global-article-box-hover-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-footer-padding: 0;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-footer-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-footer-text-alignment: right;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-footer-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-footer-line-height: 1.7;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --global-footer-font-size: 13px;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-footer-font-weight: 400;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-footer-font-style: normal;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-footer-text-decoration: none;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-footer-text-transform: none;
+  /* VoogStyle
+    "path": ["Footer"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --global-footer-color: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -1693,6 +1807,11 @@ body {
   color: var(--global-secondary-color);
 }
 
+.site-footer {
+  padding-right: var(--global-footer-padding);
+  padding-left: var(--global-footer-padding);
+}
+
 .voog-reference a {
   color: var(--global-secondary-color);
 }
@@ -1744,55 +1863,67 @@ body {
   color: var(--global-main-color);
 }
 .page-content .content-area {
-  font-family: var(--global-content-font-family);
-  font-size: var(--global-content-font-size);
-  font-style: var(--global-content-font-style);
-  font-weight: var(--global-content-font-weight);
-  line-height: var(--global-content-line-height);
-  letter-spacing: var(--global-content-letter-spacing);
-  color: var(--global-content-color);
-  text-align: var(--global-content-text-alignment);
-  text-decoration: var(--global-content-text-decoration);
-  text-transform: var(--global-content-text-transform);
+  font-family: var(--global-content-body-font-family);
+  font-size: var(--global-content-body-font-size);
+  font-style: var(--global-content-body-font-style);
+  font-weight: var(--global-content-body-font-weight);
+  line-height: var(--global-content-body-line-height);
+  letter-spacing: var(--global-content-body-letter-spacing);
+  color: var(--global-content-body-color);
+  text-align: var(--global-content-body-text-alignment);
+  text-decoration: var(--global-content-body-text-decoration);
+  text-transform: var(--global-content-body-text-transform);
+}
+.site-footer .content-area {
+  font-family: var(--global-footer-font-family);
+  font-size: var(--global-footer-font-size);
+  font-style: var(--global-footer-font-style);
+  font-weight: var(--global-footer-font-weight);
+  line-height: var(--global-footer-line-height);
+  letter-spacing: var(--global-footer-letter-spacing);
+  color: var(--global-footer-color);
+  text-align: var(--global-footer-text-alignment);
+  text-decoration: var(--global-footer-text-decoration);
+  text-transform: var(--global-footer-text-transform);
 }
 .content-area h1 {
-  font-family: var(--global-title-font-family);
-  font-size: var(--global-title-font-size);
-  font-style: var(--global-title-font-style);
-  font-weight: var(--global-title-font-weight);
-  line-height: var(--global-title-line-height);
-  letter-spacing: var(--global-title-letter-spacing);
-  color: var(--global-title-color);
-  text-align: var(--global-title-text-alignment);
-  text-decoration: var(--global-title-text-decoration);
-  text-transform: var(--global-title-text-transform);
+  font-family: var(--global-content-title-font-family);
+  font-size: var(--global-content-title-font-size);
+  font-style: var(--global-content-title-font-style);
+  font-weight: var(--global-content-title-font-weight);
+  line-height: var(--global-content-title-line-height);
+  letter-spacing: var(--global-content-title-letter-spacing);
+  color: var(--global-content-title-color);
+  text-align: var(--global-content-title-text-alignment);
+  text-decoration: var(--global-content-title-text-decoration);
+  text-transform: var(--global-content-title-text-transform);
 }
-.content-area h2 {
-  font-family: var(--global-heading-font-family);
-  font-size: var(--global-heading-font-size);
-  font-style: var(--global-heading-font-style);
-  font-weight: var(--global-heading-font-weight);
-  line-height: var(--global-heading-line-height);
-  letter-spacing: var(--global-heading-letter-spacing);
-  color: var(--global-heading-color);
-  text-align: var(--global-heading-text-alignment);
-  text-decoration: var(--global-heading-text-decoration);
-  text-transform: var(--global-heading-text-transform);
+.content-area h2:not(.comments-title) {
+  font-family: var(--global-content-heading-font-family);
+  font-size: var(--global-content-heading-font-size);
+  font-style: var(--global-content-heading-font-style);
+  font-weight: var(--global-content-heading-font-weight);
+  line-height: var(--global-content-heading-line-height);
+  letter-spacing: var(--global-content-heading-letter-spacing);
+  color: var(--global-content-heading-color);
+  text-align: var(--global-content-heading-text-alignment);
+  text-decoration: var(--global-content-heading-text-decoration);
+  text-transform: var(--global-content-heading-text-transform);
 }
 .content-area h3,
 .content-area h4,
 .content-area h5,
 .content-area h6 {
-  font-family: var(--global-subheading-font-family);
-  font-size: var(--global-subheading-font-size);
-  font-style: var(--global-subheading-font-style);
-  font-weight: var(--global-subheading-font-weight);
-  line-height: var(--global-subheading-line-height);
-  letter-spacing: var(--global-subheading-letter-spacing);
-  color: var(--global-subheading-color);
-  text-align: var(--global-subheading-text-alignment);
-  text-decoration: var(--global-subheading-text-decoration);
-  text-transform: var(--global-subheading-text-transform);
+  font-family: var(--global-content-subheading-font-family);
+  font-size: var(--global-content-subheading-font-size);
+  font-style: var(--global-content-subheading-font-style);
+  font-weight: var(--global-content-subheading-font-weight);
+  line-height: var(--global-content-subheading-line-height);
+  letter-spacing: var(--global-content-subheading-letter-spacing);
+  color: var(--global-content-subheading-color);
+  text-align: var(--global-content-subheading-text-alignment);
+  text-decoration: var(--global-content-subheading-text-decoration);
+  text-transform: var(--global-content-subheading-text-transform);
 }
 .site-header .content-area a {
   color: var(--global-main-color);
