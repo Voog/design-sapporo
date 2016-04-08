@@ -1,23 +1,16 @@
 {
-  "description": "New design",
-  "name": "New design",
+  "description": "Simple layout",
+  "name": "Sapporo",
   "preview_medium": "",
   "preview_small": "",
-  "author": "",
+  "author": "Tõnu Runnel",
   "layouts": [
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/blog___news.tpl",
-      "layout_name": "page_default",
-      "title": "Blog   news"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "page_default",
-      "title": "Blog article"
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
     },
     {
       "content_type": "page",
@@ -27,11 +20,18 @@
       "title": "Common page"
     },
     {
-      "content_type": "page",
+      "content_type": "blog",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_default",
-      "title": "Front page"
+      "file": "layouts/blog___news.tpl",
+      "layout_name": "blog",
+      "title": "Blog & News"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "blog_article",
+      "title": "Blog article"
     },
     {
       "content_type": "component",
