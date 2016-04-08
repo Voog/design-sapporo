@@ -808,6 +808,17 @@ Adds template design editor style overrides.
   --global-menu-main-compact-background-color: white;
   /* VoogStyle
     "path": ["Content"],
+    "title": "Maximum width",
+    "editor": "rangePicker",
+    "min": 100,
+    "max": 2000,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-max-width: 700px;
+  /* VoogStyle
+    "path": ["Content"],
     "title": "Padding",
     "editor": "rangePicker",
     "min": 0,
@@ -1671,6 +1682,9 @@ body {
 .page-content {
   padding: var(--global-content-padding);
   background-color: var(--global-content-background-color);
+}
+.page-content .inner {
+  max-width: var(--global-content-max-width);
 }
 
 .loader::before {
