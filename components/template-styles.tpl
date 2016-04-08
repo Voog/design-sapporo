@@ -1262,6 +1262,56 @@ Adds template design editor style overrides.
   */
   --global-menu-main-compact-background-color: white;
   /* VoogStyle
+    "path": ["Blog"],
+    "title": "Max nr of rows",
+    "editor": "listPicker",
+    "list": [
+      {
+        "title": "1",
+        "value": "100%"
+      },
+      {
+        "title": "2",
+        "value": "50%"
+      },
+      {
+        "title": "3",
+        "value": "33.3%"
+      },
+      {
+        "title": "4",
+        "value": "25%"
+      },
+      {
+        "title": "5",
+        "value": "20%"
+      },
+      {
+        "title": "6",
+        "value": "16.6%"
+      },
+      {
+        "title": "7",
+        "value": "14.2%"
+      },
+      {
+        "title": "8",
+        "value": "12.5%"
+      },
+      {
+        "title": "9",
+        "value": "11.1%"
+      },
+      {
+        "title": "10",
+        "value": "10%"
+      }
+    ],
+    "featured": true,
+    "scope": "global"
+  */
+  --global-article-box-width: 33.3%;
+  /* VoogStyle
     "path": ["Blog", "Article box"],
     "title": "Image radius",
     "editor": "rangePicker",
@@ -1668,6 +1718,11 @@ body {
   color: var(--global-article-box-color);
   text-decoration: var(--global-article-box-text-decoration);
   text-transform: var(--global-article-box-text-transform);
+}
+@media screen and (min-width: 641px) {
+  .blog-listing-page .blog-article-newer {
+    width: var(--global-article-box-width);
+  }
 }
 
 .article-top .top-inner {

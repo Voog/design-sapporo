@@ -27,6 +27,7 @@
   .blog-listing-page & {
     padding-top: 15px;
     padding-bottom: 15px;
+    box-sizing: border-box;
 
     @media screen and (max-width: $nano) {
       display: block;
@@ -38,13 +39,14 @@
     }
 
     @media screen and (min-width: $nano + 1) and (max-width: $mobile) {
-      width: calc(50% - 20px);
+      width: 50%;
       padding-right: 10px;
       padding-left: 10px;
     }
 
     @media screen and (min-width: $mobile + 1) {
-      width: calc(33.3% - 40px);
+      width: 33.3%;
+      min-width: 213px;
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -83,32 +85,20 @@
 }
 
 .article-add-ico {
+  width: calc(100% - 225px);
+  height: auto;
+  min-width: 22px;
+  margin-bottom: 5%;
   opacity: .3;
   stroke: rgba($color-black, 1);
 
-  @media screen and (max-width: $nano) {
-    @include size(82px);
-  }
-
-  @media screen and (min-width: $nano + 1) {
-    @include size(22px);
-  }
-
   @media screen and (min-width: $micro + 1) {
-    @include size(42px);
-    margin-bottom: 15px;
+    min-width: 42px;
   }
 
   @media screen and (min-width: $tiny + 1) {
-    @include size(62px);
-  }
-
-  @media screen and (min-width: $small) {
-    margin-bottom: 30px;
-  }
-
-  @media screen and (min-width: $tablet + 1) {
-    @include size(82px);
+    max-width: 82px;
+    min-width: 62px;
   }
 }
 
@@ -135,6 +125,7 @@
 
   .bg-picker-btn {
     top: 0;
+    left: 0
   }
 
   .bg-crop-btn {

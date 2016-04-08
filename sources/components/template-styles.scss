@@ -1403,6 +1403,57 @@
   // Global article listing styles.
   // ===========================================================================
   /* VoogStyle
+    "path": ["Blog"],
+    "title": "Nr of rows",
+    "editor": "listPicker",
+    "list": [
+      {
+        "title": "1",
+        "value": "100%"
+      },
+      {
+        "title": "2",
+        "value": "50%"
+      },
+      {
+        "title": "3",
+        "value": "33.3%"
+      },
+      {
+        "title": "4",
+        "value": "25%"
+      },
+      {
+        "title": "5",
+        "value": "20%"
+      },
+      {
+        "title": "6",
+        "value": "16.6%"
+      },
+      {
+        "title": "7",
+        "value": "14.2%"
+      },
+      {
+        "title": "8",
+        "value": "12.5%"
+      },
+      {
+        "title": "9",
+        "value": "11.1%"
+      },
+      {
+        "title": "10",
+        "value": "10%"
+      }
+    ],
+    "featured": true,
+    "scope": "global"
+  */
+  --global-article-box-width: 33.3%;
+
+  /* VoogStyle
     "path": ["Blog", "Article box"],
     "title": "Image radius",
     "editor": "rangePicker",
@@ -1843,12 +1894,6 @@ body {
         background-color: var(--global-menu-sub-active-background-color);
         opacity: var(--global-menu-sub-active-opacity);
       }
-
-      // .header-menu-compact & {
-      // }
-      //
-      // .header-menu-wide & {
-      // }
       // scss-lint:enable NestingDepth
     }
   }
@@ -1891,39 +1936,47 @@ body {
 // =============================================================================
 // BLOG ARTICLE
 // =============================================================================
-.blog-article-newer:not(.cms-blog-article-add-button) {
-  .blog-listing-page & {
-    .top-inner {
-      opacity: var(--global-article-box-opacity);
-    }
-
-    &:hover {
+.blog-article-newer {
+  &:not(.cms-blog-article-add-button) {
+    .blog-listing-page & {
       .top-inner {
-        opacity: var(--global-article-box-hover-opacity);
+        opacity: var(--global-article-box-opacity);
       }
 
-      // scss-lint:disable NestingDepth
+      &:hover {
+        .top-inner {
+          opacity: var(--global-article-box-hover-opacity);
+        }
+
+        // scss-lint:disable NestingDepth
+        .article-title {
+          font-size: var(--global-article-box-hover-font-size);
+          font-style: var(--global-article-box-hover-font-style);
+          font-weight: var(--global-article-box-hover-font-weight);
+          color: var(--global-article-box-hover-color);
+          text-decoration: var(--global-article-box-hover-text-decoration);
+          text-transform: var(--global-article-box-hover-text-transform);
+        }
+        // scss-lint:enable NestingDepth
+      }
+
       .article-title {
-        font-size: var(--global-article-box-hover-font-size);
-        font-style: var(--global-article-box-hover-font-style);
-        font-weight: var(--global-article-box-hover-font-weight);
-        color: var(--global-article-box-hover-color);
-        text-decoration: var(--global-article-box-hover-text-decoration);
-        text-transform: var(--global-article-box-hover-text-transform);
+        font-family: var(--global-article-box-font-family);
+        font-size: var(--global-article-box-font-size);
+        font-style: var(--global-article-box-font-style);
+        font-weight: var(--global-article-box-font-weight);
+        line-height: var(--global-article-box-line-height);
+        letter-spacing: var(--global-article-box-letter-spacing);
+        color: var(--global-article-box-color);
+        text-decoration: var(--global-article-box-text-decoration);
+        text-transform: var(--global-article-box-text-transform);
       }
-      // scss-lint:enable NestingDepth
     }
+  }
 
-    .article-title {
-      font-family: var(--global-article-box-font-family);
-      font-size: var(--global-article-box-font-size);
-      font-style: var(--global-article-box-font-style);
-      font-weight: var(--global-article-box-font-weight);
-      line-height: var(--global-article-box-line-height);
-      letter-spacing: var(--global-article-box-letter-spacing);
-      color: var(--global-article-box-color);
-      text-decoration: var(--global-article-box-text-decoration);
-      text-transform: var(--global-article-box-text-transform);
+  .blog-listing-page & {
+    @media screen and (min-width: $mobile + 1) {
+      width: var(--global-article-box-width);
     }
   }
 }
