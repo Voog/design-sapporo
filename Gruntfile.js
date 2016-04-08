@@ -191,8 +191,14 @@ module.exports = function(grunt) {
           {
             prepend: "{% comment %}\n================================================================================\nTEMPLATE DESIGN EDITOR STYLES.\nAdds template design editor style overrides.\n================================================================================\n{% endcomment %}\n<style data-voog-style>\n",
             append: "</style>\n\n{{ site.style_tag }}",
-            input: 'components/template-styles.tpl',
-            output: 'components/template-styles.tpl'
+            input: 'components/template-design-styles.tpl',
+            output: 'components/template-design-styles.tpl'
+          },
+          {
+            prepend: "{% comment %}\n================================================================================\nTEMPLATE DESIGN EDITOR VARIABLES.\nAdds template design editor style variables.\n================================================================================\n{% endcomment %}\n<style data-voog-style>\n",
+            append: "</style>",
+            input: 'components/template-design-variables.tpl',
+            output: 'components/template-design-variables.tpl'
           }
         ]
       }
@@ -257,7 +263,12 @@ module.exports = function(grunt) {
       },
 
       template_editor_styles: {
-        files: 'sources/components/template-styles.scss',
+        files: 'sources/components/template-design-styles.scss',
+        tasks: ['sass:build_components', 'copy:components', 'clean:remove', 'file_append:template_editor', 'exec:kitmanifest']
+      },
+
+      template_editor_styles: {
+        files: 'sources/components/template-design-variables.scss',
         tasks: ['sass:build_components', 'copy:components', 'clean:remove', 'file_append:template_editor', 'exec:kitmanifest']
       },
 

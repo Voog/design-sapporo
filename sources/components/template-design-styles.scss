@@ -1,0 +1,491 @@
+// =============================================================================
+// STYLE OVERRIDES
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// MODULES
+@import '../stylesheets/modules/variables';
+
+// Basics.
+body {
+  font-family: var(--global-main-font-family);
+  color: var(--global-secondary-color);
+  background-color: var(--global-body-background-color);
+}
+
+.wrap {
+  max-width: var(--global-wrap-max-width);
+  padding-right: var(--global-wrap-padding);
+  padding-left: var(--global-wrap-padding);
+}
+
+.page-content {
+  padding: var(--global-content-padding);
+  background-color: var(--global-content-background-color);
+
+  .inner {
+    max-width: var(--global-content-max-width);
+  }
+}
+
+.loader {
+  &::before {
+    border-top-color: var(--global-secondary-color);
+  }
+}
+
+// =============================================================================
+// Navigation menus.
+// =============================================================================
+.menu-btn {
+  border-color: var(--global-secondary-color);
+
+  &::before {
+    background-color: var(--global-secondary-color);
+  }
+
+  .menu-main-opened & {
+    background-color: var(--global-secondary-color);
+  }
+}
+
+.menu-public {
+  a {
+    color: var(--global-secondary-color);
+  }
+}
+
+.menu-main {
+  .header-menu-compact & {
+    background-color: var(--global-menu-main-compact-background-color);
+  }
+
+  .btn {
+    &:hover {
+      stroke: var(--global-secondary-color);
+    }
+  }
+}
+
+// =============================================================================
+// SITE SEARCH
+// =============================================================================
+.site-search-btn {
+  &:hover,
+  .site-search-opened & {
+    .search-ico {
+      fill: var(--global-secondary-color);
+    }
+  }
+}
+
+.search-ico {
+  fill: var(--global-secondary-color);
+}
+
+.search-input {
+  color: var(--global-secondary-color);
+}
+
+.search-clear {
+  fill: var(--global-secondary-color);
+}
+
+.voog-search-modal-result {
+  h3 {
+    a {
+      color: var(--global-secondary-color);
+    }
+  }
+}
+
+// =============================================================================
+// SITE'S MAIN MENU
+// =============================================================================
+.menu-level-1 {
+  > .menu-item {
+    &:not(:last-child) {
+      // scss-lint:disable NestingDepth
+      .header-menu-wide & {
+        margin-right: var(--global-menu-main-margin);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    &:hover {
+      // scss-lint:disable NestingDepth
+      > a {
+        font-size: var(--global-menu-main-hover-font-size);
+        font-style: var(--global-menu-main-hover-font-style);
+        font-weight: var(--global-menu-main-hover-font-weight);
+        color: var(--global-menu-main-hover-color);
+        text-decoration: var(--global-menu-main-hover-text-decoration);
+        text-transform: var(--global-menu-main-hover-text-transform);
+        background-color: var(--global-menu-main-hover-background-color);
+        opacity: var(--global-menu-main-hover-opacity);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    // scss-lint:disable NestingDepth
+    &.item-current {
+      > a {
+        font-size: var(--global-menu-main-active-font-size);
+        font-style: var(--global-menu-main-active-font-style);
+        font-weight: var(--global-menu-main-active-font-weight);
+        color: var(--global-menu-main-active-color);
+        text-decoration: var(--global-menu-main-active-text-decoration);
+        text-transform: var(--global-menu-main-active-text-transform);
+        background-color: var(--global-menu-main-active-background-color);
+        opacity: var(--global-menu-main-active-opacity);
+      }
+    }
+    // scss-lint:enable NestingDepth
+
+    > a {
+      padding-right: var(--global-menu-main-padding);
+      padding-left: var(--global-menu-main-padding);
+      font-family: var(--global-menu-main-font-family);
+      font-size: var(--global-menu-main-font-size);
+      font-style: var(--global-menu-main-font-style);
+      font-weight: var(--global-menu-main-font-weight);
+      line-height: var(--global-menu-main-line-height);
+      letter-spacing: var(--global-menu-main-letter-spacing);
+      color: var(--global-menu-main-color);
+      text-decoration: var(--global-menu-main-text-decoration);
+      text-transform: var(--global-menu-main-text-transform);
+      background-color: var(--global-menu-main-background-color);
+      opacity: var(--global-menu-main-opacity);
+    }
+  }
+}
+
+// =============================================================================
+// SITE'S SUB MENU
+// =============================================================================
+.menu-level-2 {
+  .menu-item {
+    a {
+      font-family: var(--global-menu-sub-font-family);
+      font-size: var(--global-menu-sub-font-size);
+      font-style: var(--global-menu-sub-font-style);
+      font-weight: var(--global-menu-sub-font-weight);
+      line-height: var(--global-menu-sub-line-height);
+      letter-spacing: var(--global-menu-sub-letter-spacing);
+      color: var(--global-menu-sub-color);
+      text-decoration: var(--global-menu-sub-text-decoration);
+      text-transform: var(--global-menu-sub-text-transform);
+      background-color: var(--global-menu-sub-background-color);
+      opacity: var(--global-menu-sub-opacity);
+
+      // scss-lint:disable NestingDepth
+      &:hover {
+        font-size: var(--global-menu-sub-hover-font-size);
+        font-style: var(--global-menu-sub-hover-font-style);
+        font-weight: var(--global-menu-sub-hover-font-weight);
+        color: var(--global-menu-sub-hover-color);
+        text-decoration: var(--global-menu-sub-hover-text-decoration);
+        text-transform: var(--global-menu-sub-hover-text-transform);
+        background-color: var(--global-menu-sub-hover-background-color);
+        opacity: var(--global-menu-sub-hover-opacity);
+      }
+
+      &.selected {
+        font-size: var(--global-menu-sub-active-font-size);
+        font-style: var(--global-menu-sub-active-font-style);
+        font-weight: var(--global-menu-sub-active-font-weight);
+        color: var(--global-menu-sub-active-color);
+        text-decoration: var(--global-menu-sub-active-text-decoration);
+        text-transform: var(--global-menu-sub-active-text-transform);
+        background-color: var(--global-menu-sub-active-background-color);
+        opacity: var(--global-menu-sub-active-opacity);
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+}
+
+// =============================================================================
+// LANGUAGE MENU STYLES
+// =============================================================================
+.menu-language-btn {
+  color: var(--global-secondary-color);
+}
+
+.menu-language {
+  .menu-item {
+    a {
+      color: var(--global-secondary-color);
+    }
+  }
+}
+
+.menu-language-btn-circle {
+  stroke: var(--global-secondary-color);
+}
+
+.menu-language-options {
+  button {
+    color: var(--global-secondary-color);
+  }
+}
+
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+.voog-reference {
+  a {
+    color: var(--global-secondary-color);
+  }
+}
+
+// =============================================================================
+// BLOG ARTICLE
+// =============================================================================
+.blog-article-newer {
+  &:not(.cms-blog-article-add-button) {
+    .blog-listing-page & {
+      .top-inner {
+        opacity: var(--global-article-box-opacity);
+      }
+
+      &:hover {
+        .top-inner {
+          opacity: var(--global-article-box-hover-opacity);
+        }
+
+        // scss-lint:disable NestingDepth
+        .article-title {
+          font-size: var(--global-article-box-hover-font-size);
+          font-style: var(--global-article-box-hover-font-style);
+          font-weight: var(--global-article-box-hover-font-weight);
+          color: var(--global-article-box-hover-color);
+          text-decoration: var(--global-article-box-hover-text-decoration);
+          text-transform: var(--global-article-box-hover-text-transform);
+        }
+        // scss-lint:enable NestingDepth
+      }
+
+      .article-title {
+        font-family: var(--global-article-box-font-family);
+        font-size: var(--global-article-box-font-size);
+        font-style: var(--global-article-box-font-style);
+        font-weight: var(--global-article-box-font-weight);
+        line-height: var(--global-article-box-line-height);
+        letter-spacing: var(--global-article-box-letter-spacing);
+        color: var(--global-article-box-color);
+        text-decoration: var(--global-article-box-text-decoration);
+        text-transform: var(--global-article-box-text-transform);
+      }
+    }
+  }
+
+  .blog-listing-page & {
+    @media screen and (min-width: $mobile + 1) {
+      width: var(--global-article-box-width);
+    }
+  }
+}
+
+.article-top {
+  .top-inner {
+    border-radius: var(--global-article-box-image-radius);
+  }
+}
+
+.article-add-ico {
+  stroke: var(--global-main-color);
+}
+
+.article-date {
+  color: var(--global-secondary-color);
+}
+
+// =============================================================================
+// Text type content area.
+// =============================================================================
+.content-area {
+  color: var(--global-main-color);
+
+  .page-content & {
+    font-family: var(--global-content-body-font-family);
+    font-size: var(--global-content-body-font-size);
+    font-style: var(--global-content-body-font-style);
+    font-weight: var(--global-content-body-font-weight);
+    line-height: var(--global-content-body-line-height);
+    letter-spacing: var(--global-content-body-letter-spacing);
+    color: var(--global-content-body-color);
+    text-align: var(--global-content-body-text-alignment);
+    text-decoration: var(--global-content-body-text-decoration);
+    text-transform: var(--global-content-body-text-transform);
+  }
+
+  .site-footer & {
+    font-family: var(--global-footer-font-family);
+    font-size: var(--global-footer-font-size);
+    font-style: var(--global-footer-font-style);
+    font-weight: var(--global-footer-font-weight);
+    line-height: var(--global-footer-line-height);
+    letter-spacing: var(--global-footer-letter-spacing);
+    color: var(--global-footer-color);
+    text-align: var(--global-footer-text-alignment);
+    text-decoration: var(--global-footer-text-decoration);
+    text-transform: var(--global-footer-text-transform);
+  }
+
+  h1 {
+    font-family: var(--global-content-title-font-family);
+    font-size: var(--global-content-title-font-size);
+    font-style: var(--global-content-title-font-style);
+    font-weight: var(--global-content-title-font-weight);
+    line-height: var(--global-content-title-line-height);
+    letter-spacing: var(--global-content-title-letter-spacing);
+    color: var(--global-content-title-color);
+    text-align: var(--global-content-title-text-alignment);
+    text-decoration: var(--global-content-title-text-decoration);
+    text-transform: var(--global-content-title-text-transform);
+  }
+
+  h2:not(.comments-title) {
+    font-family: var(--global-content-heading-font-family);
+    font-size: var(--global-content-heading-font-size);
+    font-style: var(--global-content-heading-font-style);
+    font-weight: var(--global-content-heading-font-weight);
+    line-height: var(--global-content-heading-line-height);
+    letter-spacing: var(--global-content-heading-letter-spacing);
+    color: var(--global-content-heading-color);
+    text-align: var(--global-content-heading-text-alignment);
+    text-decoration: var(--global-content-heading-text-decoration);
+    text-transform: var(--global-content-heading-text-transform);
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--global-content-subheading-font-family);
+    font-size: var(--global-content-subheading-font-size);
+    font-style: var(--global-content-subheading-font-style);
+    font-weight: var(--global-content-subheading-font-weight);
+    line-height: var(--global-content-subheading-line-height);
+    letter-spacing: var(--global-content-subheading-letter-spacing);
+    color: var(--global-content-subheading-color);
+    text-align: var(--global-content-subheading-text-alignment);
+    text-decoration: var(--global-content-subheading-text-decoration);
+    text-transform: var(--global-content-subheading-text-transform);
+  }
+
+  a {
+    .site-header & {
+      color: var(--global-main-color);
+      // scss-lint:disable NestingDepth
+      &:hover {
+        color: var(--global-secondary-color);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    .page-content &,
+    .site-footer & {
+      padding-right: var(--global-content-link-padding);
+      padding-left: var(--global-content-link-padding);
+      font-family: var(--global-content-link-font-family);
+      font-style: var(--global-content-link-font-style);
+      font-weight: var(--global-content-link-font-weight);
+      line-height: var(--global-content-link-line-height);
+      letter-spacing: var(--global-content-link-letter-spacing);
+      color: var(--global-content-link-color);
+      text-decoration: var(--global-content-link-text-decoration);
+      text-transform: var(--global-content-link-text-transform);
+      background-color: var(--global-content-link-background-color);
+
+      // scss-lint:disable NestingDepth
+      &:hover {
+        font-style: var(--global-content-link-hover-font-style);
+        font-weight: var(--global-content-link-hover-font-weight);
+        color: var(--global-content-link-hover-color);
+        text-decoration: var(--global-content-link-hover-text-decoration);
+        text-transform: var(--global-content-link-hover-text-transform);
+        background-color: var(--global-content-link-hover-background-color);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    .page-content & {
+      font-size: var(--global-content-link-font-size);
+
+      // scss-lint:disable NestingDepth
+      &:hover {
+        font-size: var(--global-content-link-hover-font-size);
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  .custom-btn {
+    font-family: var(--global-main-font-family);
+  }
+}
+
+//==============================================================================
+// "Form" type content area.
+//==============================================================================
+// scss-lint:disable SelectorFormat
+.form_field_textfield,
+.form_field_textarea {
+  font-family: var(--global-main-font-family);
+  color: var(--global-secondary-color);
+}
+
+.form_submit {
+  input {
+    font-family: var(--global-main-font-family);
+  }
+}
+
+label {
+  .form_field_checkbox {
+    + .form_control_indicator {
+      // scss-lint:disable NestingDepth
+      &::before {
+        border-color: var(--global-secondary-color);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    &:checked {
+      // scss-lint:disable NestingDepth
+      + .form_control_indicator {
+        &::before {
+          background-color: var(--global-secondary-color);
+        }
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  .form_field_radio {
+    // scss-lint:disable NestingDepth
+    + .form_control_indicator {
+      &::before {
+        outline-color: var(--global-secondary-color);
+      }
+      // scss-lint:enable NestingDepth
+    }
+
+    &:checked {
+      // scss-lint:disable NestingDepth
+      + .form_control_indicator {
+        &::before {
+          background-color: var(--global-secondary-color);
+        }
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+}
+// scss-lint:enable SelectorFormat
