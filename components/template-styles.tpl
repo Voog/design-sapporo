@@ -8,38 +8,6 @@ Adds template design editor style overrides.
 :root {
   /* VoogStyle
     "path": ["Main Styles"],
-    "title": "Main color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-content-color",
-      "--global-menu-main-color",
-      "--global-menu-sub-color",
-      "--global-article-box-font-family"
-    ]
-  */
-  --global-main-color: rgba(0, 0, 0, 0.8);
-  /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Secondary color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-color",
-      "--global-heading-color",
-      "--global-subheading-color"
-    ]
-  */
-  --global-secondary-color: black;
-  /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-body-background-color: rgba(0, 0, 0, 0.02);
-  /* VoogStyle
-    "path": ["Main Styles"],
     "title": "Maximum width",
     "editor": "rangePicker",
     "min": 600,
@@ -75,6 +43,41 @@ Adds template design editor style overrides.
     ]
   */
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Main Styles", "Colors"],
+    "title": "Main color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-content-color",
+      "--global-menu-main-color",
+      "--global-menu-sub-color",
+      "--global-article-box-font-family"
+    ]
+  */
+  --global-main-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Main Styles", "Colors"],
+    "title": "Secondary color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-color",
+      "--global-heading-color",
+      "--global-subheading-color"
+    ]
+  */
+  --global-secondary-color: black;
+  /* VoogStyle
+    "path": ["Main Styles", "Colors"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-body-background-color: rgba(0, 0, 0, 0.02);
   /* VoogStyle
     "path": ["Headings", "Title"],
     "title": "Font",
@@ -1263,7 +1266,7 @@ Adds template design editor style overrides.
   --global-menu-main-compact-background-color: white;
   /* VoogStyle
     "path": ["Blog"],
-    "title": "Max nr of rows",
+    "title": "Nr of rows",
     "editor": "listPicker",
     "list": [
       {

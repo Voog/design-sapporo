@@ -19,41 +19,6 @@
   // ===========================================================================
   /* VoogStyle
     "path": ["Main Styles"],
-    "title": "Main color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-content-color",
-      "--global-menu-main-color",
-      "--global-menu-sub-color",
-      "--global-article-box-font-family"
-    ]
-  */
-  --global-main-color: rgba($color-black, .8);
-
-  /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Secondary color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "boundVariables": [
-      "--global-title-color",
-      "--global-heading-color",
-      "--global-subheading-color"
-    ]
-  */
-  --global-secondary-color: rgba($color-black, 1);
-
-  /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Background color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --global-body-background-color: rgba($color-black, .02);
-
-  /* VoogStyle
-    "path": ["Main Styles"],
     "title": "Maximum width",
     "editor": "rangePicker",
     "min": 600,
@@ -91,6 +56,44 @@
     ]
   */
   --global-main-font-family: $base-font-family;
+
+  /* VoogStyle
+    "path": ["Main Styles", "Colors"],
+    "title": "Main color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-content-color",
+      "--global-menu-main-color",
+      "--global-menu-sub-color",
+      "--global-article-box-font-family"
+    ]
+  */
+  --global-main-color: rgba($color-black, .8);
+
+  /* VoogStyle
+    "path": ["Main Styles", "Colors"],
+    "title": "Secondary color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-title-color",
+      "--global-heading-color",
+      "--global-subheading-color"
+    ]
+  */
+  --global-secondary-color: rgba($color-black, 1);
+
+  /* VoogStyle
+    "path": ["Main Styles", "Colors"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-body-background-color: rgba($color-black, .02);
 
   // ===========================================================================
   // Global content area "Title" (<h1>) styles.
