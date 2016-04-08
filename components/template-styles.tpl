@@ -67,7 +67,8 @@ Adds template design editor style overrides.
       "--global-content-title-color",
       "--global-content-heading-color",
       "--global-content-subheading-color",
-      "--global-content-link-color"
+      "--global-content-link-color",
+      "--global-footer-link-color"
     ]
   */
   --global-secondary-color: black;
@@ -1766,6 +1767,17 @@ Adds template design editor style overrides.
   --global-article-box-hover-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "path": ["Footer"],
+    "title": "Maximum width",
+    "editor": "rangePicker",
+    "min": 100,
+    "max": 2000,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-footer-max-width: 700px;
+  /* VoogStyle
+    "path": ["Footer"],
     "title": "Padding",
     "editor": "rangePicker",
     "min": 0,
@@ -1777,23 +1789,29 @@ Adds template design editor style overrides.
   --global-footer-padding: 0;
   /* VoogStyle
     "path": ["Footer"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-footer-background-color: transparent;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Title"],
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
-    "featured": true,
     "scope": "global"
   */
-  --global-footer-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  --global-footer-title-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Alignment",
     "editor": "listPicker",
     "list": {{ base_alignment_set }},
     "scope": "global"
   */
-  --global-footer-text-alignment: right;
+  --global-footer-title-text-alignment: center;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Character spacing",
     "editor": "rangePicker",
     "min": 0,
@@ -1802,9 +1820,9 @@ Adds template design editor style overrides.
     "unit": "em",
     "scope": "global"
   */
-  --global-footer-letter-spacing: 0;
+  --global-footer-title-letter-spacing: 0;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Line height",
     "editor": "rangePicker",
     "min": 1,
@@ -1813,21 +1831,20 @@ Adds template design editor style overrides.
     "unit": "",
     "scope": "global"
   */
-  --global-footer-line-height: 1.7;
+  --global-footer-title-line-height: 1.3;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
     "max": 80,
     "unit": "px",
-    "scope": "global",
-    "featured": true
+    "scope": "global"
   */
-  --global-footer-font-size: 13px;
+  --global-footer-title-font-size: 50px;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Font size",
     "type": "button",
     "editor": "toggleIcon",
@@ -1838,9 +1855,9 @@ Adds template design editor style overrides.
     "icon": "bold",
     "scope": "global"
   */
-  --global-footer-font-weight: 400;
+  --global-footer-title-font-weight: 600;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -1851,9 +1868,9 @@ Adds template design editor style overrides.
     "icon": "italic",
     "scope": "global"
   */
-  --global-footer-font-style: normal;
+  --global-footer-title-font-style: normal;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -1864,9 +1881,9 @@ Adds template design editor style overrides.
     "icon": "underline",
     "scope": "global"
   */
-  --global-footer-text-decoration: none;
+  --global-footer-title-text-decoration: none;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -1877,16 +1894,558 @@ Adds template design editor style overrides.
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-footer-text-transform: none;
+  --global-footer-title-text-transform: none;
   /* VoogStyle
-    "path": ["Footer"],
+    "path": ["Footer", "Headings", "Title"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
+    "scope": "global"
   */
-  --global-footer-color: rgba(0, 0, 0, 0.8);
+  --global-footer-title-color: black;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "scope": "global"
+  */
+  --global-footer-heading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-footer-heading-text-alignment: left;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-footer-heading-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-footer-heading-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-footer-heading-font-size: 27px;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-footer-heading-font-weight: 600;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-footer-heading-font-style: normal;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-footer-heading-text-decoration: none;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-footer-heading-text-transform: none;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Heading"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-footer-heading-color: black;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "scope": "global"
+  */
+  --global-footer-subheading-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-footer-subheading-text-alignment: left;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-footer-subheading-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-footer-subheading-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-footer-subheading-font-size: 24px;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-footer-subheading-font-weight: 600;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-footer-subheading-font-style: normal;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-footer-subheading-text-decoration: none;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-footer-subheading-text-transform: none;
+  /* VoogStyle
+    "path": ["Footer", "Headings", "Subheading"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-footer-subheading-color: black;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-footer-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-footer-body-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-footer-body-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-footer-body-font-size: 18px;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-footer-body-font-weight: 400;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-footer-body-font-style: normal;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-footer-body-text-decoration: none;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-footer-body-text-transform: none;
+  /* VoogStyle
+    "path": ["Footer", "Text"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-footer-body-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-footer-link-padding: 0;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-footer-link-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-footer-link-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-footer-link-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-background-color"
+    ]
+  */
+  --global-footer-link-background-color: transparent;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Background color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-footer-link-hover-background-color: transparent;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-font-size"
+    ]
+  */
+  --global-footer-link-font-size: 18px;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-footer-link-hover-font-size: 18px;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-font-weight"
+    ]
+  */
+  --global-footer-link-font-weight: 400;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-footer-link-hover-font-weight: 400;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-font-style"
+    ]
+  */
+  --global-footer-link-font-style: normal;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-footer-link-hover-font-style: normal;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-text-decoration"
+    ]
+  */
+  --global-footer-link-text-decoration: none;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-footer-link-hover-text-decoration: none;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-text-transform"
+    ]
+  */
+  --global-footer-link-text-transform: none;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-footer-link-hover-text-transform: none;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Normal"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-footer-link-hover-color"
+    ]
+  */
+  --global-footer-link-color: black;
+  /* VoogStyle
+    "path": ["Footer", "Links", "Hover"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-footer-link-hover-color: black;
 }
 
 body {
