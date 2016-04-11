@@ -209,6 +209,17 @@ body {
 .content-area {
   color: var(--global-main-color);
 }
+.site-header .content-area {
+  font-family: var(--global-header-body-font-family);
+  font-size: var(--global-header-body-font-size);
+  font-style: var(--global-header-body-font-style);
+  font-weight: var(--global-header-body-font-weight);
+  line-height: var(--global-header-body-line-height);
+  letter-spacing: var(--global-header-body-letter-spacing);
+  color: var(--global-header-body-color);
+  text-decoration: var(--global-header-body-text-decoration);
+  text-transform: var(--global-header-body-text-transform);
+}
 .page-content .content-area {
   font-family: var(--global-content-body-font-family);
   font-size: var(--global-content-body-font-size);
@@ -222,16 +233,16 @@ body {
   text-transform: var(--global-content-body-text-transform);
 }
 .site-footer .content-area {
-  font-family: var(--global-footer-font-family);
-  font-size: var(--global-footer-font-size);
-  font-style: var(--global-footer-font-style);
-  font-weight: var(--global-footer-font-weight);
-  line-height: var(--global-footer-line-height);
-  letter-spacing: var(--global-footer-letter-spacing);
-  color: var(--global-footer-color);
-  text-align: var(--global-footer-text-alignment);
-  text-decoration: var(--global-footer-text-decoration);
-  text-transform: var(--global-footer-text-transform);
+  font-family: var(--global-footer-body-font-family);
+  font-size: var(--global-footer-body-font-size);
+  font-style: var(--global-footer-body-font-style);
+  font-weight: var(--global-footer-body-font-weight);
+  line-height: var(--global-footer-body-line-height);
+  letter-spacing: var(--global-footer-body-letter-spacing);
+  color: var(--global-footer-body-color);
+  text-align: var(--global-footer-body-text-alignment);
+  text-decoration: var(--global-footer-body-text-decoration);
+  text-transform: var(--global-footer-body-text-transform);
 }
 .content-area h1 {
   font-family: var(--global-content-title-font-family);
@@ -273,10 +284,16 @@ body {
   text-transform: var(--global-content-subheading-text-transform);
 }
 .site-header .content-area a {
-  color: var(--global-main-color);
+  color: var(--global-header-body-color);
 }
 .site-header .content-area a:hover {
-  color: var(--global-secondary-color);
+  font-size: var(--global-header-body-hover-font-size);
+  font-style: var(--global-header-body-hover-font-style);
+  font-weight: var(--global-header-body-hover-font-weight);
+  color: var(--global-header-body-hover-color);
+  text-decoration: var(--global-header-body-hover-text-decoration);
+  text-transform: var(--global-header-body-hover-text-transform);
+  background-color: var(--global-header-body-hover-background-color);
 }
 .page-content .content-area a, .site-footer .content-area a {
   padding-right: var(--global-content-link-padding);

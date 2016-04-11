@@ -51,9 +51,12 @@ Adds template design editor style variables.
     "scope": "global",
     "boundVariables": [
       "--global-content-color",
+      "--global-header-body-color",
       "--global-menu-main-color",
       "--global-menu-sub-color",
-      "--global-article-box-font-family"
+      "--global-content-body-color",
+      "--global-article-box-color",
+      "--global-footer-body-color"
     ]
   */
   --global-main-color: rgba(0, 0, 0, 0.8);
@@ -64,6 +67,7 @@ Adds template design editor style variables.
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--global-header-body-hover-color",
       "--global-content-title-color",
       "--global-content-heading-color",
       "--global-content-subheading-color",
@@ -80,6 +84,196 @@ Adds template design editor style variables.
     "scope": "global"
   */
   --global-body-background-color: rgba(0, 0, 0, 0.02);
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-header-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-header-body-letter-spacing: 0.1;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-header-body-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+      "--global-header-body-hover-font-size"
+    ]
+  */
+  --global-header-body-font-size: 30px;
+  /* VoogStyle
+    "path": ["Header", "Title", "Hover"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-header-body-hover-font-size: 30px;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global",
+    "boundVariables": [
+      "--global-header-body-hover-font-weight"
+    ]
+  */
+  --global-header-body-font-weight: 400;
+  /* VoogStyle
+    "path": ["Header", "Title", "Hover"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-header-body-hover-font-weight: 400;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global",
+    "boundVariables": [
+      "--global-header-body-hover-font-style"
+    ]
+  */
+  --global-header-body-font-style: normal;
+  /* VoogStyle
+    "path": ["Header", "Title", "Hover"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-header-body-hover-font-style: normal;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global",
+    "boundVariables": [
+      "--global-header-body-hover-text-decoration"
+    ]
+  */
+  --global-header-body-text-decoration: none;
+  /* VoogStyle
+    "path": ["Header", "Title", "Hover"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-header-body-hover-text-decoration: none;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global",
+    "boundVariables": [
+      "--global-header-body-hover-text-transform"
+    ]
+  */
+  --global-header-body-text-transform: none;
+  /* VoogStyle
+    "path": ["Header", "Title", "Hover"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-header-body-hover-text-transform: none;
+  /* VoogStyle
+    "path": ["Header", "Title", "Normal"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-header-body-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Header", "Title", "Hover"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-header-body-hover-color: black;
   /* VoogStyle
     "path": ["Header", "Main menu", "Normal"],
     "title": "Margin",
@@ -194,6 +388,13 @@ Adds template design editor style variables.
     "scope": "global"
   */
   --global-menu-main-active-background-color: transparent;
+  /* VoogStyle
+    "path": ["Header", "Main menu", "Normal"],
+    "title": "Sidebar menu bg color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-menu-main-compact-background-color: white;
   /* VoogStyle
     "path": ["Header", "Main menu", "Normal"],
     "title": "Size",
@@ -800,14 +1001,6 @@ Adds template design editor style variables.
     "scope": "global"
   */
   --global-menu-sub-active-color: rgba(0, 0, 0, 0.8);
-  /* VoogStyle
-    "path": ["Header"],
-    "title": "Sidebar menu bg color",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
-  */
-  --global-menu-main-compact-background-color: white;
   /* VoogStyle
     "path": ["Content"],
     "title": "Maximum width",
@@ -1773,7 +1966,7 @@ Adds template design editor style variables.
     "featured": true,
     "scope": "global"
   */
-  --global-footer-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  --global-footer-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Character spacing",
@@ -1784,7 +1977,7 @@ Adds template design editor style variables.
     "unit": "em",
     "scope": "global"
   */
-  --global-footer-letter-spacing: 0;
+  --global-footer-body-letter-spacing: 0;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Line height",
@@ -1795,7 +1988,7 @@ Adds template design editor style variables.
     "unit": "",
     "scope": "global"
   */
-  --global-footer-line-height: 1.3;
+  --global-footer-body-line-height: 1.3;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Size",
@@ -1807,7 +2000,7 @@ Adds template design editor style variables.
     "featured": true,
     "scope": "global"
   */
-  --global-footer-font-size: 13px;
+  --global-footer-body-font-size: 13px;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Font size",
@@ -1820,7 +2013,7 @@ Adds template design editor style variables.
     "icon": "bold",
     "scope": "global"
   */
-  --global-footer-font-weight: 400;
+  --global-footer-body-font-weight: 400;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Font style",
@@ -1833,7 +2026,7 @@ Adds template design editor style variables.
     "icon": "italic",
     "scope": "global"
   */
-  --global-footer-font-style: normal;
+  --global-footer-body-font-style: normal;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Text decoration",
@@ -1846,7 +2039,7 @@ Adds template design editor style variables.
     "icon": "underline",
     "scope": "global"
   */
-  --global-footer-text-decoration: none;
+  --global-footer-body-text-decoration: none;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Text transform",
@@ -1859,7 +2052,7 @@ Adds template design editor style variables.
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-footer-text-transform: none;
+  --global-footer-body-text-transform: none;
   /* VoogStyle
     "path": ["Footer"],
     "title": "Color",
@@ -1868,6 +2061,6 @@ Adds template design editor style variables.
     "featured": true,
     "scope": "global"
   */
-  --global-footer-color: rgba(0, 0, 0, 0.8);
+  --global-footer-body-color: rgba(0, 0, 0, 0.8);
 }
 </style>
