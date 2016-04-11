@@ -322,6 +322,19 @@ body {
 .page-content .content-area a:hover {
   font-size: var(--global-content-link-hover-font-size);
 }
+.content-area ul,
+.content-area ol,
+.content-area dl {
+  font-family: var(--global-content-list-font-family);
+  font-size: var(--global-content-list-font-size);
+  font-style: var(--global-content-list-font-style);
+  font-weight: var(--global-content-list-font-weight);
+  line-height: var(--global-content-list-line-height);
+  letter-spacing: var(--global-content-list-letter-spacing);
+  color: var(--global-content-list-color);
+  text-decoration: var(--global-content-list-text-decoration);
+  text-transform: var(--global-content-list-text-transform);
+}
 .content-area a.custom-btn {
   padding-right: var(--global-content-button-padding);
   padding-left: var(--global-content-button-padding);
