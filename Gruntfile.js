@@ -267,7 +267,7 @@ module.exports = function(grunt) {
         tasks: ['sass:build_components', 'copy:components', 'clean:remove', 'file_append:template_editor', 'exec:kitmanifest']
       },
 
-      template_editor_styles: {
+      template_editor_variables: {
         files: 'sources/components/template-design-variables.scss',
         tasks: ['sass:build_components', 'copy:components', 'clean:remove', 'file_append:template_editor', 'exec:kitmanifest']
       },
