@@ -55,6 +55,7 @@ Adds template design editor style variables.
       "--global-menu-main-color",
       "--global-menu-sub-color",
       "--global-content-body-color",
+      "--global-content-list-color",
       "--global-article-box-color",
       "--global-footer-body-color"
     ]
@@ -2007,6 +2008,185 @@ Adds template design editor style variables.
     "scope": "global"
   */
   --global-content-list-color: rgba(0, 0, 0, 0.8);
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-table-padding: 10px;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-table-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Character spacing",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 5,
+    "step": 0.1,
+    "unit": "em",
+    "scope": "global"
+  */
+  --global-content-table-letter-spacing: 0;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Line height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --global-content-table-line-height: 1.3;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Border thickness",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 10,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-content-table-border-width: 1px;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Border style",
+    "editor": "listPicker",
+    "list": [
+      {
+        "title": "Solid",
+        "value": "solid"
+      },
+      {
+        "title": "Dotted",
+        "value": "dotted"
+      },
+      {
+        "title": "Dashed",
+        "value": "dashed"
+      },
+      {
+        "title": "Double",
+        "value": "double"
+      },
+      {
+        "title": "Groove",
+        "value": "groove"
+      },
+      {
+        "title": "Ridge",
+        "value": "ridge"
+      },
+      {
+        "title": "Inset",
+        "value": "inset"
+      },
+      {
+        "title": "Outset",
+        "value": "outset"
+      },
+      {
+        "title": "None",
+        "value": "hidden"
+      }
+    ],
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-table-border-style: solid;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Border color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-table-border-color: #d2d2d2;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "featured": true,
+    "scope": "global"
+  */
+  --global-content-table-font-size: 18px;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Font size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --global-content-table-font-weight: 400;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --global-content-table-font-style: normal;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --global-content-table-text-decoration: none;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --global-content-table-text-transform: none;
+  /* VoogStyle
+    "path": ["Content", "Table"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --global-content-table-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "path": ["Blog"],
     "title": "Nr of rows",

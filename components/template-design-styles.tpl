@@ -358,6 +358,22 @@ body {
   text-transform: var(--global-content-button-hover-text-transform);
   background-color: var(--global-content-button-hover-background-color);
 }
+.content-area table td,
+.content-area table th {
+  padding: var(--global-content-table-padding);
+  font-family: var(--global-content-table-font-family);
+  font-size: var(--global-content-table-font-size);
+  font-style: var(--global-content-table-font-style);
+  font-weight: var(--global-content-table-font-weight);
+  line-height: var(--global-content-table-line-height);
+  letter-spacing: var(--global-content-table-letter-spacing);
+  color: var(--global-content-table-color);
+  text-decoration: var(--global-content-table-text-decoration);
+  text-transform: var(--global-content-table-text-transform);
+  border-color: var(--global-content-table-border-color);
+  border-style: var(--global-content-table-border-style);
+  border-width: var(--global-content-table-border-width);
+}
 
 .form_field_textfield,
 .form_field_textarea {
