@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-header.tpl",
-      "layout_name": "site-header",
-      "title": "site-header"
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
     },
     {
       "content_type": "component",
@@ -141,16 +141,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-footer.tpl",
-      "layout_name": "site-footer",
-      "title": "site-footer"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-article-comments.tpl",
-      "layout_name": "blog-article-comments",
-      "title": "blog-article-comments"
+      "file": "components/site-header.tpl",
+      "layout_name": "site-header",
+      "title": "site-header"
     },
     {
       "content_type": "component",
@@ -165,13 +165,6 @@
       "file": "components/template-cs-blog.tpl",
       "layout_name": "template-cs-blog",
       "title": "template-cs-blog"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-button.tpl",
-      "layout_name": "template-cs-button",
-      "title": "template-cs-button"
     },
     {
       "content_type": "component",
@@ -221,13 +214,6 @@
       "file": "components/template-cs-main-styles.tpl",
       "layout_name": "template-cs-main-styles",
       "title": "template-cs-main-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-style-overrides.tpl",
-      "layout_name": "template-cs-style-overrides",
-      "title": "template-cs-style-overrides"
     },
     {
       "content_type": "component",

@@ -4,6 +4,8 @@
 <html class="{{ view_mode }} {{ language_flags_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
+    {% include "template-cs-blog" %}
+    {{ site.style_tag }}
   </head>
 
   <body class="blog-news-page blog-listing-page header-menu-wide" data-search-indexing-allowed="false">

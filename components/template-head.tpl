@@ -31,7 +31,6 @@
 {% include "template-cs-list" %}
 {% include "template-cs-table" %}
 {% include "template-cs-footer" %}
-
 {% include "template-cs-style-rules" %}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}

@@ -3,6 +3,7 @@
 <html class="{{ view_mode }} {{ language_flags_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
+    {{ site.style_tag }}
   </head>
 
   <body class="common-page header-menu-wide">
