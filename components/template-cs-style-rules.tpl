@@ -240,43 +240,43 @@ body {
   text-transform: var(--global-footer-body-text-transform);
 }
 .content-area h1 {
-  font-family: var(--global-content-title-font-family);
-  font-size: var(--global-content-title-font-size);
-  font-style: var(--global-content-title-font-style);
-  font-weight: var(--global-content-title-font-weight);
-  line-height: var(--global-content-title-line-height);
-  letter-spacing: var(--global-content-title-letter-spacing);
-  color: var(--global-content-title-color);
-  text-align: var(--global-content-title-text-alignment);
-  text-decoration: var(--global-content-title-text-decoration);
-  text-transform: var(--global-content-title-text-transform);
+  font-family: var(--global-headings-title-font-family);
+  font-size: var(--global-headings-title-font-size);
+  font-style: var(--global-headings-title-font-style);
+  font-weight: var(--global-headings-title-font-weight);
+  line-height: var(--global-headings-title-line-height);
+  letter-spacing: var(--global-headings-title-letter-spacing);
+  color: var(--global-headings-title-color);
+  text-align: var(--global-headings-title-text-alignment);
+  text-decoration: var(--global-headings-title-text-decoration);
+  text-transform: var(--global-headings-title-text-transform);
 }
 .content-area h2:not(.comments-title) {
-  font-family: var(--global-content-heading-font-family);
-  font-size: var(--global-content-heading-font-size);
-  font-style: var(--global-content-heading-font-style);
-  font-weight: var(--global-content-heading-font-weight);
-  line-height: var(--global-content-heading-line-height);
-  letter-spacing: var(--global-content-heading-letter-spacing);
-  color: var(--global-content-heading-color);
-  text-align: var(--global-content-heading-text-alignment);
-  text-decoration: var(--global-content-heading-text-decoration);
-  text-transform: var(--global-content-heading-text-transform);
+  font-family: var(--global-headings-heading-font-family);
+  font-size: var(--global-headings-heading-font-size);
+  font-style: var(--global-headings-heading-font-style);
+  font-weight: var(--global-headings-heading-font-weight);
+  line-height: var(--global-headings-heading-line-height);
+  letter-spacing: var(--global-headings-heading-letter-spacing);
+  color: var(--global-headings-heading-color);
+  text-align: var(--global-headings-heading-text-alignment);
+  text-decoration: var(--global-headings-heading-text-decoration);
+  text-transform: var(--global-headings-heading-text-transform);
 }
 .content-area h3,
 .content-area h4,
 .content-area h5,
 .content-area h6 {
-  font-family: var(--global-content-subheading-font-family);
-  font-size: var(--global-content-subheading-font-size);
-  font-style: var(--global-content-subheading-font-style);
-  font-weight: var(--global-content-subheading-font-weight);
-  line-height: var(--global-content-subheading-line-height);
-  letter-spacing: var(--global-content-subheading-letter-spacing);
-  color: var(--global-content-subheading-color);
-  text-align: var(--global-content-subheading-text-alignment);
-  text-decoration: var(--global-content-subheading-text-decoration);
-  text-transform: var(--global-content-subheading-text-transform);
+  font-family: var(--global-headings-subheading-font-family);
+  font-size: var(--global-headings-subheading-font-size);
+  font-style: var(--global-headings-subheading-font-style);
+  font-weight: var(--global-headings-subheading-font-weight);
+  line-height: var(--global-headings-subheading-line-height);
+  letter-spacing: var(--global-headings-subheading-letter-spacing);
+  color: var(--global-headings-subheading-color);
+  text-align: var(--global-headings-subheading-text-alignment);
+  text-decoration: var(--global-headings-subheading-text-decoration);
+  text-transform: var(--global-headings-subheading-text-transform);
 }
 .site-header .content-area a {
   color: var(--global-header-body-color);
@@ -320,15 +320,15 @@ body {
 .content-area ul,
 .content-area ol,
 .content-area dl {
-  font-family: var(--global-content-list-font-family);
-  font-size: var(--global-content-list-font-size);
-  font-style: var(--global-content-list-font-style);
-  font-weight: var(--global-content-list-font-weight);
-  line-height: var(--global-content-list-line-height);
-  letter-spacing: var(--global-content-list-letter-spacing);
-  color: var(--global-content-list-color);
-  text-decoration: var(--global-content-list-text-decoration);
-  text-transform: var(--global-content-list-text-transform);
+  font-family: var(--global-list-font-family);
+  font-size: var(--global-list-font-size);
+  font-style: var(--global-list-font-style);
+  font-weight: var(--global-list-font-weight);
+  line-height: var(--global-list-line-height);
+  letter-spacing: var(--global-list-letter-spacing);
+  color: var(--global-list-color);
+  text-decoration: var(--global-list-text-decoration);
+  text-transform: var(--global-list-text-transform);
 }
 .content-area a.custom-btn {
   padding-right: var(--global-content-button-padding);
@@ -355,19 +355,19 @@ body {
 }
 .content-area table td,
 .content-area table th {
-  padding: var(--global-content-table-padding);
-  font-family: var(--global-content-table-font-family);
-  font-size: var(--global-content-table-font-size);
-  font-style: var(--global-content-table-font-style);
-  font-weight: var(--global-content-table-font-weight);
-  line-height: var(--global-content-table-line-height);
-  letter-spacing: var(--global-content-table-letter-spacing);
-  color: var(--global-content-table-color);
-  text-decoration: var(--global-content-table-text-decoration);
-  text-transform: var(--global-content-table-text-transform);
-  border-color: var(--global-content-table-border-color);
-  border-style: var(--global-content-table-border-style);
-  border-width: var(--global-content-table-border-width);
+  padding: var(--global-table-padding);
+  font-family: var(--global-table-font-family);
+  font-size: var(--global-table-font-size);
+  font-style: var(--global-table-font-style);
+  font-weight: var(--global-table-font-weight);
+  line-height: var(--global-table-line-height);
+  letter-spacing: var(--global-table-letter-spacing);
+  color: var(--global-table-color);
+  text-decoration: var(--global-table-text-decoration);
+  text-transform: var(--global-table-text-transform);
+  border-color: var(--global-table-border-color);
+  border-style: var(--global-table-border-style);
+  border-width: var(--global-table-border-width);
 }
 
 .form_field_textfield,

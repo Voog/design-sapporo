@@ -31,9 +31,9 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-content-title-font-family",
-      "--global-content-heading-font-family",
-      "--global-content-subheading-font-family",
+      "--global-headings-title-font-family",
+      "--global-headings-heading-font-family",
+      "--global-headings-subheading-font-family",
       "--global-content-body-font-family"
     ]
   */
@@ -50,7 +50,7 @@
       "--global-menu-main-color",
       "--global-menu-sub-color",
       "--global-content-body-color",
-      "--global-content-list-color",
+      "--global-list-color",
       "--global-article-box-color",
       "--global-footer-body-color"
     ]
@@ -64,9 +64,9 @@
     "scope": "global",
     "boundVariables": [
       "--global-header-body-hover-color",
-      "--global-content-title-color",
-      "--global-content-heading-color",
-      "--global-content-subheading-color",
+      "--global-headings-title-color",
+      "--global-headings-heading-color",
+      "--global-headings-subheading-color",
       "--global-content-link-color",
       "--global-content-button-color",
       "--global-footer-link-color",
