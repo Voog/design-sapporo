@@ -2244,7 +2244,6 @@
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
-    "featured": true,
     "scope": "global"
   */
   --global-content-table-font-family: $base-font-family;
@@ -2281,6 +2280,7 @@
     "max": 10,
     "step": 1,
     "unit": "px",
+    "featured": true,
     "scope": "global"
   */
   --global-content-table-border-width: 1px;
@@ -2339,7 +2339,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-content-table-border-color: rgba($color-alto, 1);;
+  --global-content-table-border-color: rgba($color-alto, 1);
 
   /* VoogStyle
     "path": ["Content", "Table"],
@@ -2349,7 +2349,6 @@
     "min": 8,
     "max": 80,
     "unit": "px",
-    "featured": true,
     "scope": "global"
   */
   --global-content-table-font-size: $base-font-size;

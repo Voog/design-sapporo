@@ -2024,7 +2024,6 @@ Adds template design editor style variables.
     "title": "Font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
-    "featured": true,
     "scope": "global"
   */
   --global-content-table-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
@@ -2058,7 +2057,8 @@ Adds template design editor style variables.
     "max": 10,
     "step": 1,
     "unit": "px",
-    "scope": "global"
+    "scope": "global",
+    "featured": true
   */
   --global-content-table-border-width: 1px;
   /* VoogStyle
@@ -2123,7 +2123,6 @@ Adds template design editor style variables.
     "min": 8,
     "max": 80,
     "unit": "px",
-    "featured": true,
     "scope": "global"
   */
   --global-content-table-font-size: 18px;
