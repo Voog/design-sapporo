@@ -68,7 +68,8 @@
       "--global-content-heading-color",
       "--global-content-subheading-color",
       "--global-content-link-color",
-      "--global-footer-link-color"
+      "--global-content-button-color",
+      "--global-footer-link-color",
     ]
   */
   --global-secondary-color: black;
