@@ -2,8 +2,8 @@
 <style data-voog-style>
 :root {
   /* VoogStyle
-    "path": ["Blog"],
-    "title": "Nr of rows",
+    "pathI18n": ["custom_styles.blog"],
+    "titleI18n": "custom_styles.nr_of_rows",
     "editor": "listPicker",
     "list": {{ base_number_of_columns_set }},
     "featured": true,
@@ -11,8 +11,8 @@
   */
   --global-article-box-width: 33.3%;
   /* VoogStyle
-    "path": ["Blog", "Article box"],
-    "title": "Image radius",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box"],
+    "titleI18n": "custom_styles.image_radius",
     "editor": "rangePicker",
     "min": 0,
     "max": 100,
@@ -22,8 +22,8 @@
   */
   --global-article-box-image-radius: 0;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Font",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "featured": true,
@@ -31,8 +31,8 @@
   */
   --global-article-box-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Character spacing",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.character_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -42,8 +42,8 @@
   */
   --global-article-box-letter-spacing: 0;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Line height",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,
     "max": 5,
@@ -53,8 +53,8 @@
   */
   --global-article-box-line-height: 1.2;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Opacity",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.opacity",
     "editor": "rangePicker",
     "min": 0.1,
     "max": 1,
@@ -64,8 +64,8 @@
   */
   --global-article-box-opacity: 1;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Opacity",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.opacity",
     "editor": "rangePicker",
     "min": 0.1,
     "max": 1,
@@ -75,8 +75,8 @@
   */
   --global-article-box-hover-opacity: .8;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Size",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
@@ -90,8 +90,8 @@
   */
   --global-article-box-font-size: 18px;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Size",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
@@ -101,8 +101,8 @@
   */
   --global-article-box-hover-font-size: 18px;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Font size",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -117,8 +117,8 @@
   */
   --global-article-box-font-weight: 400;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Font size",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -130,8 +130,8 @@
   */
   --global-article-box-hover-font-weight: 400;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Font style",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -146,8 +146,8 @@
   */
   --global-article-box-font-style: normal;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Font style",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -159,8 +159,8 @@
   */
   --global-article-box-hover-font-style: normal;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Text decoration",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -175,8 +175,8 @@
   */
   --global-article-box-text-decoration: none;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Text decoration",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -188,8 +188,8 @@
   */
   --global-article-box-hover-text-decoration: none;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Text transform",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -204,8 +204,8 @@
   */
   --global-article-box-text-transform: none;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Text transform",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -217,8 +217,8 @@
   */
   --global-article-box-hover-text-transform: none;
   /* VoogStyle
-    "path": ["Blog", "Article box", "Normal"],
-    "title": "Color",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
+    "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
     "featured": true,
@@ -229,8 +229,8 @@
   */
   --global-article-box-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Blog", "Article box", "Hover"],
-    "title": "Color",
+    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
+    "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global"

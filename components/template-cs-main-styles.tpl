@@ -2,8 +2,8 @@
 <style data-voog-style>
 :root {
   /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Maximum width",
+    "pathI18n": ["custom_styles.main_styles"],
+    "titleI18n": "custom_styles.maximum_width",
     "editor": "rangePicker",
     "min": 600,
     "max": 2000,
@@ -13,8 +13,8 @@
   */
   --global-wrap-max-width: 1140px;
   /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Padding",
+    "pathI18n": ["custom_styles.main_styles"],
+    "titleI18n": "custom_styles.padding",
     "editor": "rangePicker",
     "min": 0,
     "max": 200,
@@ -24,8 +24,8 @@
   */
   --global-wrap-padding: 20px;
   /* VoogStyle
-    "path": ["Main Styles"],
-    "title": "Font",
+    "pathI18n": ["custom_styles.main_styles"],
+    "titleI18n": "custom_styles.font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "featured": true,
@@ -39,8 +39,8 @@
   */
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Main Styles", "Colors"],
-    "title": "Main color",
+    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+    "titleI18n": "custom_styles.main_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
@@ -57,8 +57,8 @@
   */
   --global-main-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "path": ["Main Styles", "Colors"],
-    "title": "Secondary color",
+    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+    "titleI18n": "custom_styles.secondary_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
@@ -69,13 +69,13 @@
       "--global-headings-subheading-color",
       "--global-content-link-color",
       "--global-content-button-color",
-      "--global-footer-link-color",
+      "--global-footer-link-color"
     ]
   */
   --global-secondary-color: black;
   /* VoogStyle
-    "path": ["Main Styles", "Colors"],
-    "title": "Background color",
+    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+    "titleI18n": "custom_styles.background_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global"

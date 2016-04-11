@@ -2,8 +2,8 @@
 <style data-voog-style>
 :root {
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Padding",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.padding",
     "editor": "rangePicker",
     "min": 0,
     "max": 200,
@@ -13,16 +13,16 @@
   */
   --global-table-padding: 10px;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Font",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "scope": "global"
   */
   --global-table-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Character spacing",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.character_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -32,8 +32,8 @@
   */
   --global-table-letter-spacing: 0;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Line height",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,
     "max": 5,
@@ -43,8 +43,8 @@
   */
   --global-table-line-height: 1.3;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Border thickness",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_style.border_thickness",
     "editor": "rangePicker",
     "min": 1,
     "max": 10,
@@ -55,62 +55,25 @@
   */
   --global-table-border-width: 1px;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Border style",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.border_style",
     "editor": "listPicker",
-    "list": [
-      {
-        "title": "Solid",
-        "value": "solid"
-      },
-      {
-        "title": "Dotted",
-        "value": "dotted"
-      },
-      {
-        "title": "Dashed",
-        "value": "dashed"
-      },
-      {
-        "title": "Double",
-        "value": "double"
-      },
-      {
-        "title": "Groove",
-        "value": "groove"
-      },
-      {
-        "title": "Ridge",
-        "value": "ridge"
-      },
-      {
-        "title": "Inset",
-        "value": "inset"
-      },
-      {
-        "title": "Outset",
-        "value": "outset"
-      },
-      {
-        "title": "None",
-        "value": "hidden"
-      }
-    ],
+    "list": {{ base_border_style_set }},
     "featured": true,
     "scope": "global"
   */
   --global-table-border-style: solid;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Border color",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.border_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global"
   */
   --global-table-border-color: #d2d2d2;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Size",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
@@ -120,8 +83,8 @@
   */
   --global-table-font-size: 18px;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Font size",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -133,8 +96,8 @@
   */
   --global-table-font-weight: 400;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Font style",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -146,8 +109,8 @@
   */
   --global-table-font-style: normal;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Text decoration",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -159,8 +122,8 @@
   */
   --global-table-text-decoration: none;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Text transform",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -172,8 +135,8 @@
   */
   --global-table-text-transform: none;
   /* VoogStyle
-    "path": ["Table"],
-    "title": "Color",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global"

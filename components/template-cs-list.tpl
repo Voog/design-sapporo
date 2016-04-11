@@ -2,8 +2,8 @@
 <style data-voog-style>
 :root {
   /* VoogStyle
-    "path": ["List"],
-    "title": "Font",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "featured": true,
@@ -11,8 +11,8 @@
   */
   --global-list-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Character spacing",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.character_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -22,8 +22,8 @@
   */
   --global-list-letter-spacing: 0;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Line height",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,
     "max": 5,
@@ -33,8 +33,8 @@
   */
   --global-list-line-height: 1.3;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Size",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
@@ -45,8 +45,8 @@
   */
   --global-list-font-size: 18px;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Font size",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -58,8 +58,8 @@
   */
   --global-list-font-weight: 400;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Font style",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -71,8 +71,8 @@
   */
   --global-list-font-style: normal;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Text decoration",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -84,8 +84,8 @@
   */
   --global-list-text-decoration: none;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Text transform",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -97,8 +97,8 @@
   */
   --global-list-text-transform: none;
   /* VoogStyle
-    "path": ["List"],
-    "title": "Color",
+    "pathI18n": ["custom_styles.list"],
+    "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
     "featured": true,

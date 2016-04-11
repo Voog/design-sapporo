@@ -27,11 +27,16 @@
 {% include "template-cs-main-styles" %}
 {% include "template-cs-header" %}
 {% include "template-cs-headings" %}
+{% if template-head == "blog_listing_page" %}
+  {% include "template-cs-blog-list" %}
+{% endif %}
 {% include "template-cs-content" %}
 {% include "template-cs-list" %}
 {% include "template-cs-table" %}
 {% include "template-cs-footer" %}
 {% include "template-cs-style-rules" %}
+
+{{ site.style_tag }}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>
