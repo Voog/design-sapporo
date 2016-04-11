@@ -1,10 +1,37 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// DO NOT REMOVE START: Grunt replaces this with the <style> tag component.
 // scss-lint:disable Comment
 /* GRUNT-REPLACE: CUSTOM-STYLES-PREPEND */
+// DO NOT REMOVE END
 
-// Add variables and styles here.
-body {
-  margin: 0;
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
+:root {
+
 }
 
+// =============================================================================
+// Default stylesheet override styles.
+// =============================================================================
+
+
+// DO NOT REMOVE START: Grunt replaces this with the </style> tag component.
 /* GRUNT-REPLACE: CUSTOM-STYLES-APPEND */
 // scss-lint:enable Comment
+// DO NOT REMOVE END
