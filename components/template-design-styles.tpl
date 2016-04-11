@@ -322,8 +322,28 @@ body {
 .page-content .content-area a:hover {
   font-size: var(--global-content-link-hover-font-size);
 }
-.content-area .custom-btn {
-  font-family: var(--global-main-font-family);
+.content-area a.custom-btn {
+  padding-right: var(--global-content-button-padding);
+  padding-left: var(--global-content-button-padding);
+  font-family: var(--global-content-button-font-family);
+  font-size: var(--global-content-button-font-size);
+  font-style: var(--global-content-button-font-style);
+  font-weight: var(--global-content-button-font-weight);
+  line-height: var(--global-content-button-line-height);
+  letter-spacing: var(--global-content-button-letter-spacing);
+  color: var(--global-content-button-color);
+  text-decoration: var(--global-content-button-text-decoration);
+  text-transform: var(--global-content-button-text-transform);
+  background-color: var(--global-content-button-background-color);
+}
+.content-area a.custom-btn:hover {
+  font-size: var(--global-content-button-hover-font-size);
+  font-style: var(--global-content-button-hover-font-style);
+  font-weight: var(--global-content-button-hover-font-weight);
+  color: var(--global-content-button-hover-color);
+  text-decoration: var(--global-content-button-hover-text-decoration);
+  text-transform: var(--global-content-button-hover-text-transform);
+  background-color: var(--global-content-button-hover-background-color);
 }
 
 .form_field_textfield,
