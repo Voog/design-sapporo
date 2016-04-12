@@ -10,7 +10,7 @@
   --global-footer-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.footer"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,

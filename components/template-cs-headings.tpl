@@ -17,7 +17,7 @@
   --global-headings-title-text-alignment: center;
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.title"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -126,7 +126,7 @@
   --global-headings-heading-text-alignment: left;
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.heading"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -235,7 +235,7 @@
   --global-headings-subheading-text-alignment: left;
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.subheading"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,

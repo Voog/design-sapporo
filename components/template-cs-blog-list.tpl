@@ -30,7 +30,7 @@
   --global-article-box-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,

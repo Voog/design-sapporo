@@ -39,7 +39,7 @@
   --global-content-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.text"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -154,7 +154,7 @@
   --global-content-link-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.link", "custom_styles.normal"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
@@ -375,7 +375,7 @@
   --global-content-button-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.character_spacing",
+    "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
     "max": 5,
