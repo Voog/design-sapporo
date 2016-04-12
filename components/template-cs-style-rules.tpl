@@ -1,5 +1,3 @@
-{% comment %}Template custom styles definitions.{% endcomment %}
-<style data-voog-style>
 body {
   font-family: var(--global-main-font-family);
   color: var(--global-secondary-color);
@@ -392,5 +390,3 @@ label .form_field_radio + .form_control_indicator::before {
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--global-secondary-color);
 }
-
-</style>

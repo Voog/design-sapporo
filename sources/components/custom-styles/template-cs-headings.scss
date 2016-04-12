@@ -13,11 +13,6 @@
 // =============================================================================
 @import '../../stylesheets/modules/variables';
 
-// DO NOT REMOVE START: Grunt replaces this with the <style> tag component.
-// scss-lint:disable Comment
-/* GRUNT-REPLACE: CUSTOM-STYLES-PREPEND */
-// DO NOT REMOVE END
-
 // =============================================================================
 // Design editor configuration.
 // =============================================================================
@@ -390,8 +385,3 @@
   --global-headings-subheading-color: rgba($color-black, 1);
   // scss-lint:enable Comment, Indentation
 }
-
-// DO NOT REMOVE START: Grunt replaces this with the </style> tag component.
-/* GRUNT-REPLACE: CUSTOM-STYLES-APPEND */
-// scss-lint:enable Comment
-// DO NOT REMOVE END

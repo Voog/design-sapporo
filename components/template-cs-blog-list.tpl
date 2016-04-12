@@ -1,5 +1,3 @@
-{% comment %}Template custom styles definitions.{% endcomment %}
-<style data-voog-style>
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.blog"],
@@ -237,5 +235,3 @@
   */
   --global-article-box-hover-color: rgba(0, 0, 0, 0.8);
 }
-
-</style>

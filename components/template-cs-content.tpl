@@ -1,5 +1,3 @@
-{% comment %}Template custom styles definitions.{% endcomment %}
-<style data-voog-style>
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.content"],
@@ -577,5 +575,3 @@
   */
   --global-content-button-hover-color: black;
 }
-
-</style>

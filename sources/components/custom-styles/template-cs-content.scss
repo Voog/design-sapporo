@@ -13,11 +13,6 @@
 // =============================================================================
 @import '../../stylesheets/modules/variables';
 
-// DO NOT REMOVE START: Grunt replaces this with the <style> tag component.
-// scss-lint:disable Comment
-/* GRUNT-REPLACE: CUSTOM-STYLES-PREPEND */
-// DO NOT REMOVE END
-
 // =============================================================================
 // Design editor configuration.
 // =============================================================================
@@ -28,7 +23,7 @@
   // GLOBAL CONTENT AREA STYLES.
   // ===========================================================================
   /* VoogStyle
-    "pathI18n": "custom_styles.content"],
+    "pathI18n": ["custom_styles.content"],
     "titleI18n": "custom_styles.maximum_width",
     "editor": "rangePicker",
     "min": 100,
@@ -40,7 +35,7 @@
   --global-content-max-width: 700px;
 
   /* VoogStyle
-    "pathI18n": "custom_styles.content"],
+    "pathI18n": ["custom_styles.content"],
     "titleI18n": "custom_styles.padding",
     "editor": "rangePicker",
     "min": 0,
@@ -52,7 +47,7 @@
   --global-content-padding: 0;
 
   /* VoogStyle
-    "pathI18n": "custom_styles.content"],
+    "pathI18n": ["custom_styles.content"],
     "titleI18n": "custom_styles.background_color",
     "editor": "colorPicker",
     "scope": "global"
@@ -661,8 +656,3 @@
 
   // scss-lint:enable Comment, Indentation
 }
-
-// DO NOT REMOVE START: Grunt replaces this with the </style> tag component.
-/* GRUNT-REPLACE: CUSTOM-STYLES-APPEND */
-// scss-lint:enable Comment
-// DO NOT REMOVE END

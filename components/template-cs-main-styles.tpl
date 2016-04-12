@@ -1,5 +1,3 @@
-{% comment %}Template custom styles definitions.{% endcomment %}
-<style data-voog-style>
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles"],
@@ -82,5 +80,3 @@
   */
   --global-body-background-color: rgba(0, 0, 0, 0.02);
 }
-
-</style>

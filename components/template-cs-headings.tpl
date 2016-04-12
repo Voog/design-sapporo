@@ -1,5 +1,3 @@
-{% comment %}Template custom styles definitions.{% endcomment %}
-<style data-voog-style>
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.title"],
@@ -329,5 +327,3 @@
   */
   --global-headings-subheading-color: black;
 }
-
-</style>
