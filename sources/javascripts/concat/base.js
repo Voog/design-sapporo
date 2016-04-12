@@ -64,7 +64,6 @@
     // that shouldn't trigger the sideclick events.
     $(document).on('click touchstart', function(event) {
       // TODO: Prevent sidemenu closing.
-      console.log($(event.target).closest('.edy-design-editor-panel').length);
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html');
 
