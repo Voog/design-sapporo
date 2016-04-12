@@ -19,9 +19,6 @@
 :root {
   // scss-lint:disable Comment, Indentation
 
-  // ===========================================================================
-  // GLOBAL CONTENT AREA STYLES.
-  // ===========================================================================
   /* VoogStyle
     "pathI18n": ["custom_styles.content"],
     "titleI18n": "custom_styles.maximum_width",
@@ -54,9 +51,6 @@
   */
   --global-content-background-color: transparent;
 
-  // ===========================================================================
-  // Global content body styles.
-  // ===========================================================================
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.text"],
     "titleI18n": "custom_styles.font",
@@ -170,9 +164,6 @@
   */
   --global-content-body-color: rgba($color-black, .8);
 
-  // ===========================================================================
-  // Global content link styles.
-  // ===========================================================================
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.link", "custom_styles.normal"],
     "titleI18n": "custom_styles.padding",
@@ -412,9 +403,6 @@
       */
       --global-content-link-hover-color: rgba($color-black, 1);
 
-  // ===========================================================================
-  // Global content button styles.
-  // ===========================================================================
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.padding",
