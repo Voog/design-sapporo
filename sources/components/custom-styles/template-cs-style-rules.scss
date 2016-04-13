@@ -514,10 +514,28 @@ body {
 // "Form" type content area.
 //==============================================================================
 // scss-lint:disable SelectorFormat
+
+.content-area {
+  .form,
+  form {
+    padding: var(--global-form-padding);
+    background-color: var(--global-form-background-color);
+  }
+}
+
 .form_field_textfield,
 .form_field_textarea {
-  font-family: var(--global-main-font-family);
-  color: var(--global-secondary-color);
+  font-family: var(--global-form-field-font-family);
+  font-size: var(--global-form-field-font-size);
+  font-style: var(--global-form-field-font-style);
+  font-weight: var(--global-form-field-font-weight);
+  line-height: var(--global-form-field-line-height);
+  color: var(--global-form-field-color);
+  text-decoration: var(--global-form-field-text-decoration);
+  text-transform: var(--global-form-field-text-transform);
+  background-color: var(--global-form-field-background-color);
+  border-color: var(--global-form-field-border-color);
+  border-width: var(--global-form-field-border-width);
 }
 
 .form_submit {

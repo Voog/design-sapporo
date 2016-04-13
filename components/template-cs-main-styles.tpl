@@ -67,6 +67,7 @@
       "--global-headings-subheading-color",
       "--global-content-link-color",
       "--global-content-button-color",
+      "--global-form-field-color",
       "--global-footer-link-color"
     ]
   */
