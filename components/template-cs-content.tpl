@@ -363,7 +363,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-content-button-padding: 20;
+  --global-content-button-padding: 20px;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.font",
