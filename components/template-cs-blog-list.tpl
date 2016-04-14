@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.blog"],
-    "titleI18n": "custom_styles.nr_of_rows",
+    "titleI18n": "custom_styles.max_nr_of_columns",
     "editor": "listPicker",
     "list": {{ base_number_of_columns_set }},
     "featured": true,
