@@ -30,7 +30,6 @@ lalalalla
   {% include "template-cs-header" %}
   {% include "template-cs-headings" %}
   {% if template-head == "blog_listing_page" %}
-  sadfopifjdsaiop
     {% include "template-cs-blog-list" %}
   {% endif %}
   {% include "template-cs-content" %}
