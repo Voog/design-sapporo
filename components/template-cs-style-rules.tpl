@@ -238,25 +238,41 @@ body {
   text-transform: var(--global-footer-body-text-transform);
 }
 .content-area h1 {
+  color: var(--global-headings-title-color);
+}
+.site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1, .site-header
+.content-area h1 a, .page-content
+.content-area h1 a, .site-footer
+.content-area h1 a, .site-header
+.content-area h1 a:hover, .page-content
+.content-area h1 a:hover, .site-footer
+.content-area h1 a:hover {
   font-family: var(--global-headings-title-font-family);
   font-size: var(--global-headings-title-font-size);
   font-style: var(--global-headings-title-font-style);
   font-weight: var(--global-headings-title-font-weight);
   line-height: var(--global-headings-title-line-height);
   letter-spacing: var(--global-headings-title-letter-spacing);
-  color: var(--global-headings-title-color);
   text-align: var(--global-headings-title-text-alignment);
   text-decoration: var(--global-headings-title-text-decoration);
   text-transform: var(--global-headings-title-text-transform);
 }
 .content-area h2:not(.comments-title) {
+  color: var(--global-headings-heading-color);
+}
+.site-header .content-area h2:not(.comments-title), .page-content .content-area h2:not(.comments-title), .site-footer .content-area h2:not(.comments-title), .site-header
+.content-area h2:not(.comments-title) a, .page-content
+.content-area h2:not(.comments-title) a, .site-footer
+.content-area h2:not(.comments-title) a, .site-header
+.content-area h2:not(.comments-title) a:hover, .page-content
+.content-area h2:not(.comments-title) a:hover, .site-footer
+.content-area h2:not(.comments-title) a:hover {
   font-family: var(--global-headings-heading-font-family);
   font-size: var(--global-headings-heading-font-size);
   font-style: var(--global-headings-heading-font-style);
   font-weight: var(--global-headings-heading-font-weight);
   line-height: var(--global-headings-heading-line-height);
   letter-spacing: var(--global-headings-heading-letter-spacing);
-  color: var(--global-headings-heading-color);
   text-align: var(--global-headings-heading-text-alignment);
   text-decoration: var(--global-headings-heading-text-decoration);
   text-transform: var(--global-headings-heading-text-transform);
@@ -265,13 +281,48 @@ body {
 .content-area h4,
 .content-area h5,
 .content-area h6 {
+  color: var(--global-headings-subheading-color);
+}
+.site-header .content-area h3, .page-content .content-area h3, .site-footer .content-area h3, .site-header
+.content-area h3 a, .page-content
+.content-area h3 a, .site-footer
+.content-area h3 a, .site-header
+.content-area h3 a:hover, .page-content
+.content-area h3 a:hover, .site-footer
+.content-area h3 a:hover, .site-header
+.content-area h4, .page-content
+.content-area h4, .site-footer
+.content-area h4, .site-header
+.content-area h4 a, .page-content
+.content-area h4 a, .site-footer
+.content-area h4 a, .site-header
+.content-area h4 a:hover, .page-content
+.content-area h4 a:hover, .site-footer
+.content-area h4 a:hover, .site-header
+.content-area h5, .page-content
+.content-area h5, .site-footer
+.content-area h5, .site-header
+.content-area h5 a, .page-content
+.content-area h5 a, .site-footer
+.content-area h5 a, .site-header
+.content-area h5 a:hover, .page-content
+.content-area h5 a:hover, .site-footer
+.content-area h5 a:hover, .site-header
+.content-area h6, .page-content
+.content-area h6, .site-footer
+.content-area h6, .site-header
+.content-area h6 a, .page-content
+.content-area h6 a, .site-footer
+.content-area h6 a, .site-header
+.content-area h6 a:hover, .page-content
+.content-area h6 a:hover, .site-footer
+.content-area h6 a:hover {
   font-family: var(--global-headings-subheading-font-family);
   font-size: var(--global-headings-subheading-font-size);
   font-style: var(--global-headings-subheading-font-style);
   font-weight: var(--global-headings-subheading-font-weight);
   line-height: var(--global-headings-subheading-line-height);
   letter-spacing: var(--global-headings-subheading-letter-spacing);
-  color: var(--global-headings-subheading-color);
   text-align: var(--global-headings-subheading-text-alignment);
   text-decoration: var(--global-headings-subheading-text-decoration);
   text-transform: var(--global-headings-subheading-text-transform);
@@ -351,30 +402,40 @@ body {
   text-transform: var(--global-content-button-hover-text-transform);
   background-color: var(--global-content-button-hover-background-color);
 }
+.site-header .content-area table th, .site-header .content-area table th:hover, .page-content .content-area table th, .page-content .content-area table th:hover, .site-footer .content-area table th, .site-footer .content-area table th:hover, .site-header
+.content-area table td, .site-header
+.content-area table td:hover, .page-content
+.content-area table td, .page-content
+.content-area table td:hover, .site-footer
+.content-area table td, .site-footer
+.content-area table td:hover, .site-header
+.content-area table a, .site-header
+.content-area table a:hover, .page-content
+.content-area table a, .page-content
+.content-area table a:hover, .site-footer
+.content-area table a, .site-footer
+.content-area table a:hover, .site-header
+.content-area table a:hover, .site-header
+.content-area table a:hover:hover, .page-content
+.content-area table a:hover, .page-content
+.content-area table a:hover:hover, .site-footer
+.content-area table a:hover, .site-footer
+.content-area table a:hover:hover {
+  font-family: var(--global-table-font-family);
+  font-size: var(--global-table-font-size);
+  font-style: var(--global-table-font-style);
+  font-weight: var(--global-table-font-weight);
+  line-height: var(--global-table-line-height);
+  letter-spacing: var(--global-table-letter-spacing);
+  text-decoration: var(--global-table-text-decoration);
+  text-transform: var(--global-table-text-transform);
+}
 .content-area table td,
 .content-area table th {
   padding: var(--global-table-padding);
-  font-family: var(--global-table-font-family);
-  font-size: var(--global-table-font-size);
-  font-style: var(--global-table-font-style);
-  font-weight: var(--global-table-font-weight);
-  line-height: var(--global-table-line-height);
-  letter-spacing: var(--global-table-letter-spacing);
-  text-decoration: var(--global-table-text-decoration);
-  text-transform: var(--global-table-text-transform);
   border-color: var(--global-table-border-color);
   border-style: var(--global-table-border-style);
   border-width: var(--global-table-border-width);
-}
-.site-header .content-area table a, .site-header .content-area table a:hover, .page-content .content-area table a, .page-content .content-area table a:hover, .site-footer .content-area table a, .site-footer .content-area table a:hover {
-  font-family: var(--global-table-font-family);
-  font-size: var(--global-table-font-size);
-  font-style: var(--global-table-font-style);
-  font-weight: var(--global-table-font-weight);
-  line-height: var(--global-table-line-height);
-  letter-spacing: var(--global-table-letter-spacing);
-  text-decoration: var(--global-table-text-decoration);
-  text-transform: var(--global-table-text-transform);
 }
 
 .content-area .form,
