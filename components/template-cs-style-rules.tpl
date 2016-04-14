@@ -360,12 +360,21 @@ body {
   font-weight: var(--global-table-font-weight);
   line-height: var(--global-table-line-height);
   letter-spacing: var(--global-table-letter-spacing);
-  color: var(--global-table-color);
   text-decoration: var(--global-table-text-decoration);
   text-transform: var(--global-table-text-transform);
   border-color: var(--global-table-border-color);
   border-style: var(--global-table-border-style);
   border-width: var(--global-table-border-width);
+}
+.site-header .content-area table a, .site-header .content-area table a:hover, .page-content .content-area table a, .page-content .content-area table a:hover, .site-footer .content-area table a, .site-footer .content-area table a:hover {
+  font-family: var(--global-table-font-family);
+  font-size: var(--global-table-font-size);
+  font-style: var(--global-table-font-style);
+  font-weight: var(--global-table-font-weight);
+  line-height: var(--global-table-line-height);
+  letter-spacing: var(--global-table-letter-spacing);
+  text-decoration: var(--global-table-text-decoration);
+  text-transform: var(--global-table-text-transform);
 }
 
 .content-area .form,

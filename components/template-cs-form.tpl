@@ -41,16 +41,6 @@
   */
   --global-form-field-border-width: 0;
   /* VoogStyle
-     "pathI18n": ["custom_styles.form"],
-     "titleI18n": "custom_styles.field_padding",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 100,
-     "unit": "px",
-     "scope": "global"
-  */
-  --global-form-field-padding: 10px;
-  /* VoogStyle
      "pathI18n": ["custom_styles.form", "custom_styles.text"],
      "titleI18n": "custom_styles.font",
      "editor": "listPicker",
