@@ -92,10 +92,15 @@ module.exports = function(grunt) {
           require('autoprefixer')({browsers: 'last 4 versions'})
         ]
       },
-      dist: {
+      main_styles: {
         src: [
           'stylesheets/*.css',
           'stylesheets/!*.min.css'
+        ]
+      },
+      custom_styles: {
+        src: [
+          'sources/components/custom-styles/tmp/*.css'
         ]
       }
     },
@@ -303,7 +308,7 @@ module.exports = function(grunt) {
   // Default task with text replacement (for automatic <style> tag wrapping).
   // grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin', 'replace', 'copy', 'clean:remove']);
 
-  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin', 'copy', 'clean:remove']);
+  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy', 'clean:remove']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
