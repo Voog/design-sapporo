@@ -380,8 +380,7 @@ body {
   text-transform: var(--global-list-text-transform);
 }
 .content-area a.custom-btn {
-  padding-right: var(--global-content-button-padding);
-  padding-left: var(--global-content-button-padding);
+  padding: calc(var(--global-content-button-padding) - 16px) var(--global-content-button-padding) calc(var(--global-content-button-padding) - 17px);
   font-family: var(--global-content-button-font-family);
   font-size: var(--global-content-button-font-size);
   font-style: var(--global-content-button-font-style);
@@ -460,7 +459,26 @@ body {
 }
 
 .form_submit input {
-  font-family: var(--global-main-font-family);
+  padding: calc(var(--global-form-button-padding) - 16px) var(--global-form-button-padding) calc(var(--global-form-button-padding) - 17px);
+  font-family: var(--global-form-button-font-family);
+  font-size: var(--global-form-button-font-size);
+  font-style: var(--global-form-button-font-style);
+  font-weight: var(--global-form-button-font-weight);
+  line-height: var(--global-form-button-line-height);
+  letter-spacing: var(--global-form-button-letter-spacing);
+  color: var(--global-form-button-color);
+  text-decoration: var(--global-form-button-text-decoration);
+  text-transform: var(--global-form-button-text-transform);
+  background-color: var(--global-form-button-background-color);
+}
+.form_submit input:hover {
+  font-size: var(--global-form-button-hover-font-size);
+  font-style: var(--global-form-button-hover-font-style);
+  font-weight: var(--global-form-button-hover-font-weight);
+  text-decoration: var(--global-form-button-hover-text-decoration);
+  text-transform: var(--global-form-button-hover-text-transform);
+  color: var(--global-form-button-hover-color);
+  background-color: var(--global-form-button-hover-background-color);
 }
 
 label .form_field_checkbox + .form_control_indicator::before {
