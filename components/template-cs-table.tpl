@@ -42,7 +42,7 @@
   --global-table-line-height: 1.3;
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
-    "titleI18n": "custom_style.border_thickness",
+    "titleI18n": "custom_styles.border_thickness",
     "editor": "rangePicker",
     "min": 1,
     "max": 10,

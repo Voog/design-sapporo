@@ -38,7 +38,7 @@
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.main_color",
+    "titleI18n": "custom_styles.primary_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
