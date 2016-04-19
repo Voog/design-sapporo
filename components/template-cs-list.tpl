@@ -1,17 +1,6 @@
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.list"],
-    "titleI18n": "custom_styles.line_height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global"
-  */
-  --global-list-line-height: 1.3;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.list"],
     "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
