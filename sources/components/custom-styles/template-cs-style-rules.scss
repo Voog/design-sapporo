@@ -430,14 +430,12 @@ body {
     font-size: var(--global-content-button-font-size);
     font-style: var(--global-content-button-font-style);
     font-weight: var(--global-content-button-font-weight);
-    line-height: var(--global-content-button-line-height);
     color: var(--global-content-button-color);
     text-decoration: var(--global-content-button-text-decoration);
     text-transform: var(--global-content-button-text-transform);
     background-color: var(--global-content-button-background-color);
 
     &:hover {
-      font-size: var(--global-content-button-hover-font-size);
       font-style: var(--global-content-button-hover-font-style);
       font-weight: var(--global-content-button-hover-font-weight);
       color: var(--global-content-button-hover-color);

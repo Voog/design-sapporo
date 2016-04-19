@@ -1872,6 +1872,7 @@ a {
   max-width: 100%;
 }
 .content-area .custom-btn {
+  display: inline-block;
   padding-top: 4px;
   padding-right: 20px;
   padding-bottom: 3px;
