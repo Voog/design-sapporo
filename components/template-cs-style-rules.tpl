@@ -198,7 +198,6 @@ body {
   font-size: var(--global-header-body-font-size);
   font-style: var(--global-header-body-font-style);
   font-weight: var(--global-header-body-font-weight);
-  line-height: var(--global-header-body-line-height);
   color: var(--global-header-body-color);
   text-decoration: var(--global-header-body-text-decoration);
   text-transform: var(--global-header-body-text-transform);
@@ -309,15 +308,6 @@ body {
 }
 .site-header .content-area a {
   color: var(--global-header-body-color);
-}
-.site-header .content-area a:hover {
-  font-size: var(--global-header-body-hover-font-size);
-  font-style: var(--global-header-body-hover-font-style);
-  font-weight: var(--global-header-body-hover-font-weight);
-  color: var(--global-header-body-hover-color);
-  text-decoration: var(--global-header-body-hover-text-decoration);
-  text-transform: var(--global-header-body-hover-text-transform);
-  background-color: var(--global-header-body-hover-background-color);
 }
 .page-content .content-area a, .site-footer .content-area a {
   padding-right: var(--global-content-link-padding);
