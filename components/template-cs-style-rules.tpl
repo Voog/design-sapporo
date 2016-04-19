@@ -67,7 +67,6 @@ body {
   color: var(--global-menu-main-hover-color);
   text-decoration: var(--global-menu-main-hover-text-decoration);
   text-transform: var(--global-menu-main-hover-text-transform);
-  background-color: var(--global-menu-main-hover-background-color);
 }
 .menu-level-1 > .menu-item.item-current > a {
   font-style: var(--global-menu-main-active-font-style);
@@ -75,7 +74,6 @@ body {
   color: var(--global-menu-main-active-color);
   text-decoration: var(--global-menu-main-active-text-decoration);
   text-transform: var(--global-menu-main-active-text-transform);
-  background-color: var(--global-menu-main-active-background-color);
 }
 .menu-level-1 > .menu-item > a {
   font-size: var(--global-menu-main-font-size);
@@ -84,7 +82,6 @@ body {
   color: var(--global-menu-main-color);
   text-decoration: var(--global-menu-main-text-decoration);
   text-transform: var(--global-menu-main-text-transform);
-  background-color: var(--global-menu-main-background-color);
 }
 
 .menu-level-2 .menu-item a {
@@ -95,28 +92,20 @@ body {
   color: var(--global-menu-sub-color);
   text-decoration: var(--global-menu-sub-text-decoration);
   text-transform: var(--global-menu-sub-text-transform);
-  background-color: var(--global-menu-sub-background-color);
-  opacity: var(--global-menu-sub-opacity);
 }
 .menu-level-2 .menu-item a:hover {
-  font-size: var(--global-menu-sub-hover-font-size);
   font-style: var(--global-menu-sub-hover-font-style);
   font-weight: var(--global-menu-sub-hover-font-weight);
   color: var(--global-menu-sub-hover-color);
   text-decoration: var(--global-menu-sub-hover-text-decoration);
   text-transform: var(--global-menu-sub-hover-text-transform);
-  background-color: var(--global-menu-sub-hover-background-color);
-  opacity: var(--global-menu-sub-hover-opacity);
 }
 .menu-level-2 .menu-item a.selected {
-  font-size: var(--global-menu-sub-active-font-size);
   font-style: var(--global-menu-sub-active-font-style);
   font-weight: var(--global-menu-sub-active-font-weight);
   color: var(--global-menu-sub-active-color);
   text-decoration: var(--global-menu-sub-active-text-decoration);
   text-transform: var(--global-menu-sub-active-text-transform);
-  background-color: var(--global-menu-sub-active-background-color);
-  opacity: var(--global-menu-sub-active-opacity);
 }
 
 .menu-language-btn {

@@ -160,30 +160,22 @@ body {
       color: var(--global-menu-sub-color);
       text-decoration: var(--global-menu-sub-text-decoration);
       text-transform: var(--global-menu-sub-text-transform);
-      background-color: var(--global-menu-sub-background-color);
-      opacity: var(--global-menu-sub-opacity);
 
       // scss-lint:disable NestingDepth
       &:hover {
-        font-size: var(--global-menu-sub-hover-font-size);
         font-style: var(--global-menu-sub-hover-font-style);
         font-weight: var(--global-menu-sub-hover-font-weight);
         color: var(--global-menu-sub-hover-color);
         text-decoration: var(--global-menu-sub-hover-text-decoration);
         text-transform: var(--global-menu-sub-hover-text-transform);
-        background-color: var(--global-menu-sub-hover-background-color);
-        opacity: var(--global-menu-sub-hover-opacity);
       }
 
       &.selected {
-        font-size: var(--global-menu-sub-active-font-size);
         font-style: var(--global-menu-sub-active-font-style);
         font-weight: var(--global-menu-sub-active-font-weight);
         color: var(--global-menu-sub-active-color);
         text-decoration: var(--global-menu-sub-active-text-decoration);
         text-transform: var(--global-menu-sub-active-text-transform);
-        background-color: var(--global-menu-sub-active-background-color);
-        opacity: var(--global-menu-sub-active-opacity);
       }
       // scss-lint:enable NestingDepth
     }
