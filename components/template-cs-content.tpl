@@ -30,15 +30,6 @@
   --global-content-background-color: transparent;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.text"],
-    "titleI18n": "custom_styles.font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-content-body-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.content", "custom_styles.text"],
     "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,
