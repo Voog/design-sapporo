@@ -247,7 +247,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --global-content-link-hover-color: black;
+  --global-content-link-hover-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.padding",
