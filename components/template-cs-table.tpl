@@ -120,5 +120,5 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --global-table-color: rgba(0, 0, 0, 0.8);
+  --global-table-text-color: rgba(0, 0, 0, 0.8);
 }

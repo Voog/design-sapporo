@@ -358,6 +358,7 @@ body {
 .content-area table td,
 .content-area table th {
   padding: var(--global-table-padding);
+  color: var(--global-table-text-color);
   border-color: var(--global-table-border-color);
   border-style: var(--global-table-border-style);
   border-width: var(--global-table-border-width);

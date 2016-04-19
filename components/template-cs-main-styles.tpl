@@ -32,6 +32,7 @@
       "--global-menu-sub-color",
       "--global-content-body-color",
       "--global-list-color",
+      "--global-table-text-color",
       "--global-article-box-color",
       "--global-footer-body-color"
     ]
