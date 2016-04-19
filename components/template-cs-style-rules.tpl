@@ -61,41 +61,30 @@ body {
   color: var(--global-secondary-color);
 }
 
-.header-menu-wide .menu-level-1 > .menu-item:not(:last-child) {
-  margin-right: var(--global-menu-main-margin);
-}
 .menu-level-1 > .menu-item:hover > a {
-  font-size: var(--global-menu-main-hover-font-size);
   font-style: var(--global-menu-main-hover-font-style);
   font-weight: var(--global-menu-main-hover-font-weight);
   color: var(--global-menu-main-hover-color);
   text-decoration: var(--global-menu-main-hover-text-decoration);
   text-transform: var(--global-menu-main-hover-text-transform);
   background-color: var(--global-menu-main-hover-background-color);
-  opacity: var(--global-menu-main-hover-opacity);
 }
 .menu-level-1 > .menu-item.item-current > a {
-  font-size: var(--global-menu-main-active-font-size);
   font-style: var(--global-menu-main-active-font-style);
   font-weight: var(--global-menu-main-active-font-weight);
   color: var(--global-menu-main-active-color);
   text-decoration: var(--global-menu-main-active-text-decoration);
   text-transform: var(--global-menu-main-active-text-transform);
   background-color: var(--global-menu-main-active-background-color);
-  opacity: var(--global-menu-main-active-opacity);
 }
 .menu-level-1 > .menu-item > a {
-  padding-right: var(--global-menu-main-padding);
-  padding-left: var(--global-menu-main-padding);
   font-size: var(--global-menu-main-font-size);
   font-style: var(--global-menu-main-font-style);
   font-weight: var(--global-menu-main-font-weight);
-  line-height: var(--global-menu-main-line-height);
   color: var(--global-menu-main-color);
   text-decoration: var(--global-menu-main-text-decoration);
   text-transform: var(--global-menu-main-text-transform);
   background-color: var(--global-menu-main-background-color);
-  opacity: var(--global-menu-main-opacity);
 }
 
 .menu-level-2 .menu-item a {
