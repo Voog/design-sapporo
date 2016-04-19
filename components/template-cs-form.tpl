@@ -137,17 +137,6 @@
   --global-form-button-padding: 20px;
   /* VoogStyle
     "pathI18n": ["custom_styles.form", "custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.letter_spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-form-button-letter-spacing: 0;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.form", "custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,

@@ -9,17 +9,6 @@
   --global-headings-title-text-alignment: center;
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.title"],
-    "titleI18n": "custom_styles.letter_spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-headings-title-letter-spacing: 0;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.headings", "custom_styles.title"],
     "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,
@@ -111,17 +100,6 @@
   --global-headings-heading-text-alignment: left;
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.heading"],
-    "titleI18n": "custom_styles.letter_spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-headings-heading-letter-spacing: 0;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.headings", "custom_styles.heading"],
     "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,
@@ -211,17 +189,6 @@
     "scope": "global"
   */
   --global-headings-subheading-text-alignment: left;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.headings", "custom_styles.subheading"],
-    "titleI18n": "custom_styles.letter_spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-headings-subheading-letter-spacing: 0;
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.subheading"],
     "titleI18n": "custom_styles.line_height",

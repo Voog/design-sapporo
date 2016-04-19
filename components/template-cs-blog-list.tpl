@@ -21,17 +21,6 @@
   --global-article-box-image-radius: 0;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
-    "titleI18n": "custom_styles.letter_spacing",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 5,
-    "step": 0.1,
-    "unit": "em",
-    "scope": "global"
-  */
-  --global-article-box-letter-spacing: 0;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.line_height",
     "editor": "rangePicker",
     "min": 1,

@@ -91,7 +91,6 @@ body {
   font-style: var(--global-menu-main-font-style);
   font-weight: var(--global-menu-main-font-weight);
   line-height: var(--global-menu-main-line-height);
-  letter-spacing: var(--global-menu-main-letter-spacing);
   color: var(--global-menu-main-color);
   text-decoration: var(--global-menu-main-text-decoration);
   text-transform: var(--global-menu-main-text-transform);
@@ -104,7 +103,6 @@ body {
   font-style: var(--global-menu-sub-font-style);
   font-weight: var(--global-menu-sub-font-weight);
   line-height: var(--global-menu-sub-line-height);
-  letter-spacing: var(--global-menu-sub-letter-spacing);
   color: var(--global-menu-sub-color);
   text-decoration: var(--global-menu-sub-text-decoration);
   text-transform: var(--global-menu-sub-text-transform);
@@ -171,7 +169,6 @@ body {
   font-style: var(--global-article-box-font-style);
   font-weight: var(--global-article-box-font-weight);
   line-height: var(--global-article-box-line-height);
-  letter-spacing: var(--global-article-box-letter-spacing);
   color: var(--global-article-box-color);
   text-decoration: var(--global-article-box-text-decoration);
   text-transform: var(--global-article-box-text-transform);
@@ -202,7 +199,6 @@ body {
   font-style: var(--global-header-body-font-style);
   font-weight: var(--global-header-body-font-weight);
   line-height: var(--global-header-body-line-height);
-  letter-spacing: var(--global-header-body-letter-spacing);
   color: var(--global-header-body-color);
   text-decoration: var(--global-header-body-text-decoration);
   text-transform: var(--global-header-body-text-transform);
@@ -212,7 +208,6 @@ body {
   font-style: var(--global-content-body-font-style);
   font-weight: var(--global-content-body-font-weight);
   line-height: var(--global-content-body-line-height);
-  letter-spacing: var(--global-content-body-letter-spacing);
   color: var(--global-content-body-color);
   text-align: var(--global-content-body-text-alignment);
   text-decoration: var(--global-content-body-text-decoration);
@@ -223,7 +218,6 @@ body {
   font-style: var(--global-footer-body-font-style);
   font-weight: var(--global-footer-body-font-weight);
   line-height: var(--global-footer-body-line-height);
-  letter-spacing: var(--global-footer-body-letter-spacing);
   color: var(--global-footer-body-color);
   text-align: var(--global-footer-body-text-alignment);
   text-decoration: var(--global-footer-body-text-decoration);
@@ -243,7 +237,6 @@ body {
   font-style: var(--global-headings-title-font-style);
   font-weight: var(--global-headings-title-font-weight);
   line-height: var(--global-headings-title-line-height);
-  letter-spacing: var(--global-headings-title-letter-spacing);
   text-align: var(--global-headings-title-text-alignment);
   text-decoration: var(--global-headings-title-text-decoration);
   text-transform: var(--global-headings-title-text-transform);
@@ -262,7 +255,6 @@ body {
   font-style: var(--global-headings-heading-font-style);
   font-weight: var(--global-headings-heading-font-weight);
   line-height: var(--global-headings-heading-line-height);
-  letter-spacing: var(--global-headings-heading-letter-spacing);
   text-align: var(--global-headings-heading-text-alignment);
   text-decoration: var(--global-headings-heading-text-decoration);
   text-transform: var(--global-headings-heading-text-transform);
@@ -311,7 +303,6 @@ body {
   font-style: var(--global-headings-subheading-font-style);
   font-weight: var(--global-headings-subheading-font-weight);
   line-height: var(--global-headings-subheading-line-height);
-  letter-spacing: var(--global-headings-subheading-letter-spacing);
   text-align: var(--global-headings-subheading-text-alignment);
   text-decoration: var(--global-headings-subheading-text-decoration);
   text-transform: var(--global-headings-subheading-text-transform);
@@ -334,7 +325,6 @@ body {
   font-style: var(--global-content-link-font-style);
   font-weight: var(--global-content-link-font-weight);
   line-height: var(--global-content-link-line-height);
-  letter-spacing: var(--global-content-link-letter-spacing);
   color: var(--global-content-link-color);
   text-decoration: var(--global-content-link-text-decoration);
   text-transform: var(--global-content-link-text-transform);
@@ -361,7 +351,6 @@ body {
   font-style: var(--global-list-font-style);
   font-weight: var(--global-list-font-weight);
   line-height: var(--global-list-line-height);
-  letter-spacing: var(--global-list-letter-spacing);
   color: var(--global-list-color);
   text-decoration: var(--global-list-text-decoration);
   text-transform: var(--global-list-text-transform);
@@ -372,7 +361,6 @@ body {
   font-style: var(--global-content-button-font-style);
   font-weight: var(--global-content-button-font-weight);
   line-height: var(--global-content-button-line-height);
-  letter-spacing: var(--global-content-button-letter-spacing);
   color: var(--global-content-button-color);
   text-decoration: var(--global-content-button-text-decoration);
   text-transform: var(--global-content-button-text-transform);
@@ -410,7 +398,6 @@ body {
   font-style: var(--global-table-font-style);
   font-weight: var(--global-table-font-weight);
   line-height: var(--global-table-line-height);
-  letter-spacing: var(--global-table-letter-spacing);
   text-decoration: var(--global-table-text-decoration);
   text-transform: var(--global-table-text-transform);
 }
@@ -448,7 +435,6 @@ body {
   font-style: var(--global-form-button-font-style);
   font-weight: var(--global-form-button-font-weight);
   line-height: var(--global-form-button-line-height);
-  letter-spacing: var(--global-form-button-letter-spacing);
   color: var(--global-form-button-color);
   text-decoration: var(--global-form-button-text-decoration);
   text-transform: var(--global-form-button-text-transform);
