@@ -12,17 +12,6 @@
   --global-wrap-max-width: 1140px;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles"],
-    "titleI18n": "custom_styles.padding",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 200,
-    "step": 1,
-    "unit": "px",
-    "scope": "global"
-  */
-  --global-wrap-padding: 20px;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles"],
     "titleI18n": "custom_styles.font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
