@@ -351,7 +351,6 @@ body {
   font-size: var(--global-table-font-size);
   font-style: var(--global-table-font-style);
   font-weight: var(--global-table-font-weight);
-  line-height: var(--global-table-line-height);
   text-decoration: var(--global-table-text-decoration);
   text-transform: var(--global-table-text-transform);
 }
