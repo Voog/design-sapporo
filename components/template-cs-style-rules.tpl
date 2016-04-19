@@ -307,7 +307,6 @@ body {
   font-size: var(--global-list-font-size);
   font-style: var(--global-list-font-style);
   font-weight: var(--global-list-font-weight);
-  line-height: var(--global-list-line-height);
   color: var(--global-list-color);
   text-decoration: var(--global-list-text-decoration);
   text-transform: var(--global-list-text-transform);
