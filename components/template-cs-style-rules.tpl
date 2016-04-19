@@ -194,7 +194,6 @@ body {
   font-size: var(--global-footer-body-font-size);
   font-style: var(--global-footer-body-font-style);
   font-weight: var(--global-footer-body-font-weight);
-  line-height: var(--global-footer-body-line-height);
   color: var(--global-footer-body-color);
   text-align: var(--global-footer-body-text-alignment);
   text-decoration: var(--global-footer-body-text-decoration);
@@ -374,7 +373,6 @@ body {
   font-size: var(--global-form-field-font-size);
   font-style: var(--global-form-field-font-style);
   font-weight: var(--global-form-field-font-weight);
-  line-height: var(--global-form-field-line-height);
   color: var(--global-form-field-color);
   text-decoration: var(--global-form-field-text-decoration);
   text-transform: var(--global-form-field-text-transform);
@@ -388,7 +386,6 @@ body {
   font-size: var(--global-form-button-font-size);
   font-style: var(--global-form-button-font-style);
   font-weight: var(--global-form-button-font-weight);
-  line-height: var(--global-form-button-line-height);
   color: var(--global-form-button-color);
   text-decoration: var(--global-form-button-text-decoration);
   text-transform: var(--global-form-button-text-transform);
