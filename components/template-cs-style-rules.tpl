@@ -288,15 +288,11 @@ body {
   color: var(--global-header-body-color);
 }
 .page-content .content-area a, .site-footer .content-area a {
-  padding-right: var(--global-content-link-padding);
-  padding-left: var(--global-content-link-padding);
   font-style: var(--global-content-link-font-style);
   font-weight: var(--global-content-link-font-weight);
-  line-height: var(--global-content-link-line-height);
   color: var(--global-content-link-color);
   text-decoration: var(--global-content-link-text-decoration);
   text-transform: var(--global-content-link-text-transform);
-  background-color: var(--global-content-link-background-color);
 }
 .page-content .content-area a:hover, .site-footer .content-area a:hover {
   font-style: var(--global-content-link-hover-font-style);
@@ -304,13 +300,6 @@ body {
   color: var(--global-content-link-hover-color);
   text-decoration: var(--global-content-link-hover-text-decoration);
   text-transform: var(--global-content-link-hover-text-transform);
-  background-color: var(--global-content-link-hover-background-color);
-}
-.page-content .content-area a {
-  font-size: var(--global-content-link-font-size);
-}
-.page-content .content-area a:hover {
-  font-size: var(--global-content-link-hover-font-size);
 }
 .content-area ul,
 .content-area ol,
