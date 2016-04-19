@@ -97,6 +97,7 @@
     "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
+    "featured": true,
     "scope": "global"
   */
   --global-headings-title-color: black;
@@ -198,6 +199,7 @@
     "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
+    "featured": true,
     "scope": "global"
   */
   --global-headings-heading-color: black;
@@ -299,6 +301,7 @@
     "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
+    "featured": true,
     "scope": "global"
   */
   --global-headings-subheading-color: black;
