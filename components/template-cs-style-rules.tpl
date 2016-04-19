@@ -6,8 +6,6 @@ body {
 
 .wrap {
   max-width: var(--global-wrap-max-width);
-  padding-right: var(--global-wrap-padding);
-  padding-left: var(--global-wrap-padding);
 }
 
 .page-content {
@@ -89,7 +87,6 @@ body {
 .menu-level-1 > .menu-item > a {
   padding-right: var(--global-menu-main-padding);
   padding-left: var(--global-menu-main-padding);
-  font-family: var(--global-menu-main-font-family);
   font-size: var(--global-menu-main-font-size);
   font-style: var(--global-menu-main-font-style);
   font-weight: var(--global-menu-main-font-weight);
@@ -103,7 +100,6 @@ body {
 }
 
 .menu-level-2 .menu-item a {
-  font-family: var(--global-menu-sub-font-family);
   font-size: var(--global-menu-sub-font-size);
   font-style: var(--global-menu-sub-font-style);
   font-weight: var(--global-menu-sub-font-weight);
@@ -171,7 +167,6 @@ body {
   text-transform: var(--global-article-box-hover-text-transform);
 }
 .blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button) .article-title {
-  font-family: var(--global-article-box-font-family);
   font-size: var(--global-article-box-font-size);
   font-style: var(--global-article-box-font-style);
   font-weight: var(--global-article-box-font-weight);
@@ -203,7 +198,6 @@ body {
   color: var(--global-main-color);
 }
 .site-header .content-area {
-  font-family: var(--global-header-body-font-family);
   font-size: var(--global-header-body-font-size);
   font-style: var(--global-header-body-font-style);
   font-weight: var(--global-header-body-font-weight);
@@ -214,7 +208,6 @@ body {
   text-transform: var(--global-header-body-text-transform);
 }
 .page-content .content-area {
-  font-family: var(--global-content-body-font-family);
   font-size: var(--global-content-body-font-size);
   font-style: var(--global-content-body-font-style);
   font-weight: var(--global-content-body-font-weight);
@@ -226,7 +219,6 @@ body {
   text-transform: var(--global-content-body-text-transform);
 }
 .site-footer .content-area {
-  font-family: var(--global-footer-body-font-family);
   font-size: var(--global-footer-body-font-size);
   font-style: var(--global-footer-body-font-style);
   font-weight: var(--global-footer-body-font-weight);
@@ -247,7 +239,6 @@ body {
 .content-area h1 a:hover, .page-content
 .content-area h1 a:hover, .site-footer
 .content-area h1 a:hover {
-  font-family: var(--global-headings-title-font-family);
   font-size: var(--global-headings-title-font-size);
   font-style: var(--global-headings-title-font-style);
   font-weight: var(--global-headings-title-font-weight);
@@ -267,7 +258,6 @@ body {
 .content-area h2:not(.comments-title) a:hover, .page-content
 .content-area h2:not(.comments-title) a:hover, .site-footer
 .content-area h2:not(.comments-title) a:hover {
-  font-family: var(--global-headings-heading-font-family);
   font-size: var(--global-headings-heading-font-size);
   font-style: var(--global-headings-heading-font-style);
   font-weight: var(--global-headings-heading-font-weight);
@@ -317,7 +307,6 @@ body {
 .content-area h6 a:hover, .page-content
 .content-area h6 a:hover, .site-footer
 .content-area h6 a:hover {
-  font-family: var(--global-headings-subheading-font-family);
   font-size: var(--global-headings-subheading-font-size);
   font-style: var(--global-headings-subheading-font-style);
   font-weight: var(--global-headings-subheading-font-weight);
@@ -342,7 +331,6 @@ body {
 .page-content .content-area a, .site-footer .content-area a {
   padding-right: var(--global-content-link-padding);
   padding-left: var(--global-content-link-padding);
-  font-family: var(--global-content-link-font-family);
   font-style: var(--global-content-link-font-style);
   font-weight: var(--global-content-link-font-weight);
   line-height: var(--global-content-link-line-height);
@@ -369,7 +357,6 @@ body {
 .content-area ul,
 .content-area ol,
 .content-area dl {
-  font-family: var(--global-list-font-family);
   font-size: var(--global-list-font-size);
   font-style: var(--global-list-font-style);
   font-weight: var(--global-list-font-weight);
@@ -381,7 +368,6 @@ body {
 }
 .content-area a.custom-btn {
   padding: calc(var(--global-content-button-padding) - 16px) var(--global-content-button-padding) calc(var(--global-content-button-padding) - 17px);
-  font-family: var(--global-content-button-font-family);
   font-size: var(--global-content-button-font-size);
   font-style: var(--global-content-button-font-style);
   font-weight: var(--global-content-button-font-weight);
@@ -420,7 +406,6 @@ body {
 .content-area table a:hover:hover, .site-footer
 .content-area table a:hover, .site-footer
 .content-area table a:hover:hover {
-  font-family: var(--global-table-font-family);
   font-size: var(--global-table-font-size);
   font-style: var(--global-table-font-style);
   font-weight: var(--global-table-font-weight);
@@ -445,7 +430,6 @@ body {
 
 .form_field_textfield,
 .form_field_textarea {
-  font-family: var(--global-form-field-font-family);
   font-size: var(--global-form-field-font-size);
   font-style: var(--global-form-field-font-style);
   font-weight: var(--global-form-field-font-weight);
@@ -460,7 +444,6 @@ body {
 
 .form_submit input {
   padding: calc(var(--global-form-button-padding) - 16px) var(--global-form-button-padding) calc(var(--global-form-button-padding) - 17px);
-  font-family: var(--global-form-button-font-family);
   font-size: var(--global-form-button-font-size);
   font-style: var(--global-form-button-font-style);
   font-weight: var(--global-form-button-font-weight);

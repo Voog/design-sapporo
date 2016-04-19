@@ -16,13 +16,7 @@
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "featured": true,
-    "scope": "global",
-    "boundVariables": [
-      "--global-headings-title-font-family",
-      "--global-headings-heading-font-family",
-      "--global-headings-subheading-font-family",
-      "--global-content-body-font-family"
-    ]
+    "scope": "global"
   */
   --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle

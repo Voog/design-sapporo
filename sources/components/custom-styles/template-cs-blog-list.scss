@@ -43,16 +43,6 @@
 
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-article-box-font-family: $base-font-family;
-
-  /* VoogStyle
-    "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,

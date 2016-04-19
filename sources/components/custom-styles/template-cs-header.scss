@@ -21,16 +21,6 @@
 
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-header-body-font-family: $base-font-family;
-
-  /* VoogStyle
-    "pathI18n": ["custom_styles.header", "custom_styles.title", "custom_styles.normal"],
     "titleI18n": "custom_styles.letter_spacing",
     "editor": "rangePicker",
     "min": 0,
@@ -247,16 +237,6 @@
     "scope": "global"
   */
   --global-menu-main-padding: 5px;
-
-  /* VoogStyle
-    "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-menu-main-font-family: $base-font-family;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
@@ -631,16 +611,6 @@
         "scope": "global"
       */
       --global-menu-main-active-color: rgba($color-black, .8);
-
-  /* VoogStyle
-    "pathI18n": ["custom_styles.header", "custom_styles.sub_menu", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font",
-    "editor": "listPicker",
-    "list": {{ base_font_set }},
-    "featured": true,
-    "scope": "global"
-  */
-  --global-menu-sub-font-family: $base-font-family;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.sub_menu", "custom_styles.normal"],
