@@ -1308,6 +1308,7 @@ a {
 .article-add-ico {
   width: calc(100% - 225px);
   height: auto;
+  max-height: 82px;
   min-width: 22px;
   margin-bottom: 5%;
   opacity: .3;
