@@ -328,33 +328,26 @@ body {
   text-transform: var(--global-content-button-hover-text-transform);
   background-color: var(--global-content-button-hover-background-color);
 }
-.site-header .content-area table th, .site-header .content-area table th:hover, .page-content .content-area table th, .page-content .content-area table th:hover, .site-footer .content-area table th, .site-footer .content-area table th:hover, .site-header
-.content-area table td, .site-header
-.content-area table td:hover, .page-content
-.content-area table td, .page-content
-.content-area table td:hover, .site-footer
-.content-area table td, .site-footer
-.content-area table td:hover, .site-header
-.content-area table a, .site-header
-.content-area table a:hover, .page-content
-.content-area table a, .page-content
-.content-area table a:hover, .site-footer
-.content-area table a, .site-footer
-.content-area table a:hover, .site-header
-.content-area table a:hover, .site-header
-.content-area table a:hover:hover, .page-content
-.content-area table a:hover, .page-content
-.content-area table a:hover:hover, .site-footer
-.content-area table a:hover, .site-footer
-.content-area table a:hover:hover {
+.site-header .content-area table th,
+.site-header .content-area table td,
+.site-header .content-area table a,
+.site-header .content-area table a:hover, .page-content .content-area table th,
+.page-content .content-area table td,
+.page-content .content-area table a,
+.page-content .content-area table a:hover, .site-footer .content-area table th,
+.site-footer .content-area table td,
+.site-footer .content-area table a,
+.site-footer .content-area table a:hover {
   font-size: var(--global-table-font-size);
   font-style: var(--global-table-font-style);
   font-weight: var(--global-table-font-weight);
   text-decoration: var(--global-table-text-decoration);
   text-transform: var(--global-table-text-transform);
 }
-.content-area table td,
-.content-area table th {
+.site-header .content-area td,
+.site-header .content-area th, .page-content .content-area td,
+.page-content .content-area th, .site-footer .content-area td,
+.site-footer .content-area th {
   padding: var(--global-table-padding);
   color: var(--global-table-text-color);
   border-color: var(--global-table-border-color);

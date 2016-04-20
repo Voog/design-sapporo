@@ -443,24 +443,21 @@ body {
     }
   }
 
-  table {
-    th,
-    td,
-    a,
-    a:hover {
+  .site-header &,
+  .page-content &,
+  .site-footer & {
+    table {
+      th,
+      td,
+      a,
+      a:hover {
       // scss-lint:disable NestingDepth
       // scss-lint:disable SelectorDepth
-      .site-header &,
-      .page-content &,
-      .site-footer & {
-        &,
-        &:hover {
-          font-size: var(--global-table-font-size);
-          font-style: var(--global-table-font-style);
-          font-weight: var(--global-table-font-weight);
-          text-decoration: var(--global-table-text-decoration);
-          text-transform: var(--global-table-text-transform);
-        }
+        font-size: var(--global-table-font-size);
+        font-style: var(--global-table-font-style);
+        font-weight: var(--global-table-font-weight);
+        text-decoration: var(--global-table-text-decoration);
+        text-transform: var(--global-table-text-transform);
       }
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
