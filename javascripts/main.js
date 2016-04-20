@@ -10081,8 +10081,29 @@ return jQuery;
   // Detects design editor changes.
   // ===========================================================================
   var detectDesignEditorChanges = function() {
-    document.addEventListener('edicy:customstyles:change', function() {
-      setHeaderMenuMode();
+    document.addEventListener('edicy:customstyles:change', function(event) {
+      var relevantVariables = [
+        '--global-wrap-max-width',
+        '--global-main-font-family',
+        '--global-header-body-font-size',
+        '--global-header-body-font-weight',
+        '--global-header-body-font-style',
+        '--global-header-body-text-decoration',
+        '--global-header-body-text-transform',
+        '--global-menu-main-font-size',
+        '--global-menu-main-font-weight',
+        '--global-menu-main-font-style',
+        '--global-menu-main-text-decoration',
+        '--global-menu-main-text-transform'
+      ];
+
+      var relevantVariableChanged = Object.keys(event.detail.changes).filter(function(variable) {
+       return relevantVariables.indexOf(variable) > -1;
+      }).length > 0;
+
+      if (relevantVariableChanged) {
+        setHeaderMenuMode();
+      }
     });
   };
 
