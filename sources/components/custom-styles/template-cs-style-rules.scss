@@ -453,15 +453,6 @@ body {
 // "Form" type content area.
 //==============================================================================
 // scss-lint:disable SelectorFormat
-
-.content-area {
-  .form,
-  form {
-    padding: var(--form-padding);
-    background-color: var(--form-background-color);
-  }
-}
-
 .form_field_textfield,
 .form_field_textarea {
   font-size: var(--form-field-font-size);
@@ -471,31 +462,6 @@ body {
   text-decoration: var(--form-field-text-decoration);
   text-transform: var(--form-field-text-transform);
   background-color: var(--form-field-background-color);
-  border-color: var(--form-field-border-color);
-  border-width: var(--form-field-border-width);
-}
-
-.form_submit {
-  input {
-    padding: calc(var(--form-button-padding) - 16px) var(--form-button-padding) calc(var(--form-button-padding) - 17px);
-    font-size: var(--form-button-font-size);
-    font-style: var(--form-button-font-style);
-    font-weight: var(--form-button-font-weight);
-    color: var(--form-button-color);
-    text-decoration: var(--form-button-text-decoration);
-    text-transform: var(--form-button-text-transform);
-    background-color: var(--form-button-background-color);
-
-    &:hover {
-      font-size: var(--form-button-hover-font-size);
-      font-style: var(--form-button-hover-font-style);
-      font-weight: var(--form-button-hover-font-weight);
-      text-decoration: var(--form-button-hover-text-decoration);
-      text-transform: var(--form-button-hover-text-transform);
-      color: var(--form-button-hover-color);
-      background-color: var(--form-button-hover-background-color);
-    }
-  }
 }
 
 label {
