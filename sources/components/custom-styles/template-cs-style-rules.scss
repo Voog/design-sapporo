@@ -423,17 +423,13 @@ body {
   .page-content &,
   .site-footer & {
     table {
+      // scss-lint:disable NestingDepth
+      // scss-lint:disable SelectorDepth
       th,
       td,
       a,
       a:hover {
-      // scss-lint:disable NestingDepth
-      // scss-lint:disable SelectorDepth
         font-size: var(--table-font-size);
-        font-style: var(--table-font-style);
-        font-weight: var(--table-font-weight);
-        text-decoration: var(--table-text-decoration);
-        text-transform: var(--table-text-transform);
       }
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
@@ -442,10 +438,7 @@ body {
     td,
     th {
       padding: var(--table-padding);
-      color: var(--table-text-color);
-      border-color: var(--table-border-color);
       border-style: var(--table-border-style);
-      border-width: var(--table-border-width);
     }
   }
 }

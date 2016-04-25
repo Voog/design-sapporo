@@ -323,20 +323,13 @@ body {
 .site-footer .content-area table a,
 .site-footer .content-area table a:hover {
   font-size: var(--table-font-size);
-  font-style: var(--table-font-style);
-  font-weight: var(--table-font-weight);
-  text-decoration: var(--table-text-decoration);
-  text-transform: var(--table-text-transform);
 }
 .site-header .content-area td,
 .site-header .content-area th, .page-content .content-area td,
 .page-content .content-area th, .site-footer .content-area td,
 .site-footer .content-area th {
   padding: var(--table-padding);
-  color: var(--table-text-color);
-  border-color: var(--table-border-color);
   border-style: var(--table-border-style);
-  border-width: var(--table-border-width);
 }
 
 .form_field_textfield,
