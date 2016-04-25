@@ -53,58 +53,6 @@
   --content-body-font-size: 18px;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.text"],
-    "titleI18n": "custom_styles.font_size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
-  --content-body-font-weight: 400;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.content", "custom_styles.text"],
-    "titleI18n": "custom_styles.font_style",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "italic",
-      "off": "normal"
-    },
-    "icon": "italic",
-    "scope": "global"
-  */
-  --content-body-font-style: normal;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.content", "custom_styles.text"],
-    "titleI18n": "custom_styles.text_decoration",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "underline",
-      "off": "none"
-    },
-    "icon": "underline",
-    "scope": "global"
-  */
-  --content-body-text-decoration: none;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.content", "custom_styles.text"],
-    "titleI18n": "custom_styles.text_transform",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "uppercase",
-      "off": "none"
-    },
-    "icon": "uppercase",
-    "scope": "global"
-  */
-  --content-body-text-transform: none;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.content", "custom_styles.text"],
     "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",

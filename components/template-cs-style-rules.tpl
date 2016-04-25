@@ -182,12 +182,9 @@ body {
 }
 .page-content .content-area {
   font-size: var(--content-body-font-size);
-  font-style: var(--content-body-font-style);
-  font-weight: var(--content-body-font-weight);
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);
   text-align: var(--content-body-text-alignment);
-  text-decoration: var(--content-body-text-decoration);
   text-transform: var(--content-body-text-transform);
 }
 .site-footer .content-area {
