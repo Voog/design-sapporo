@@ -222,27 +222,6 @@ body {
 .blog-article-newer {
   &:not(.cms-blog-article-add-button) {
     .blog-listing-page & {
-      .top-inner {
-        opacity: var(--article-box-opacity);
-      }
-
-      &:hover {
-        .top-inner {
-          opacity: var(--article-box-hover-opacity);
-        }
-
-        // scss-lint:disable NestingDepth
-        .article-title {
-          font-size: var(--article-box-hover-font-size);
-          font-style: var(--article-box-hover-font-style);
-          font-weight: var(--article-box-hover-font-weight);
-          color: var(--article-box-hover-color);
-          text-decoration: var(--article-box-hover-text-decoration);
-          text-transform: var(--article-box-hover-text-transform);
-        }
-        // scss-lint:enable NestingDepth
-      }
-
       .article-title {
         font-size: var(--article-box-font-size);
         font-style: var(--article-box-font-style);

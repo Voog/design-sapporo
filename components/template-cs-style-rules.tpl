@@ -128,20 +128,6 @@ body {
   color: var(--secondary-color);
 }
 
-.blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button) .top-inner {
-  opacity: var(--article-box-opacity);
-}
-.blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button):hover .top-inner {
-  opacity: var(--article-box-hover-opacity);
-}
-.blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button):hover .article-title {
-  font-size: var(--article-box-hover-font-size);
-  font-style: var(--article-box-hover-font-style);
-  font-weight: var(--article-box-hover-font-weight);
-  color: var(--article-box-hover-color);
-  text-decoration: var(--article-box-hover-text-decoration);
-  text-transform: var(--article-box-hover-text-transform);
-}
 .blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button) .article-title {
   font-size: var(--article-box-font-size);
   font-style: var(--article-box-font-style);
@@ -185,7 +171,6 @@ body {
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);
   text-align: var(--content-body-text-alignment);
-  text-transform: var(--content-body-text-transform);
 }
 .site-footer .content-area {
   font-size: var(--footer-body-font-size);
