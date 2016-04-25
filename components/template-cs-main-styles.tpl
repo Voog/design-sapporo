@@ -9,7 +9,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-wrap-max-width: 1140px;
+  --wrap-max-width: 1140px;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles"],
     "titleI18n": "custom_styles.font",
@@ -18,7 +18,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  --main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.primary_color",
@@ -26,18 +26,18 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-content-color",
-      "--global-header-body-color",
-      "--global-menu-main-color",
-      "--global-menu-sub-color",
-      "--global-content-body-color",
-      "--global-list-color",
-      "--global-table-text-color",
-      "--global-article-box-color",
-      "--global-footer-body-color"
+      "--content-color",
+      "--header-body-color",
+      "--menu-main-color",
+      "--menu-sub-color",
+      "--content-body-color",
+      "--list-color",
+      "--table-text-color",
+      "--article-box-color",
+      "--footer-body-color"
     ]
   */
-  --global-main-color: rgba(0, 0, 0, 0.8);
+  --main-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.secondary_color",
@@ -45,16 +45,16 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-header-body-hover-color",
-      "--global-headings-title-color",
-      "--global-headings-heading-color",
-      "--global-headings-subheading-color",
-      "--global-content-link-color",
-      "--global-form-field-color",
-      "--global-footer-link-color"
+      "--header-body-hover-color",
+      "--headings-title-color",
+      "--headings-heading-color",
+      "--headings-subheading-color",
+      "--content-link-color",
+      "--form-field-color",
+      "--footer-link-color"
     ]
   */
-  --global-secondary-color: black;
+  --secondary-color: black;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.background_color",
@@ -62,5 +62,5 @@
     "featured": true,
     "scope": "global"
   */
-  --global-body-background-color: rgba(0, 0, 0, 0.02);
+  --body-background-color: rgba(0, 0, 0, 0.02);
 }

@@ -29,7 +29,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-table-padding: 10px;
+  --table-padding: 10px;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -42,7 +42,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-table-border-width: 1px;
+  --table-border-width: 1px;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -52,7 +52,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-table-border-style: solid;
+  --table-border-style: solid;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -61,7 +61,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-table-border-color: rgba($color-alto, 1);
+  --table-border-color: rgba($color-alto, 1);
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -73,7 +73,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-table-font-size: $base-font-size;
+  --table-font-size: $base-font-size;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -87,7 +87,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --global-table-font-weight: 400;
+  --table-font-weight: 400;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -101,7 +101,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --global-table-font-style: normal;
+  --table-font-style: normal;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -115,7 +115,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --global-table-text-decoration: none;
+  --table-text-decoration: none;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -129,7 +129,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-table-text-transform: none;
+  --table-text-transform: none;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -138,7 +138,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --global-table-text-color: rgba($color-black, .8);
+  --table-text-color: rgba($color-black, .8);
 
   // scss-lint:enable Comment, Indentation
 }

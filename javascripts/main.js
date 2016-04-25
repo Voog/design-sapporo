@@ -10083,18 +10083,18 @@ return jQuery;
   var detectDesignEditorChanges = function() {
     document.addEventListener('edicy:customstyles:change', function(event) {
       var relevantVariables = [
-        '--global-wrap-max-width',
-        '--global-main-font-family',
-        '--global-header-body-font-size',
-        '--global-header-body-font-weight',
-        '--global-header-body-font-style',
-        '--global-header-body-text-decoration',
-        '--global-header-body-text-transform',
-        '--global-menu-main-font-size',
-        '--global-menu-main-font-weight',
-        '--global-menu-main-font-style',
-        '--global-menu-main-text-decoration',
-        '--global-menu-main-text-transform'
+        '--wrap-max-width',
+        '--main-font-family',
+        '--header-body-font-size',
+        '--header-body-font-weight',
+        '--header-body-font-style',
+        '--header-body-text-decoration',
+        '--header-body-text-transform',
+        '--menu-main-font-size',
+        '--menu-main-font-weight',
+        '--menu-main-font-style',
+        '--menu-main-text-decoration',
+        '--menu-main-text-transform'
       ];
 
       var relevantVariableChanged = Object.keys(event.detail.changes).filter(function(variable) {

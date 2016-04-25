@@ -7,7 +7,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-article-box-width: 33.3%;
+  --article-box-width: 33.3%;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box"],
     "titleI18n": "custom_styles.image_radius",
@@ -18,7 +18,7 @@
     "unit": "%",
     "scope": "global"
   */
-  --global-article-box-image-radius: 0;
+  --article-box-image-radius: 0;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.line_height",
@@ -29,7 +29,7 @@
     "unit": "",
     "scope": "global"
   */
-  --global-article-box-line-height: 1.2;
+  --article-box-line-height: 1.2;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.opacity",
@@ -40,7 +40,7 @@
     "unit": "",
     "scope": "global"
   */
-  --global-article-box-opacity: 1;
+  --article-box-opacity: 1;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.opacity",
@@ -51,7 +51,7 @@
     "unit": "",
     "scope": "global"
   */
-  --global-article-box-hover-opacity: .8;
+  --article-box-hover-opacity: .8;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.size",
@@ -63,10 +63,10 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-article-box-hover-font-size"
+      "--article-box-hover-font-size"
     ]
   */
-  --global-article-box-font-size: 18px;
+  --article-box-font-size: 18px;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.size",
@@ -77,7 +77,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-article-box-hover-font-size: 18px;
+  --article-box-hover-font-size: 18px;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_size",
@@ -90,10 +90,10 @@
     "icon": "bold",
     "scope": "global",
     "boundVariables": [
-      "--global-article-box-hover-font-weight"
+      "--article-box-hover-font-weight"
     ]
   */
-  --global-article-box-font-weight: 400;
+  --article-box-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.font_size",
@@ -106,7 +106,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --global-article-box-hover-font-weight: 400;
+  --article-box-hover-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_style",
@@ -119,10 +119,10 @@
     "icon": "italic",
     "scope": "global",
     "boundVariables": [
-      "--global-article-box-hover-font-style"
+      "--article-box-hover-font-style"
     ]
   */
-  --global-article-box-font-style: normal;
+  --article-box-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.font_style",
@@ -135,7 +135,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --global-article-box-hover-font-style: normal;
+  --article-box-hover-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_decoration",
@@ -148,10 +148,10 @@
     "icon": "underline",
     "scope": "global",
     "boundVariables": [
-      "--global-article-box-hover-text-decoration"
+      "--article-box-hover-text-decoration"
     ]
   */
-  --global-article-box-text-decoration: none;
+  --article-box-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.text_decoration",
@@ -164,7 +164,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --global-article-box-hover-text-decoration: none;
+  --article-box-hover-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_transform",
@@ -177,10 +177,10 @@
     "icon": "uppercase",
     "scope": "global",
     "boundVariables": [
-      "--global-article-box-hover-text-transform"
+      "--article-box-hover-text-transform"
     ]
   */
-  --global-article-box-text-transform: none;
+  --article-box-text-transform: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.text_transform",
@@ -193,7 +193,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-article-box-hover-text-transform: none;
+  --article-box-hover-text-transform: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.normal"],
     "titleI18n": "custom_styles.color",
@@ -202,10 +202,10 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
-      "--global-article-box-hover-color"
+      "--article-box-hover-color"
     ]
   */
-  --global-article-box-color: rgba(0, 0, 0, 0.8);
+  --article-box-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "pathI18n": ["custom_styles.blog", "custom_styles.article_box", "custom_styles.hover"],
     "titleI18n": "custom_styles.color",
@@ -213,5 +213,5 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --global-article-box-hover-color: rgba(0, 0, 0, 0.8);
+  --article-box-hover-color: rgba(0, 0, 0, 0.8);
 }
