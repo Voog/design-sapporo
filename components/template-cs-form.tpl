@@ -73,7 +73,7 @@
   --form-field-color: black;
   /* VoogStyle
     "pathI18n": ["custom_styles.form"],
-    "titleI18n": "custom_styles.field_bg_color",
+    "titleI18n": "custom_styles.background_color",
     "editor": "colorPicker",
     "scope": "global"
   */
