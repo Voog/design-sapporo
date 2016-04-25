@@ -42,10 +42,9 @@
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
     "titleI18n": "custom_styles.size",
-    "type": "button",
     "editor": "rangePicker",
     "min": 8,
-    "max": 80,
+    "max": 100,
     "unit": "px",
     "scope": "global"
   */
