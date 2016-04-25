@@ -1881,6 +1881,7 @@ a {
   font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
+  line-height: 1.4;
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.1);
   border-style: solid;

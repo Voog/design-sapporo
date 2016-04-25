@@ -40,10 +40,10 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-footer.tpl",
-      "layout_name": "site-footer",
-      "title": "site-footer",
-      "titleI18n": "site-footer"
+      "file": "components/site-header.tpl",
+      "layout_name": "site-header",
+      "title": "site-header",
+      "titleI18n": "site-header"
     },
     {
       "content_type": "component",
@@ -160,18 +160,18 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-article-comments.tpl",
-      "layout_name": "blog-article-comments",
-      "title": "blog-article-comments",
-      "titleI18n": "blog-article-comments"
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer",
+      "titleI18n": "site-footer"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-header.tpl",
-      "layout_name": "site-header",
-      "title": "site-header",
-      "titleI18n": "site-header"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments",
+      "titleI18n": "blog-article-comments"
     },
     {
       "content_type": "component",
@@ -187,6 +187,13 @@
       "file": "components/template-cs-blog-list.tpl",
       "layout_name": "template-cs-blog-list",
       "title": "template-cs-blog-list"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-button.tpl",
+      "layout_name": "template-cs-button",
+      "title": "template-cs-button"
     },
     {
       "content_type": "component",

@@ -398,7 +398,8 @@ body {
     text-transform: var(--list-text-transform);
   }
 
-  a.custom-btn {
+  a.custom-btn,
+  .form_submit input {
     padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
     font-size: var(--content-button-font-size);
     font-style: var(--content-button-font-style);
