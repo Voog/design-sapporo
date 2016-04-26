@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles"],
-    "titleI18n": "custom_styles.maximum_width",
+    "pathI18n": ["main_styles"],
+    "titleI18n": "maximum_width",
     "editor": "rangePicker",
     "min": 600,
     "max": 2000,
@@ -11,8 +11,8 @@
   */
   --wrap-max-width: 1140px;
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles"],
-    "titleI18n": "custom_styles.font",
+    "pathI18n": ["main_styles"],
+    "titleI18n": "font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "featured": true,
@@ -20,8 +20,8 @@
   */
   --main-font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.primary_color",
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "primary_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
@@ -39,8 +39,8 @@
   */
   --main-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.secondary_color",
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "secondary_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
@@ -56,8 +56,8 @@
   */
   --secondary-color: black;
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.background_color",
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "background_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global"

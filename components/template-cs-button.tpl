@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.padding",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "padding",
     "editor": "rangePicker",
     "min": 0,
     "max": 200,
@@ -11,8 +11,8 @@
   */
   --content-button-padding: 20px;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.size",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
     "max": 100,
@@ -25,8 +25,8 @@
   */
   --content-button-font-size: 18px;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.background_color",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "background_color",
     "editor": "colorPicker",
     "scope": "global",
     "boundVariables": [
@@ -35,16 +35,16 @@
   */
   --content-button-background-color: transparent;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.hover"],
-    "titleI18n": "custom_styles.background_color",
+    "pathI18n": ["button", "hover"],
+    "titleI18n": "background_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global"
   */
   --content-button-hover-background-color: transparent;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font_size",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -59,8 +59,8 @@
   */
   --content-button-font-weight: 400;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.hover"],
-    "titleI18n": "custom_styles.font_size",
+    "pathI18n": ["button", "hover"],
+    "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -72,8 +72,8 @@
   */
   --content-button-hover-font-weight: 400;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font_style",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -88,8 +88,8 @@
   */
   --content-button-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.hover"],
-    "titleI18n": "custom_styles.font_style",
+    "pathI18n": ["button", "hover"],
+    "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -101,8 +101,8 @@
   */
   --content-button-hover-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.text_decoration",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -117,8 +117,8 @@
   */
   --content-button-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.hover"],
-    "titleI18n": "custom_styles.text_decoration",
+    "pathI18n": ["button", "hover"],
+    "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -130,8 +130,8 @@
   */
   --content-button-hover-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.text_transform",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -146,8 +146,8 @@
   */
   --content-button-text-transform: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.hover"],
-    "titleI18n": "custom_styles.text_transform",
+    "pathI18n": ["button", "hover"],
+    "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -159,8 +159,8 @@
   */
   --content-button-hover-text-transform: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.normal"],
-    "titleI18n": "custom_styles.color",
+    "pathI18n": ["button", "normal"],
+    "titleI18n": "color",
     "type": "button",
     "editor": "colorPicker",
     "featured": true,
@@ -171,8 +171,8 @@
   */
   --content-button-color: rgba(0, 0, 0, 0.5);
   /* VoogStyle
-    "pathI18n": ["custom_styles.button", "custom_styles.hover"],
-    "titleI18n": "custom_styles.color",
+    "pathI18n": ["button", "hover"],
+    "titleI18n": "color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global"
