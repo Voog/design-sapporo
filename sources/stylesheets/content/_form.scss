@@ -97,7 +97,7 @@
 .form_submit {
   input {
     padding: 4px 20px 3px;
-    font-family: $base-font-family;
+    font-family: inherit;
     font-size: $base-font-size;
     color: rgba($color-black, .5);
     cursor: pointer;
