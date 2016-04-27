@@ -28,7 +28,7 @@
 .form_field_textarea {
   width: 30%;
   padding: 4px 7px 2px;
-  font-family: $base-font-family;
+  font-family: inherit;
   font-size: $base-font-size;
   line-height: 1.5;
   color: rgba($color-black, 1);

@@ -1993,7 +1993,7 @@ a {
 .form_field_textarea {
   width: 30%;
   padding: 4px 7px 2px;
-  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 1.5;
   color: black;
