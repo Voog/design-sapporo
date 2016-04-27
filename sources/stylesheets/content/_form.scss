@@ -28,16 +28,17 @@
 .form_field_textarea {
   width: 30%;
   padding: 4px 7px 2px;
-  font-family: $font-base;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: $base-font-size;
   line-height: 1.5;
-  color: rgba($color-black, .87);
+  color: rgba($color-black, 1);
   background-color: rgba($color-white, 1);
   border-color: rgba($color-black, .05);
   border-style: solid;
   border-width: 1px;
   border-radius: 0;
   outline: none;
+  opacity: .87;
   box-sizing: border-box;
 }
 
@@ -96,8 +97,8 @@
 .form_submit {
   input {
     padding: 4px 20px 3px;
-    font-family: $font-base;
-    font-size: 18px;
+    font-family: inherit;
+    font-size: $base-font-size;
     color: rgba($color-black, .5);
     cursor: pointer;
     background-color: transparent;
@@ -198,7 +199,8 @@ label {
       // scss-lint:disable NestingDepth
       + .form_control_indicator {
         &::before {
-          background-color: rgba($color-black, .84);
+          background-color: rgba($color-black, 1);
+          opacity: .84;
         }
       }
       // scss-lint:enable NestingDepth

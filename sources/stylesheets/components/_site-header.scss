@@ -1,4 +1,6 @@
-// Header of the site.
+// =============================================================================
+// SITE HEADER
+// =============================================================================
 .site-header {
   &.is-loading {
     visibility: hidden;
@@ -34,11 +36,6 @@
 
   .header-menu-compact & {
     position: relative;
-  }
-
-  .blog-listing-page & {
-    margin-right: 20px;
-    margin-left: 20px;
   }
 
   .header-title {

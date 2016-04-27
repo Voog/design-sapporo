@@ -1,4 +1,6 @@
+// =============================================================================
 // Navigation menus.
+// =============================================================================
 .menu-btn {
   @include size(25px);
   position: relative;
@@ -23,11 +25,7 @@
   }
 
   &:hover {
-    border-color: rgba($color-black, .5);
-
-    &::before {
-      background-color: rgba($color-black, .5);
-    }
+    opacity: .5;
   }
 
   .menu-main-opened & {
@@ -55,7 +53,7 @@
   padding: 12px 15px;
   font-size: 0;
   text-align: right;
-  background-color: rgba($color-white, 1);
+  background-color: transparent;
   border-style: none;
   stroke: rgba($color-black, .5);
 
@@ -97,21 +95,22 @@
     // scss-lint:disable NestingDepth
     &:hover {
       > a {
-        color: rgba($color-black, .75);
+        opacity: .75;
       }
     }
     // scss-lint:enable NestingDepth
   }
 
   a {
-    color: rgba($color-black, .5);
+    color: rgba($color-black, 1);
+    opacity: .5;
 
     &:hover {
-      color: rgba($color-black, .75);
+      opacity: .8;
     }
 
     &.selected {
-      color: rgba($color-black, 1);
+      opacity: 1;
     }
 
     &.untranslated {
@@ -251,8 +250,6 @@
     position: absolute;
     z-index: 1;
     display: none;
-    padding-right: 9px;
-    padding-left: 9px;
     margin-left: -5px;
     background-color: rgba($color-white, .95);
 
@@ -280,8 +277,8 @@
       }
 
       .header-menu-wide & {
-        padding-right: 6px;
-        padding-left: 6px;
+        padding-right: 15px;
+        padding-left: 15px;
       }
     }
   }

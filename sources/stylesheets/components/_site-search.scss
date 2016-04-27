@@ -1,3 +1,6 @@
+// =============================================================================
+// SITE SEARCH
+// =============================================================================
 .site-search-btn {
   @include button;
   padding: 6px 5px 4px;
@@ -14,13 +17,15 @@
   &:hover,
   .site-search-opened & {
     .search-ico {
-      fill: rgba($color-black, .75);
+      opacity: .75;
+      fill: rgba($color-black, 1);
     }
   }
 }
 
 .search-ico {
-  fill: rgba($color-black, .5);
+  opacity: .5;
+  fill: rgba($color-black, 1);
 }
 
 .site-search {
@@ -79,6 +84,7 @@
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
+  color: rgba($color-black, 1);
   border-color: rgba($color-black, .1);
   border-style: solid;
   border-width: 1px;
@@ -111,14 +117,15 @@
   bottom: 7px;
   display: none;
   cursor: pointer;
-  fill: rgba($color-black, .2);
+  opacity: .2;
+  fill: rgba($color-black, 1);
 
   .not-empty & {
     display: block;
   }
 
   &:hover {
-    fill: rgba($color-black, .5);
+    opacity: .5;
   }
 }
 
@@ -202,7 +209,7 @@
 
 
     a {
-      font-size: 18px;
+      font-size: $base-font-size;
       font-weight: 500;
       color: rgba($color-black, 1);
     }

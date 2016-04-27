@@ -63,6 +63,7 @@
     // sideclick functionality. Use the class "js-prevent-sideclick" on elements
     // that shouldn't trigger the sideclick events.
     $(document).on('click touchstart', function(event) {
+      // TODO: Prevent sidemenu closing.
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         var $html = $('html');
 
@@ -568,6 +569,36 @@
   };
 
   // ===========================================================================
+  // Detects design editor changes.
+  // ===========================================================================
+  var detectDesignEditorChanges = function() {
+    document.addEventListener('edicy:customstyles:change', function(event) {
+      var relevantVariables = [
+        '--wrap-max-width',
+        '--main-font-family',
+        '--header-body-font-size',
+        '--header-body-font-weight',
+        '--header-body-font-style',
+        '--header-body-text-decoration',
+        '--header-body-text-transform',
+        '--menu-main-font-size',
+        '--menu-main-font-weight',
+        '--menu-main-font-style',
+        '--menu-main-text-decoration',
+        '--menu-main-text-transform'
+      ];
+
+      var relevantVariableChanged = Object.keys(event.detail.changes).filter(function(variable) {
+       return relevantVariables.indexOf(variable) > -1;
+      }).length > 0;
+
+      if (relevantVariableChanged) {
+        setHeaderMenuMode();
+      }
+    });
+  };
+
+  // ===========================================================================
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   // ===========================================================================
@@ -597,6 +628,7 @@
     removeFormInputErrorHighlight();
     autoSizeFormCommentArea();
     preventMenuMainLinkTouchInit();
+    detectDesignEditorChanges();
 
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderContentAreaWidthCalculation();

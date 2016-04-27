@@ -1,10 +1,14 @@
-// Site's main menu.
+// =============================================================================
+// SITE'S MAIN MENU
+// =============================================================================
 .menu-level-1 {
   > .menu-item {
     &:not(:last-child) {
+      // scss-lint:disable NestingDepth
       .header-menu-wide & {
         margin-right: 15px;
       }
+      // scss-lint:enable NestingDepth
     }
 
     &.item-current {
@@ -33,7 +37,6 @@
       padding-left: 5px;
       letter-spacing: .2em;
       text-transform: uppercase;
-      opacity: .8;
 
       .header-menu-compact & {
         padding: 12px 25px 11px 15px;

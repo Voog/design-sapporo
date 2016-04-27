@@ -8,6 +8,7 @@
   vertical-align: top;
   margin-right: 5px;
   flex: 1 0 auto;
+  color: rgba($color-black, 1);
 
   .language-flags-enabled & {
     width: 1px;
@@ -49,7 +50,7 @@
 
   &:hover {
     .menu-language-btn-circle {
-      stroke: rgba($color-black, .6);
+      opacity: .6;
     }
   }
 
@@ -62,7 +63,8 @@
   position: absolute;
   top: 50%;
   margin-top: -4px;
-  stroke: rgba($color-black, .3);
+  opacity: .3;
+  stroke: rgba($color-black, 1);
   fill: none;
 }
 
@@ -123,10 +125,6 @@
       &::after {
         top: 8px;
         right: 26px;
-      }
-
-      &:hover {
-        color: rgba($color-black, .6);
       }
 
       &.selected {
@@ -192,11 +190,12 @@
     width: 100%;
     font-family: inherit;
     font-size: 11px;
+    color: rgba($color-black, 1);
     text-align: right;
     border-top: 1px solid rgba($color-black, .05);
 
     &:hover {
-      color: rgba($color-black, .75);
+      opacity: .75;
     }
 
     .language-flags-disabled & {
