@@ -9789,9 +9789,9 @@ return jQuery;
     }
   };
 
-  var bindCustomContentFormats = function() {
+  var bindCustomTexteditorStyles = function(buttonTranslation) {
     window.edy = window.edy || [];
-    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+    edy.push(['texteditorStyles', {name: buttonTranslation, tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
   };
 
   // TODO: Convert these fallbacks to one function.
@@ -10145,7 +10145,6 @@ return jQuery;
      }
 
      if (editmode()) {
-       bindCustomContentFormats();
        bindHeaderTitleChange();
      } else {
        wrapContentAreaTables();
@@ -10164,7 +10163,8 @@ return jQuery;
     bindSiteSearch: bindSiteSearch,
     bindBgPickers: bindBgPickers,
     bindImgDropAreas: bindImgDropAreas,
-    bindArticleImageCropToggle: bindArticleImageCropToggle
+    bindArticleImageCropToggle: bindArticleImageCropToggle,
+    bindCustomTexteditorStyles: bindCustomTexteditorStyles
   });
 
   // ===========================================================================

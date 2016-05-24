@@ -12,5 +12,10 @@ Adds template specific JS tools.
     // Initiates the language flags state toggleing.
     //==========================================================================
     template.bindLanguageFlagsToggle();
+
+    //==========================================================================
+    // Binds custom styles under wysihtml editor.
+    //==========================================================================
+    template.bindCustomTexteditorStyles('{{ "button" | lc: editor_locale }}');
   </script>
 {% endeditorjsblock %}
