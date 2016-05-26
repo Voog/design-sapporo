@@ -1,11 +1,9 @@
 {
   "name": "voog-design-sapporo",
   "devDependencies": {
-    "bourbon": "~4.2.5",
-    "textarea-autosize": "^0.4.1",
-    "jquery_lazyload": "jquery.lazyload#^1.9.7"
-  },
-  "dependencies": {
-    "jquery": "~2.1.4"
+    "bourbon": "^4.2.7",
+    "jquery": "^2.2.4",
+    "textarea-autosize": "^0.4.2",
+    "jquery_lazyload": "^1.9.1"
   }
 }
