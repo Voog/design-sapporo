@@ -1380,7 +1380,6 @@ a {
 }
 .article-top .top-inner {
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   word-break: break-word;
@@ -1508,7 +1507,6 @@ a {
 
 .article-title {
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   word-break: break-word;
@@ -1631,7 +1629,6 @@ a {
 
 .content-area {
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   word-break: break-word;
@@ -1834,7 +1831,6 @@ a {
 .content-area table,
 .content-area form {
   -webkit-hyphens: none;
-     -moz-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
   word-break: normal;
