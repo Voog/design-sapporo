@@ -91,27 +91,8 @@
 }
 
 .menu-public {
-  > .menu-item {
-    // scss-lint:disable NestingDepth
-    &:hover {
-      > a {
-        opacity: .75;
-      }
-    }
-    // scss-lint:enable NestingDepth
-  }
-
   a {
     color: rgba($color-black, 1);
-    opacity: .5;
-
-    &:hover {
-      opacity: .8;
-    }
-
-    &.selected {
-      opacity: 1;
-    }
 
     &.untranslated {
       color: rgba($color-error, 1);
@@ -134,6 +115,7 @@
 .menu-popover {
   position: absolute;
   display: none;
+  margin-bottom: 60px;
   background-color: rgba($color-white, 1);
   border-color: rgba($color-black, .1);
   border-style: solid;

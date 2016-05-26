@@ -5,6 +5,15 @@
   .menu-item {
     a {
       display: block;
+      opacity: .5;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &.selected {
+        opacity: 1;
+      }
 
       .header-menu-compact & {
         padding: 12px 15px;

@@ -3,6 +3,12 @@
 // =============================================================================
 .menu-level-1 {
   > .menu-item {
+    &:hover {
+      > a {
+        opacity: .75;
+      }
+    }
+
     &:not(:last-child) {
       // scss-lint:disable NestingDepth
       .header-menu-wide & {
@@ -37,6 +43,16 @@
       padding-left: 5px;
       letter-spacing: .2em;
       text-transform: uppercase;
+
+      opacity: .5;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &.selected {
+        opacity: 1;
+      }
 
       .header-menu-compact & {
         padding: 12px 25px 11px 15px;
