@@ -2,21 +2,11 @@
   {% unless site.root_item.hidden? %}
     <li class="menu-item{% if site.root_item.selected? %} item-current{% endif %} js-prevent-link-click">
       {% menulink site.root_item %}
-
-      {% if blog_pages_size == 1 %}
-        {% include "blog-listing-tags" with blog_first.path %}
-      {% endif %}
     </li>
   {% endunless %}
 
   {% for level_1 in site.visible_menuitems %}
-    {% if level_1.blog? %}
-      {% if blog_pages_size > 1 %}
-        {% include "menu-level-1-link" %}
-      {% endif %}
-    {% else %}
-      {% include "menu-level-1-link" %}
-    {% endif %}
+    {% include "menu-level-1-link" %}
   {% endfor %}
 
   {% if editmode %}
