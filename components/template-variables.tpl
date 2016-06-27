@@ -38,6 +38,19 @@
     {% assign menu_current = true %}
   {% endif %}
 
+  {% if site.root_item.blog? %}
+    {% assign blog_pages_size = 1 %}
+  {% else %}
+    {% assign blog_pages_size = 0 %}
+  {% endif %}
+
+  {% for item in site.menuitems_with_hidden %}
+    {% if item.blog? %}
+      {% assign blog_first = item %}
+      {% assign blog_pages_size = blog_pages_size | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
   {% comment %}=================================================================
   || Design editor variables.
   ============================================================= {% endcomment %}
