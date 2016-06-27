@@ -12,7 +12,7 @@
   {% menulink level_1 %}
 
   {% if level_1.blog? %}
-    {% include "blog-listing-tags" page_path: level_1.path %}
+    {% include "blog-listing-tags" with level_1.path %}
   {% else %}
     {% include "menu-level-2" %}
   {% endif %}
