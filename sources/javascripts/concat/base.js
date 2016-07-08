@@ -443,7 +443,7 @@
   // ===========================================================================
   // Binds editmode image drop areas.
   // ===========================================================================
-  var bindImgDropAreas = function(placeholderText) {
+  var bindImgDropAreas = function() {
     $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
           $article = $imgDropAreaTarget.closest('.js-blog-article-newer'),
@@ -457,7 +457,6 @@
       var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
         positionable: false,
         target_width: 1280,
-        placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
         removeBtn: '',
 
         change: function(data) {
