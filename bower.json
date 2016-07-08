@@ -1,8 +1,14 @@
 {
-  "name": "voog-design-sapporo",
+  "name": "voog-design-firenze",
+  "homepage": "https://github.com/Voog/design-sapporo",
+  "authors": [
+    "Kaspar Naaber <kaspar@voog.com>"
+  ],
+  "description": "The Sapporo design template for Voog",
+  "license": "MIT",
   "devDependencies": {
     "bourbon": "^4.2.7",
-    "jquery": "^2.2.4",
+    "jquery": "^3.1.0",
     "textarea-autosize": "^0.4.2",
     "jquery_lazyload": "^1.9.1"
   }
