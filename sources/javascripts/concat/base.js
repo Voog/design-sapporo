@@ -93,10 +93,10 @@
         $html.removeClass('menu-main-opened site-search-opened');
 
         setTimeout(function(){
-          handleMenuLanguagePopoverPositioning();
+          positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
         }, 300);
       } else if ($html.hasClass('menu-language-popover-open')) {
-        handleMenuLanguagePopoverPositioning();
+        positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
       }
     });
 
@@ -216,14 +216,14 @@
   };
 
   // ===========================================================================
-  // Positions language menu popover under the toggleing button.
+  // Positions popover menus under the toggleing button.
   // ===========================================================================
-  var handleMenuLanguagePopoverPositioning = function(button) {
-    var $offsetItem = $('.js-menu-language-offset-item');
+  var positionPopoverMenu = function(popoverButton, popoverMenu) {
+    var $popoverButton = $(popoverButton);
 
-    $('.js-menu-language-popover').css({
-      top: Math.round($offsetItem.offset().top + $offsetItem.outerHeight()),
-      right: Math.round($(window).width() - $offsetItem.offset().left - $offsetItem.outerWidth())
+    $(popoverMenu).css({
+      top: Math.round($popoverButton.offset().top + $popoverButton.outerHeight()),
+      right: Math.round($(window).width() - $popoverButton.offset().left - $popoverButton.outerWidth())
     });
   };
 
@@ -252,7 +252,7 @@
         siteData.set("language_flags_enabled", false);
       }
 
-      handleMenuLanguagePopoverPositioning();
+      positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
     });
   };
 
@@ -281,7 +281,7 @@
         siteData.set('language_menu_mode', 'popover');
       }
 
-      handleMenuLanguagePopoverPositioning();
+      positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
     });
   };
 
@@ -631,9 +631,11 @@
   // window.
   // ===========================================================================
   var initWindowResize = function() {
-    if (languageMenuPopoverOpen()) {
-      $(window).resize(debounce(handleMenuLanguagePopoverPositioning, 100));
-    }
+    $(window).resize(debounce(function() {
+      if (languageMenuPopoverOpen()) {
+        positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
+      }
+    }, 25));
 
     $(window).resize(debounce(setHeaderMenuMode, 25));
   };
