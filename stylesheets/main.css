@@ -775,25 +775,28 @@ a {
   padding: 5px 9px;
 }
 
-.menu-language-btn {
+.language-menu-mode-popover .menu-language-btn {
   margin: 0;
   background-color: transparent;
   border-style: none;
   cursor: pointer;
   display: inline-block;
-  vertical-align: top;
-  margin-right: 5px;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  margin-right: 5px;
   color: black;
+  vertical-align: top;
 }
-.menu-language-btn:focus {
+.language-menu-mode-popover .menu-language-btn:focus {
   outline: none;
 }
-.menu-language-btn::-moz-focus-inner {
+.language-menu-mode-popover .menu-language-btn::-moz-focus-inner {
   padding: 0;
   border-style: none;
+}
+.language-menu-mode-list .menu-language-btn {
+  display: none;
 }
 .language-flags-enabled .menu-language-btn {
   width: 1px;
@@ -866,14 +869,20 @@ a {
 .publicmode.language-flags-enabled .menu-language.menu-popover {
   margin-top: -44px;
 }
+.language-menu-mode-list .menu-language.menu-language-popover {
+  display: none;
+}
 .menu-language-popover-open .menu-language {
   z-index: 10;
   display: block;
 }
-.editmode .menu-language .menu-public {
+.editmode.language-menu-mode-popover .menu-language .menu-public {
   padding-top: 7px;
 }
-.publicmode .menu-language .menu-public {
+.editmode.language-menu-mode-list .menu-language .menu-public {
+  padding-bottom: 1px;
+}
+.publicmode.language-menu-mode-popover .menu-language .menu-public {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -944,10 +953,10 @@ a {
 .language-flags-disabled .menu-language-options .language-flags-disable {
   display: none;
 }
-.language-menu-mode-popover .menu-language-options .language-menu-mode-list {
+.language-menu-mode-popover .menu-language-options .language-menu-mode-list-enable {
   display: none;
 }
-.language-menu-mode-list .menu-language-options .language-menu-mode-popover {
+.language-menu-mode-list .menu-language-options .language-menu-mode-popover-enable {
   display: none;
 }
 

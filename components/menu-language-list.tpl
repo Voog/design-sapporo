@@ -1,5 +1,5 @@
-<nav class="menu-language menu-language-popover menu-popover js-menu-language-popover js-prevent-sideclick">
-  <ul class="menu menu-vertical menu-public">
+<nav class="menu-language menu-list js-menu-language-list">
+  <ul class="menu menu-horizontal menu-public">
     {% for language in site.languages %}
       <li class="menu-item">
         <a class="ico-flags ico-flag-{{ language.code }}{% if language.selected? %} selected{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
@@ -12,6 +12,7 @@
     {% endfor %}
   </ul>
 
+  {% comment %}
   {% if editmode %}
     <ul class="menu menu-vertical menu-cms">
       {% if editmode %}
@@ -28,11 +29,12 @@
       </li>
 
       <li class="menu-item">
-        <button class="js-toggle-language-menu-mode">
-          <span class="language-menu-mode-list-enable">{{ "list_lang_menu" | lc: editor_locale }}</span>
-          <span class="language-menu-mode-popover-enable">{{ "popover_lang_menu" | lc: editor_locale }}</span>
+        <button class="js-toggle-language-menu-style">
+          <span class="language-flags-list">{{ "list_lang_menu" | lc: editor_locale }}</span>
+          <span class="language-flags-popover">{{ "popover_lang_menu" | lc: editor_locale }}</span>
         </button>
       </li>
     </ul>
   {% endif %}
+  {% endcomment %}
 </nav>

@@ -28,6 +28,16 @@
     {% assign language_menu_mode = "language-menu-mode-list" %}
   {% endif %}
 
+  {% if editmode %}
+    {% assign show_language_menu_popover = true %}
+  {% else %}
+    {% if language_menu_mode == "language-menu-mode-popover" and site.has_many_languages? %}
+      {% assign show_language_menu_popover = true %}
+    {% else %}
+      {% assign show_language_menu_popover = false %}
+    {% endif %}
+  {% endif %}
+
   {% comment %}Detects current page visible childnen size.{% endcomment %}
   {% assign page_children_size = page.menuitem.visible_children | size %}
 

@@ -31,7 +31,9 @@
       </div>
     </div>
 
-    {% include "menu-language-popover" %}
+    {% if show_language_menu_popover %}
+      {% include "menu-language-popover" %}
+    {% endif %}
 
     {% include "template-javascripts" %}
   </body>

@@ -3,12 +3,18 @@
 // Gerneral menu styles are located in "general/_menus.scss" partial.
 //==============================================================================
 .menu-language-btn {
-  @include button;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 5px;
-  flex: 1 0 auto;
-  color: rgba($color-black, 1);
+  .language-menu-mode-popover & {
+    @include button;
+    display: inline-block;
+    flex: 1 0 auto;
+    margin-right: 5px;
+    color: rgba($color-black, 1);
+    vertical-align: top;
+  }
+
+  .language-menu-mode-list & {
+    display: none;
+  }
 
   .language-flags-enabled & {
     width: 1px;
@@ -99,17 +105,27 @@
     }
   }
 
+  &.menu-language-popover {
+    .language-menu-mode-list & {
+      display: none;
+    }
+  }
+
   .menu-language-popover-open & {
     z-index: 10;
     display: block;
   }
 
   .menu-public {
-    .editmode & {
+    .editmode.language-menu-mode-popover & {
       padding-top: 7px;
     }
 
-    .publicmode & {
+    .editmode.language-menu-mode-list & {
+      padding-bottom: 1px;
+    }
+
+    .publicmode.language-menu-mode-popover & {
       $vertical-padding-publicmode: 15px;
       padding-top: $vertical-padding-publicmode;
       padding-bottom: $vertical-padding-publicmode;
@@ -231,13 +247,13 @@
     }
   }
 
-  .language-menu-mode-list {
+  .language-menu-mode-list-enable {
     .language-menu-mode-popover & {
       display: none;
     }
   }
 
-  .language-menu-mode-popover {
+  .language-menu-mode-popover-enable {
     .language-menu-mode-list & {
       display: none;
     }
