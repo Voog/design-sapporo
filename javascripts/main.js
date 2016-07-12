@@ -10648,6 +10648,35 @@ return jQuery;
   };
 
   // ===========================================================================
+  // Toggles language menu mode.
+  // ===========================================================================
+  var bindLanguageMenuModeToggle = function() {
+    // Sets the variable for saving global custom data.
+    var siteData = new Edicy.CustomData({
+      type: 'site'
+    });
+
+    // Toggles language flags visibility.
+    $('.js-toggle-language-menu-mode').click(function() {
+      if ($('html').hasClass('language-menu-mode-popover')) {
+        $('html')
+          .removeClass('language-menu-mode-popover')
+          .addClass('language-menu-mode-list');
+
+        siteData.set('language_menu_mode', 'list');
+      } else {
+        $('html')
+          .removeClass('language-menu-mode-list')
+          .addClass('language-menu-mode-popover');
+
+        siteData.set('language_menu_mode', 'popover');
+      }
+
+      handleMenuLanguagePopoverPositioning();
+    });
+  };
+
+  // ===========================================================================
   // Binds site search functionality.
   // ===========================================================================
   var bindSiteSearch = function(searchForm, languageCode) {
@@ -11041,6 +11070,7 @@ return jQuery;
     // initFrontPage: initFrontPage,
     // Initiations for specific functions.
     bindLanguageFlagsToggle: bindLanguageFlagsToggle,
+    bindLanguageMenuModeToggle: bindLanguageMenuModeToggle,
     bindSiteSearch: bindSiteSearch,
     bindBgPickers: bindBgPickers,
     bindImgDropAreas: bindImgDropAreas,

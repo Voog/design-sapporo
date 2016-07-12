@@ -21,6 +21,13 @@
     {% assign language_flags_mode = "language-flags-enabled" %}
   {% endif %}
 
+  {% comment %}Detects language menu mode setting.{% endcomment %}
+  {% if site.data.language_menu_mode == nil or site.data.language_menu_mode == 'popover' %}
+    {% assign language_menu_mode = "language-menu-mode-popover" %}
+  {% else %}
+    {% assign language_menu_mode = "language-menu-mode-list" %}
+  {% endif %}
+
   {% comment %}Detects current page visible childnen size.{% endcomment %}
   {% assign page_children_size = page.menuitem.visible_children | size %}
 

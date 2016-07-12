@@ -944,6 +944,12 @@ a {
 .language-flags-disabled .menu-language-options .language-flags-disable {
   display: none;
 }
+.language-menu-mode-popover .menu-language-options .language-menu-mode-list {
+  display: none;
+}
+.language-menu-mode-list .menu-language-options .language-menu-mode-popover {
+  display: none;
+}
 
 .ico-flags {
   position: relative;

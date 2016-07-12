@@ -230,6 +230,18 @@
       display: none;
     }
   }
+
+  .language-menu-mode-list {
+    .language-menu-mode-popover & {
+      display: none;
+    }
+  }
+
+  .language-menu-mode-popover {
+    .language-menu-mode-list & {
+      display: none;
+    }
+  }
 }
 
 .ico-flags {
