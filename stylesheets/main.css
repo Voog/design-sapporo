@@ -913,7 +913,7 @@ a {
 .menu-language .menu-item .menu-language-btn-circle {
   right: 9px;
 }
-.language-names-disabled .menu-language .menu-language-name {
+.language-names-disabled.language-flags-enabled .menu-language .menu-language-name {
   display: none;
 }
 .menu-language .menu-cms li {
