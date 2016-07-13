@@ -847,6 +847,9 @@ a {
   stroke: black;
   fill: none;
 }
+.language-menu-mode-list .menu-language-btn-circle {
+  display: none;
+}
 
 .menu-language {
   text-align: right;
@@ -879,7 +882,7 @@ a {
 .editmode.language-menu-mode-popover .menu-language .menu-public {
   padding-top: 7px;
 }
-.editmode.language-menu-mode-list .menu-language .menu-public {
+.language-menu-mode-list.language-names-disabled .menu-language .menu-public {
   padding-bottom: 1px;
 }
 .publicmode.language-menu-mode-popover .menu-language .menu-public {
@@ -894,9 +897,13 @@ a {
   font-size: 13px;
   color: black;
 }
-.menu-language .menu-item a::before, .menu-language .menu-item a::after {
+.language-menu-mode-popover.language-flags-enabled .menu-language .menu-item a::before, .language-menu-mode-popover.language-flags-enabled .menu-language .menu-item a::after {
   top: 8px;
   right: 26px;
+}
+.language-menu-mode-list.language-flags-enabled .menu-language .menu-item a::before, .language-menu-mode-list.language-flags-enabled .menu-language .menu-item a::after {
+  top: 6px;
+  right: 4px;
 }
 .menu-language .menu-item a:hover {
   opacity: .8;
@@ -904,11 +911,32 @@ a {
 .menu-language .menu-item a.untranslated {
   color: #cc0000;
 }
-.language-flags-enabled .menu-language .menu-item a {
-  padding: 6px 58px 6px 6px;
+.language-menu-mode-popover.language-flags-enabled .menu-language .menu-item a {
+  padding-right: 58px;
+  padding-left: 6px;
 }
-.language-flags-disabled .menu-language .menu-item a {
+.language-menu-mode-popover.language-flags-disabled .menu-language .menu-item a {
   padding: 3px 25px;
+}
+.language-menu-mode-popover.language-flags-enabled.language-names-enabled .menu-language .menu-item a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.language-menu-mode-popover.language-flags-enabled.language-names-disabled .menu-language .menu-item a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.language-menu-mode-list.language-flags-enabled.language-names-enabled .menu-language .menu-item a {
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+.language-menu-mode-list.language-flags-disabled.language-names-enabled .menu-language .menu-item a {
+  padding: 5px;
+}
+.language-menu-mode-list.language-flags-enabled.language-names-disabled .menu-language .menu-item a {
+  padding: 10px 14px 10px 15px;
 }
 .menu-language .menu-item .menu-language-btn-circle {
   right: 9px;
@@ -917,20 +945,25 @@ a {
   display: none;
 }
 .menu-language .menu-cms li {
+  padding-right: 16px;
   padding-bottom: 9px;
-  padding-left: 6px;
+  padding-left: 12px;
 }
 .language-flags-disabled .menu-language .menu-cms li {
   padding-top: 3px;
-  padding-right: 22px;
 }
 .language-flags-enabled .menu-language .menu-cms li {
   padding-top: 1px;
-  padding-right: 12px;
 }
 
+.menu-language-list {
+  margin-left: 20px;
+}
 .language-menu-mode-popover .menu-language-list {
   display: none;
+}
+.menu-language-list .menu-item-cms {
+  margin-left: 10px;
 }
 
 .menu-language-settings-popover {

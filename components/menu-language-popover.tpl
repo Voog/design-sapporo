@@ -19,7 +19,7 @@
       <li class="menu-item">{% languageadd %}</li>
 
       <li class="menu-item menu-item-cms">
-        <a class="menu-language-settings-btn edy-cbtn js-toggle-menu-language-settings js-prevent-sideclick">
+        <button class="btn menu-language-settings-btn edy-cbtn js-toggle-menu-language-settings js-prevent-sideclick">
           <span>
             <span class="edy-cbtn-content">
               <span class="edy-cbtn-ico">
@@ -31,26 +31,8 @@
               <span>Settings</span>
             </span>
           </span>
-        </a>
-      </li>
-    </ul>
-
-    {% comment %}
-    <ul class="menu menu-vertical menu-cms-options menu-language-options">
-      <li class="menu-item">
-        <button class="js-toggle-language-flags">
-          <span class="language-flags-enable">{{ "enable_lang_flags" | lc: editor_locale }}</span>
-          <span class="language-flags-disable">{{ "disable_lang_flags" | lc: editor_locale }}</span>
-        </button>
-      </li>
-
-      <li class="menu-item">
-        <button class="js-toggle-language-menu-mode">
-          <span class="language-menu-mode-list-enable">{{ "list_lang_menu" | lc: editor_locale }}</span>
-          <span class="language-menu-mode-popover-enable">{{ "popover_lang_menu" | lc: editor_locale }}</span>
         </button>
       </li>
     </ul>
-    {% endcomment %}
   {% endif %}
 </nav>

@@ -76,6 +76,10 @@
   opacity: .3;
   stroke: rgba($color-black, 1);
   fill: none;
+
+  .language-menu-mode-list & {
+    display: none;
+  }
 }
 
 .menu-language {
@@ -121,7 +125,7 @@
       padding-top: 7px;
     }
 
-    .editmode.language-menu-mode-list & {
+    .language-menu-mode-list.language-names-disabled & {
       padding-bottom: 1px;
     }
 
@@ -143,8 +147,15 @@
       // scss-lint:disable NestingDepth
       &::before,
       &::after {
-        top: 8px;
-        right: 26px;
+        .language-menu-mode-popover.language-flags-enabled & {
+          top: 8px;
+          right: 26px;
+        }
+
+        .language-menu-mode-list.language-flags-enabled & {
+          top: 6px;
+          right: 4px;
+        }
       }
 
       &:hover {
@@ -152,17 +163,7 @@
       }
 
       &.selected {
-        // &::after {
-        //   @include size(7px);
-        //   position: absolute;
-        //   display: block;
-        //   content: '';
-        //   border-radius: 100%;
-        //   border-width: 1px;
-        //   border-style: solid;
-        //   border-color: rgba($color-black, .3);
 
-        // }
       }
 
       &.untranslated {
@@ -170,12 +171,39 @@
       }
 
       // scss-lint:disable SelectorDepth
-      .language-flags-enabled & {
-        padding: 6px 58px 6px 6px;
+      .language-menu-mode-popover.language-flags-enabled & {
+        padding-right: 58px;
+        padding-left: 6px;
       }
 
-      .language-flags-disabled & {
+      .language-menu-mode-popover.language-flags-disabled & {
         padding: 3px 25px;
+      }
+
+      .language-menu-mode-popover.language-flags-enabled.language-names-enabled & {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+
+      .language-menu-mode-popover.language-flags-enabled.language-names-disabled & {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+
+      .language-menu-mode-list.language-flags-enabled.language-names-enabled & {
+        padding-top: 5px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        padding-left: 3px;
+      }
+
+      .language-menu-mode-list.language-flags-disabled.language-names-enabled & {
+        padding: 5px;
+      }
+
+      .language-menu-mode-list.language-flags-enabled.language-names-disabled & {
+        padding: 10px 14px 10px 15px;
       }
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
@@ -194,19 +222,18 @@
 
   .menu-cms {
     li {
+      padding-right: 16px;
       padding-bottom: 9px;
-      padding-left: 6px;
+      padding-left: 12px;
 
       // scss-lint:disable NestingDepth
       // scss-lint:disable SelectorDepth
       .language-flags-disabled & {
         padding-top: 3px;
-        padding-right: 22px;
       }
 
       .language-flags-enabled & {
         padding-top: 1px;
-        padding-right: 12px;
       }
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
@@ -215,8 +242,14 @@
 }
 
 .menu-language-list {
+  margin-left: 20px;
+
   .language-menu-mode-popover & {
     display: none;
+  }
+
+  .menu-item-cms {
+    margin-left: 10px;
   }
 }
 
