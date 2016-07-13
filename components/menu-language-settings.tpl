@@ -1,4 +1,4 @@
-<div class="menu-language-settings menu-language-settings-popover menu-popover js-menu-language-settings-popover js-prevent-sideclick">
+<div class="menu-language-settings-popover menu-popover js-menu-language-settings-popover js-prevent-sideclick">
   <ul class="menu menu-vertical menu-cms-options menu-language-options">
     <li class="menu-item">
       <button class="js-toggle-language-flags">

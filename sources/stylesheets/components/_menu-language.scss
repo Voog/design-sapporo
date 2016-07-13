@@ -214,7 +214,15 @@
   }
 }
 
+.menu-language-list {
+  .language-menu-mode-popover & {
+    display: none;
+  }
+}
+
 .menu-language-settings-popover {
+  z-index: 11;
+
   .menu-language-settings-popover-open & {
     display: block;
   }

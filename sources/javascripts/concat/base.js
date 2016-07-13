@@ -111,15 +111,11 @@
         $html.removeClass('menu-main-opened site-search-opened');
 
         setTimeout(function(){
-          console.log(1);
-          positionPopoverMenu('.js-toggle-menu-language-settings', '.js-menu-language-settings-popover');
+          positionPopoverMenu(this, '.js-menu-language-settings-popover');
         }, 300);
       } else {
-        console.log(2);
-        positionPopoverMenu('.js-toggle-menu-language-settings', '.js-menu-language-settings-popover');
+        positionPopoverMenu(this, '.js-menu-language-settings-popover');
       }
-
-      console.log(3);
     });
 
     // Goes one level up in mobile view navigation menu.
@@ -254,22 +250,24 @@
   // ===========================================================================
   var bindLanguageFlagsToggle = function() {
     // Toggles language flags visibility.
+    var $html = $('html');
+
     $('.js-toggle-language-flags').click(function() {
-      if ($('html').hasClass('language-flags-disabled')) {
-        $('html')
+      if ($html.hasClass('language-flags-disabled')) {
+        $html
           .removeClass('language-flags-disabled')
           .addClass('language-flags-enabled');
 
         siteData.set("language_flags_enabled", true);
       } else {
-        $('html')
+        $html
           .removeClass('language-flags-enabled')
           .addClass('language-flags-disabled');
 
         siteData.set("language_flags_enabled", false);
       }
 
-      positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+      $html.removeClass('menu-language-settings-popover-open');
     });
   };
 
@@ -278,22 +276,24 @@
   // ===========================================================================
   var bindLanguageNamesToggle = function() {
     // Toggles language flags visibility.
+    var $html = $('html');
+
     $('.js-toggle-language-names').click(function() {
-      if ($('html').hasClass('language-names-disabled')) {
-        $('html')
+      if ($html.hasClass('language-names-disabled')) {
+        $html
           .removeClass('language-names-disabled')
           .addClass('language-names-enabled');
 
         siteData.set("language_names_enabled", true);
       } else {
-        $('html')
+        $html
           .removeClass('language-names-enabled')
           .addClass('language-names-disabled');
 
         siteData.set("language_names_enabled", false);
       }
 
-      positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+      $html.removeClass('menu-language-settings-popover-open');
     });
   };
 
@@ -302,22 +302,24 @@
   // ===========================================================================
   var bindLanguageMenuModeToggle = function() {
     // Toggles language flags visibility.
+    var $html = $('html');
+
     $('.js-toggle-language-menu-mode').click(function() {
-      if ($('html').hasClass('language-menu-mode-popover')) {
-        $('html')
+      if ($html.hasClass('language-menu-mode-popover')) {
+        $html
           .removeClass('language-menu-mode-popover')
           .addClass('language-menu-mode-list');
 
         siteData.set('language_menu_mode', 'list');
       } else {
-        $('html')
+        $html
           .removeClass('language-menu-mode-list')
           .addClass('language-menu-mode-popover');
 
         siteData.set('language_menu_mode', 'popover');
       }
 
-      positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+      $html.removeClass('menu-language-settings-popover-open');
     });
   };
 
@@ -674,7 +676,7 @@
         positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
       }
 
-      positionPopoverMenu('.js-toggle-menu-language-settings', '.js-menu-language-settings-popover');
+      $('html').removeClass('menu-language-settings-popover-open');
     }, 25));
   };
 

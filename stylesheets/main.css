@@ -929,6 +929,13 @@ a {
   padding-right: 12px;
 }
 
+.language-menu-mode-popover .menu-language-list {
+  display: none;
+}
+
+.menu-language-settings-popover {
+  z-index: 11;
+}
 .menu-language-settings-popover-open .menu-language-settings-popover {
   display: block;
 }

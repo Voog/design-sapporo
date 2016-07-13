@@ -1,4 +1,4 @@
-<nav class="menu-language menu-list js-menu-language-list">
+<nav class="menu-language menu-language-list js-menu-language-list">
   <ul class="menu menu-horizontal menu-public">
     {% for language in site.languages %}
       <li class="menu-item">
