@@ -913,6 +913,9 @@ a {
 .menu-language .menu-item .menu-language-btn-circle {
   right: 9px;
 }
+.language-names-disabled .menu-language .menu-language-name {
+  display: none;
+}
 .menu-language .menu-cms li {
   padding-bottom: 9px;
   padding-left: 6px;
@@ -924,6 +927,10 @@ a {
 .language-flags-enabled .menu-language .menu-cms li {
   padding-top: 1px;
   padding-right: 12px;
+}
+
+.menu-language-settings-popover-open .menu-language-settings-popover {
+  display: block;
 }
 
 .menu-language-options button {
@@ -953,10 +960,19 @@ a {
 .language-flags-disabled .menu-language-options .language-flags-disable {
   display: none;
 }
-.language-menu-mode-popover .menu-language-options .language-menu-mode-list-enable {
+.language-flags-disabled .menu-language-options .language-names-toggle {
   display: none;
 }
-.language-menu-mode-list .menu-language-options .language-menu-mode-popover-enable {
+.language-names-enabled .menu-language-options .language-names-enable {
+  display: none;
+}
+.language-names-disabled .menu-language-options .language-names-disable {
+  display: none;
+}
+.language-menu-mode-list .menu-language-options .language-menu-mode-list-enable {
+  display: none;
+}
+.language-menu-mode-popover .menu-language-options .language-menu-mode-popover-enable {
   display: none;
 }
 

@@ -186,6 +186,12 @@
     }
   }
 
+  .menu-language-name {
+    .language-names-disabled & {
+      display: none;
+    }
+  }
+
   .menu-cms {
     li {
       padding-bottom: 9px;
@@ -205,6 +211,12 @@
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
     }
+  }
+}
+
+.menu-language-settings-popover {
+  .menu-language-settings-popover-open & {
+    display: block;
   }
 }
 
@@ -247,14 +259,32 @@
     }
   }
 
+  .language-names-toggle {
+    .language-flags-disabled & {
+      display: none;
+    }
+  }
+
+  .language-names-enable {
+    .language-names-enabled & {
+      display: none;
+    }
+  }
+
+  .language-names-disable {
+    .language-names-disabled & {
+      display: none;
+    }
+  }
+
   .language-menu-mode-list-enable {
-    .language-menu-mode-popover & {
+    .language-menu-mode-list & {
       display: none;
     }
   }
 
   .language-menu-mode-popover-enable {
-    .language-menu-mode-list & {
+    .language-menu-mode-popover & {
       display: none;
     }
   }

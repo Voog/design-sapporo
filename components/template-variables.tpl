@@ -21,6 +21,13 @@
     {% assign language_flags_mode = "language-flags-enabled" %}
   {% endif %}
 
+  {% comment %}Detects language flags visibility setting.{% endcomment %}
+  {% if site.data.language_names_enabled == nil or site.data.language_names_enabled == true %}
+    {% assign language_names_mode = "language-names-enabled" %}
+  {% else %}
+    {% assign language_names_mode = "language-names-disabled" %}
+  {% endif %}
+
   {% comment %}Detects language menu mode setting.{% endcomment %}
   {% if site.data.language_menu_mode == nil or site.data.language_menu_mode == 'popover' %}
     {% assign language_menu_mode = "language-menu-mode-popover" %}

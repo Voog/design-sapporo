@@ -68,6 +68,7 @@
         var $html = $('html');
 
         $html.removeClass('menu-language-popover-open');
+        $html.removeClass('menu-language-settings-popover-open');
         $html.removeClass('menu-main-opened');
         $html.removeClass('site-search-opened');
 
@@ -83,7 +84,7 @@
       $html.toggleClass('menu-main-opened');
   	});
 
-    // Toggles language menu.
+    // Toggles language menu popover.
     $('.js-toggle-menu-language').click(function() {
       var $html = $('html');
 
@@ -93,11 +94,32 @@
         $html.removeClass('menu-main-opened site-search-opened');
 
         setTimeout(function(){
-          positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
+          positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
         }, 300);
       } else if ($html.hasClass('menu-language-popover-open')) {
-        positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
+        positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
       }
+    });
+
+    // Toggles language menu settings popover.
+    $('.js-toggle-menu-language-settings').click(function() {
+      var $html = $('html');
+
+      $html.toggleClass('menu-language-settings-popover-open');
+
+      if ($html.hasClass('menu-main-opened') || $html.hasClass('site-search-opened')) {
+        $html.removeClass('menu-main-opened site-search-opened');
+
+        setTimeout(function(){
+          console.log(1);
+          positionPopoverMenu('.js-toggle-menu-language-settings', '.js-menu-language-settings-popover');
+        }, 300);
+      } else {
+        console.log(2);
+        positionPopoverMenu('.js-toggle-menu-language-settings', '.js-menu-language-settings-popover');
+      }
+
+      console.log(3);
     });
 
     // Goes one level up in mobile view navigation menu.
@@ -231,11 +253,6 @@
   // Toggles language menu flags.
   // ===========================================================================
   var bindLanguageFlagsToggle = function() {
-    // Sets the variable for saving global custom data.
-    var siteData = new Edicy.CustomData({
-      type: 'site'
-    });
-
     // Toggles language flags visibility.
     $('.js-toggle-language-flags').click(function() {
       if ($('html').hasClass('language-flags-disabled')) {
@@ -252,7 +269,31 @@
         siteData.set("language_flags_enabled", false);
       }
 
-      positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
+      positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+    });
+  };
+
+  // ===========================================================================
+  // Toggles language menu names.
+  // ===========================================================================
+  var bindLanguageNamesToggle = function() {
+    // Toggles language flags visibility.
+    $('.js-toggle-language-names').click(function() {
+      if ($('html').hasClass('language-names-disabled')) {
+        $('html')
+          .removeClass('language-names-disabled')
+          .addClass('language-names-enabled');
+
+        siteData.set("language_names_enabled", true);
+      } else {
+        $('html')
+          .removeClass('language-names-enabled')
+          .addClass('language-names-disabled');
+
+        siteData.set("language_names_enabled", false);
+      }
+
+      positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
     });
   };
 
@@ -260,11 +301,6 @@
   // Toggles language menu mode.
   // ===========================================================================
   var bindLanguageMenuModeToggle = function() {
-    // Sets the variable for saving global custom data.
-    var siteData = new Edicy.CustomData({
-      type: 'site'
-    });
-
     // Toggles language flags visibility.
     $('.js-toggle-language-menu-mode').click(function() {
       if ($('html').hasClass('language-menu-mode-popover')) {
@@ -281,7 +317,7 @@
         siteData.set('language_menu_mode', 'popover');
       }
 
-      positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
+      positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
     });
   };
 
@@ -632,12 +668,14 @@
   // ===========================================================================
   var initWindowResize = function() {
     $(window).resize(debounce(function() {
-      if (languageMenuPopoverOpen()) {
-        positionPopoverMenu('.js-menu-language-offset-item', '.js-menu-language-popover');
-      }
-    }, 25));
+      setHeaderMenuMode();
 
-    $(window).resize(debounce(setHeaderMenuMode, 25));
+      if (languageMenuPopoverOpen()) {
+        positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+      }
+
+      positionPopoverMenu('.js-toggle-menu-language-settings', '.js-menu-language-settings-popover');
+    }, 25));
   };
 
   // ===========================================================================
@@ -681,6 +719,7 @@
     // initFrontPage: initFrontPage,
     // Initiations for specific functions.
     bindLanguageFlagsToggle: bindLanguageFlagsToggle,
+    bindLanguageNamesToggle: bindLanguageNamesToggle,
     bindLanguageMenuModeToggle: bindLanguageMenuModeToggle,
     bindSiteSearch: bindSiteSearch,
     bindBgPickers: bindBgPickers,

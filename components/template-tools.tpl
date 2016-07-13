@@ -9,9 +9,17 @@ Adds template specific JS tools.
 
   <script>
     //==========================================================================
+    // Sets the variable for saving global custom data.
+    //==========================================================================
+    var siteData = new Edicy.CustomData({
+      type: 'site'
+    });
+
+    //==========================================================================
     // Initiates the language flags state toggleing.
     //==========================================================================
     template.bindLanguageFlagsToggle();
+    template.bindLanguageNamesToggle();
     template.bindLanguageMenuModeToggle();
 
     //==========================================================================
