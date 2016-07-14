@@ -7,7 +7,7 @@
     @include button;
     display: inline-block;
     flex: 1 0 auto;
-    margin-right: 5px;
+    margin-right: -5px;
     color: rgba($color-black, 1);
     vertical-align: top;
   }
@@ -147,23 +147,36 @@
       // scss-lint:disable NestingDepth
       &::before,
       &::after {
+        // scss-lint:disable SelectorDepth
         .language-menu-mode-popover.language-flags-enabled & {
           top: 8px;
           right: 26px;
         }
+        // scss-lint:enable SelectorDepth
 
+        // scss-lint:disable SelectorDepth
         .language-menu-mode-list.language-flags-enabled & {
           top: 6px;
           right: 4px;
         }
+        // scss-lint:enable SelectorDepth
       }
 
       &:hover {
-        opacity: .8;
+        // scss-lint:disable SelectorDepth
+        &,
+        .language-menu-mode-list & {
+          opacity: .5;
+        }
+        // scss-lint:enable SelectorDepth
       }
 
       &.selected {
-
+        // scss-lint:disable SelectorDepth
+        .language-menu-mode-list & {
+          opacity: 1;
+        }
+        // scss-lint:enable SelectorDepth
       }
 
       &.untranslated {
@@ -190,12 +203,12 @@
         padding-bottom: 15px;
       }
 
+      .language-menu-mode-list & {
+        opacity: .3;
+      }
 
       .language-menu-mode-list.language-flags-enabled.language-names-enabled & {
-        padding-top: 5px;
-        padding-right: 30px;
-        padding-bottom: 5px;
-        padding-left: 3px;
+        padding: 5px 30px 5px 3px;
       }
 
       .language-menu-mode-list.language-flags-disabled.language-names-enabled & {
@@ -373,6 +386,7 @@
 }
 
 // Language flag icons positioning in the spritemap.
+// scss-lint:disable TrailingSemicolon
 $flags:
   (sq, 0 0), // Albanian (Albania)
   (hy, -21px 0), // Armenian (Armenia)
@@ -429,6 +443,7 @@ $flags:
   // (en, -168px -60px), // Australian English (Commonwealth of Australia)
   (th, -189px -60px) // Thai (Thailand)
 ;
+// scss-lint:enable TrailingSemicolon
 
 @each $flag, $pos in $flags {
   .ico-flag-#{$flag}:after {
