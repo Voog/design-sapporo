@@ -18,9 +18,18 @@ Adds template specific JS tools.
     //==========================================================================
     // Initiates the language flags state toggleing.
     //==========================================================================
-    template.bindLanguageFlagsToggle();
-    template.bindLanguageNamesToggle();
-    template.bindLanguageMenuModeToggle();
+    // template.bindLanguageFlagsToggle();
+    // template.bindLanguageNamesToggle();
+    // template.bindLanguageMenuModeToggle();
+    var valuesObj;
+    
+    {%if site.data.settings_language_menu %}
+      valuesObj = {{ site.data.settings_language_menu | json }};
+    {% else %}
+      valuesObj = {};
+    {% endif %};
+    
+    template.bindLanguageMenuSettings(valuesObj);
 
     //==========================================================================
     // Binds custom styles under wysihtml editor.

@@ -39,8 +39,6 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
-    {% include "menu-language-settings" %}
-
     {% include "template-javascripts" %}
     {% include "blog-listing-tools" %}
 

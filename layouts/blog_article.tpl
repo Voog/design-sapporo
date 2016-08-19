@@ -47,8 +47,6 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
-    {% include "menu-language-settings" %}
-
     {% include "template-javascripts" %}
   </body>
 </html>

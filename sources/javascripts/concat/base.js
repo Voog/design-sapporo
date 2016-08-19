@@ -68,7 +68,6 @@
         var $html = $('html');
 
         $html.removeClass('menu-language-popover-open');
-        $html.removeClass('menu-language-settings-popover-open');
         $html.removeClass('menu-main-opened');
         $html.removeClass('site-search-opened');
 
@@ -98,23 +97,6 @@
         }, 300);
       } else if ($html.hasClass('menu-language-popover-open')) {
         positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
-      }
-    });
-
-    // Toggles language menu settings popover.
-    $('.js-toggle-menu-language-settings').click(function() {
-      var $html = $('html');
-
-      $html.toggleClass('menu-language-settings-popover-open');
-
-      if ($html.hasClass('menu-main-opened') || $html.hasClass('site-search-opened')) {
-        $html.removeClass('menu-main-opened site-search-opened');
-
-        setTimeout(function(){
-          positionPopoverMenu(this, '.js-menu-language-settings-popover');
-        }, 300);
-      } else {
-        positionPopoverMenu(this, '.js-menu-language-settings-popover');
       }
     });
 
@@ -246,80 +228,73 @@
   };
 
   // ===========================================================================
-  // Toggles language menu flags.
-  // ===========================================================================
-  var bindLanguageFlagsToggle = function() {
-    // Toggles language flags visibility.
-    var $html = $('html');
-
-    $('.js-toggle-language-flags').click(function() {
-      if ($html.hasClass('language-flags-disabled')) {
-        $html
-          .removeClass('language-flags-disabled')
-          .addClass('language-flags-enabled');
-
-        siteData.set("language_flags_enabled", true);
-      } else {
-        $html
-          .removeClass('language-flags-enabled')
-          .addClass('language-flags-disabled');
-
-        siteData.set("language_flags_enabled", false);
-      }
-
-      $html.removeClass('menu-language-settings-popover-open');
-    });
-  };
-
-  // ===========================================================================
-  // Toggles language menu names.
-  // ===========================================================================
-  var bindLanguageNamesToggle = function() {
-    // Toggles language flags visibility.
-    var $html = $('html');
-
-    $('.js-toggle-language-names').click(function() {
-      if ($html.hasClass('language-names-disabled')) {
-        $html
-          .removeClass('language-names-disabled')
-          .addClass('language-names-enabled');
-
-        siteData.set("language_names_enabled", true);
-      } else {
-        $html
-          .removeClass('language-names-enabled')
-          .addClass('language-names-disabled');
-
-        siteData.set("language_names_enabled", false);
-      }
-
-      $html.removeClass('menu-language-settings-popover-open');
-    });
-  };
-
-  // ===========================================================================
   // Toggles language menu mode.
   // ===========================================================================
-  var bindLanguageMenuModeToggle = function() {
-    // Toggles language flags visibility.
-    var $html = $('html');
+  var bindLanguageMenuSettings = function(valuesObj) {
+    if (!('type' in valuesObj)) {
+      valuesObj.type = 'popover';
+    }
 
-    $('.js-toggle-language-menu-mode').click(function() {
-      if ($html.hasClass('language-menu-mode-popover')) {
-        $html
-          .removeClass('language-menu-mode-popover')
-          .addClass('language-menu-mode-list');
+    if (!('item_state' in valuesObj)) {
+      valuesObj.item_state = 'flags_and_names';
+    }
 
-        siteData.set('language_menu_mode', 'list');
-      } else {
-        $html
-          .removeClass('language-menu-mode-list')
-          .addClass('language-menu-mode-popover');
+    $('.js-toggle-menu-language-settings').each(function(index, languageMenuSettingsButton) {
+      var langSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
+        menuItems: [
+          {
+            "title": "Expand menu",
+            "type": "checkbox",
+            "key": "type",
+            "states": {
+              "on": "list",
+              "off": "popover"
+            }
+          },
+          {
+            "title": "Show",
+            "type": "radio",
+            "key": "item_state",
+            "list": [
+              {
+                "title": "Flags only",
+                "value": "flags_only"
+              },
+              {
+                "title": "Names only",
+                "value": "names_only"
+              },
+              {
+                "title": "Flags & names",
+                "value": "flags_and_names"
+              }
+            ]
+          }
+        ],
 
-        siteData.set('language_menu_mode', 'popover');
-      }
+        values: valuesObj,
 
-      $html.removeClass('menu-language-settings-popover-open');
+        containerClass: 'js-prevent-sideclick',
+
+        preview: function(data) {
+          console.log(data);
+
+          // if (data.bg_blue === true) {
+          //   document.querySelector('body').style.backgroundColor = 'blue';
+          // } else {
+          //   document.querySelector('body').style.backgroundColor = 'white';
+          // }
+          //
+          // document.querySelector('.js-lang-menu-style').innerHTML = data.lang_menu_style;
+          // document.querySelector('.js-state-for-something').innerHTML = data.state_for_something;
+        },
+
+        commit: function(data) {
+          console.log(data);
+
+          siteData.set('settings_language_menu', data);
+        }
+      });
     });
   };
 
@@ -675,8 +650,6 @@
       if (languageMenuPopoverOpen()) {
         positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
       }
-
-      $('html').removeClass('menu-language-settings-popover-open');
     }, 25));
   };
 
@@ -719,10 +692,9 @@
     // initArticlePage: initArticlePage,
     // initCommonPage: initCommonPage,
     // initFrontPage: initFrontPage,
+
     // Initiations for specific functions.
-    bindLanguageFlagsToggle: bindLanguageFlagsToggle,
-    bindLanguageNamesToggle: bindLanguageNamesToggle,
-    bindLanguageMenuModeToggle: bindLanguageMenuModeToggle,
+    bindLanguageMenuSettings: bindLanguageMenuSettings,
     bindSiteSearch: bindSiteSearch,
     bindBgPickers: bindBgPickers,
     bindImgDropAreas: bindImgDropAreas,

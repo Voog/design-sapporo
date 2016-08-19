@@ -969,56 +969,6 @@ a {
   margin-left: 10px;
 }
 
-.menu-language-settings-popover {
-  z-index: 11;
-}
-.menu-language-settings-popover-open .menu-language-settings-popover {
-  display: block;
-}
-
-.menu-language-options button {
-  display: block;
-  width: 100%;
-  font-family: inherit;
-  font-size: 11px;
-  color: black;
-  text-align: right;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-.menu-language-options button:hover {
-  opacity: .75;
-}
-.language-flags-disabled .menu-language-options button {
-  padding: 6px 9px 6px 6px;
-}
-.language-flags-enabled .menu-language-options button {
-  padding: 6px;
-}
-.menu-language-options button span {
-  display: block;
-}
-.language-flags-enabled .menu-language-options .language-flags-enable {
-  display: none;
-}
-.language-flags-disabled .menu-language-options .language-flags-disable {
-  display: none;
-}
-.language-flags-disabled .menu-language-options .language-names-toggle {
-  display: none;
-}
-.language-names-enabled .menu-language-options .language-names-enable {
-  display: none;
-}
-.language-names-disabled .menu-language-options .language-names-disable {
-  display: none;
-}
-.language-menu-mode-list .menu-language-options .language-menu-mode-list-enable {
-  display: none;
-}
-.language-menu-mode-popover .menu-language-options .language-menu-mode-popover-enable {
-  display: none;
-}
-
 .ico-flags {
   position: relative;
   background-color: transparent;

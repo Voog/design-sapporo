@@ -111,13 +111,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-language-settings.tpl",
-      "layout_name": "menu-language-settings",
-      "title": "menu-language-settings"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/menu-level-1-link.tpl",
       "layout_name": "menu-level-1-link",
       "title": "menu-level-1-link",
