@@ -2,10 +2,12 @@
 // Navigation menus.
 // =============================================================================
 .menu-btn {
+  @include size(25px);
+  position: relative;
   min-width: 25px;
   min-height: 25px;
-  position: relative;
   padding: 0;
+  margin-left: 10px;
   font-size: 0;
   vertical-align: top;
   background-color: rgba($color-white, 1);

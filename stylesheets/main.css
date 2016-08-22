@@ -217,10 +217,13 @@ a {
 }
 
 .menu-btn {
+  height: 25px;
+  width: 25px;
+  position: relative;
   min-width: 25px;
   min-height: 25px;
-  position: relative;
   padding: 0;
+  margin-left: 10px;
   font-size: 0;
   vertical-align: top;
   background-color: white;
@@ -500,6 +503,11 @@ a {
 }
 .no-flexbox .site-header .header-menu {
   float: right;
+}
+.flexbox .header-menu-compact .site-header .header-menu {
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
 }
 .site-header .header-menu .menu-invisible {
   visibility: hidden;
@@ -967,9 +975,6 @@ a {
 }
 .menu-language-list .menu-item-cms {
   margin-left: 10px;
-}
-.header-menu-compact .menu-language-list .menu-item-language-settings {
-  margin-right: 20px;
 }
 
 .ico-flags {
