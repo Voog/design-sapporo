@@ -2,7 +2,8 @@
 // Navigation menus.
 // =============================================================================
 .menu-btn {
-  @include size(25px);
+  min-width: 25px;
+  min-height: 25px;
   position: relative;
   padding: 0;
   font-size: 0;

@@ -264,6 +264,12 @@
   .menu-item-cms {
     margin-left: 10px;
   }
+
+  .menu-item-language-settings {
+    .header-menu-compact & {
+      margin-right: 20px;
+    }
+  }
 }
 
 .ico-flags {
