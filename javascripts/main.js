@@ -10630,33 +10630,39 @@ return jQuery;
       valuesObj.item_state = 'flags_and_names';
     }
 
-    $('.js-toggle-menu-language-settings').each(function(index, languageMenuSettingsButton) {
+    $('.js-menu-language-settings-toggle').each(function(index, languageMenuSettingsButton) {
       var langSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
         menuItems: [
           {
-            "title": "Expand menu",
-            "type": "checkbox",
+            "titleI18n": "format",
+            "type": "radio",
             "key": "type",
-            "states": {
-              "on": "list",
-              "off": "popover"
-            }
+            "list": [
+              {
+                "titleI18n": "dropdown_menu",
+                "value": "popover"
+              },
+              {
+                "titleI18n": "expanded_menu",
+                "value": "list"
+              },
+            ]
           },
           {
-            "title": "Show",
+            "titleI18n": "show",
             "type": "radio",
             "key": "item_state",
             "list": [
               {
-                "title": "Flags only",
+                "titleI18n": "flags_only",
                 "value": "flags_only"
               },
               {
-                "title": "Names only",
+                "titleI18n": "names_only",
                 "value": "names_only"
               },
               {
-                "title": "Flags & names",
+                "titleI18n": "flags_and_names",
                 "value": "flags_and_names"
               }
             ]
@@ -10665,24 +10671,48 @@ return jQuery;
 
         values: valuesObj,
 
-        containerClass: 'js-prevent-sideclick',
+        containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
 
         preview: function(data) {
-          console.log(data);
+          var $html = $('html'),
+              $languageSettingsMenuElement = $('.js-menu-language-settings');
 
-          // if (data.bg_blue === true) {
-          //   document.querySelector('body').style.backgroundColor = 'blue';
-          // } else {
-          //   document.querySelector('body').style.backgroundColor = 'white';
-          // }
-          //
-          // document.querySelector('.js-lang-menu-style').innerHTML = data.lang_menu_style;
-          // document.querySelector('.js-state-for-something').innerHTML = data.state_for_something;
+          if (data.type === 'list') {
+            $html.removeClass('language-menu-mode-popover');
+            $html.removeClass('menu-language-popover-open');
+            $html.addClass('language-menu-mode-list');
+
+            $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
+          } else {
+            $html.removeClass('language-menu-mode-list');
+            $html.addClass('language-menu-mode-popover');
+            $html.addClass('menu-language-popover-open');
+
+            $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+          }
+
+          if (data.item_state === 'flags_only') {
+            $html.removeClass('language-flags-disabled');
+            $html.removeClass('language-names-enabled');
+            $html.addClass('language-flags-enabled');
+            $html.addClass('language-names-disabled');
+          } else if (data.item_state === 'names_only') {
+            $html.removeClass('language-flags-enabled');
+            $html.removeClass('language-names-disabled');
+            $html.addClass('language-flags-disabled');
+            $html.addClass('language-names-enabled');
+          } else if (data.item_state === 'flags_and_names') {
+            $html.removeClass('language-flags-disabled');
+            $html.removeClass('language-names-disabled');
+            $html.addClass('language-flags-enabled');
+            $html.addClass('language-names-enabled');
+          }
+
+          positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+          this.setPosition();
         },
 
         commit: function(data) {
-          console.log(data);
-
           siteData.set('settings_language_menu', data);
         }
       });
