@@ -20,7 +20,7 @@
 
       {% if language_menu_mode == "language-menu-mode-popover" %}
         <li class="menu-item menu-item-cms js-menu-language-settings">
-          <button class="btn  js-menu-language-settings-toggle js-prevent-sideclick"></button>
+          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
         </li>
       {% endif %}
     </ul>

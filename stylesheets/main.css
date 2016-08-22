@@ -43,6 +43,10 @@ a {
   outline-style: none;
 }
 
+.btn-js-styled {
+  display: none;
+}
+
 .site-container {
   transition: right 0.2s;
   position: relative;

@@ -56,6 +56,10 @@ a {
   }
 }
 
+.btn-js-styled {
+  display: none;
+}
+
 .site-container {
   @include transition(right .2s);
   position: relative;
