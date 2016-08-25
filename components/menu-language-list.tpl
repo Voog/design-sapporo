@@ -1,5 +1,5 @@
 <nav class="menu-language menu-language-list">
-  <ul class="menu menu-horizontal menu-public js-menu-language-list-setting-parent">
+  <ul class="menu menu-horizontal menu-public">
     {% for language in site.languages %}
       <li class="menu-item">
         <a class="ico-flags ico-flag-{{ language.code }}{% if language.selected? %} selected{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">
@@ -14,13 +14,17 @@
     {% endfor %}
 
     {% if editmode %}
-      <li class="menu-item menu-item-cms-add">{% languageadd %}</li>
+      <li class="menu-item">
+        <ul class="menu menu-horizontal menu-cms js-menu-language-list-setting-parent">
+          <li class="menu-item menu-item-cms-add">{% languageadd %}</li>
 
-      {% if language_menu_mode == "language-menu-mode-list" %}
-        <li class="menu-item menu-item-cms-settings js-menu-language-settings">
-          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
-        </li>
-      {% endif %}
+          {% if language_menu_mode == "language-menu-mode-list" %}
+            <li class="menu-item menu-item-cms-settings js-menu-language-settings">
+              <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+            </li>
+          {% endif %}
+        </ul>
+      </li>
     {% endif %}
   </ul>
 </nav>

@@ -243,19 +243,23 @@
 
   .menu-cms {
     li {
-      padding-right: 16px;
-      padding-bottom: 9px;
-      padding-left: 16px;
-
       // scss-lint:disable NestingDepth
       // scss-lint:disable SelectorDepth
+      .language-menu-mode-list.language-flags-enabled & {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      .language-menu-mode-popover & {
+        padding-right: 16px;
+        padding-bottom: 9px;
+        padding-left: 16px;
+      }
+
       .language-flags-disabled & {
         padding-top: 3px;
       }
 
-      .language-flags-enabled & {
-        padding-top: 1px;
-      }
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
     }

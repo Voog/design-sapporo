@@ -227,7 +227,6 @@ a {
   min-width: 25px;
   min-height: 25px;
   padding: 0;
-  margin-left: 10px;
   font-size: 0;
   vertical-align: top;
   background-color: white;
@@ -235,6 +234,13 @@ a {
   border-style: solid;
   border-width: 1px;
   border-radius: 100%;
+}
+.editmode.language-menu-mode-list .menu-btn {
+  margin-left: 15px;
+}
+.editmode.language-menu-mode-popover .menu-btn, .publicmode.language-menu-mode-popover .menu-btn,
+.menu-btn .publicmode.language-menu-mode-list {
+  margin-left: 10px;
 }
 .menu-btn::before {
   height: 9px;
@@ -965,16 +971,17 @@ a {
 .language-names-disabled.language-flags-enabled .menu-language .menu-language-name {
   display: none;
 }
-.menu-language .menu-cms li {
+.language-menu-mode-list.language-flags-enabled .menu-language .menu-cms li {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.language-menu-mode-popover .menu-language .menu-cms li {
   padding-right: 16px;
   padding-bottom: 9px;
   padding-left: 16px;
 }
 .language-flags-disabled .menu-language .menu-cms li {
   padding-top: 3px;
-}
-.language-flags-enabled .menu-language .menu-cms li {
-  padding-top: 1px;
 }
 
 .menu-language-list {

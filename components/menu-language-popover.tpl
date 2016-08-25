@@ -16,10 +16,10 @@
 
   {% if editmode %}
     <ul class="menu menu-vertical menu-cms js-menu-language-popover-setting-parent">
-      <li class="menu-item">{% languageadd %}</li>
+      <li class="menu-item menu-item-cms-add">{% languageadd %}</li>
 
       {% if language_menu_mode == "language-menu-mode-popover" %}
-        <li class="menu-item menu-item-cms js-menu-language-settings">
+        <li class="menu-item menu-item-cms-settings js-menu-language-settings">
           <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
         </li>
       {% endif %}

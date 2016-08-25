@@ -7,7 +7,6 @@
   min-width: 25px;
   min-height: 25px;
   padding: 0;
-  margin-left: 10px;
   font-size: 0;
   vertical-align: top;
   background-color: rgba($color-white, 1);
@@ -15,6 +14,16 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 100%;
+
+  .editmode.language-menu-mode-list & {
+    margin-left: 15px;
+  }
+
+  .editmode.language-menu-mode-popover &,
+  .publicmode.language-menu-mode-popover &,
+  .publicmode.language-menu-mode-list {
+    margin-left: 10px;
+  }
 
   &::before {
     @include size(9px);
