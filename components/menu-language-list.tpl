@@ -13,10 +13,14 @@
       </li>
     {% endfor %}
 
-    {% if editmode and language_menu_mode == "language-menu-mode-list" %}
-      <li class="menu-item menu-item-cms js-menu-language-settings">
-        <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
-      </li>
+    {% if editmode %}
+      <li class="menu-item menu-item-cms-add">{% languageadd %}</li>
+
+      {% if language_menu_mode == "language-menu-mode-list" %}
+        <li class="menu-item menu-item-cms-settings js-menu-language-settings">
+          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+        </li>
+      {% endif %}
     {% endif %}
   </ul>
 </nav>

@@ -894,8 +894,11 @@ a {
 .editmode.language-menu-mode-popover .menu-language .menu-public {
   padding-top: 7px;
 }
-.language-menu-mode-list.language-names-disabled .menu-language .menu-public {
-  padding-bottom: 1px;
+.editmode.language-menu-mode-list.language-names-disabled .menu-language .menu-public {
+  padding-bottom: 3px;
+}
+.publicmode.language-menu-mode-list.language-names-disabled .menu-language .menu-public {
+  padding-bottom: 2px;
 }
 .publicmode.language-menu-mode-popover .menu-language .menu-public {
   padding-top: 15px;
@@ -903,6 +906,9 @@ a {
 }
 .menu-language .menu-item {
   position: relative;
+}
+.language-menu-mode-list.language-flags-enabled .menu-language .menu-item {
+  vertical-align: middle;
 }
 .menu-language .menu-item a {
   display: block;
@@ -914,7 +920,7 @@ a {
   right: 26px;
 }
 .language-menu-mode-list.language-flags-enabled .menu-language .menu-item a::before, .language-menu-mode-list.language-flags-enabled .menu-language .menu-item a::after {
-  top: 6px;
+  top: 3px;
   right: 4px;
 }
 .menu-language .menu-item a:hover, .language-menu-mode-list .menu-language .menu-item a:hover {
@@ -951,7 +957,7 @@ a {
   padding: 5px;
 }
 .language-menu-mode-list.language-flags-enabled.language-names-disabled .menu-language .menu-item a {
-  padding: 10px 14px 10px 15px;
+  padding: 10px 14px 11px 15px;
 }
 .menu-language .menu-item .menu-language-btn-circle {
   right: 9px;
@@ -977,7 +983,10 @@ a {
 .language-menu-mode-popover .menu-language-list {
   display: none;
 }
-.menu-language-list .menu-item-cms {
+.menu-language-list .menu-item-cms-settings {
+  margin-left: 20px;
+}
+.menu-language-list .menu-item-cms-add {
   margin-left: 10px;
 }
 

@@ -16,11 +16,8 @@ Adds template specific JS tools.
     });
 
     //==========================================================================
-    // Initiates the language flags state toggleing.
+    // Initiates the language menu mode toggleing popover.
     //==========================================================================
-    // template.bindLanguageFlagsToggle();
-    // template.bindLanguageNamesToggle();
-    // template.bindLanguageMenuModeToggle();
     var valuesObj;
     
     {%if site.data.settings_language_menu %}
