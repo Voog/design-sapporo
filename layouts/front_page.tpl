@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 {% include "blog-listing-variables" %}
-<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}">
+<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" with "blog_listing_page" %}
   </head>

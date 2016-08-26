@@ -15,11 +15,11 @@
   border-width: 1px;
   border-radius: 100%;
 
-  .editmode & {
+  .editmode.site-search-disabled & {
     margin-left: 5px;
   }
 
-  .publicmode & {
+  .publicmode.site-search-disabled & {
     margin-left: 10px;
   }
 

@@ -6,6 +6,13 @@
   {% else %}
     {% assign view_mode = "publicmode" %}
   {% endif %}
+  
+  {% comment %}Sets site search state class.{% endcomment %}
+  {% if site.search.enabled %}
+    {% assign site_search_mode = "site-search-enabled" %}
+  {% else %}
+    {% assign site_search_mode = "site-search-disabled" %}
+  {% endif %}
 
   {% comment %}Sets current language title variable.{% endcomment %}
   {% for language in site.languages %}
