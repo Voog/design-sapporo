@@ -536,6 +536,10 @@ a {
   background-color: transparent;
   border-style: none;
   cursor: pointer;
+  width: 28px;
+  height: 31px;
+  min-width: 28px;
+  min-height: 31px;
   padding: 6px 5px 4px;
   vertical-align: top;
 }
