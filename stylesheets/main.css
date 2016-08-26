@@ -235,10 +235,7 @@ a {
   border-width: 1px;
   border-radius: 100%;
 }
-.editmode.site-search-disabled .menu-btn {
-  margin-left: 5px;
-}
-.publicmode.site-search-disabled .menu-btn {
+.site-search-disabled .menu-btn {
   margin-left: 10px;
 }
 .menu-btn::before {
