@@ -85,7 +85,7 @@
 .menu-language {
   text-align: right;
 
-  &.menu-popover {
+  &.menu-language-popover {
     margin-right: -1px;
 
     .publicmode.language-flags-disabled & {
@@ -100,6 +100,16 @@
       margin-right: -22px;
     }
 
+    .header-menu-wide & {
+      // scss-lint:disable NestingDepth
+      .language-flags-enabled & {
+        @media screen and (max-width: 1140px) {
+          margin-right: 5px;
+        }
+      }
+      // scss-lint:enable NestingDepth
+    }
+
     .editmode.language-flags-enabled & {
       margin-top: -36px;
     }
@@ -107,9 +117,7 @@
     .publicmode.language-flags-enabled & {
       margin-top: -44px;
     }
-  }
 
-  &.menu-language-popover {
     .language-menu-mode-list & {
       display: none;
     }
@@ -341,7 +349,7 @@
     .language-flags-enabled & {
       background-image: url('../assets/ico-flags.svg');
     }
-    
+
     .language-flags-disabled & {
       display: none;
     }

@@ -878,22 +878,27 @@ a {
 .menu-language {
   text-align: right;
 }
-.menu-language.menu-popover {
+.menu-language.menu-language-popover {
   margin-right: -1px;
 }
-.publicmode.language-flags-disabled .menu-language.menu-popover {
+.publicmode.language-flags-disabled .menu-language.menu-language-popover {
   margin-top: -40px;
 }
-.editmode.language-flags-disabled .menu-language.menu-popover {
+.editmode.language-flags-disabled .menu-language.menu-language-popover {
   margin-top: -32px;
 }
-.language-flags-enabled .menu-language.menu-popover {
+.language-flags-enabled .menu-language.menu-language-popover {
   margin-right: -22px;
 }
-.editmode.language-flags-enabled .menu-language.menu-popover {
+@media screen and (max-width: 1140px) {
+  .language-flags-enabled .header-menu-wide .menu-language.menu-language-popover {
+    margin-right: 5px;
+  }
+}
+.editmode.language-flags-enabled .menu-language.menu-language-popover {
   margin-top: -36px;
 }
-.publicmode.language-flags-enabled .menu-language.menu-popover {
+.publicmode.language-flags-enabled .menu-language.menu-language-popover {
   margin-top: -44px;
 }
 .language-menu-mode-list .menu-language.menu-language-popover {
