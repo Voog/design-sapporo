@@ -42,7 +42,7 @@
     margin-right: 20px;
 
     .flexbox & {
-      flex-grow: 1;
+      flex: 1 1 auto;
     }
 
     .no-flexbox & {
