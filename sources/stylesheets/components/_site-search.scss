@@ -8,7 +8,16 @@
 
   .header-menu-compact & {
     margin-right: 5px;
+
+    .language-menu-mode-list & {
+      margin-left: 10px;
+    }
+
+    .language-menu-mode-popover & {
+      margin-left: 10px;
+    }
   }
+
 
   .header-menu-wide & {
     margin-left: 13px;

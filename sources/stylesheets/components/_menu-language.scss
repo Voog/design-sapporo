@@ -125,8 +125,20 @@
       padding-top: 7px;
     }
 
-    .editmode.language-menu-mode-list.language-names-disabled & {
-      padding-bottom: 3px;
+    .header-menu-wide & {
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .editmode.language-menu-mode-list.language-names-disabled & {
+        padding-bottom: 3px;
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
+    }
+
+    .header-menu-compact & {
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .editmode.language-menu-mode-list.language-names-disabled & {
+        padding-bottom: 2px;
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
     }
 
     .publicmode.language-menu-mode-list.language-names-disabled & {
@@ -164,8 +176,15 @@
 
         // scss-lint:disable SelectorDepth
         .language-menu-mode-list.language-flags-enabled & {
-          top: 3px;
           right: 4px;
+        }
+
+        .language-menu-mode-list.language-flags-enabled.language-names-enabled & {
+          top: 6px;
+        }
+
+        .language-menu-mode-list.language-flags-enabled.language-names-disabled & {
+          top: 3px;
         }
         // scss-lint:enable SelectorDepth
       }
@@ -242,6 +261,8 @@
   }
 
   .menu-cms {
+    margin-right: 10px;
+
     li {
       // scss-lint:disable NestingDepth
       // scss-lint:disable SelectorDepth

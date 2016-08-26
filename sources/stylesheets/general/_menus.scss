@@ -15,13 +15,11 @@
   border-width: 1px;
   border-radius: 100%;
 
-  .editmode.language-menu-mode-list & {
-    margin-left: 15px;
+  .editmode & {
+    margin-left: 5px;
   }
 
-  .editmode.language-menu-mode-popover &,
-  .publicmode.language-menu-mode-popover &,
-  .publicmode.language-menu-mode-list {
+  .publicmode & {
     margin-left: 10px;
   }
 
@@ -192,31 +190,35 @@
 
   .menu {
     .menu-item {
+      // scss-lint:disable NestingDepth, SelectorDepth
       .header-menu-compact & {
         display: none;
 
-        // scss-lint:disable NestingDepth
         &.item-current {
           display: block;
         }
-        // scss-lint:enable NestingDepth
       }
+      // scss-lint:enable NestingDepth, SelectorDepth
     }
   }
 
   .menu-current {
     > .menu-item {
+      // scss-lint:disable NestingDepth, SelectorDepth
       .header-menu-compact & {
         display: block;
       }
+      // scss-lint:enable NestingDepth, SelectorDepth
     }
   }
 
   .menu-public {
     .menu-item {
+      // scss-lint:disable NestingDepth, SelectorDepth
       .header-menu-compact & {
         position: relative;
       }
+      // scss-lint:enable NestingDepth, SelectorDepth
     }
   }
 
@@ -265,6 +267,7 @@
       padding-top: 6px;
       padding-bottom: 6px;
 
+      // scss-lint:disable NestingDepth, SelectorDepth
       .header-menu-compact & {
         padding-right: 15px;
         padding-left: 15px;
@@ -274,6 +277,7 @@
         padding-right: 15px;
         padding-left: 15px;
       }
+      // scss-lint:enable NestingDepth, SelectorDepth
     }
   }
 }
