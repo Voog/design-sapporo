@@ -341,6 +341,10 @@
     .language-flags-enabled & {
       background-image: url('../assets/ico-flags.svg');
     }
+    
+    .language-flags-disabled & {
+      display: none;
+    }
   }
 }
 

@@ -554,7 +554,7 @@ a {
   margin-right: 5px;
 }
 .language-menu-mode-list .header-menu-compact .site-search-btn {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .language-menu-mode-popover .header-menu-compact .site-search-btn {
   margin-left: 10px;
@@ -1048,6 +1048,9 @@ a {
 }
 .language-flags-enabled .ico-flags::after {
   background-image: url("../assets/ico-flags.svg");
+}
+.language-flags-disabled .ico-flags::after {
+  display: none;
 }
 
 .ico-flag-sq:after {
