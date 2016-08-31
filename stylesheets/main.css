@@ -481,7 +481,6 @@ a {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: red;
 }
 .no-flexbox .site-header .header-title {
   float: left;
