@@ -9,9 +9,24 @@ Adds template specific JS tools.
 
   <script>
     //==========================================================================
-    // Initiates the language flags state toggleing.
+    // Sets the variable for saving global custom data.
     //==========================================================================
-    template.bindLanguageFlagsToggle();
+    var siteData = new Edicy.CustomData({
+      type: 'site'
+    });
+
+    //==========================================================================
+    // Initiates the language menu mode toggleing popover.
+    //==========================================================================
+    var valuesObj;
+    
+    {%if site.data.settings_language_menu %}
+      valuesObj = {{ site.data.settings_language_menu | json }};
+    {% else %}
+      valuesObj = {};
+    {% endif %};
+    
+    template.bindLanguageMenuSettings(valuesObj);
 
     //==========================================================================
     // Binds custom styles under wysihtml editor.

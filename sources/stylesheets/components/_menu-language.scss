@@ -3,12 +3,18 @@
 // Gerneral menu styles are located in "general/_menus.scss" partial.
 //==============================================================================
 .menu-language-btn {
-  @include button;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 5px;
-  flex: 1 0 auto;
-  color: rgba($color-black, 1);
+  .language-menu-mode-popover & {
+    @include button;
+    display: inline-block;
+    flex: 1 0 auto;
+    margin-right: -5px;
+    color: rgba($color-black, 1);
+    vertical-align: top;
+  }
+
+  .language-menu-mode-list & {
+    display: none;
+  }
 
   .language-flags-enabled & {
     width: 1px;
@@ -70,12 +76,16 @@
   opacity: .3;
   stroke: rgba($color-black, 1);
   fill: none;
+
+  .language-menu-mode-list & {
+    display: none;
+  }
 }
 
 .menu-language {
   text-align: right;
 
-  &.menu-popover {
+  &.menu-language-popover {
     margin-right: -1px;
 
     .publicmode.language-flags-disabled & {
@@ -90,12 +100,26 @@
       margin-right: -22px;
     }
 
+    .header-menu-wide & {
+      // scss-lint:disable NestingDepth
+      .language-flags-enabled & {
+        @media screen and (max-width: 1140px) {
+          margin-right: 5px;
+        }
+      }
+      // scss-lint:enable NestingDepth
+    }
+
     .editmode.language-flags-enabled & {
       margin-top: -36px;
     }
 
     .publicmode.language-flags-enabled & {
       margin-top: -44px;
+    }
+
+    .language-menu-mode-list & {
+      display: none;
     }
   }
 
@@ -105,11 +129,31 @@
   }
 
   .menu-public {
-    .editmode & {
+    .editmode.language-menu-mode-popover & {
       padding-top: 7px;
     }
 
-    .publicmode & {
+    .header-menu-wide & {
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .editmode.language-menu-mode-list.language-names-disabled & {
+        padding-bottom: 3px;
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
+    }
+
+    .header-menu-compact & {
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .editmode.language-menu-mode-list.language-names-disabled & {
+        padding-bottom: 2px;
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
+    }
+
+    .publicmode.language-menu-mode-list.language-names-disabled & {
+      padding-bottom: 2px;
+    }
+
+    .publicmode.language-menu-mode-popover & {
       $vertical-padding-publicmode: 15px;
       padding-top: $vertical-padding-publicmode;
       padding-bottom: $vertical-padding-publicmode;
@@ -119,6 +163,10 @@
   .menu-item {
     position: relative;
 
+    .language-menu-mode-list.language-flags-enabled & {
+      vertical-align: middle;
+    }
+
     a {
       display: block;
       font-size: 13px;
@@ -127,26 +175,43 @@
       // scss-lint:disable NestingDepth
       &::before,
       &::after {
-        top: 8px;
-        right: 26px;
+        // scss-lint:disable SelectorDepth
+        .language-menu-mode-popover.language-flags-enabled & {
+          top: 8px;
+          right: 26px;
+        }
+        // scss-lint:enable SelectorDepth
+
+        // scss-lint:disable SelectorDepth
+        .language-menu-mode-list.language-flags-enabled & {
+          right: 4px;
+        }
+
+        .language-menu-mode-list.language-flags-enabled.language-names-enabled & {
+          top: 6px;
+        }
+
+        .language-menu-mode-list.language-flags-enabled.language-names-disabled & {
+          top: 3px;
+        }
+        // scss-lint:enable SelectorDepth
       }
 
       &:hover {
-        opacity: .8;
+        // scss-lint:disable SelectorDepth
+        &,
+        .language-menu-mode-list & {
+          opacity: .5;
+        }
+        // scss-lint:enable SelectorDepth
       }
 
       &.selected {
-        // &::after {
-        //   @include size(7px);
-        //   position: absolute;
-        //   display: block;
-        //   content: '';
-        //   border-radius: 100%;
-        //   border-width: 1px;
-        //   border-style: solid;
-        //   border-color: rgba($color-black, .3);
-
-        // }
+        // scss-lint:disable SelectorDepth
+        .language-menu-mode-list & {
+          opacity: 1;
+        }
+        // scss-lint:enable SelectorDepth
       }
 
       &.untranslated {
@@ -154,12 +219,39 @@
       }
 
       // scss-lint:disable SelectorDepth
-      .language-flags-enabled & {
-        padding: 6px 58px 6px 6px;
+      .language-menu-mode-popover.language-flags-enabled & {
+        padding-right: 58px;
+        padding-left: 6px;
       }
 
-      .language-flags-disabled & {
+      .language-menu-mode-popover.language-flags-disabled & {
         padding: 3px 25px;
+      }
+
+      .language-menu-mode-popover.language-flags-enabled.language-names-enabled & {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+
+      .language-menu-mode-popover.language-flags-enabled.language-names-disabled & {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .language-menu-mode-list & {
+        opacity: .3;
+      }
+
+      .language-menu-mode-list.language-flags-enabled.language-names-enabled & {
+        padding: 5px 30px 5px 3px;
+      }
+
+      .language-menu-mode-list.language-flags-disabled.language-names-enabled & {
+        padding: 5px;
+      }
+
+      .language-menu-mode-list.language-flags-enabled.language-names-disabled & {
+        padding: 10px 14px 11px 15px;
       }
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
@@ -170,65 +262,52 @@
     }
   }
 
-  .menu-cms {
-    li {
-      padding-bottom: 9px;
-      padding-left: 6px;
+  .menu-language-name {
+    .language-names-disabled.language-flags-enabled & {
+      display: none;
+    }
+  }
 
+  .menu-cms {
+    margin-right: 10px;
+
+    li {
       // scss-lint:disable NestingDepth
       // scss-lint:disable SelectorDepth
-      .language-flags-disabled & {
-        padding-top: 3px;
-        padding-right: 22px;
+      .language-menu-mode-list.language-flags-enabled & {
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
 
-      .language-flags-enabled & {
-        padding-top: 1px;
-        padding-right: 12px;
+      .language-menu-mode-popover & {
+        padding-right: 16px;
+        padding-bottom: 9px;
+        padding-left: 16px;
       }
+
+      .language-flags-disabled & {
+        padding-top: 3px;
+      }
+
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
     }
   }
 }
 
-.menu-language-options {
-  button {
-    display: block;
-    width: 100%;
-    font-family: inherit;
-    font-size: 11px;
-    color: rgba($color-black, 1);
-    text-align: right;
-    border-top: 1px solid rgba($color-black, .05);
+.menu-language-list {
+  margin-left: 20px;
 
-    &:hover {
-      opacity: .75;
-    }
-
-    .language-flags-disabled & {
-      padding: 6px 9px 6px 6px;
-    }
-
-    .language-flags-enabled & {
-      padding: 6px;
-    }
-
-    span {
-      display: block;
-    }
+  .language-menu-mode-popover & {
+    display: none;
   }
 
-  .language-flags-enable {
-    .language-flags-enabled & {
-      display: none;
-    }
+  .menu-item-cms-settings {
+    margin-left: 20px;
   }
 
-  .language-flags-disable {
-    .language-flags-disabled & {
-      display: none;
-    }
+  .menu-item-cms-add {
+    margin-left: 10px;
   }
 }
 
@@ -270,10 +349,15 @@
     .language-flags-enabled & {
       background-image: url('../assets/ico-flags.svg');
     }
+
+    .language-flags-disabled & {
+      display: none;
+    }
   }
 }
 
 // Language flag icons positioning in the spritemap.
+// scss-lint:disable TrailingSemicolon
 $flags:
   (sq, 0 0), // Albanian (Albania)
   (hy, -21px 0), // Armenian (Armenia)
@@ -330,6 +414,7 @@ $flags:
   // (en, -168px -60px), // Australian English (Commonwealth of Australia)
   (th, -189px -60px) // Thai (Thailand)
 ;
+// scss-lint:enable TrailingSemicolon
 
 @each $flag, $pos in $flags {
   .ico-flag-#{$flag}:after {

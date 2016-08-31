@@ -3,12 +3,25 @@
 // =============================================================================
 .site-search-btn {
   @include button;
+  width: 28px;
+  height: 31px;
+  min-width: 28px;
+  min-height: 31px;
   padding: 6px 5px 4px;
   vertical-align: top;
 
   .header-menu-compact & {
     margin-right: 5px;
+
+    .language-menu-mode-list & {
+      margin-left: 5px;
+    }
+
+    .language-menu-mode-popover & {
+      margin-left: 10px;
+    }
   }
+
 
   .header-menu-wide & {
     margin-left: 13px;

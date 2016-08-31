@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-<html class="{{ view_mode }} {{ language_flags_mode }}" lang="{{ page.language_code }}">
+<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
   </head>
@@ -43,7 +43,9 @@
       </div>
     </div>
 
-    {% include "menu-language-popover" %}
+    {% if show_language_menu_popover %}
+      {% include "menu-language-popover" %}
+    {% endif %}
 
     {% include "template-javascripts" %}
   </body>

@@ -8,18 +8,18 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page",
-      "titleI18n": "Front page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
       "file": "layouts/common_page.tpl",
       "layout_name": "page_default",
       "title": "Common page",
       "titleI18n": "Common page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page",
+      "titleI18n": "Front page"
     },
     {
       "content_type": "blog",
@@ -92,6 +92,13 @@
       "layout_name": "blog-listing-variables",
       "title": "blog-listing-variables",
       "titleI18n": "blog-listing-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-language-list.tpl",
+      "layout_name": "menu-language-list",
+      "title": "menu-language-list"
     },
     {
       "content_type": "component",

@@ -6,6 +6,13 @@
   {% else %}
     {% assign view_mode = "publicmode" %}
   {% endif %}
+  
+  {% comment %}Sets site search state class.{% endcomment %}
+  {% if site.search.enabled %}
+    {% assign site_search_mode = "site-search-enabled" %}
+  {% else %}
+    {% assign site_search_mode = "site-search-disabled" %}
+  {% endif %}
 
   {% comment %}Sets current language title variable.{% endcomment %}
   {% for language in site.languages %}
@@ -15,10 +22,43 @@
   {% endfor %}
 
   {% comment %}Detects language flags visibility setting.{% endcomment %}
-  {% if site.data.language_flags_enabled == nil or site.data.language_flags_enabled == false %}
-    {% assign language_flags_mode = "language-flags-disabled" %}
+  {% if site.data.settings_language_menu.item_state %}
+    {% if site.data.settings_language_menu.item_state == "names_only" %}
+      {% assign language_flags_mode = "language-flags-disabled" %}
+    {% else %}
+      {% assign language_flags_mode = "language-flags-enabled" %}
+    {% endif %}
   {% else %}
-    {% assign language_flags_mode = "language-flags-enabled" %}
+    {% comment %}Fallback for older flags toggle button.{% endcomment %}
+    {% if site.data.language_flags_enabled == true %}
+      {% assign language_flags_mode = "language-flags-enabled" %}
+    {% else %}
+      {% assign language_flags_mode = "language-flags-disabled" %}
+    {% endif %}
+  {% endif %}
+
+  {% comment %}Detects language flags visibility setting.{% endcomment %}
+  {% if site.data.settings_language_menu.item_state == "flags_only" %}
+    {% assign language_names_mode = "language-names-disabled" %}
+  {% else %}
+    {% assign language_names_mode = "language-names-enabled" %}
+  {% endif %}
+
+  {% comment %}Detects language menu mode setting.{% endcomment %}
+  {% if site.data.settings_language_menu.type == "list" %}
+    {% assign language_menu_mode = "language-menu-mode-list" %}
+  {% else %}
+    {% assign language_menu_mode = "language-menu-mode-popover" %}
+  {% endif %}
+
+  {% if editmode %}
+    {% assign show_language_menu_popover = true %}
+  {% else %}
+    {% if language_menu_mode == "language-menu-mode-popover" and site.has_many_languages? %}
+      {% assign show_language_menu_popover = true %}
+    {% else %}
+      {% assign show_language_menu_popover = false %}
+    {% endif %}
   {% endif %}
 
   {% comment %}Detects current page visible childnen size.{% endcomment %}

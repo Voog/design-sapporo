@@ -8,14 +8,16 @@
   <div class="header-menu js-header-menu" data-initial-width="unset">
     {% include "menu-main" %}
 
-    {% if editmode or site.has_many_languages? %}
-      <button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-menu-language-offset-item js-prevent-sideclick" data-lang-code="{{ page.language_code }}">
+    {% if show_language_menu_popover %}
+      <button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-menu-language-popover-btn js-prevent-sideclick" data-lang-code="{{ page.language_code }}">
         <span>{{ current_language_title }}</span>
         <svg class="menu-language-btn-circle" width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#ico-circle"></use>
         </svg>
       </button>
     {% endif %}
+
+    {% include "menu-language-list" %}
 
     {% include "site-search" %}
 
