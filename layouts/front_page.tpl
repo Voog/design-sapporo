@@ -16,7 +16,7 @@
 
           <main class="page-content" role="main">
             <section class="content-body">
-              <div class="content-area">{% content %}</div>
+              <div class="content-area" {{ edy_intro_edit_text }}>{% content %}</div>
             </section>
 
             <section class="blog-articles">
