@@ -19,7 +19,7 @@
             </header>
 
             <section class="content-body">
-              <div class="content-area area-normal inner" data-search-indexing-allowed="true">{% content %}</div>
+              <div class="content-area area-normal inner" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
 
               <div class="content-bottom content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
             </section>
