@@ -16,7 +16,7 @@
     {% if editmode %}
       <li class="menu-item">
         <ul class="menu menu-horizontal menu-cms js-menu-language-list-setting-parent">
-          <li class="menu-item menu-item-cms-add">{% languageadd %}</li>
+          <li class="menu-item menu-item-cms-add" {{ edy_intro_add_lang }}>{% languageadd %}</li>
 
           {% if language_menu_mode == "language-menu-mode-list" %}
             <li class="menu-item menu-item-cms-settings js-menu-language-settings">

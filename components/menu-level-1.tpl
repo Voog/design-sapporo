@@ -24,6 +24,6 @@
       <li class="menu-item menu-item-cms">{% menubtn site.hidden_menuitems %}</li>
     {% endif %}
 
-    <li class="menu-item menu-item-cms">{% menuadd %}</li>
+    <li class="menu-item menu-item-cms" {{ edy_intro_add_page }}>{% menuadd %}</li>
   {% endif %}
 </ul>
