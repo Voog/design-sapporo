@@ -22,8 +22,8 @@
 
 
               <div class="inner content-area area-normal" data-search-indexing-allowed="true">
-                <div class="article-excerpt">{% editable article.excerpt %}</div>
-                <div class="article-body" {{ edy_intro_edit_text }}>{% editable article.body %}</div>
+                <div class="article-excerpt" {{ edy_intro_edit_text }}>{% editable article.excerpt %}</div>
+                <div class="article-body">{% editable article.body %}</div>
               </div>
 
               {% unless article.new_record? %}

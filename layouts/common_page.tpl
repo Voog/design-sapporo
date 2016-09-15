@@ -18,8 +18,8 @@
               <div class="content-area">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
             </header>
 
-            <section class="content-body">
-              <div class="content-area area-normal inner" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
+            <section class="content-body" {{ edy_intro_edit_text }}>
+              <div class="content-area area-normal inner" data-search-indexing-allowed="true">{% content %}</div>
 
               <div class="content-bottom content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
             </section>
