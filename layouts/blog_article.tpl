@@ -35,6 +35,39 @@
               {% include "blog-article-tags" %}
             </article>
 
+            {% if article.older or article.newer %}
+              <div class="article-nav">
+                <div class="article-nav-inner">
+                {% if article.older %}
+                  <a class="article-nav-link {% if article.newer %}article-nav-link-half{% else %}article-nav-link-full{% endif %} article-nav-link-older" href="{{ article.older.url }}">
+                    <div class="article-nav-link-inner">
+                      <div class="article-nav-direction">
+                        <svg width="7px" height="13px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="#ico-arrow"></use>
+                        </svg>
+                      </div>
+
+                      <div class="article-nav-title">{{ article.older.title }}</div>
+                    </div>
+                  </a>
+                {% endif %}
+
+                {% if article.newer %}
+                  <a class="article-nav-link {% if article.older %}article-nav-link-half{% else %}article-nav-link-full{% endif %} article-nav-link-newer" href="{{ article.newer.url }}">
+                    <div class="article-nav-link-inner">
+                      <div class="article-nav-title">{{ article.newer.title }}</div>
+
+                      <div class="article-nav-direction">
+                        <svg width="7px" height="13px" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="#ico-arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+
             {% include "blog-article-comments" %}
           </main>
 

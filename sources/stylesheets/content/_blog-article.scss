@@ -127,7 +127,7 @@
 
   .bg-picker-btn {
     top: 0;
-    left: 0
+    left: 0;
   }
 
   .bg-crop-btn {
@@ -284,8 +284,8 @@
 
 .article-placeholder {
   width: 100%;
-  box-sizing: border-box;
   padding: .5em;
+  box-sizing: border-box;
 }
 
 .article-header {
@@ -372,18 +372,106 @@
   margin-top: 20px;
 }
 
+.article-nav {
+}
+
+.article-nav-inner {
+  @media screen and (min-width: $mobile + 1) {
+    display: flex;
+  }
+}
+
+.article-nav-link {
+  position: relative;
+  display: block;
+  flex: 1;
+  padding-top: 33px;
+  color: currentColor;
+
+  &:first-child {
+    @media screen and (min-width: $mobile + 1) {
+      padding-right: 20px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: $mobile + 1) {
+      padding-left: 20px;
+    }
+  }
+
+  &:hover {
+    .article-nav-direction {
+      opacity: 1;
+    }
+
+    .article-nav-title {
+      opacity: 1;
+    }
+  }
+}
+
+.article-nav-link-half {
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    padding-bottom: 33px;
+  }
+
+  &:first-child {
+    @media screen and (max-width: $mobile) {
+      padding-bottom: 33px;
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: $mobile + 1) {
+      text-align: right;
+    }
+  }
+}
+
+.article-nav-link-full {
+  text-align: center;
+}
+
+.article-nav-direction {
+  position: relative;
+  display: inline-block;
+  opacity: .5;
+  stroke: currentColor;
+
+  .article-nav-link-older & {
+    transform: rotate(180deg);
+    top: -2px;
+  }
+
+  .article-nav-link-newer & {
+    top: 1px;
+  }
+}
+
+.article-nav-title {
+  display: inline-block;
+  font-size: 15px;
+  opacity: .7;
+}
+
 .article-comments {
   margin-bottom: 50px;
 
+  // scss-lint:disable SelectorFormat
   .form_fields {
     font-size: 0;
   }
 
   .form_field_inline {
     display: inline-block;
-    vertical-align: top;
     width: calc(50% - 10px);
     margin-top: 5px;
+    vertical-align: top;
 
     &:first-child {
       margin-right: 10px;
@@ -393,11 +481,12 @@
       margin-left: 10px;
     }
   }
+  // scss-lint:enable SelectorFormat
 
   .comments-title {
     margin-bottom: 55px;
-    text-align: center;
     font-weight: 400;
+    text-align: center;
   }
 
   .comment-form-details {

@@ -1646,8 +1646,8 @@ a {
 
 .article-placeholder {
   width: 100%;
-  box-sizing: border-box;
   padding: .5em;
+  box-sizing: border-box;
 }
 
 .article-header {
@@ -1735,6 +1735,87 @@ a {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 641px) {
+  .article-nav-inner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.article-nav-link {
+  position: relative;
+  display: block;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 33px;
+  color: currentColor;
+}
+@media screen and (min-width: 641px) {
+  .article-nav-link:first-child {
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .article-nav-link:last-child {
+    padding-left: 20px;
+  }
+}
+.article-nav-link:hover .article-nav-direction {
+  opacity: 1;
+}
+.article-nav-link:hover .article-nav-title {
+  opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .article-nav-link-half {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 641px) {
+  .article-nav-link-half {
+    padding-bottom: 33px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .article-nav-link-half:first-child {
+    padding-bottom: 33px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .article-nav-link-half:last-child {
+    text-align: right;
+  }
+}
+
+.article-nav-link-full {
+  text-align: center;
+}
+
+.article-nav-direction {
+  position: relative;
+  display: inline-block;
+  opacity: .5;
+  stroke: currentColor;
+}
+.article-nav-link-older .article-nav-direction {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: -2px;
+}
+.article-nav-link-newer .article-nav-direction {
+  top: 1px;
+}
+
+.article-nav-title {
+  display: inline-block;
+  font-size: 15px;
+  opacity: .7;
+}
+
 .article-comments {
   margin-bottom: 50px;
 }
@@ -1743,9 +1824,9 @@ a {
 }
 .article-comments .form_field_inline {
   display: inline-block;
-  vertical-align: top;
   width: calc(50% - 10px);
   margin-top: 5px;
+  vertical-align: top;
 }
 .article-comments .form_field_inline:first-child {
   margin-right: 10px;
@@ -1755,8 +1836,8 @@ a {
 }
 .article-comments .comments-title {
   margin-bottom: 55px;
-  text-align: center;
   font-weight: 400;
+  text-align: center;
 }
 .article-comments .comment-form-details.is-hidden {
   display: none;
