@@ -3,7 +3,13 @@
 // =============================================================================
 .cms-blog-article-add-button {
   &:hover {
-    opacity: .5;
+    .article-top {
+      // scss-lint:disable NestingDepth
+      .top-inner {
+        border-style: solid;
+      }
+      // scss-lint:disable NestingDepth
+    }
   }
 }
 

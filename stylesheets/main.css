@@ -1374,8 +1374,8 @@ a {
   }
 }
 
-.cms-blog-article-add-button:hover {
-  opacity: .5;
+.cms-blog-article-add-button:hover .article-top .top-inner {
+  border-style: solid;
 }
 
 .cms-blog-article-tags {
