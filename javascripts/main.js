@@ -10815,6 +10815,8 @@ return jQuery;
           }
         ],
 
+        buttonTitleI18n: "settings",
+
         values: valuesObj,
 
         containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
