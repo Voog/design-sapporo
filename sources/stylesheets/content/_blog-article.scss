@@ -253,6 +253,10 @@
       border-color: rgba($color-black, .4);
       border-style: dashed;
       border-width: 1px;
+      
+      &:hover {
+        border-style: solid;
+      }
     }
 
     .edy-img-drop-area-placeholder {

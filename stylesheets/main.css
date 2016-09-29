@@ -1616,6 +1616,9 @@ a {
   border-style: dashed;
   border-width: 1px;
 }
+.article-top .image-drop-area:not(.active):hover {
+  border-style: solid;
+}
 @media screen and (max-width: 640px) {
   .article-top .image-drop-area .edy-img-drop-area-placeholder {
     font-size: 13px;
