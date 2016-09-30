@@ -462,7 +462,6 @@ a {
   .flexbox .site-header {
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
   }
 }
@@ -1791,24 +1790,15 @@ a {
 }
 
 .article-nav-direction {
-  position: relative;
-  display: inline-block;
-  opacity: .5;
-  stroke: currentColor;
-}
-.article-nav-link-older .article-nav-direction {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  top: -2px;
-}
-.article-nav-link-newer .article-nav-direction {
-  top: 1px;
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .3;
 }
 
 .article-nav-title {
-  display: inline-block;
-  font-size: 15px;
+  margin-top: 6px;
+  font-size: 18px;
   opacity: .7;
 }
 

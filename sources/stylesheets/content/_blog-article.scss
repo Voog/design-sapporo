@@ -429,24 +429,15 @@
 }
 
 .article-nav-direction {
-  position: relative;
-  display: inline-block;
-  opacity: .5;
-  stroke: currentColor;
-
-  .article-nav-link-older & {
-    transform: rotate(180deg);
-    top: -2px;
-  }
-
-  .article-nav-link-newer & {
-    top: 1px;
-  }
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .3;
 }
 
 .article-nav-title {
-  display: inline-block;
-  font-size: 15px;
+  margin-top: 6px;
+  font-size: 18px;
   opacity: .7;
 }
 
