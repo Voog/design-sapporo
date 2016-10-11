@@ -401,6 +401,28 @@
       opacity: 1;
     }
   }
+
+  &:nth-child(2) {
+    &::before {
+      @media screen and (max-width: $mobile) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        border-top-color: currentColor;
+        border-top-style: solid;
+        border-top-width: 1px;
+        content: '';
+        opacity: .2;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
 }
 
 .article-nav-link-half {
@@ -420,12 +442,16 @@
 }
 
 .article-nav-link-older {
-  padding-right: 20px;
+  @media screen and (min-width: $mobile) {
+    padding-right: 20px;
+  }
 }
 
 .article-nav-link-newer {
-  padding-left: 20px;
-  text-align: right;
+  @media screen and (min-width: $mobile) {
+    padding-left: 20px;
+    text-align: right;
+  }
 }
 
 .article-nav-direction {
