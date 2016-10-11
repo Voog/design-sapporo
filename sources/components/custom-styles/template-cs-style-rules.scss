@@ -219,6 +219,10 @@ body {
 // =============================================================================
 // BLOG ARTICLE
 // =============================================================================
+.article-nav {
+  max-width: var(--content-max-width);
+}
+
 .blog-article-newer {
   &:not(.cms-blog-article-add-button) {
     .blog-listing-page & {
