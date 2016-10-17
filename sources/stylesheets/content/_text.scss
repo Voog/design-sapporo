@@ -241,6 +241,11 @@
     outline: 0;
     -webkit-appearance: none;
 
+    &::-moz-focus-inner {
+      padding: 0;
+      border-style: none;
+    }
+
     &:hover {
       border-color: rgba($color-black, .3);
     }

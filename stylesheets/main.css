@@ -2037,6 +2037,10 @@ a {
   outline: 0;
   -webkit-appearance: none;
 }
+.content-area .custom-btn::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
 .content-area .custom-btn:hover {
   border-color: rgba(0, 0, 0, 0.3);
 }
