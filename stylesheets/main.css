@@ -2290,3 +2290,43 @@ label .form_control_indicator::before {
   height: 15px;
   content: '';
 }
+
+.publicmode .edy-ecommerce-shopping-cart-button {
+  right: 20px;
+  display: inline-block;
+  padding: 3px 8px 2px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+@media screen and (max-width: 640px) {
+  .publicmode .edy-ecommerce-shopping-cart-button {
+    top: 87px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .publicmode .edy-ecommerce-shopping-cart-button {
+    top: 122px;
+  }
+}
+.publicmode .edy-ecommerce-shopping-cart-button:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.publicmode .publicmode .edy-ecommerce-shopping-cart-button {
+  cursor: pointer;
+}
+.publicmode .edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
+  font-size: 12px;
+  line-height: 2;
+  border-radius: 15px;
+}
