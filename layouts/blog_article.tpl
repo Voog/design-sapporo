@@ -27,9 +27,7 @@
               </div>
 
               {% unless article.new_record? %}
-                <div class="content-bottom">
-                  <div class="content-area">{% content name="bottom" bind="Article" %}</div>
-                </div>
+                <div class="content-bottom content-area">{% content name="bottom" bind="Article" %}</div>
               {% endunless %}
 
               {% include "blog-article-tags" %}

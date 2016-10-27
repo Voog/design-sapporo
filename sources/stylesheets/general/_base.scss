@@ -149,6 +149,10 @@ a {
 
   .content-bottom {
     padding-top: 35px;
+
+    &:empty {
+      display: none;
+    }
   }
 }
 

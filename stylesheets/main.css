@@ -141,6 +141,9 @@ a {
 .page-content .content-bottom {
   padding-top: 35px;
 }
+.page-content .content-bottom:empty {
+  display: none;
+}
 
 .blog-articles {
   padding-top: 15px;
