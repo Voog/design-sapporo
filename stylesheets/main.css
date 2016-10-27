@@ -141,6 +141,9 @@ a {
 .page-content .content-bottom {
   padding-top: 35px;
 }
+.page-content .content-bottom:empty {
+  display: none;
+}
 
 .blog-articles {
   padding-top: 15px;
@@ -1648,8 +1651,8 @@ a {
 
 .article-placeholder {
   width: 100%;
-  box-sizing: border-box;
   padding: .5em;
+  box-sizing: border-box;
 }
 
 .article-header {
@@ -1737,6 +1740,98 @@ a {
   margin-top: 20px;
 }
 
+.article-nav {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+}
+
+@media screen and (min-width: 641px) {
+  .article-nav-inner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.article-nav-link {
+  position: relative;
+  display: block;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 33px;
+  color: currentColor;
+}
+.article-nav-link:hover .article-nav-direction {
+  opacity: 1;
+}
+.article-nav-link:hover .article-nav-title {
+  opacity: 1;
+}
+@media screen and (max-width: 640px) {
+  .article-nav-link:nth-child(2)::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    border-top-color: currentColor;
+    border-top-style: solid;
+    border-top-width: 1px;
+    content: '';
+    opacity: .2;
+  }
+}
+@media screen and (max-width: 640px) {
+  .article-nav-link {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .article-nav-link-half {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 641px) {
+  .article-nav-link-half {
+    padding-bottom: 33px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .article-nav-link-half:first-child {
+    padding-bottom: 33px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article-nav-link-older {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .article-nav-link-newer {
+    padding-left: 20px;
+    text-align: right;
+  }
+}
+
+.article-nav-direction {
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+.article-nav-title {
+  margin-top: 6px;
+  font-size: 18px;
+  opacity: .7;
+}
+
 .article-comments {
   margin-bottom: 50px;
 }
@@ -1745,9 +1840,9 @@ a {
 }
 .article-comments .form_field_inline {
   display: inline-block;
-  vertical-align: top;
   width: calc(50% - 10px);
   margin-top: 5px;
+  vertical-align: top;
 }
 .article-comments .form_field_inline:first-child {
   margin-right: 10px;
@@ -1757,8 +1852,8 @@ a {
 }
 .article-comments .comments-title {
   margin-bottom: 55px;
-  text-align: center;
   font-weight: 400;
+  text-align: center;
 }
 .article-comments .comment-form-details.is-hidden {
   display: none;

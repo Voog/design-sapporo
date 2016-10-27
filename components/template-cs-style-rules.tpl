@@ -128,6 +128,10 @@ body {
   color: var(--secondary-color);
 }
 
+.article-nav {
+  max-width: var(--content-max-width);
+}
+
 .blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button) .article-title {
   font-size: var(--article-box-font-size);
   font-style: var(--article-box-font-style);

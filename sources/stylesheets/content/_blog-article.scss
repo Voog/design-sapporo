@@ -133,7 +133,7 @@
 
   .bg-picker-btn {
     top: 0;
-    left: 0
+    left: 0;
   }
 
   .bg-crop-btn {
@@ -294,8 +294,8 @@
 
 .article-placeholder {
   width: 100%;
-  box-sizing: border-box;
   padding: .5em;
+  box-sizing: border-box;
 }
 
 .article-header {
@@ -382,18 +382,113 @@
   margin-top: 20px;
 }
 
+.article-nav {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+}
+
+.article-nav-inner {
+  @media screen and (min-width: $mobile + 1) {
+    display: flex;
+  }
+}
+
+.article-nav-link {
+  position: relative;
+  display: block;
+  flex: 1;
+  padding-top: 33px;
+  color: currentColor;
+
+  &:hover {
+    .article-nav-direction {
+      opacity: 1;
+    }
+
+    .article-nav-title {
+      opacity: 1;
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      @media screen and (max-width: $mobile) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        border-top-color: currentColor;
+        border-top-style: solid;
+        border-top-width: 1px;
+        content: '';
+        opacity: .2;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
+}
+
+.article-nav-link-half {
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    padding-bottom: 33px;
+  }
+
+  &:first-child {
+    @media screen and (max-width: $mobile) {
+      padding-bottom: 33px;
+    }
+  }
+}
+
+.article-nav-link-older {
+  @media screen and (min-width: $mobile) {
+    padding-right: 20px;
+  }
+}
+
+.article-nav-link-newer {
+  @media screen and (min-width: $mobile) {
+    padding-left: 20px;
+    text-align: right;
+  }
+}
+
+.article-nav-direction {
+  font-size: 13px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+.article-nav-title {
+  margin-top: 6px;
+  font-size: 18px;
+  opacity: .7;
+}
+
 .article-comments {
   margin-bottom: 50px;
 
+  // scss-lint:disable SelectorFormat
   .form_fields {
     font-size: 0;
   }
 
   .form_field_inline {
     display: inline-block;
-    vertical-align: top;
     width: calc(50% - 10px);
     margin-top: 5px;
+    vertical-align: top;
 
     &:first-child {
       margin-right: 10px;
@@ -403,11 +498,12 @@
       margin-left: 10px;
     }
   }
+  // scss-lint:enable SelectorFormat
 
   .comments-title {
     margin-bottom: 55px;
-    text-align: center;
     font-weight: 400;
+    text-align: center;
   }
 
   .comment-form-details {
