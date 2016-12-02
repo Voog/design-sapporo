@@ -380,6 +380,9 @@ a {
 .menu-main-opened .header-menu-compact .menu-main {
   right: 0;
 }
+.edy-checkout-button-visible .menu-main {
+  top: 41px;
+}
 .header-menu-compact .menu-main .inner {
   height: 100%;
   overflow: auto;
@@ -580,6 +583,9 @@ a {
   background-image: url("../assets/bg-search.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+.edy-checkout-button-visible .site-search {
+  top: 41px;
 }
 @media screen and (max-width: 400px) {
   .site-search {
