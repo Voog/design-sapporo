@@ -162,6 +162,10 @@
     }
   }
 
+  .edy-checkout-button-visible & {
+    top: 41px; // 41 is the height of the checkout button.
+  }
+
   .inner {
     .header-menu-compact & {
       height: 100%;
