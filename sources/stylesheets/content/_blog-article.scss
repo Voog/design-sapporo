@@ -63,6 +63,14 @@
     padding-bottom: 30px;
   }
 
+  .item-page & {
+    @media screen and (min-width: $mobile + 1) {
+      flex-grow: 1;
+      max-width: 520px;
+      margin-right: 40px;
+    }
+  }
+
   .top-inner {
     opacity: 1;
   }
@@ -253,7 +261,7 @@
       border-color: rgba($color-black, .4);
       border-style: dashed;
       border-width: 1px;
-      
+
       &:hover {
         border-style: solid;
       }

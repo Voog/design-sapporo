@@ -60,6 +60,12 @@ a {
   display: none;
 }
 
+// TODO: Remove hotfix !important.
+.align-left {
+  text-align: left !important; // scss-lint:disable ImportantRule
+
+}
+
 .site-container {
   @include transition(right .2s);
   position: relative;
@@ -156,6 +162,25 @@ a {
   }
 }
 
+//TODO: Maybe content should be separate partial?
+.content-header {
+  .item-page & {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $mobile) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.content-body {
+  .item-page & {
+    @media screen and (min-width: $mobile + 1) {
+      flex: 1;
+    }
+  }
+}
+
 .blog-articles {
   padding-top: 15px;
   font-size: 0;
@@ -170,6 +195,14 @@ a {
     padding-bottom: 80px;
     margin-right: -20px;
     margin-left: -20px;
+  }
+}
+
+.items-body {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $mobile + 1) {
+    display: flex;
   }
 }
 
