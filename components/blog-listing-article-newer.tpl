@@ -19,7 +19,7 @@
 {% endunless %}
 
 {% if editmode %}
-  <div class="blog-article-newer {{ article_image_state }} js-blog-article-newer" data-article-id="{{ article.id }}">
+  <div class="blog-article-newer {{ article_image_state }} js-blog-article-newer" data-item-type="article" data-article-id="{{ article.id }}">
     <div class="article-top js-bg-picker-area">
       <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.url }}" data-bg-target-width="680"></button>
 

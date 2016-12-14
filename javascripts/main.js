@@ -10998,11 +10998,24 @@ return jQuery;
     }
   };
 
-  var setArticleImage = function(articleId, imageId) {
+  var setItemImage = function(itemId, imageId, itemType) {
+    var apiType;
+
+    // console.log(itemType);
+
+    if (itemType === 'article') {
+      apiType = 'articles';
+    } else {
+      apiType = 'pages';
+    }
+
+    console.log(apiType);
+    console.log('/admin/api/' + apiType +'/' + itemId);
+
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
-       url: '/admin/api/articles/' + articleId,
+       url: '/admin/api/' + apiType +'/' + itemId,
        data: JSON.stringify({'image_id': imageId}),
        dataType: 'json'
     });
@@ -11015,7 +11028,9 @@ return jQuery;
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
           $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
-          articleId = $bgPickerArea.closest('.js-blog-article-newer').data('article-id'),
+          $article = $bgPickerArea.closest('.js-blog-article-newer'),
+          itemId = $article.data('article-id'),
+          itemType = $article.data('item-type'),
           dataBgKey = $bgPickerButton.data('bg-key');
 
       var bgPicker = new Edicy.BgPicker($bgPickerButton, {
@@ -11043,7 +11058,7 @@ return jQuery;
         },
 
         commit: function(data) {
-          setArticleImage(articleId, data.original_id);
+          setItemImage(itemId, data.original_id, itemType);
         }
       });
 
@@ -11059,10 +11074,15 @@ return jQuery;
       var $imgDropAreaTarget = $(imgDropAreaTarget),
           $article = $imgDropAreaTarget.closest('.js-blog-article-newer'),
           $bgPickerArea = $article.find('.js-bg-picker-area'),
-          articleId = $article.data('article-id'),
+          itemId = $article.data('article-id'),
+          itemType = $article.data('item-type'),
           articleData = new Edicy.CustomData({
             type: 'article',
-            id: articleId
+            id: itemId
+          }),
+          pageData = new Edicy.CustomData({
+            type: 'page',
+            id: $article.data('article-id')
           });
 
       var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
@@ -11093,8 +11113,13 @@ return jQuery;
             height: data.height
           });
 
-          setArticleImage(articleId, data.original_id);
-          articleData.set('image_crop_state', 'not-cropped');
+          setItemImage(itemId, data.original_id, itemType);
+
+          if (itemType === 'article') {
+            articleData.set('image_crop_state', 'not-cropped');
+          } else {
+            pageData.set('image_crop_state', 'not-cropped');
+          }
         }
       });
 
@@ -11110,10 +11135,16 @@ return jQuery;
     $('.js-toggle-crop-state').on('click', function() {
       var $article = $(this).closest('.js-blog-article-newer'),
           $imgDropAreaTarget = $article.find('.js-img-drop-area'),
+          itemType = $article.data('item-type'),
           imageCropState;
 
       var articleData = new Edicy.CustomData({
         type: 'article',
+        id: $article.data('article-id')
+      });
+
+      var pageData = new Edicy.CustomData({
+        type: 'page',
         id: $article.data('article-id')
       });
 
@@ -11134,7 +11165,11 @@ return jQuery;
         imageCropState = 'is-cropped';
       }
 
-      articleData.set('image_crop_state', imageCropState);
+      if (itemType === 'article') {
+        articleData.set('image_crop_state', imageCropState);
+      } else {
+        pageData.set('image_crop_state', imageCropState);
+      }
     });
   };
 

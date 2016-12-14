@@ -28,7 +28,7 @@
                       </ul>
                     {% endif %}
 
-                    {% for level_2 in level_1.visible_children %}
+                    {% for level_2 in level_1.visible_children_with_data %}
                       {% if page.level == 1 %}
                         {% include "items-listing-item" menu_level: level_2 %}
                       {% elsif page.level == 2 %}
@@ -43,7 +43,7 @@
                             </ul>
                           {% endif %}
 
-                          {% for level_3 in level_2.visible_children %}
+                          {% for level_3 in level_2.visible_children_with_data %}
                             {% include "items-listing-item" menu_level: level_3 %}
                           {% endfor %}
                         {% endif %}

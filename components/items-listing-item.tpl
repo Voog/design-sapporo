@@ -1,25 +1,25 @@
-{% unless item.image %}
+{% unless menu_level.image %}
   {% assign item_image_state = "without-image" %}
 {% else %}
   {% assign item_image_state = "with-image" %}
 
-  {% if item.image.width > item.image.height %}
+  {% if menu_level.image.width > menu_level.image.height %}
     {% assign item_image_orientation = "image-landscape" %}
-  {% elsif item.image.width == item.image.height %}
+  {% elsif menu_level.image.width == menu_level.image.height %}
     {% assign item_image_orientation = "image-square" %}
   {% else %}
     {% assign item_image_orientation = "image-portrait" %}
   {% endif %}
 
-  {% if item.data.image_crop_state %}
-    {% assign item_image_crop_state = item.data.image_crop_state %}
+  {% if menu_level.data.image_crop_state %}
+    {% assign item_image_crop_state = menu_level.data.image_crop_state %}
   {% else %}
     {% assign item_image_crop_state = "not-cropped" %}
   {% endif %}
 {% endunless %}
 
 {% if editmode %}
-  <div class="blog-article-newer {{ item_image_state }} js-blog-article-newer" data-article-id="{{ menu_level.id }}">
+  <div class="blog-article-newer {{ item_image_state }} js-blog-article-newer" data-item-type="page" data-article-id="{{ menu_level.page_id }}">
     <div class="article-top js-bg-picker-area">
       <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ menu_level.image.for-width-680.url }}" data-bg-target-width="680"></button>
 
