@@ -19,14 +19,22 @@ Adds template specific JS tools.
     // Initiates the language menu mode toggleing popover.
     //==========================================================================
     var valuesObj;
-    
+
     {%if site.data.settings_language_menu %}
-      valuesObj = {{ site.data.settings_language_menu | json }};
+      languageMenuValuesObj = {{ site.data.settings_language_menu | json }};
     {% else %}
-      valuesObj = {};
+      languageMenuValuesObj = {};
     {% endif %};
-    
-    template.bindLanguageMenuSettings(valuesObj);
+
+    template.bindLanguageMenuSettings(languageMenuValuesObj);
+
+    {%if site.data.settings_root_item %}
+      rootItemValuesObj = {{ site.data.settings_root_item | json }};
+    {% else %}
+      rootItemValuesObj = {};
+    {% endif %};
+
+    template.bindRootItemSettings(rootItemValuesObj);
 
     //==========================================================================
     // Binds custom styles under wysihtml editor.

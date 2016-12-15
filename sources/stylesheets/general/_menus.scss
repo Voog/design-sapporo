@@ -148,6 +148,12 @@
   }
 }
 
+.menu-item {
+  &.is-hidden {
+    display: none;
+  }
+}
+
 .menu-main {
   display: inline-block;
   text-align: left;

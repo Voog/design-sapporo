@@ -16,14 +16,20 @@
       {% endif %}
     {% else %}
       {% if site.root_item.layout_title == product_list_layout %}
-        {% if hide_front_page_categories_in_main_menu %}
-          {% unless level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
-            {% include "menu-level-1-link" %}
+        {% if editmode %}
+          {% unless level_1.layout_title == product_layout %}
+            {% include "menu-level-1-link" render_hidden_categories: true %}
           {% endunless %}
         {% else %}
-          {% unless level_1.layout_title == product_layout %}
-            {% include "menu-level-1-link" %}
-          {% endunless %}
+          {% if hide_categories_from_main_menu %}
+            {% unless level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
+              {% include "menu-level-1-link" %}
+            {% endunless %}
+          {% else %}
+            {% unless level_1.layout_title == product_layout %}
+              {% include "menu-level-1-link" %}
+            {% endunless %}
+          {% endif %}
         {% endif %}
       {% else %}
         {% include "menu-level-1-link" %}

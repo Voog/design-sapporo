@@ -10868,6 +10868,56 @@ return jQuery;
   };
 
   // ===========================================================================
+  // Toggles language menu mode.
+  // ===========================================================================
+  var bindRootItemSettings = function(valuesObj) {
+    if (!('hide_categories_from_main_menu' in valuesObj)) {
+      valuesObj.hide_categories_from_main_menu = false;
+    }
+
+    $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
+      var rootItemSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
+        menuItems: [
+          {
+            "title": "Hide categories from main menu",
+            "type": "checkbox",
+            "key": "hide_categories_from_main_menu",
+            "states": {
+              "on": true,
+              "off": false
+            }
+          }
+        ],
+
+        buttonTitleI18n: "settings",
+
+        values: valuesObj,
+
+        containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
+
+        preview: function(data) {
+          console.log(data);
+          if (data.hide_categories_from_main_menu === true) {
+            console.log(1);
+            $.each($('.js-menu-item-category'), function() {
+              $(this).addClass('is-hidden');
+            });
+          } else {
+            console.log(2);
+            $.each($('.js-menu-item-category'), function() {
+              $(this).removeClass('is-hidden');
+            });
+          }
+        },
+
+        commit: function(data) {
+          siteData.set('settings_root_item', data);
+        }
+      });
+    });
+  };
+
+  // ===========================================================================
   // Binds site search functionality.
   // ===========================================================================
   var bindSiteSearch = function(searchForm, languageCode) {
@@ -11299,6 +11349,7 @@ return jQuery;
 
     // Initiations for specific functions.
     bindLanguageMenuSettings: bindLanguageMenuSettings,
+    bindRootItemSettings: bindRootItemSettings,
     bindSiteSearch: bindSiteSearch,
     bindBgPickers: bindBgPickers,
     bindImgDropAreas: bindImgDropAreas,
