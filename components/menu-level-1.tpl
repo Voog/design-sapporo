@@ -28,8 +28,6 @@
       {% else %}
         {% include "menu-level-1-link" %}
       {% endif %}
-      {% comment %}{% unless level_1.layout_title == product_layout %}
-      {% endunless %}{% endcomment %}
     {% endif %}
   {% endfor %}
 
