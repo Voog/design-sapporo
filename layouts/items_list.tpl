@@ -17,17 +17,20 @@
           <main class="page-content" role="main">
             <section class="blog-articles">
               {% if site.root_item.selected? %}
-                {% if page.level == 0 and editmode %}
+                {% if editmode %}
                   <ul class="menu menu-horizontal menu-cms">
                     {% if site.hidden_menuitems.size > 0 %}
                       <li class="menu-item menu-item-cms">{% menubtn site.hidden_menuitems %}</li>
                     {% endif %}
+
                     <li class="menu-item menu-item-cms">{% menuadd %}</li>
                   </ul>
                 {% endif %}
 
                 {% for level_1 in site.visible_menuitems_with_data %}
-                  {% include "items-listing-item" menu_level: level_1 %}
+                  {% if level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
+                    {% include "items-listing-item" menu_level: level_1 %}
+                  {% endif %}
                 {% endfor %}
               {% else %}
                 {% for level_1 in site.visible_menuitems %}
@@ -43,7 +46,9 @@
 
                     {% for level_2 in level_1.visible_children_with_data %}
                       {% if page.level == 1 %}
-                        {% include "items-listing-item" menu_level: level_2 %}
+                        {% if level_2.layout_title == product_list_layout or level_2.layout_title == product_layout %}
+                          {% include "items-listing-item" menu_level: level_2 %}
+                        {% endif %}
                       {% elsif page.level == 2 %}
                         {% if level_2.selected? and level_2.children? or editmode %}
                           {% comment %}TODO: Convert to custom boxes{% endcomment %}
@@ -57,7 +62,9 @@
                           {% endif %}
 
                           {% for level_3 in level_2.visible_children_with_data %}
-                            {% include "items-listing-item" menu_level: level_3 %}
+                            {% if level_2.layout_title == product_list_layout or level_2.layout_title == product_layout %}
+                              {% include "items-listing-item" menu_level: level_3 %}
+                            {% endif %}
                           {% endfor %}
                         {% endif %}
                       {% endif %}
