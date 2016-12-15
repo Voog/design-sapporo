@@ -30,7 +30,7 @@
                     <li class="menu-item menu-item-cms">{% menuadd %}</li>
 
                     {% if site.root_item.selected? %}
-                      <li class="menu-item menu-item-cms">
+                      <li class="menu-item menu-item-cms float-right">
                         <a class="js-root-item-settings-toggle"></a>
                       </li>
                     {% endif %}

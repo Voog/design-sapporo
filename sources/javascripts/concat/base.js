@@ -359,18 +359,19 @@
         containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
 
         preview: function(data) {
-          console.log(data);
           if (data.hide_categories_from_main_menu === true) {
-            console.log(1);
             $.each($('.js-menu-item-category'), function() {
               $(this).addClass('is-hidden');
             });
           } else {
-            console.log(2);
             $.each($('.js-menu-item-category'), function() {
               $(this).removeClass('is-hidden');
             });
           }
+
+          // TODO: Find out why it doesn't work in some edge cases.
+          setHeaderMenuInitialWidth();
+          setHeaderMenuMode();
         },
 
         commit: function(data) {
