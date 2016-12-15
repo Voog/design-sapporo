@@ -117,9 +117,12 @@ body {
       > a {
         font-style: var(--menu-main-hover-font-style);
         font-weight: var(--menu-main-hover-font-weight);
-        color: var(--menu-main-hover-color);
         text-decoration: var(--menu-main-hover-text-decoration);
         text-transform: var(--menu-main-hover-text-transform);
+      }
+
+      > a:not(.untranslated) {
+        color: var(--menu-main-hover-color);
       }
       // scss-lint:enable NestingDepth
     }
@@ -140,9 +143,12 @@ body {
       font-size: var(--menu-main-font-size);
       font-style: var(--menu-main-font-style);
       font-weight: var(--menu-main-font-weight);
-      color: var(--menu-main-color);
       text-decoration: var(--menu-main-text-decoration);
       text-transform: var(--menu-main-text-transform);
+    }
+
+    > a:not(.untranslated) {
+      color: var(--menu-main-color);
     }
   }
 }

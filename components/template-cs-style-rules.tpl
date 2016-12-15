@@ -64,9 +64,11 @@ body {
 .menu-level-1 > .menu-item:hover > a {
   font-style: var(--menu-main-hover-font-style);
   font-weight: var(--menu-main-hover-font-weight);
-  color: var(--menu-main-hover-color);
   text-decoration: var(--menu-main-hover-text-decoration);
   text-transform: var(--menu-main-hover-text-transform);
+}
+.menu-level-1 > .menu-item:hover > a:not(.untranslated) {
+  color: var(--menu-main-hover-color);
 }
 .menu-level-1 > .menu-item.item-current > a {
   font-style: var(--menu-main-active-font-style);
@@ -79,9 +81,11 @@ body {
   font-size: var(--menu-main-font-size);
   font-style: var(--menu-main-font-style);
   font-weight: var(--menu-main-font-weight);
-  color: var(--menu-main-color);
   text-decoration: var(--menu-main-text-decoration);
   text-transform: var(--menu-main-text-transform);
+}
+.menu-level-1 > .menu-item > a:not(.untranslated) {
+  color: var(--menu-main-color);
 }
 
 .menu-level-2 .menu-item a {
