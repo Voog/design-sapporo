@@ -63,12 +63,8 @@
     padding-bottom: 30px;
   }
 
-  .item-page & {
-    @media screen and (min-width: $mobile + 1) {
-      flex-grow: 1;
-      max-width: 520px;
-      margin-right: 40px;
-    }
+  .content-illustrations & {
+    margin-bottom: 40px;
   }
 
   .top-inner {

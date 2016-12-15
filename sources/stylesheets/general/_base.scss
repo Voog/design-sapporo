@@ -176,6 +176,14 @@ a {
   }
 }
 
+.content-illustrations {
+  @media screen and (min-width: $mobile + 1) {
+    flex: 1;
+    max-width: 520px;
+    margin-right: 40px;
+  }
+}
+
 .content-body {
   .item-page & {
     @media screen and (min-width: $mobile + 1) {
