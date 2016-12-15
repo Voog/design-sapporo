@@ -15,16 +15,16 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/item.tpl",
-      "layout_name": "item",
-      "title": "Item"
+      "file": "layouts/product.tpl",
+      "layout_name": "product",
+      "title": "Product"
     },
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/items_list.tpl",
-      "layout_name": "items_list",
-      "title": "Items list"
+      "file": "layouts/product_list.tpl",
+      "layout_name": "product_list",
+      "title": "Product list"
     },
     {
       "content_type": "page",
@@ -38,7 +38,7 @@
       "component": false,
       "file": "layouts/blog___news.tpl",
       "layout_name": "blog___news",
-      "title": "Blog & News"
+      "title": "Blog & news"
     },
     {
       "content_type": "blog_article",
