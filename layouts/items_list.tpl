@@ -19,10 +19,8 @@
               {% if site.root_item.selected? %}
                 {% if editmode %}
                   <ul class="menu menu-horizontal menu-cms">
-                    {% if site.root_item.selected? %}
-                      <li class="menu-item menu-item-cms">
-                        <a class="js-root-item-settings-toggle"></a>
-                      </li>
+                    {% if site.untranslated_menuitems.size > 0 %}
+                      <li class="menu-item menu-item-cms">{% menubtn site.untranslated_menuitems %}</li>
                     {% endif %}
 
                     {% if site.hidden_menuitems.size > 0 %}
@@ -30,6 +28,12 @@
                     {% endif %}
 
                     <li class="menu-item menu-item-cms">{% menuadd %}</li>
+
+                    {% if site.root_item.selected? %}
+                      <li class="menu-item menu-item-cms">
+                        <a class="js-root-item-settings-toggle"></a>
+                      </li>
+                    {% endif %}
                   </ul>
                 {% endif %}
 
