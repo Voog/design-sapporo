@@ -47,9 +47,14 @@
                   {% if level_1.selected? and level_1.children? or editmode %}
                     {% if page.level == 1 and editmode %}
                       <ul class="menu menu-horizontal menu-cms">
+                        {% if level_1.untranslated_children.size > 0 %}
+                          <li class="menu-item menu-item-cms">{% menubtn level_1.untranslated_children %}</li>
+                        {% endif %}
+
                         {% if level_1.hidden_children.size > 0 %}
                           <li class="menu-item menu-item-cms">{% menubtn level_1.hidden_children %}</li>
                         {% endif %}
+
                         <li class="menu-item menu-item-cms">{% menuadd parent="level_1" %}</li>
                       </ul>
                     {% endif %}
@@ -61,18 +66,22 @@
                         {% endif %}
                       {% elsif page.level == 2 %}
                         {% if level_2.selected? and level_2.children? or editmode %}
-                          {% comment %}TODO: Convert to custom boxes{% endcomment %}
                           {% if editmode %}
                             <ul class="menu menu-horizontal menu-cms">
+                              {% if level_2.untranslated_children.size > 0 %}
+                                <li class="menu-item menu-item-cms">{% menubtn level_2.untranslated_children %}</li>
+                              {% endif %}
+
                               {% if level_2.hidden_children.size > 0 %}
                                 <li class="menu-item menu-item-cms">{% menubtn level_1.hidden_children %}</li>
                               {% endif %}
+
                               <li class="menu-item menu-item-cms">{% menuadd parent="level_2" %}</li>
                             </ul>
                           {% endif %}
 
                           {% for level_3 in level_2.visible_children_with_data %}
-                            {% if level_2.layout_title == product_list_layout or level_2.layout_title == product_layout %}
+                            {% if level_3.layout_title == product_list_layout or level_3.layout_title == product_layout %}
                               {% include "product-list-item" menu_level: level_3 %}
                             {% endif %}
                           {% endfor %}
