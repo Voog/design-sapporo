@@ -93,14 +93,12 @@ body {
   font-style: var(--menu-sub-font-style);
   font-weight: var(--menu-sub-font-weight);
   line-height: var(--menu-sub-line-height);
-  color: var(--menu-sub-color);
   text-decoration: var(--menu-sub-text-decoration);
   text-transform: var(--menu-sub-text-transform);
 }
 .menu-level-2 .menu-item a:hover {
   font-style: var(--menu-sub-hover-font-style);
   font-weight: var(--menu-sub-hover-font-weight);
-  color: var(--menu-sub-hover-color);
   text-decoration: var(--menu-sub-hover-text-decoration);
   text-transform: var(--menu-sub-hover-text-transform);
 }
@@ -110,6 +108,12 @@ body {
   color: var(--menu-sub-active-color);
   text-decoration: var(--menu-sub-active-text-decoration);
   text-transform: var(--menu-sub-active-text-transform);
+}
+.menu-level-2 .menu-item a:not(.untranslated) {
+  color: var(--menu-sub-color);
+}
+.menu-level-2 .menu-item a:not(.untranslated):hover {
+  color: var(--menu-sub-hover-color);
 }
 
 .menu-language-btn {

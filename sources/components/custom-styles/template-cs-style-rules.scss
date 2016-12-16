@@ -163,7 +163,6 @@ body {
       font-style: var(--menu-sub-font-style);
       font-weight: var(--menu-sub-font-weight);
       line-height: var(--menu-sub-line-height);
-      color: var(--menu-sub-color);
       text-decoration: var(--menu-sub-text-decoration);
       text-transform: var(--menu-sub-text-transform);
 
@@ -171,7 +170,6 @@ body {
       &:hover {
         font-style: var(--menu-sub-hover-font-style);
         font-weight: var(--menu-sub-hover-font-weight);
-        color: var(--menu-sub-hover-color);
         text-decoration: var(--menu-sub-hover-text-decoration);
         text-transform: var(--menu-sub-hover-text-transform);
       }
@@ -184,6 +182,14 @@ body {
         text-transform: var(--menu-sub-active-text-transform);
       }
       // scss-lint:enable NestingDepth
+    }
+
+    a:not(.untranslated) {
+      color: var(--menu-sub-color);
+
+      &:hover {
+        color: var(--menu-sub-hover-color);
+      }
     }
   }
 }
