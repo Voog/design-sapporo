@@ -91,8 +91,8 @@
     {% endif %}
   {% endfor %}
 
-  {% assign product_list_layout = "Items list" %}
-  {% assign product_layout = "Item" %}
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
 
   {% assign hide_categories_from_main_menu = site.data.settings_root_item.hide_categories_from_main_menu %}
 

@@ -1,11 +1,11 @@
 {% if forloop.index < articles_newer_limit %}
-  {% include "blog-listing-article-newer" %}
+  {% include "blog-list-article-newer" %}
 {% else %}
   {% if forloop.index == articles_newer_limit %}
-    <div class="blog-articles-older">
+    <div class="content-items">
   {% endif %}
 
-  {% include "blog-listing-article-older" %}
+  {% include "blog-list-article-older" %}
 
   {% if forloop.last %}
     </div>

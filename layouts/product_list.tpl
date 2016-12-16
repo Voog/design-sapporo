@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-{% include "blog-listing-variables" %}
+{% include "blog-list-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% include "template-head" with "blog_listing_page" %}
+    {% include "template-head" with "blog_list_page" %}
   </head>
 
-  <body class="blog-news-page blog-listing-page header-menu-wide" data-search-indexing-allowed="false">
+  <body class="blog-news-page item-list-page header-menu-wide" data-search-indexing-allowed="false">
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">
@@ -15,7 +15,7 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
-            <section class="blog-articles">
+            <section class="content-item-boxes">
               {% if site.root_item.selected? %}
                 {% if editmode %}
                   <ul class="menu menu-horizontal menu-cms">
@@ -39,7 +39,7 @@
 
                 {% for level_1 in site.visible_menuitems_with_data %}
                   {% if level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
-                    {% include "items-listing-item" menu_level: level_1 %}
+                    {% include "product-list-item" menu_level: level_1 %}
                   {% endif %}
                 {% endfor %}
               {% else %}
@@ -57,7 +57,7 @@
                     {% for level_2 in level_1.visible_children_with_data %}
                       {% if page.level == 1 %}
                         {% if level_2.layout_title == product_list_layout or level_2.layout_title == product_layout %}
-                          {% include "items-listing-item" menu_level: level_2 %}
+                          {% include "product-list-item" menu_level: level_2 %}
                         {% endif %}
                       {% elsif page.level == 2 %}
                         {% if level_2.selected? and level_2.children? or editmode %}
@@ -73,7 +73,7 @@
 
                           {% for level_3 in level_2.visible_children_with_data %}
                             {% if level_2.layout_title == product_list_layout or level_2.layout_title == product_layout %}
-                              {% include "items-listing-item" menu_level: level_3 %}
+                              {% include "product-list-item" menu_level: level_3 %}
                             {% endif %}
                           {% endfor %}
                         {% endif %}
@@ -95,8 +95,8 @@
     {% endif %}
 
     {% include "template-javascripts" %}
-    {% include "blog-listing-tools" %}
+    {% include "blog-list-tools" %}
 
-    <script>template.initBlogPage();</script>
+    <script>template.initItemsPage();</script>
   </body>
 </html>

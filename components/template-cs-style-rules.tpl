@@ -136,7 +136,7 @@ body {
   max-width: var(--content-max-width);
 }
 
-.blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button) .article-title {
+.item-list-page .content-item-box:not(.cms-blog-article-add-button) .item-title {
   font-size: var(--article-box-font-size);
   font-style: var(--article-box-font-style);
   font-weight: var(--article-box-font-weight);
@@ -146,12 +146,12 @@ body {
   text-transform: var(--article-box-text-transform);
 }
 @media screen and (min-width: 641px) {
-  .blog-listing-page .blog-article-newer {
+  .item-list-page .content-item-box {
     width: var(--article-box-width);
   }
 }
 
-.article-top .top-inner {
+.item-top .top-inner {
   border-radius: var(--article-box-image-radius);
 }
 

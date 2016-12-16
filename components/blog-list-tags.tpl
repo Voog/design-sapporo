@@ -1,5 +1,5 @@
 {% if site.has_language_tags? %}
-  {% assign page_path = blog-listing-tags %}
+  {% assign page_path = blog-list-tags %}
 
   {% blogcontext page_path %}
     <nav class="menu-sub js-menu-sub">

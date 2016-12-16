@@ -9,6 +9,6 @@ Adds article specific JS tools.
   <script>
     template.bindBgPickers();
     template.bindImgDropAreas();
-    template.bindArticleImageCropToggle();
+    template.bindItemImageCropToggle();
   </script>
 {% endeditorjsblock %}

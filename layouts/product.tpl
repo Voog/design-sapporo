@@ -38,8 +38,8 @@
             <div class="items-body" {{ edy_intro_edit_text }}>
               <div class="content-illustrations">
                 {% if editmode %}
-                  <div class="blog-article-newer {{ page_image_state }} js-blog-article-newer" data-item-type="page" data-article-id="{{ page.page_id }}">
-                    <div class="article-top js-bg-picker-area">
+                  <div class="content-item-box {{ page_image_state }} js-content-item-box" data-item-type="page" data-item-id="{{ page.page_id }}">
+                    <div class="item-top js-bg-picker-area">
                       <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ page.image.for-width-680.url }}" data-bg-target-width="680"></button>
 
                       <button class="btn bg-crop-btn {% if page_image_orientation == "image-square" or page.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
@@ -53,14 +53,14 @@
                   </div>
                 {% else %}
                   {% if page.image %}
-                    <div class="blog-article-newer {{ page_image_state }} js-blog-article-newer" href="{{ page.url }}">
-                      <div class="article-top">
+                    <div class="content-item-box {{ page_image_state }} js-content-item-box" href="{{ page.url }}">
+                      <div class="item-top">
                         <div class="top-inner aspect-ratio-inner">
                           {% if page.image %}
                             <div class="loader js-loader"></div>
-                            <img class="article-image {{ page_image_orientation }} {{ page_image_crop_state }} js-lazyload" data-original="{{ page.image.for-width-680.url }}">
+                            <img class="item-image {{ page_image_orientation }} {{ page_image_crop_state }} js-lazyload" data-original="{{ page.image.for-width-680.url }}">
                           {% else %}
-                            <div class="article-placeholder">{{ page.title | truncate: 50 }}</div>
+                            <div class="item-placeholder">{{ page.title | truncate: 50 }}</div>
                           {% endif %}
                         </div>
                       </div>
@@ -93,8 +93,8 @@
     {% endif %}
 
     {% include "template-javascripts" %}
-    {% include "blog-listing-tools" %}
+    {% include "blog-list-tools" %}
 
-    <script>template.initBlogPage();</script>
+    <script>template.initItemsPage();</script>
   </body>
 </html>

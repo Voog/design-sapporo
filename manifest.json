@@ -50,44 +50,37 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-article-older.tpl",
-      "layout_name": "blog-listing-article-older",
-      "title": "blog-listing-article-older"
+      "file": "components/blog-list-article-older.tpl",
+      "layout_name": "blog-list-article-older",
+      "title": "blog-list-article-older"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-article.tpl",
-      "layout_name": "blog-listing-article",
-      "title": "blog-listing-article"
+      "file": "components/blog-list-article.tpl",
+      "layout_name": "blog-list-article",
+      "title": "blog-list-article"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-tags.tpl",
-      "layout_name": "blog-listing-tags",
-      "title": "blog-listing-tags"
+      "file": "components/blog-list-tags.tpl",
+      "layout_name": "blog-list-tags",
+      "title": "blog-list-tags"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-tools.tpl",
-      "layout_name": "blog-listing-tools",
-      "title": "blog-listing-tools"
+      "file": "components/blog-list-tools.tpl",
+      "layout_name": "blog-list-tools",
+      "title": "blog-list-tools"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-variables.tpl",
-      "layout_name": "blog-listing-variables",
-      "title": "blog-listing-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/items-listing-item.tpl",
-      "layout_name": "items-listing-item",
-      "title": "items-listing-item"
+      "file": "components/blog-list-variables.tpl",
+      "layout_name": "blog-list-variables",
+      "title": "blog-list-variables"
     },
     {
       "content_type": "component",
@@ -130,6 +123,13 @@
       "file": "components/menu-main.tpl",
       "layout_name": "menu-main",
       "title": "menu-main"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-item.tpl",
+      "layout_name": "product-list-item",
+      "title": "product-list-item"
     },
     {
       "content_type": "component",
@@ -302,16 +302,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-article-add.tpl",
-      "layout_name": "blog-listing-article-add",
-      "title": "blog-listing-article-add"
+      "file": "components/blog-list-article-add.tpl",
+      "layout_name": "blog-list-article-add",
+      "title": "blog-list-article-add"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-listing-article-newer.tpl",
-      "layout_name": "blog-listing-article-newer",
-      "title": "blog-listing-article-newer"
+      "file": "components/blog-list-article-newer.tpl",
+      "layout_name": "blog-list-article-newer",
+      "title": "blog-list-article-newer"
     }
   ],
   "assets": [

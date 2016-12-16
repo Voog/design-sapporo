@@ -4,7 +4,7 @@
       {% menulink site.root_item %}
 
       {% if blog_pages_size == 1 %}
-        {% include "blog-listing-tags" with blog_first.path %}
+        {% include "blog-list-tags" with blog_first.path %}
       {% endif %}
     </li>
   {% endunless %}
