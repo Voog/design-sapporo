@@ -44,8 +44,8 @@
                 {% endfor %}
               {% else %}
                 {% for level_1 in site.visible_menuitems %}
-                  {% if level_1.selected? and level_1.children? or editmode %}
-                    {% if page.level == 1 and editmode %}
+                  {% if level_1.selected? %}
+                    {% if level_1.current? and editmode %}
                       <ul class="menu menu-horizontal menu-cms">
                         {% if level_1.untranslated_children.size > 0 %}
                           <li class="menu-item menu-item-cms">{% menubtn level_1.untranslated_children %}</li>
@@ -60,13 +60,13 @@
                     {% endif %}
 
                     {% for level_2 in level_1.visible_children_with_data %}
-                      {% if page.level == 1 %}
+                      {% if level_1.current? %}
                         {% if level_2.layout_title == product_list_layout or level_2.layout_title == product_layout %}
                           {% include "product-list-item" menu_level: level_2 %}
                         {% endif %}
-                      {% elsif page.level == 2 %}
-                        {% if level_2.selected? and level_2.children? or editmode %}
-                          {% if editmode %}
+                      {% else %}
+                        {% if level_2.selected? %}
+                          {% if level_2.current? and editmode %}
                             <ul class="menu menu-horizontal menu-cms">
                               {% if level_2.untranslated_children.size > 0 %}
                                 <li class="menu-item menu-item-cms">{% menubtn level_2.untranslated_children %}</li>
