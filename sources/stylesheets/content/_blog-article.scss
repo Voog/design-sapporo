@@ -73,7 +73,12 @@
 
   &:hover {
     .top-inner {
-      opacity: .8;
+      // scss-lint:disable NestingDepth
+      .editmode &,
+      .item-list-page & {
+        opacity: .8;
+      }
+      // scss-lint:enable NestingDepth
     }
   }
 }

@@ -1500,7 +1500,7 @@ a {
 .content-item-box .top-inner {
   opacity: 1;
 }
-.content-item-box:hover .top-inner {
+.editmode .content-item-box:hover .top-inner, .item-list-page .content-item-box:hover .top-inner {
   opacity: .8;
 }
 
