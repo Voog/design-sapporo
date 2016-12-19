@@ -1636,6 +1636,10 @@ a {
   width: 100%;
   height: auto;
 }
+.publicmode .item-top .top-inner .image-square {
+  width: 100%;
+  height: auto;
+}
 .with-image .item-top .top-inner {
   background-color: white;
 }
