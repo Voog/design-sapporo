@@ -331,7 +331,7 @@
   };
 
   // ===========================================================================
-  // Toggles language menu mode.
+  // Toggles product categories visibility in main menu.
   // ===========================================================================
   var bindRootItemSettings = function(valuesObj) {
     if (!('hide_categories_from_main_menu' in valuesObj)) {
