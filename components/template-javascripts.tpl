@@ -2,8 +2,7 @@
 {% include "template-tools" %}
 
 {% comment %}Main template functionality.{% endcomment %}
-{% comment %}TODO: Use .min{% endcomment %}
-<script src="{{ javascripts_path }}/main.js"></script>
+<script src="{{ javascripts_path }}/main.min.js"></script>
 
 {% comment %}Site search related javascript components.{% endcomment %}
 {% if site.search.enabled %}
