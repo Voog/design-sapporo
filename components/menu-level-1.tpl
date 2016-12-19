@@ -11,7 +11,7 @@
 
   {% for level_1 in site.visible_menuitems %}
     {% if level_1.blog? %}
-      {% if blog_pages_size > 1 %}
+      {% if blog_pages_size > 1 or site.root_item.layout_title != front_page_layout %}
         {% include "menu-level-1-link" %}
       {% endif %}
     {% else %}
