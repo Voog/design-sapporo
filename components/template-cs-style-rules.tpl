@@ -73,9 +73,11 @@ body {
 .menu-level-1 > .menu-item.item-current > a {
   font-style: var(--menu-main-active-font-style);
   font-weight: var(--menu-main-active-font-weight);
-  color: var(--menu-main-active-color);
   text-decoration: var(--menu-main-active-text-decoration);
   text-transform: var(--menu-main-active-text-transform);
+}
+.menu-level-1 > .menu-item.item-current > a:not(.untranslated) {
+  color: var(--menu-main-active-color);
 }
 .menu-level-1 > .menu-item > a {
   font-size: var(--menu-main-font-size);
