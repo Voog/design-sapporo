@@ -15,6 +15,10 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
+            <section class="content-body">
+              <div class="content-area" {{ edy_intro_edit_text }}>{% content %}</div>
+            </section>
+
             <section class="content-item-boxes">
               {% if tags %}
                 <h1>{{ tags_title }}</h1>
