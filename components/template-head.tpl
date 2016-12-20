@@ -28,7 +28,7 @@
   {% include "template-cs-main-styles" %}
   {% include "template-cs-header" %}
   {% include "template-cs-headings" %}
-  {% if template-head == "blog_listing_page" %}
+  {% if template-head == "blog_list_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}
   {% include "template-cs-content" %}

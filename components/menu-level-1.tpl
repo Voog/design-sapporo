@@ -4,18 +4,36 @@
       {% menulink site.root_item %}
 
       {% if blog_pages_size == 1 %}
-        {% include "blog-listing-tags" with blog_first.path %}
+        {% include "blog-list-tags" with blog_first.path %}
       {% endif %}
     </li>
   {% endunless %}
 
   {% for level_1 in site.visible_menuitems %}
     {% if level_1.blog? %}
-      {% if blog_pages_size > 1 %}
+      {% if blog_pages_size > 1 or site.root_item.layout_title != front_page_layout %}
         {% include "menu-level-1-link" %}
       {% endif %}
     {% else %}
-      {% include "menu-level-1-link" %}
+      {% if site.root_item.layout_title == product_list_layout %}
+        {% if editmode %}
+          {% unless level_1.layout_title == product_layout %}
+            {% include "menu-level-1-link" render_hidden_categories: true %}
+          {% endunless %}
+        {% else %}
+          {% if hide_categories_from_main_menu %}
+            {% unless level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
+              {% include "menu-level-1-link" %}
+            {% endunless %}
+          {% else %}
+            {% unless level_1.layout_title == product_layout %}
+              {% include "menu-level-1-link" %}
+            {% endunless %}
+          {% endif %}
+        {% endif %}
+      {% else %}
+        {% include "menu-level-1-link" %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 

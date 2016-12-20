@@ -117,9 +117,12 @@ body {
       > a {
         font-style: var(--menu-main-hover-font-style);
         font-weight: var(--menu-main-hover-font-weight);
-        color: var(--menu-main-hover-color);
         text-decoration: var(--menu-main-hover-text-decoration);
         text-transform: var(--menu-main-hover-text-transform);
+      }
+
+      > a:not(.untranslated) {
+        color: var(--menu-main-hover-color);
       }
       // scss-lint:enable NestingDepth
     }
@@ -129,9 +132,12 @@ body {
       > a {
         font-style: var(--menu-main-active-font-style);
         font-weight: var(--menu-main-active-font-weight);
-        color: var(--menu-main-active-color);
         text-decoration: var(--menu-main-active-text-decoration);
         text-transform: var(--menu-main-active-text-transform);
+      }
+
+      > a:not(.untranslated) {
+        color: var(--menu-main-active-color);
       }
     }
     // scss-lint:enable NestingDepth
@@ -140,9 +146,12 @@ body {
       font-size: var(--menu-main-font-size);
       font-style: var(--menu-main-font-style);
       font-weight: var(--menu-main-font-weight);
-      color: var(--menu-main-color);
       text-decoration: var(--menu-main-text-decoration);
       text-transform: var(--menu-main-text-transform);
+    }
+
+    > a:not(.untranslated) {
+      color: var(--menu-main-color);
     }
   }
 }
@@ -157,7 +166,6 @@ body {
       font-style: var(--menu-sub-font-style);
       font-weight: var(--menu-sub-font-weight);
       line-height: var(--menu-sub-line-height);
-      color: var(--menu-sub-color);
       text-decoration: var(--menu-sub-text-decoration);
       text-transform: var(--menu-sub-text-transform);
 
@@ -165,7 +173,6 @@ body {
       &:hover {
         font-style: var(--menu-sub-hover-font-style);
         font-weight: var(--menu-sub-hover-font-weight);
-        color: var(--menu-sub-hover-color);
         text-decoration: var(--menu-sub-hover-text-decoration);
         text-transform: var(--menu-sub-hover-text-transform);
       }
@@ -178,6 +185,14 @@ body {
         text-transform: var(--menu-sub-active-text-transform);
       }
       // scss-lint:enable NestingDepth
+    }
+
+    a:not(.untranslated) {
+      color: var(--menu-sub-color);
+
+      &:hover {
+        color: var(--menu-sub-hover-color);
+      }
     }
   }
 }
@@ -223,10 +238,10 @@ body {
   max-width: var(--content-max-width);
 }
 
-.blog-article-newer {
+.content-item-box {
   &:not(.cms-blog-article-add-button) {
-    .blog-listing-page & {
-      .article-title {
+    .item-list-page & {
+      .item-title {
         font-size: var(--article-box-font-size);
         font-style: var(--article-box-font-style);
         font-weight: var(--article-box-font-weight);
@@ -238,14 +253,14 @@ body {
     }
   }
 
-  .blog-listing-page & {
+  .item-list-page & {
     @media screen and (min-width: $mobile + 1) {
       width: var(--article-box-width);
     }
   }
 }
 
-.article-top {
+.item-top {
   .top-inner {
     border-radius: var(--article-box-image-radius);
   }

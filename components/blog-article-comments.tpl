@@ -32,7 +32,7 @@
   </div>
 
   {% if article.comments_count > 0 %}
-    <div class="comments-listing">
+    <div class="comments-list">
       {% for comment in article.comments %}
         <div class="comment edy-site-blog-comment">
 

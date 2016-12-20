@@ -64,24 +64,30 @@ body {
 .menu-level-1 > .menu-item:hover > a {
   font-style: var(--menu-main-hover-font-style);
   font-weight: var(--menu-main-hover-font-weight);
-  color: var(--menu-main-hover-color);
   text-decoration: var(--menu-main-hover-text-decoration);
   text-transform: var(--menu-main-hover-text-transform);
+}
+.menu-level-1 > .menu-item:hover > a:not(.untranslated) {
+  color: var(--menu-main-hover-color);
 }
 .menu-level-1 > .menu-item.item-current > a {
   font-style: var(--menu-main-active-font-style);
   font-weight: var(--menu-main-active-font-weight);
-  color: var(--menu-main-active-color);
   text-decoration: var(--menu-main-active-text-decoration);
   text-transform: var(--menu-main-active-text-transform);
+}
+.menu-level-1 > .menu-item.item-current > a:not(.untranslated) {
+  color: var(--menu-main-active-color);
 }
 .menu-level-1 > .menu-item > a {
   font-size: var(--menu-main-font-size);
   font-style: var(--menu-main-font-style);
   font-weight: var(--menu-main-font-weight);
-  color: var(--menu-main-color);
   text-decoration: var(--menu-main-text-decoration);
   text-transform: var(--menu-main-text-transform);
+}
+.menu-level-1 > .menu-item > a:not(.untranslated) {
+  color: var(--menu-main-color);
 }
 
 .menu-level-2 .menu-item a {
@@ -89,14 +95,12 @@ body {
   font-style: var(--menu-sub-font-style);
   font-weight: var(--menu-sub-font-weight);
   line-height: var(--menu-sub-line-height);
-  color: var(--menu-sub-color);
   text-decoration: var(--menu-sub-text-decoration);
   text-transform: var(--menu-sub-text-transform);
 }
 .menu-level-2 .menu-item a:hover {
   font-style: var(--menu-sub-hover-font-style);
   font-weight: var(--menu-sub-hover-font-weight);
-  color: var(--menu-sub-hover-color);
   text-decoration: var(--menu-sub-hover-text-decoration);
   text-transform: var(--menu-sub-hover-text-transform);
 }
@@ -106,6 +110,12 @@ body {
   color: var(--menu-sub-active-color);
   text-decoration: var(--menu-sub-active-text-decoration);
   text-transform: var(--menu-sub-active-text-transform);
+}
+.menu-level-2 .menu-item a:not(.untranslated) {
+  color: var(--menu-sub-color);
+}
+.menu-level-2 .menu-item a:not(.untranslated):hover {
+  color: var(--menu-sub-hover-color);
 }
 
 .menu-language-btn {
@@ -132,7 +142,7 @@ body {
   max-width: var(--content-max-width);
 }
 
-.blog-listing-page .blog-article-newer:not(.cms-blog-article-add-button) .article-title {
+.item-list-page .content-item-box:not(.cms-blog-article-add-button) .item-title {
   font-size: var(--article-box-font-size);
   font-style: var(--article-box-font-style);
   font-weight: var(--article-box-font-weight);
@@ -142,12 +152,12 @@ body {
   text-transform: var(--article-box-text-transform);
 }
 @media screen and (min-width: 641px) {
-  .blog-listing-page .blog-article-newer {
+  .item-list-page .content-item-box {
     width: var(--article-box-width);
   }
 }
 
-.article-top .top-inner {
+.item-top .top-inner {
   border-radius: var(--article-box-image-radius);
 }
 

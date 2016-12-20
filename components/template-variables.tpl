@@ -6,7 +6,7 @@
   {% else %}
     {% assign view_mode = "publicmode" %}
   {% endif %}
-  
+
   {% comment %}Sets site search state class.{% endcomment %}
   {% if site.search.enabled %}
     {% assign site_search_mode = "site-search-enabled" %}
@@ -90,6 +90,12 @@
       {% assign blog_pages_size = blog_pages_size | plus: 1 %}
     {% endif %}
   {% endfor %}
+
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
+  {% assign front_page_layout = "Front page" %}
+
+  {% assign hide_categories_from_main_menu = site.data.settings_root_item.hide_categories_from_main_menu %}
 
   {% comment %}=================================================================
   || Design editor variables.

@@ -107,8 +107,20 @@
 }
 
 .menu-horizontal {
+  .content-item-boxes & {
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+
   > .menu-item {
     display: inline-block;
+
+    &:not(:last-child) {
+      .content-item-boxes & {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -133,6 +145,12 @@
 .menu-cms-options {
   button {
     @include button;
+  }
+}
+
+.menu-item {
+  &.is-hidden {
+    display: none;
   }
 }
 

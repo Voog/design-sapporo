@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-{% include "blog-listing-variables" %}
+{% include "blog-list-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% include "template-head" with "blog_listing_page" %}
+    {% include "template-head" with "blog_list_page" %}
   </head>
 
-  <body class="blog-news-page blog-listing-page header-menu-wide" data-search-indexing-allowed="false">
+  <body class="blog-news-page item-list-page header-menu-wide" data-search-indexing-allowed="false">
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">
@@ -15,17 +15,17 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
-            <section class="blog-articles">
+            <section class="content-item-boxes">
               {% if tags %}
                 <h1>{{ tags_title }}</h1>
               {% endif %}
 
               {% if editmode %}
-                {% include "blog-listing-article-add" %}
+                {% include "blog-list-article-add" %}
               {% endif %}
 
               {% for article in articles %}
-                {% include "blog-listing-article" %}
+                {% include "blog-list-article" %}
               {% endfor %}
             </section>
           </main>
@@ -40,8 +40,8 @@
     {% endif %}
 
     {% include "template-javascripts" %}
-    {% include "blog-listing-tools" %}
+    {% include "blog-list-tools" %}
 
-    <script>template.initBlogPage();</script>
+    <script>template.initItemsPage();</script>
   </body>
 </html>

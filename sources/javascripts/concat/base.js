@@ -21,7 +21,7 @@
   };
 
   // ===========================================================================
-  // Function to detect if current page is article.
+  // Function to detect if current page has expanded menu.
   // ===========================================================================
   var headerMenuWide = function() {
     return $('body').hasClass('header-menu-wide');
@@ -331,6 +331,57 @@
   };
 
   // ===========================================================================
+  // Toggles product categories visibility in main menu.
+  // ===========================================================================
+  var bindRootItemSettings = function(valuesObj) {
+    if (!('hide_categories_from_main_menu' in valuesObj)) {
+      valuesObj.hide_categories_from_main_menu = false;
+    }
+
+    $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
+      var rootItemSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
+        menuItems: [
+          {
+            "title": "Hide categories from main menu",
+            "type": "checkbox",
+            "key": "hide_categories_from_main_menu",
+            "states": {
+              "on": true,
+              "off": false
+            }
+          }
+        ],
+
+        buttonTitleI18n: "settings",
+
+        values: valuesObj,
+
+        containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
+
+        preview: function(data) {
+          if (data.hide_categories_from_main_menu === true) {
+            $.each($('.js-menu-item-category'), function() {
+              $(this).addClass('is-hidden');
+            });
+          } else {
+            $.each($('.js-menu-item-category'), function() {
+              $(this).removeClass('is-hidden');
+            });
+          }
+
+          // TODO: Find out why it doesn't work in some edge cases.
+          setHeaderMenuInitialWidth();
+          setHeaderMenuMode();
+        },
+
+        commit: function(data) {
+          siteData.set('settings_root_item', data);
+        }
+      });
+    });
+  };
+
+  // ===========================================================================
   // Binds site search functionality.
   // ===========================================================================
   var bindSiteSearch = function(searchForm, languageCode) {
@@ -427,9 +478,9 @@
     $('.js-comment-body').textareaAutoSize();
   };
 
-  var setImageOrientation = function($article, width, height) {
-    var $imgDropAreaTarget = $article.find('.js-img-drop-area'),
-        $cropToggleButton = $article.find('.js-toggle-crop-state');
+  var setImageOrientation = function($contentItemBox, width, height) {
+    var $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+        $cropToggleButton = $contentItemBox.find('.js-toggle-crop-state');
 
     if (width > height) {
       $imgDropAreaTarget
@@ -461,11 +512,24 @@
     }
   };
 
-  var setArticleImage = function(articleId, imageId) {
+  var setItemImage = function(itemId, imageId, itemType) {
+    var apiType;
+
+    // console.log(itemType);
+
+    if (itemType === 'article') {
+      apiType = 'articles';
+    } else {
+      apiType = 'pages';
+    }
+
+    console.log(apiType);
+    console.log('/admin/api/' + apiType +'/' + itemId);
+
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
-       url: '/admin/api/articles/' + articleId,
+       url: '/admin/api/' + apiType +'/' + itemId,
        data: JSON.stringify({'image_id': imageId}),
        dataType: 'json'
     });
@@ -478,7 +542,9 @@
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
           $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
-          articleId = $bgPickerArea.closest('.js-blog-article-newer').data('article-id'),
+          $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
+          itemId = $contentItemBox.data('item-id'),
+          itemType = $contentItemBox.data('item-type'),
           dataBgKey = $bgPickerButton.data('bg-key');
 
       var bgPicker = new Edicy.BgPicker($bgPickerButton, {
@@ -487,10 +553,10 @@
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
-          var $article = $bgPickerArea.closest('.js-blog-article-newer'),
+          var $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
               $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
 
-          setImageOrientation($article, data.width, data.height);
+          setImageOrientation($contentItemBox, data.width, data.height);
 
           $bgPickerArea.eq(0).data('imgDropArea').setData({
             id: data.original_id,
@@ -506,7 +572,7 @@
         },
 
         commit: function(data) {
-          setArticleImage(articleId, data.original_id);
+          setItemImage(itemId, data.original_id, itemType);
         }
       });
 
@@ -520,12 +586,17 @@
   var bindImgDropAreas = function() {
     $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
-          $article = $imgDropAreaTarget.closest('.js-blog-article-newer'),
-          $bgPickerArea = $article.find('.js-bg-picker-area'),
-          articleId = $article.data('article-id'),
+          $contentItemBox = $imgDropAreaTarget.closest('.js-content-item-box'),
+          $bgPickerArea = $contentItemBox.find('.js-bg-picker-area'),
+          itemId = $contentItemBox.data('item-id'),
+          itemType = $contentItemBox.data('item-type'),
           articleData = new Edicy.CustomData({
             type: 'article',
-            id: articleId
+            id: itemId
+          }),
+          pageData = new Edicy.CustomData({
+            type: 'page',
+            id: $contentItemBox.data('item-id')
           });
 
       var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
@@ -534,9 +605,9 @@
         removeBtn: '',
 
         change: function(data) {
-          var $bgPickerButton = $article.find('.js-bg-picker-btn');
+          var $bgPickerButton = $contentItemBox.find('.js-bg-picker-btn');
 
-          $article
+          $contentItemBox
             .addClass('with-image')
             .removeClass('without-image')
           ;
@@ -546,7 +617,7 @@
             .addClass('not-cropped')
           ;
 
-          setImageOrientation($article, data.width, data.height);
+          setImageOrientation($contentItemBox, data.width, data.height);
 
 
           $bgPickerArea.eq(0).data('bgpicker').setData({
@@ -556,8 +627,13 @@
             height: data.height
           });
 
-          setArticleImage(articleId, data.original_id);
-          articleData.set('image_crop_state', 'not-cropped');
+          setItemImage(itemId, data.original_id, itemType);
+
+          if (itemType === 'article') {
+            articleData.set('image_crop_state', 'not-cropped');
+          } else {
+            pageData.set('image_crop_state', 'not-cropped');
+          }
         }
       });
 
@@ -569,15 +645,21 @@
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   // ===========================================================================
-  var bindArticleImageCropToggle = function() {
+  var bindItemImageCropToggle = function() {
     $('.js-toggle-crop-state').on('click', function() {
-      var $article = $(this).closest('.js-blog-article-newer'),
-          $imgDropAreaTarget = $article.find('.js-img-drop-area'),
+      var $contentItemBox = $(this).closest('.js-content-item-box'),
+          $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+          itemType = $contentItemBox.data('item-type'),
           imageCropState;
 
       var articleData = new Edicy.CustomData({
         type: 'article',
-        id: $article.data('article-id')
+        id: $contentItemBox.data('item-id')
+      });
+
+      var pageData = new Edicy.CustomData({
+        type: 'page',
+        id: $contentItemBox.data('item-id')
       });
 
       if ($imgDropAreaTarget.hasClass('is-cropped')) {
@@ -597,7 +679,11 @@
         imageCropState = 'is-cropped';
       }
 
-      articleData.set('image_crop_state', imageCropState);
+      if (itemType === 'article') {
+        articleData.set('image_crop_state', imageCropState);
+      } else {
+        pageData.set('image_crop_state', imageCropState);
+      }
     });
   };
 
@@ -605,10 +691,10 @@
   // Load article cover images only when they are close or appearing in the
   // viewport.
   // ===========================================================================
-  var bindArticleImageLazyload = function() {
+  var bindItemImageLazyload = function() {
     $(document).ready(function() {
       setTimeout(function() {
-        $('.js-blog-article-newer').addClass('not-loaded');
+        $('.js-content-item-box').addClass('not-loaded');
       }, 3000);
     });
 
@@ -618,13 +704,13 @@
       placeholder: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
 
       load : function() {
-        var $article = $(this).closest('.js-blog-article-newer');
+        var $contentItemBox = $(this).closest('.js-content-item-box');
 
-        $article.removeClass('not-loaded').addClass('is-loaded');
+        $contentItemBox.removeClass('not-loaded').addClass('is-loaded');
 
         setTimeout(function() {
-          $article.removeClass('not-loaded');
-          $article.find('.js-loader').remove();
+          $contentItemBox.removeClass('not-loaded');
+          $contentItemBox.find('.js-loader').remove();
         }, 3000);
       }
     });
@@ -686,10 +772,10 @@
   };
 
   // ===========================================================================
-  // Sets functions that will be initiated on blog listing layouts.
+  // Sets functions that will be initiated on items list layouts.
   // ===========================================================================
-  var initBlogPage = function() {
-    bindArticleImageLazyload();
+  var initItemsPage = function() {
+    bindItemImageLazyload();
   };
 
   // ===========================================================================
@@ -720,17 +806,18 @@
   // Enables the usage of the initiations outside this file.
   window.template = $.extend(window.template || {}, {
     // Initiations for layouts.
-    initBlogPage: initBlogPage,
+    initItemsPage: initItemsPage,
     // initArticlePage: initArticlePage,
     // initCommonPage: initCommonPage,
     // initFrontPage: initFrontPage,
 
     // Initiations for specific functions.
     bindLanguageMenuSettings: bindLanguageMenuSettings,
+    bindRootItemSettings: bindRootItemSettings,
     bindSiteSearch: bindSiteSearch,
     bindBgPickers: bindBgPickers,
     bindImgDropAreas: bindImgDropAreas,
-    bindArticleImageCropToggle: bindArticleImageCropToggle,
+    bindItemImageCropToggle: bindItemImageCropToggle,
     bindCustomTexteditorStyles: bindCustomTexteditorStyles
   });
 

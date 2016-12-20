@@ -19,8 +19,8 @@
 {% endunless %}
 
 {% if editmode %}
-  <div class="blog-article-newer {{ article_image_state }} js-blog-article-newer" data-article-id="{{ article.id }}">
-    <div class="article-top js-bg-picker-area">
+  <div class="content-item-box {{ article_image_state }} js-content-item-box" data-item-type="article" data-item-id="{{ article.id }}">
+    <div class="item-top js-bg-picker-area">
       <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.url }}" data-bg-target-width="680"></button>
 
       <button class="btn bg-crop-btn {% if article_image_orientation == "image-square" or article.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
@@ -32,23 +32,23 @@
       <div class="top-inner aspect-ratio-inner image-drop-area {{ article_image_orientation }} {{ article_image_crop_state }} js-img-drop-area" data-image="{{ article.image.for-width-680.url }}"></div>
     </div>
 
-    <h2 class="article-title">
-      <a class="article-link" href="{{ article.url }}">{{ article.title }}</a>
+    <h2 class="item-title">
+      <a class="item-link" href="{{ article.url }}">{{ article.title }}</a>
     </h2>
   </div>
 {% else %}
-  <a class="blog-article-newer {{ article_image_state }} js-blog-article-newer" href="{{ article.url }}">
-    <div class="article-top">
+  <a class="content-item-box {{ article_image_state }} js-content-item-box" href="{{ article.url }}">
+    <div class="item-top">
       <div class="top-inner aspect-ratio-inner">
         {% if article.image %}
           <div class="loader js-loader"></div>
-          <img class="article-image {{ article_image_orientation }} {{ article_image_crop_state }} js-lazyload" data-original="{{ article.image.for-width-680.url }}">
+          <img class="item-image {{ article_image_orientation }} {{ article_image_crop_state }} js-lazyload" data-original="{{ article.image.for-width-680.url }}">
         {% else %}
-          <div class="article-placeholder">{{ article.title | truncate: 50 }}</div>
+          <div class="item-placeholder">{{ article.title | truncate: 50 }}</div>
         {% endif %}
       </div>
     </div>
 
-    <h2 class="article-title">{{ article.title }}</h2>
+    <h2 class="item-title">{{ article.title }}</h2>
   </a>
 {% endif %}
