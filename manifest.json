@@ -30,7 +30,7 @@
       "content_type": "page",
       "component": false,
       "file": "layouts/common_page.tpl",
-      "layout_name": "common_page",
+      "layout_name": "page_default",
       "title": "Common page"
     },
     {
