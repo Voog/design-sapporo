@@ -316,13 +316,13 @@
   ],
   "assets": [
     {
-      "content_type": "unknown/unknown",
+      "content_type": "image/svg+xml",
       "file": "assets/bg-search.svg",
       "kind": "asset",
       "filename": "bg-search.svg"
     },
     {
-      "content_type": "unknown/unknown",
+      "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
       "kind": "asset",
       "filename": "ico-flags.svg"
