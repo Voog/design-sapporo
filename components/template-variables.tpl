@@ -95,7 +95,7 @@
   {% assign product_layout = "Product" %}
   {% assign front_page_layout = "Front page" %}
 
-  {% assign hide_categories_from_main_menu = site.data.settings_root_item.hide_categories_from_main_menu %}
+  {% assign show_product_related_pages_in_main_menu = site.data.settings_root_item.show_product_related_pages_in_main_menu %}
 
   {% comment %}=================================================================
   || Design editor variables.

@@ -18,8 +18,6 @@ Adds template specific JS tools.
     //==========================================================================
     // Initiates the language menu mode toggleing popover.
     //==========================================================================
-    var valuesObj;
-
     {%if site.data.settings_language_menu %}
       languageMenuValuesObj = {{ site.data.settings_language_menu | json }};
     {% else %}

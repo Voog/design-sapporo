@@ -230,13 +230,13 @@
   // ===========================================================================
   // Toggles language menu mode.
   // ===========================================================================
-  var bindLanguageMenuSettings = function(valuesObj) {
-    if (!('type' in valuesObj)) {
-      valuesObj.type = 'popover';
+  var bindLanguageMenuSettings = function(languageMenuValuesObj) {
+    if (!('type' in languageMenuValuesObj)) {
+      languageMenuValuesObj.type = 'popover';
     }
 
-    if (!('item_state' in valuesObj)) {
-      valuesObj.item_state = 'flags_and_names';
+    if (!('item_state' in languageMenuValuesObj)) {
+      languageMenuValuesObj.item_state = 'flags_and_names';
     }
 
     $('.js-menu-language-settings-toggle').each(function(index, languageMenuSettingsButton) {
@@ -280,7 +280,7 @@
 
         buttonTitleI18n: "settings",
 
-        values: valuesObj,
+        values: languageMenuValuesObj,
 
         containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
 
@@ -333,18 +333,18 @@
   // ===========================================================================
   // Toggles product categories visibility in main menu.
   // ===========================================================================
-  var bindRootItemSettings = function(valuesObj) {
-    if (!('hide_categories_from_main_menu' in valuesObj)) {
-      valuesObj.hide_categories_from_main_menu = false;
+  var bindRootItemSettings = function(rootItemValuesObj) {
+    if (!('show_product_related_pages_in_main_menu' in rootItemValuesObj)) {
+      rootItemValuesObj.show_product_related_pages_in_main_menu = false;
     }
 
     $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
       var rootItemSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
         menuItems: [
           {
-            "title": "Hide categories from main menu",
+            "titleI18n": "show_in_main_menu",
             "type": "checkbox",
-            "key": "hide_categories_from_main_menu",
+            "key": "show_product_related_pages_in_main_menu",
             "states": {
               "on": true,
               "off": false
@@ -354,19 +354,15 @@
 
         buttonTitleI18n: "settings",
 
-        values: valuesObj,
+        values: rootItemValuesObj,
 
         containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
 
         preview: function(data) {
-          if (data.hide_categories_from_main_menu === true) {
-            $.each($('.js-menu-item-category'), function() {
-              $(this).addClass('is-hidden');
-            });
+          if (!data.show_product_related_pages_in_main_menu === true) {
+            $('.js-menu-item-products').addClass('is-hidden');
           } else {
-            $.each($('.js-menu-item-category'), function() {
-              $(this).removeClass('is-hidden');
-            });
+            $('.js-menu-item-products').removeClass('is-hidden');
           }
 
           // TODO: Find out why it doesn't work in some edge cases.

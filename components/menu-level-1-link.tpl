@@ -1,4 +1,4 @@
-<li class="menu-item{% if level_1.selected? %} item-current{% endif %}{% if render_hidden_categories == true and level_1.layout_title == product_list_layout %}{% if hide_categories_from_main_menu %} is-hidden{% endif %} js-menu-item-category{% endif %} js-prevent-link-click">
+<li class="menu-item{% if level_1.selected? %} item-current{% endif %}{% if render_product_related_pages == true and level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}{% unless show_product_related_pages_in_main_menu %} is-hidden{% endunless %} js-menu-item-products{% endif %}">
   {% unless level_1.link? == true %}
     {% if level_1.children? or editmode %}
       <button class="btn btn-menu-forward js-toggle-menu-sub{% if page.level > 1 or page.path == level_1.path %} hidden{% endif %}">
