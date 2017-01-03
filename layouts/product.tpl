@@ -35,6 +35,8 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
+            {% include "product-breadcrumbs" %}
+
             <div class="items-body" {{ edy_intro_edit_text }}>
               <div class="content-illustrations">
                 {% if editmode %}

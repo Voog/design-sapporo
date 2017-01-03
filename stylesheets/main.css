@@ -366,16 +366,21 @@ a {
   color: #cc0000;
 }
 
-.content-item-boxes .menu-horizontal {
-  padding-right: 30px;
+.page-content .menu-horizontal {
   padding-bottom: 20px;
-  padding-left: 30px;
+  font-size: 14px;
 }
 .menu-horizontal > .menu-item {
   display: inline-block;
 }
-.content-item-boxes .menu-horizontal > .menu-item:not(:last-child) {
-  margin-right: 15px;
+.page-content .menu-horizontal .menu-item:hover {
+  opacity: .75;
+}
+.page-content .menu-horizontal .current {
+  font-weight: 600;
+}
+.page-content .menu-horizontal .menu-item-cms:not(:first-child) {
+  margin-left: 15px;
 }
 
 .menu-vertical > .menu-item {
