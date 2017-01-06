@@ -63,6 +63,14 @@ body {
   }
 }
 
+.menu-horizontal {
+  .menu-item {
+    a {
+      color: var(--menu-main-color);
+    }
+  }
+}
+
 .menu-main {
   .header-menu-compact & {
     background-color: var(--menu-main-compact-background-color);

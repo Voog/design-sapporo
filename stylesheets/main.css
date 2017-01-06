@@ -373,11 +373,17 @@ a {
 .menu-horizontal > .menu-item {
   display: inline-block;
 }
+.menu-horizontal .menu-item {
+  opacity: .8;
+}
 .page-content .menu-horizontal .menu-item:hover {
-  opacity: .75;
+  opacity: 1;
+}
+.menu-horizontal .menu-item a {
+  color: rgba(0, 0, 0, 0.8);
 }
 .page-content .menu-horizontal .current {
-  font-weight: 600;
+  opacity: 1;
 }
 .page-content .menu-horizontal .menu-item-cms:not(:first-child) {
   margin-left: 15px;

@@ -117,18 +117,24 @@
   }
 
   .menu-item {
+    opacity: .8;
+
     &:hover {
       // scss-lint:disable NestingDepth
       .page-content & {
-        opacity: .75;
+        opacity: 1;
       }
       // scss-lint:enable NestingDepth
+    }
+
+    a {
+      color: rgba($color-black, .8);
     }
   }
 
   .current {
     .page-content & {
-      font-weight: 600;
+      opacity: 1;
     }
   }
 

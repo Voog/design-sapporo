@@ -34,6 +34,10 @@ body {
   color: var(--secondary-color);
 }
 
+.menu-horizontal .menu-item {
+  color: var(--menu-main-color);
+}
+
 .header-menu-compact .menu-main {
   background-color: var(--menu-main-compact-background-color);
 }
