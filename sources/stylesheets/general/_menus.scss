@@ -246,7 +246,7 @@
   }
 
   .menu-current {
-    > .menu-item {
+    > .menu-item:not(.is-hidden) {
       // scss-lint:disable NestingDepth, SelectorDepth
       .header-menu-compact & {
         display: block;

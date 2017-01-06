@@ -474,7 +474,7 @@ a {
 .header-menu-compact .menu-main .menu .menu-item.item-current {
   display: block;
 }
-.header-menu-compact .menu-main .menu-current > .menu-item {
+.header-menu-compact .menu-main .menu-current > .menu-item:not(.is-hidden) {
   display: block;
 }
 .header-menu-compact .menu-main .menu-public .menu-item {
