@@ -34,7 +34,7 @@ body {
   color: var(--secondary-color);
 }
 
-.menu-horizontal .menu-item {
+.menu-horizontal .menu-item a {
   color: var(--menu-main-color);
 }
 
