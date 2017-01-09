@@ -21,7 +21,7 @@
         {% else %}
           {% unless show_product_related_pages_in_main_menu %}
             {% unless item.layout_title == product_list_layout or item.layout_title == product_layout %}
-              {% include "menu-level-1-link" %}
+              {% include "menu-level-1-link" render_product_related_pages: true %}
             {% endunless %}
           {% else %}
             {% unless item.layout_title == product_layout %}
