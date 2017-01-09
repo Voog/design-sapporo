@@ -80,7 +80,7 @@
                   </div>
                 </header>
 
-                <div class="content-area area-normal" data-search-indexing-allowed="true">{% content %}</div>
+                <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc }}{% endcontentblock %}</div>
               </div>
             </div>
           </main>
