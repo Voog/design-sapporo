@@ -3,6 +3,9 @@
 // =============================================================================
 .menu-level-1 {
   > .menu-item {
+    position: relative;
+    z-index: 1;
+
     &:hover {
       > a {
         opacity: .75;

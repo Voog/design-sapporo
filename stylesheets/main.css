@@ -817,6 +817,10 @@ a {
   background-color: rgba(255, 224, 0, 0.5);
 }
 
+.menu-level-1 > .menu-item {
+  position: relative;
+  z-index: 1;
+}
 .menu-level-1 > .menu-item:hover > a {
   opacity: .75;
 }
