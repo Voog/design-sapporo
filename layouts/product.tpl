@@ -37,7 +37,7 @@
           <main class="page-content" role="main">
             {% include "product-breadcrumbs" %}
 
-            <div class="items-body" {{ edy_intro_edit_text }}>
+            <div class="items-body">
               <div class="content-illustrations">
                 {% if editmode %}
                   <div class="content-item-box {{ page_image_state }} js-content-item-box" data-item-type="page" data-item-id="{{ page.page_id }}">
@@ -80,7 +80,7 @@
                   </div>
                 </header>
 
-                <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc }}{% endcontentblock %}</div>
+                <div class="content-area area-normal" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% contentblock %}{{ "write_product_description_here" | lc }}{% endcontentblock %}</div>
               </div>
             </div>
           </main>
