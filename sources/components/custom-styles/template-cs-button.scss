@@ -18,7 +18,7 @@
 // =============================================================================
 :root {
   // scss-lint:disable Comment, Indentation
-  
+
   /* VoogStyle
     "pathI18n": ["button", "normal"],
     "titleI18n": "padding",
@@ -30,7 +30,7 @@
     "scope": "global"
   */
   --content-button-padding: 20px;
-  
+
   /* VoogStyle
     "pathI18n": ["button", "normal"],
     "titleI18n": "size",
@@ -201,7 +201,7 @@
       "--content-button-hover-color"
     ]
   */
-  --content-button-color: rgba($color-black, .5);
+  --content-button-color: #{rgba($color-black, .5)};
 
       /* VoogStyle
         "pathI18n": ["button", "hover"],
@@ -210,7 +210,7 @@
         "editor": "colorPicker",
         "scope": "global"
       */
-      --content-button-hover-color: rgba($color-black, .5);
-      
+      --content-button-hover-color: #{rgba($color-black, .5)};
+
   // scss-lint:enable Comment, Indentation
 }

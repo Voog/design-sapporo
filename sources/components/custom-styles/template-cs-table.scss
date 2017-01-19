@@ -30,7 +30,7 @@
     "scope": "global"
   */
   --table-padding: 10px;
-  
+
   /* VoogStyle
     "pathI18n": ["table"],
     "titleI18n": "size",
@@ -40,7 +40,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --table-font-size: $base-font-size;
+  --table-font-size: #{$base-font-size};
 
   /* VoogStyle
     "pathI18n": ["table"],
@@ -51,6 +51,6 @@
     "scope": "global"
   */
   --table-border-style: solid;
-  
+
   // scss-lint:enable Comment, Indentation
 }

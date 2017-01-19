@@ -63,7 +63,7 @@
     "featured": true,
     "scope": "global"
   */
-  --article-box-font-size: $base-font-size;
+  --article-box-font-size: #{$base-font-size};
 
   /* VoogStyle
     "pathI18n": ["blog", "article_box", "normal"],
@@ -129,5 +129,5 @@
     "featured": true,
     "scope": "global"
   */
-  --article-box-color: rgba($color-black, .8);
+  --article-box-color: #{rgba($color-black, .8)};
 }

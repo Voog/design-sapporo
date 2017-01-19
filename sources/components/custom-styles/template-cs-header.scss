@@ -110,7 +110,7 @@
     "featured": true,
     "scope": "global"
   */
-  --header-body-color: rgba($color-black, .8);
+  --header-body-color: #{rgba($color-black, .8)};
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -118,7 +118,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --menu-main-compact-background-color: rgba($color-white, 1);
+  --menu-main-compact-background-color: #{rgba($color-white, 1)};
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -340,7 +340,7 @@
       "--menu-main-active-color"
     ]
   */
-  --menu-main-color: rgba($color-black, .8);
+  --menu-main-color: #{rgba($color-black, .8)};
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "hover"],
@@ -352,7 +352,7 @@
           "--menu-main-active-color"
         ]
       */
-      --menu-main-hover-color: rgba($color-black, .8);
+      --menu-main-hover-color: #{rgba($color-black, .8)};
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "active"],
@@ -361,7 +361,7 @@
         "editor": "colorPicker",
         "scope": "global"
       */
-      --menu-main-active-color: rgba($color-black, .8);
+      --menu-main-active-color: #{rgba($color-black, .8)};
 
   /* VoogStyle
     "pathI18n": ["header", "sub_menu", "normal"],
@@ -590,7 +590,7 @@
       "--menu-sub-active-color"
     ]
   */
-  --menu-sub-color: rgba($color-black, .8);
+  --menu-sub-color: #{rgba($color-black, .8)};
 
       /* VoogStyle
         "pathI18n": ["header", "sub_menu", "hover"],
@@ -602,7 +602,7 @@
           "--menu-sub-active-color"
         ]
       */
-      --menu-sub-hover-color: rgba($color-black, .8);
+      --menu-sub-hover-color: #{rgba($color-black, .8)};
 
       /* VoogStyle
         "pathI18n": ["header", "sub_menu", "active"],
@@ -611,7 +611,7 @@
         "editor": "colorPicker",
         "scope": "global"
       */
-      --menu-sub-active-color: rgba($color-black, .8);
+      --menu-sub-active-color: #{rgba($color-black, .8)};
 
   // scss-lint:enable Comment, Indentation
 }
