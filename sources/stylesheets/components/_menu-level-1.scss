@@ -20,6 +20,12 @@
       // scss-lint:enable NestingDepth
     }
 
+    &.item-product-selected {
+      > a {
+        opacity: 1;
+      }
+    }
+
     &.item-current {
       > a {
         // scss-lint:disable NestingDepth

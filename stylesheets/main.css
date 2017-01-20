@@ -861,6 +861,9 @@ a {
 .header-menu-compact .menu-level-1 > .menu-item.item-current > a {
   padding-right: 15px;
 }
+.menu-level-1 > .menu-item.item-product-selected > a {
+  opacity: 1;
+}
 .header-menu-compact .menu-level-1 > .menu-item.menu-item-cms {
   padding: 10px 15px;
 }
