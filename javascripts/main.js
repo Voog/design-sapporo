@@ -11071,7 +11071,7 @@ return jQuery;
   // ===========================================================================
   // Binds editmode backgroun picker areas.
   // ===========================================================================
-  var bindBgPickers = function() {
+  var bindContentItemBgPickers = function() {
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
           $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
@@ -11116,7 +11116,7 @@ return jQuery;
   // ===========================================================================
   // Binds editmode image drop areas.
   // ===========================================================================
-  var bindImgDropAreas = function(placeholderText) {
+  var bindContentItemImgDropAreas = function(placeholderText) {
     $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
           $contentItemBox = $imgDropAreaTarget.closest('.js-content-item-box'),
@@ -11179,7 +11179,7 @@ return jQuery;
   // Sets functions that will be initiated globally when resizing the browser
   // window.
   // ===========================================================================
-  var bindItemImageCropToggle = function() {
+  var bindContentItemImageCropToggle = function() {
     $('.js-toggle-crop-state').on('click', function() {
       var $contentItemBox = $(this).closest('.js-content-item-box'),
           $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
@@ -11225,7 +11225,7 @@ return jQuery;
   // Load article cover images only when they are close or appearing in the
   // viewport.
   // ===========================================================================
-  var bindItemImageLazyload = function() {
+  var bindContentItemImageLazyload = function() {
     $(document).ready(function() {
       setTimeout(function() {
         $('.js-content-item-box').addClass('not-loaded');
@@ -11309,7 +11309,7 @@ return jQuery;
   // Sets functions that will be initiated on items list layouts.
   // ===========================================================================
   var initItemsPage = function() {
-    bindItemImageLazyload();
+    bindContentItemImageLazyload();
   };
 
   // ===========================================================================
@@ -11349,9 +11349,9 @@ return jQuery;
     bindLanguageMenuSettings: bindLanguageMenuSettings,
     bindRootItemSettings: bindRootItemSettings,
     bindSiteSearch: bindSiteSearch,
-    bindBgPickers: bindBgPickers,
-    bindImgDropAreas: bindImgDropAreas,
-    bindItemImageCropToggle: bindItemImageCropToggle,
+    bindContentItemBgPickers: bindContentItemBgPickers,
+    bindContentItemImgDropAreas: bindContentItemImgDropAreas,
+    bindContentItemImageCropToggle: bindContentItemImageCropToggle,
     bindCustomTexteditorStyles: bindCustomTexteditorStyles
   });
 

@@ -26,13 +26,19 @@ Adds template specific JS tools.
 
     template.bindLanguageMenuSettings(languageMenuValuesObj);
 
-    {%if site.data.settings_root_item %}
-      rootItemValuesObj = {{ site.data.settings_root_item | json }};
-    {% else %}
-      rootItemValuesObj = {};
-    {% endif %};
+    {% if items_page %}
+      template.bindContentItemBgPickers();
+      template.bindContentItemImgDropAreas('{{ "drag_picture_for_product_here" | lc }}');
+      template.bindContentItemImageCropToggle();
 
-    template.bindRootItemSettings(rootItemValuesObj);
+      {%if site.data.settings_root_item %}
+        rootItemValuesObj = {{ site.data.settings_root_item | json }};
+      {% else %}
+        rootItemValuesObj = {};
+      {% endif %};
+
+      template.bindRootItemSettings(rootItemValuesObj);
+    {% endif %}
 
     //==========================================================================
     // Binds custom styles under wysihtml editor.

@@ -44,7 +44,7 @@
     {% endif %}
 
     {% include "template-javascripts" %}
-    {% include "blog-list-tools" %}
+    {% include "template-tools" items_page: true %}
 
     <script>template.initItemsPage();</script>
   </body>
