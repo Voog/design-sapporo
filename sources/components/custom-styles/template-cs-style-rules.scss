@@ -425,6 +425,7 @@ body {
   }
 
   a.custom-btn,
+  div.custom-btn,
   .form_submit input {
     padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
     font-size: var(--content-button-font-size);

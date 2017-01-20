@@ -310,6 +310,7 @@ body {
   text-transform: var(--list-text-transform);
 }
 .content-area a.custom-btn,
+.content-area div.custom-btn,
 .content-area .form_submit input {
   padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
   font-size: var(--content-button-font-size);
@@ -321,6 +322,7 @@ body {
   background-color: var(--content-button-background-color);
 }
 .content-area a.custom-btn:hover,
+.content-area div.custom-btn:hover,
 .content-area .form_submit input:hover {
   font-style: var(--content-button-hover-font-style);
   font-weight: var(--content-button-hover-font-weight);
