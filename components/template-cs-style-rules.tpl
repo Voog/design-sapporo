@@ -1,5 +1,5 @@
 body {
-  font-family: var(--main-font-family);
+  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   color: var(--secondary-color);
   background-color: var(--body-background-color);
 }
