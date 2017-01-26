@@ -43,7 +43,7 @@
   --article-box-font-size: 18px;
   /* VoogStyle
     "pathI18n": ["blog", "article_box", "normal"],
-    "titleI18n": "font_size",
+    "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
