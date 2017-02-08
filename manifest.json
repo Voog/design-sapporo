@@ -8,6 +8,13 @@
     {
       "content_type": "page",
       "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
       "file": "layouts/front_page.tpl",
       "layout_name": "page_front",
       "title": "Front page"
@@ -25,13 +32,6 @@
       "file": "layouts/product_list.tpl",
       "layout_name": "product_list",
       "title": "Product list"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
     },
     {
       "content_type": "blog",
@@ -78,6 +78,27 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/menu-breadcrumbs-buttons-loop.tpl",
+      "layout_name": "menu-breadcrumbs-buttons-loop",
+      "title": "menu-breadcrumbs-buttons-loop"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-breadcrumbs-items-loop.tpl",
+      "layout_name": "menu-breadcrumbs-items-loop",
+      "title": "menu-breadcrumbs-items-loop"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-breadcrumbs.tpl",
+      "layout_name": "menu-breadcrumbs",
+      "title": "menu-breadcrumbs"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-language-list.tpl",
       "layout_name": "menu-language-list",
       "title": "menu-language-list"
@@ -120,16 +141,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/product-breadcrumbs.tpl",
-      "layout_name": "product-breadcrumbs",
-      "title": "product-breadcrumbs"
+      "file": "components/product-list-item.tpl",
+      "layout_name": "product-list-item",
+      "title": "product-list-item"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/product-list-item.tpl",
-      "layout_name": "product-list-item",
-      "title": "product-list-item"
+      "file": "components/product-list-loop.tpl",
+      "layout_name": "product-list-loop",
+      "title": "product-list-loop"
     },
     {
       "content_type": "component",
