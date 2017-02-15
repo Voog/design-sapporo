@@ -34,13 +34,10 @@ body {
   color: var(--secondary-color);
 }
 
-.menu-horizontal .menu-item a {
+.header-menu-wide .menu-horizontal .menu-item a {
   color: var(--menu-main-color);
 }
 
-.header-menu-compact .menu-main {
-  background-color: var(--menu-main-compact-background-color);
-}
 .menu-main .btn:hover {
   stroke: var(--secondary-color);
 }
@@ -71,7 +68,7 @@ body {
   text-decoration: var(--menu-main-hover-text-decoration);
   text-transform: var(--menu-main-hover-text-transform);
 }
-.menu-level-1 > .menu-item:hover > a:not(.untranslated) {
+.header-menu-wide .menu-level-1 > .menu-item:hover > a:not(.untranslated) {
   color: var(--menu-main-hover-color);
 }
 .menu-level-1 > .menu-item.item-current > a {
@@ -80,7 +77,7 @@ body {
   text-decoration: var(--menu-main-active-text-decoration);
   text-transform: var(--menu-main-active-text-transform);
 }
-.menu-level-1 > .menu-item.item-current > a:not(.untranslated) {
+.header-menu-wide .menu-level-1 > .menu-item.item-current > a:not(.untranslated) {
   color: var(--menu-main-active-color);
 }
 .menu-level-1 > .menu-item > a {
@@ -90,7 +87,7 @@ body {
   text-decoration: var(--menu-main-text-decoration);
   text-transform: var(--menu-main-text-transform);
 }
-.menu-level-1 > .menu-item > a:not(.untranslated) {
+.header-menu-wide .menu-level-1 > .menu-item > a:not(.untranslated) {
   color: var(--menu-main-color);
 }
 

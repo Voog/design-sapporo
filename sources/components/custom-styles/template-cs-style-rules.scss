@@ -66,15 +66,14 @@ body {
 .menu-horizontal {
   .menu-item {
     a {
-      color: var(--menu-main-color);
+      .header-menu-wide & {
+        color: var(--menu-main-color);
+      }
     }
   }
 }
 
 .menu-main {
-  .header-menu-compact & {
-    background-color: var(--menu-main-compact-background-color);
-  }
 
   .btn {
     &:hover {
@@ -130,7 +129,9 @@ body {
       }
 
       > a:not(.untranslated) {
-        color: var(--menu-main-hover-color);
+        .header-menu-wide & {
+          color: var(--menu-main-hover-color);
+        }
       }
       // scss-lint:enable NestingDepth
     }
@@ -145,7 +146,9 @@ body {
       }
 
       > a:not(.untranslated) {
-        color: var(--menu-main-active-color);
+        .header-menu-wide & {
+          color: var(--menu-main-active-color);
+        }
       }
     }
     // scss-lint:enable NestingDepth
@@ -159,7 +162,10 @@ body {
     }
 
     > a:not(.untranslated) {
-      color: var(--menu-main-color);
+
+      .header-menu-wide & {
+        color: var(--menu-main-color);
+      }
     }
   }
 }

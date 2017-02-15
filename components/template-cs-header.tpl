@@ -88,13 +88,6 @@
   --header-body-color: rgba(0, 0, 0, 0.8);
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
-    "titleI18n": "sidebar_menu_bg_color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --menu-main-compact-background-color: white;
-  /* VoogStyle
-    "pathI18n": ["header", "main_menu", "normal"],
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
