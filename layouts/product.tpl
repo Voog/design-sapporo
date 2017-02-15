@@ -35,7 +35,7 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
-            {% include "product-breadcrumbs" %}
+            {% include "menu-breadcrumbs" %}
 
             <div class="items-body">
               <div class="content-illustrations">
