@@ -392,7 +392,17 @@
   }
 }
 
+.article-excerpt {
+  &:empty {
+    display: none;
+  }
+}
+
 .article-body {
+  &:empty {
+    display: none;
+  }
+
   margin-top: 20px;
 }
 

@@ -1860,8 +1860,15 @@ a {
   text-align: center;
 }
 
+.article-excerpt:empty {
+  display: none;
+}
+
 .article-body {
   margin-top: 20px;
+}
+.article-body:empty {
+  display: none;
 }
 
 .article-nav {
