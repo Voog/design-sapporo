@@ -2011,11 +2011,11 @@ a {
   content: "";
   display: table;
 }
+.content-area:empty {
+  display: none;
+}
 .front-page .content-body .content-area {
   margin-bottom: 50px;
-}
-.front-page .content-body .content-area:empty {
-  display: none;
 }
 .site-header .content-area {
   line-height: 1.3;

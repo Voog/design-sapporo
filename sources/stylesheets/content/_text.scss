@@ -7,13 +7,13 @@
   line-height: 1.7;
   color: rgba($color-black, .8);
 
+  &:empty {
+    display: none;
+  }
+
   .content-body & {
     .front-page & {
       margin-bottom: 50px;
-
-      &:empty {
-        display: none;
-      }
     }
   }
 
