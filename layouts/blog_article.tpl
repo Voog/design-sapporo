@@ -24,11 +24,11 @@
               <div class="inner content-area area-normal" data-search-indexing-allowed="true">
                 <div class="article-excerpt" {{ edy_intro_edit_text }}>{% editable article.excerpt %}</div>
                 <div class="article-body">{% editable article.body %}</div>
+                <div class="article-body">{% content name="additional_body" bind="Article" %}</div>
               </div>
 
-              {% unless article.new_record? %}
-                <div class="content-bottom content-area">{% content name="bottom" bind="Article" %}</div>
-              {% endunless %}
+              <div class="content-bottom content-area">{% content name="bottom" bind="Article" %}</div>
+
 
               {% include "blog-article-tags" %}
             </article>
