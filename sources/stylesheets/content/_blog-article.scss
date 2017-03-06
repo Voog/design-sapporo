@@ -2,6 +2,10 @@
 // BLOG ARTICLE
 // =============================================================================
 .cms-blog-article-add-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
   &:hover {
     .item-top {
       // scss-lint:disable NestingDepth
@@ -10,6 +14,10 @@
       }
       // scss-lint:disable NestingDepth
     }
+  }
+
+  &:focus {
+    outline: 0;
   }
 }
 

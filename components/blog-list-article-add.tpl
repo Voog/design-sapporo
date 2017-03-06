@@ -1,4 +1,4 @@
-<a class="content-item-box without-image cms-blog-article-add-button" href="{% if blog-list-article-add == "item" %}{{ item.url }}{% else %}{{ page.path }}{% endif %}?new">
+<button class="content-item-box without-image cms-blog-article-add-button" data-behavior="open-add-modal" data-component="article" data-page-id="{% if blog-list-article-add == "item" %}{{ item.page_id }}{% else %}{{ page.id }}{% endif %}">
   <div class="item-top">
     <div class="top-inner aspect-ratio-inner">
       <div class="item-placeholder">
@@ -10,4 +10,4 @@
       </div>
     </div>
   </div>
-</a>
+</button>

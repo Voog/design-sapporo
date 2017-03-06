@@ -1493,8 +1493,16 @@ a {
   }
 }
 
+.cms-blog-article-add-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
 .cms-blog-article-add-button:hover .item-top .top-inner {
   border-style: solid;
+}
+.cms-blog-article-add-button:focus {
+  outline: 0;
 }
 
 .cms-blog-article-tags {
