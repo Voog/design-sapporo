@@ -2,9 +2,9 @@
 // BLOG ARTICLE
 // =============================================================================
 .cms-blog-article-add-button {
+  cursor: pointer;
   background-color: transparent;
   border: 0;
-  cursor: pointer;
 
   &:hover {
     .item-top {
