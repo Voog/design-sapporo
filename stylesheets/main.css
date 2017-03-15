@@ -1494,9 +1494,9 @@ a {
 }
 
 .cms-blog-article-add-button {
+  cursor: pointer;
   background-color: transparent;
   border: 0;
-  cursor: pointer;
 }
 .cms-blog-article-add-button:hover .item-top .top-inner {
   border-style: solid;
