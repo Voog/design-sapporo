@@ -20,8 +20,18 @@
   padding-bottom: 5px;
 }
 
-.form_field label {
-  display: block;
+.form_field {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    display: block;
+  }
 }
 
 .form_field_textfield,

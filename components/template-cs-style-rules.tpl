@@ -307,25 +307,29 @@ body {
   text-transform: var(--list-text-transform);
 }
 .content-area a.custom-btn,
-.content-area div.custom-btn,
-.content-area .form_submit input {
+.content-area div.custom-btn {
   padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
-  color: var(--content-button-color);
   text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
-  background-color: var(--content-button-background-color);
 }
 .content-area a.custom-btn:hover,
-.content-area div.custom-btn:hover,
-.content-area .form_submit input:hover {
+.content-area div.custom-btn:hover {
   font-style: var(--content-button-hover-font-style);
   font-weight: var(--content-button-hover-font-weight);
-  color: var(--content-button-hover-color);
   text-decoration: var(--content-button-hover-text-decoration);
   text-transform: var(--content-button-hover-text-transform);
+}
+.content-area a.custom-btn:not(.custom-btn-disabled),
+.content-area div.custom-btn:not(.custom-btn-disabled) {
+  color: var(--content-button-color);
+  background-color: var(--content-button-background-color);
+}
+.content-area a.custom-btn:not(.custom-btn-disabled):hover,
+.content-area div.custom-btn:not(.custom-btn-disabled):hover {
+  color: var(--content-button-hover-color);
   background-color: var(--content-button-hover-background-color);
 }
 .site-header .content-area table th,
@@ -370,4 +374,23 @@ label .form_field_radio + .form_control_indicator::before {
 }
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--secondary-color);
+}
+
+.form_submit input {
+  padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
+  font-size: var(--content-button-font-size);
+  font-style: var(--content-button-font-style);
+  font-weight: var(--content-button-font-weight);
+  color: var(--content-button-color);
+  text-decoration: var(--content-button-text-decoration);
+  text-transform: var(--content-button-text-transform);
+  background-color: var(--content-button-background-color);
+}
+.form_submit input:hover {
+  font-style: var(--content-button-hover-font-style);
+  font-weight: var(--content-button-hover-font-weight);
+  color: var(--content-button-hover-color);
+  text-decoration: var(--content-button-hover-text-decoration);
+  text-transform: var(--content-button-hover-text-transform);
+  background-color: var(--content-button-hover-background-color);
 }

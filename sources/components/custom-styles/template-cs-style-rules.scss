@@ -443,24 +443,34 @@ body {
 
   // scss-lint:disable QualifyingElement, SelectorFormat
   a.custom-btn,
-  div.custom-btn,
-  .form_submit input {
+  div.custom-btn {
     padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
     font-size: var(--content-button-font-size);
     font-style: var(--content-button-font-style);
     font-weight: var(--content-button-font-weight);
-    color: var(--content-button-color);
     text-decoration: var(--content-button-text-decoration);
     text-transform: var(--content-button-text-transform);
-    background-color: var(--content-button-background-color);
 
     &:hover {
       font-style: var(--content-button-hover-font-style);
       font-weight: var(--content-button-hover-font-weight);
-      color: var(--content-button-hover-color);
       text-decoration: var(--content-button-hover-text-decoration);
       text-transform: var(--content-button-hover-text-transform);
-      background-color: var(--content-button-hover-background-color);
+    }
+  }
+
+  a.custom-btn,
+  div.custom-btn {
+    &:not(.custom-btn-disabled) {
+      color: var(--content-button-color);
+      background-color: var(--content-button-background-color);
+
+      // scss-lint:disable NestingDepth
+      &:hover {
+        color: var(--content-button-hover-color);
+        background-color: var(--content-button-hover-background-color);
+      }
+      // scss-lint:enable NestingDepth
     }
   }
   // scss-lint:enable QualifyingElement, SelectorFormat
@@ -545,4 +555,26 @@ label {
     }
   }
 }
+
+  .form_submit {
+    input {
+      padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
+      font-size: var(--content-button-font-size);
+      font-style: var(--content-button-font-style);
+      font-weight: var(--content-button-font-weight);
+      color: var(--content-button-color);
+      text-decoration: var(--content-button-text-decoration);
+      text-transform: var(--content-button-text-transform);
+      background-color: var(--content-button-background-color);
+
+      &:hover {
+        font-style: var(--content-button-hover-font-style);
+        font-weight: var(--content-button-hover-font-weight);
+        color: var(--content-button-hover-color);
+        text-decoration: var(--content-button-hover-text-decoration);
+        text-transform: var(--content-button-hover-text-transform);
+        background-color: var(--content-button-hover-background-color);
+      }
+    }
+  }
 // scss-lint:enable SelectorFormat

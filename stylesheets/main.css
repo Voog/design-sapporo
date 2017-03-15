@@ -2265,8 +2265,8 @@ a {
   padding-left: 20px;
   font-family: inherit;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
   line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.1);
   border-style: solid;
@@ -2274,12 +2274,19 @@ a {
   border-radius: 15px;
   outline: 0;
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
-.content-area .custom-btn:hover {
+.content-area .custom-btn:not(.custom-btn-disabled):hover {
   border-color: rgba(0, 0, 0, 0.3);
 }
 .publicmode .content-area .custom-btn {
   cursor: pointer;
+}
+.publicmode .content-area .custom-btn-disabled {
+  color: #cccccc;
+  cursor: default;
+  border-color: #cccccc;
 }
 .content-area .edy-positionable-container-center,
 .content-area .edy-positionable-container-left-block,
@@ -2370,6 +2377,12 @@ a {
   padding-bottom: 5px;
 }
 
+.form_field:first-child {
+  margin-top: 0;
+}
+.form_field:last-child {
+  margin-bottom: 0;
+}
 .form_field label {
   display: block;
 }
@@ -2527,4 +2540,8 @@ label .form_control_indicator::before {
   width: 15px;
   height: 15px;
   content: '';
+}
+
+.content-area .edy-buy-button-variations {
+  margin-bottom: 12px;
 }

@@ -233,22 +233,36 @@
     padding-left: 20px;
     font-family: inherit;
     font-size: $base-font-size;
-    color: rgba($color-black, .5);
     line-height: 1.4;
+    color: rgba($color-black, .5);
     background-color: transparent;
     border-color: rgba($color-black, .1);
     border-style: solid;
     border-width: 1px;
     border-radius: 15px;
     outline: 0;
-    -webkit-appearance: none;
+    appearance: none;
 
-    &:hover {
-      border-color: rgba($color-black, .3);
+    &:not(.custom-btn-disabled) {
+      // scss-lint:disable NestingDepth
+      &:hover {
+        border-color: rgba($color-black, .3);
+      }
+      // scss-lint:enable NestingDepth
     }
 
     .publicmode & {
       cursor: pointer;
+    }
+
+    &-disabled {
+      // scss-lint:disable NestingDepth
+      .publicmode & {
+        color: rgba($color-disabled, 1);
+        cursor: default;
+        border-color: rgba($color-disabled, 1);
+      }
+      // scss-lint:enable NestingDepth
     }
   }
 
