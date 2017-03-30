@@ -9,7 +9,7 @@ html.site-search-opened {
 
 body {
   margin: 0;
-  font-family: "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "Segoe UI", sans-serif;
   color: black;
   background-color: rgba(0, 0, 0, 0.02);
 }
@@ -2494,6 +2494,6 @@ label .form_control_indicator::before {
   content: '';
 }
 
-.content-area .edy-buy-button-variations {
+.content-area .edy-buy-button-variants {
   margin-bottom: 12px;
 }
