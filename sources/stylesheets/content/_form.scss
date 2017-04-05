@@ -9,18 +9,10 @@
   }
 }
 
-.edy-fe-field,
 .form_field {
-  margin-bottom: 20px;
-}
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-.edy-fe-label,
-.form_field_label {
-  display: block;
-  padding-bottom: 5px;
-}
-
-.form_field {
   &:first-child {
     margin-top: 0;
   }
@@ -32,6 +24,12 @@
   label {
     display: block;
   }
+}
+
+.edy-fe-label,
+.form_field_label {
+  display: block;
+  padding-bottom: 5px;
 }
 
 .form_field_textfield,
