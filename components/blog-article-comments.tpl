@@ -3,7 +3,7 @@
 
   <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">
     {% commentform %}
-      {% include "blog-article-variables" %}
+      {% include "blog-comment-form-variables" %}
 
       <div class="form_area">
         <div class="form_fields">
