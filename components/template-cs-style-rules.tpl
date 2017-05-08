@@ -170,6 +170,10 @@ body {
   color: var(--secondary-color);
 }
 
+.blog-article-page .item-title {
+  font-size: var(--headings-title-font-size);
+}
+
 .content-area {
   color: var(--main-color);
 }

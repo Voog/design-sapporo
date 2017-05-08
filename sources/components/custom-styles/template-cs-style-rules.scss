@@ -299,6 +299,12 @@ body {
   color: var(--secondary-color);
 }
 
+.item-title {
+  .blog-article-page & {
+    font-size: var(--headings-title-font-size); 
+  }
+}
+
 // =============================================================================
 // Text type content area.
 // =============================================================================
