@@ -301,9 +301,11 @@ body {
 
 .item-title {
   .blog-article-page & {
-    font-size: var(--headings-title-font-size); 
+    @media screen and (min-width: $mobile + 1) {
+      font-size: var(--headings-title-font-size);
+    }
   }
-}
+} 
 
 // =============================================================================
 // Text type content area.

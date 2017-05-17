@@ -1829,14 +1829,9 @@ a {
     font-size: 30px;
   }
 }
-@media screen and (min-width: 641px) {
-  .blog-article-page .item-title {
-    font-size: 50px;
-  }
-}
 @media screen and (max-width: 640px) {
   .blog-article-page .item-title {
-    font-size: 32px !important;
+    font-size: 32px;
   }
 }
 .content-item-box > .item-title {

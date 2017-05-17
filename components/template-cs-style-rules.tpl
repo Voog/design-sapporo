@@ -170,8 +170,10 @@ body {
   color: var(--secondary-color);
 }
 
-.blog-article-page .item-title {
-  font-size: var(--headings-title-font-size);
+@media screen and (min-width: 641px) {
+  .blog-article-page .item-title {
+    font-size: var(--headings-title-font-size);
+  }
 }
 
 .content-area {
