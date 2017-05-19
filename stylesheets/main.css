@@ -1853,6 +1853,7 @@ a {
   margin-bottom: 0;
   line-height: 1.2;
   text-align: center;
+  font-weight: 600;
 }
 .item-title .item-link {
   color: inherit;
