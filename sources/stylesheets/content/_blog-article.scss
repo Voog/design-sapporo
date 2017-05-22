@@ -330,6 +330,7 @@
   margin-bottom: 0;
   line-height: 1.2;
   text-align: center;
+  font-weight: 600;
 
   .item-link {
     color: inherit;
@@ -370,10 +371,6 @@
   .blog-article-page & {
     @media screen and (max-width: $mobile) {
       font-size: 32px;
-    }
-
-    @media screen and (min-width: $mobile + 1) {
-      font-size: 50px;
     }
   }
 

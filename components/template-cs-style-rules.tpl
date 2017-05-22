@@ -170,6 +170,17 @@ body {
   color: var(--secondary-color);
 }
 
+@media screen and (min-width: 641px) {
+  .blog-article-page .item-title {
+    font-size: var(--headings-title-font-size);
+    font-style: var(--headings-title-font-style);
+    font-weight: var(--headings-title-font-weight);
+    color: var(--headings-title-color);
+    text-decoration: var(--headings-title-text-decoration);
+    text-transform: var(--headings-title-text-transform);
+  }
+}
+
 .content-area {
   color: var(--main-color);
 }
@@ -212,6 +223,17 @@ body {
   text-align: var(--headings-title-text-alignment);
   text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
+}
+@media screen and (max-width: 640px) {
+  .site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1, .site-header
+  .content-area h1 a, .page-content
+  .content-area h1 a, .site-footer
+  .content-area h1 a, .site-header
+  .content-area h1 a:hover, .page-content
+  .content-area h1 a:hover, .site-footer
+  .content-area h1 a:hover {
+    font-size: 32px;
+  }
 }
 .content-area h2:not(.comments-title) {
   color: var(--headings-heading-color);
