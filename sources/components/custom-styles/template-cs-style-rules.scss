@@ -354,7 +354,6 @@ body {
       .site-header &,
       .page-content &,
       .site-footer & {
-        font-size: var(--headings-title-font-size);
         font-style: var(--headings-title-font-style);
         font-weight: var(--headings-title-font-weight);
         line-height: var(--headings-title-line-height);
@@ -362,8 +361,8 @@ body {
         text-decoration: var(--headings-title-text-decoration);
         text-transform: var(--headings-title-text-transform);
 
-        @media screen and (max-width: $mobile) {
-          font-size: 32px;
+        @media screen and (min-width: $mobile + 1) {
+          font-size: var(--headings-title-font-size);
         }
       }
 

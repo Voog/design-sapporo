@@ -216,7 +216,6 @@ body {
 .content-area h1 a:hover, .page-content
 .content-area h1 a:hover, .site-footer
 .content-area h1 a:hover {
-  font-size: var(--headings-title-font-size);
   font-style: var(--headings-title-font-style);
   font-weight: var(--headings-title-font-weight);
   line-height: var(--headings-title-line-height);
@@ -224,7 +223,7 @@ body {
   text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 641px) {
   .site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1, .site-header
   .content-area h1 a, .page-content
   .content-area h1 a, .site-footer
@@ -232,7 +231,7 @@ body {
   .content-area h1 a:hover, .page-content
   .content-area h1 a:hover, .site-footer
   .content-area h1 a:hover {
-    font-size: 32px;
+    font-size: var(--headings-title-font-size);
   }
 }
 .content-area h2:not(.comments-title) {
