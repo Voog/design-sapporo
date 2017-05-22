@@ -172,11 +172,10 @@ body {
 
 @media screen and (min-width: 641px) {
   .blog-article-page .item-title {
-    color: var(--headings-title-color);
     font-size: var(--headings-title-font-size);
     font-style: var(--headings-title-font-style);
     font-weight: var(--headings-title-font-weight);
-    line-height: var(--headings-title-line-height);
+    color: var(--headings-title-color);
     text-decoration: var(--headings-title-text-decoration);
     text-transform: var(--headings-title-text-transform);
   }
