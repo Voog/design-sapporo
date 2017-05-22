@@ -177,7 +177,6 @@ body {
     font-style: var(--headings-title-font-style);
     font-weight: var(--headings-title-font-weight);
     line-height: var(--headings-title-line-height);
-    text-align: var(--headings-title-text-alignment);
     text-decoration: var(--headings-title-text-decoration);
     text-transform: var(--headings-title-text-transform);
   }
