@@ -343,6 +343,20 @@ body {
     text-transform: var(--footer-body-text-transform);
   }
 
+  &:not(.content-item-title) {
+    h1 {
+      // scss-lint:disable NestingDepth
+      // scss-lint:disable SelectorDepth
+      .site-header &,
+      .page-content &,
+      .site-footer & {
+        text-align: var(--headings-title-text-alignment);
+      }
+      // scss-lint:enable NestingDepth
+      // scss-lint:enable SelectorDepth
+    }
+  }
+
   h1 {
     color: var(--headings-title-color);
 
@@ -357,7 +371,6 @@ body {
         font-style: var(--headings-title-font-style);
         font-weight: var(--headings-title-font-weight);
         line-height: var(--headings-title-line-height);
-        text-align: var(--headings-title-text-alignment);
         text-decoration: var(--headings-title-text-decoration);
         text-transform: var(--headings-title-text-transform);
 
@@ -365,7 +378,6 @@ body {
           font-size: var(--headings-title-font-size);
         }
       }
-
       // scss-lint:enable NestingDepth
       // scss-lint:enable SelectorDepth
     }

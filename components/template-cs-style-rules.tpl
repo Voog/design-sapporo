@@ -216,6 +216,9 @@ body {
           text-decoration: var(--footer-body-text-decoration);
   text-transform: var(--footer-body-text-transform);
 }
+.site-header .content-area:not(.content-item-title) h1, .page-content .content-area:not(.content-item-title) h1, .site-footer .content-area:not(.content-item-title) h1 {
+  text-align: var(--headings-title-text-alignment);
+}
 .content-area h1 {
   color: var(--headings-title-color);
 }
@@ -225,7 +228,6 @@ body {
   font-style: var(--headings-title-font-style);
   font-weight: var(--headings-title-font-weight);
   line-height: var(--headings-title-line-height);
-  text-align: var(--headings-title-text-alignment);
   -webkit-text-decoration: var(--headings-title-text-decoration);
           text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);

@@ -76,9 +76,7 @@
 
               <div class="content-body">
                 <header class="content-header">
-                  <div class="content-area">
-                    <h1 class="align-left">{% contentblock name="content_header" publish_default_content="true" single="plaintext" %}{{ page.title }}{% endcontentblock %}</h1>
-                  </div>
+                  <div class="content-item-title content-area">{% contentblock name="content_header_test" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
                 </header>
 
                 <div class="content-area area-normal" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% contentblock %}{{ "write_product_description_here" | lc }}{% endcontentblock %}</div>

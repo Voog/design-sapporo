@@ -11,6 +11,12 @@
     display: none;
   }
 
+  &.content-item-title {
+    h1 {
+      text-align: left;
+    }
+  }
+
   .content-body & {
     .front-page & {
       margin-bottom: 50px;
@@ -109,7 +115,7 @@
     @media screen and (min-width: $mobile + 1) {
       font-size: 50px;
     }
-    
+
     &,
     a,
     a:hover {

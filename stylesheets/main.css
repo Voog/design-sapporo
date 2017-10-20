@@ -86,10 +86,6 @@ a {
   display: none;
 }
 
-.align-left {
-  text-align: left !important;
-}
-
 .float-right {
   float: right;
 }
@@ -2076,6 +2072,9 @@ a {
 }
 .content-area:empty {
   display: none;
+}
+.content-area.content-item-title h1 {
+  text-align: left;
 }
 .front-page .content-body .content-area {
   margin-bottom: 50px;
