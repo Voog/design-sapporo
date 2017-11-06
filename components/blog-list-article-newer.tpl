@@ -20,17 +20,15 @@
 
 {% if editmode %}
   <div class="content-item-box {{ article_image_state }} js-content-item-box" data-item-type="article" data-item-id="{{ article.id }}">
-    <div class="item-top js-bg-picker-area">
-      <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ article.image.for-width-680.schemeless_url }}" data-bg-target-width="680"></button>
-
+    <div class="item-top">
       <button class="btn bg-crop-btn {% if article_image_orientation == "image-square" or article.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
-        <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+        <svg width="20" height="20" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#ico-toggle"></use>
         </svg>
       </button>
 
       <div class="loader js-loader"></div>
-      <div class="top-inner aspect-ratio-inner image-drop-area {{ article_image_orientation }} {{ article_image_crop_state }} js-img-drop-area" data-image="{{ article.image.for-width-680.schemeless_url }}"></div>
+      <div class="top-inner aspect-ratio-inner image-drop-area {{ article_image_orientation }} {{ article_image_crop_state }} js-content-item-img-drop-area" data-image="{{ article.image.for-width-680.schemeless_url }}"></div>
     </div>
 
     <h2 class="item-title">
