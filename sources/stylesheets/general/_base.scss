@@ -60,11 +60,6 @@ a {
   display: none;
 }
 
-// TODO: Remove hotfix !important.
-.align-left {
-  text-align: left !important; // scss-lint:disable ImportantRule
-}
-
 .float-right {
   float: right;
 }
