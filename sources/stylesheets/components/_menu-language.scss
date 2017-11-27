@@ -201,7 +201,7 @@
         // scss-lint:disable SelectorDepth
         &,
         .language-menu-mode-list & {
-          opacity: .5;
+          opacity: .8;
         }
         // scss-lint:enable SelectorDepth
       }
@@ -239,7 +239,7 @@
       }
 
       .language-menu-mode-list & {
-        opacity: .3;
+        opacity: .5;
       }
 
       .language-menu-mode-list.language-flags-enabled.language-names-enabled & {

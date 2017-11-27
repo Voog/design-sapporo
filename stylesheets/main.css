@@ -446,9 +446,6 @@ a {
 .menu-horizontal > .menu-item {
   display: inline-block;
 }
-.menu-horizontal .menu-item {
-  opacity: .8;
-}
 .page-content .menu-horizontal .menu-item:hover {
   opacity: 1;
 }
@@ -572,13 +569,24 @@ a {
   z-index: 1;
   display: none;
   margin-left: -5px;
-  background-color: rgba(255, 255, 255, 0.95);
 }
 .publicmode .header-menu-wide .menu-sub {
   margin-bottom: 20px;
 }
 .editmode .header-menu-wide .menu-sub {
   margin-bottom: 60px;
+}
+@supports not ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
+  .header-menu-wide .menu-sub {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+@supports ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
+  .header-menu-wide .menu-sub {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+  }
 }
 .menu-item:hover .menu-sub {
   display: block;
@@ -1112,7 +1120,7 @@ a {
   top: 3px;
 }
 .menu-language .menu-item a:hover, .language-menu-mode-list .menu-language .menu-item a:hover {
-  opacity: .5;
+  opacity: .8;
 }
 .language-menu-mode-list .menu-language .menu-item a.selected {
   opacity: 1;
@@ -1136,7 +1144,7 @@ a {
   padding-bottom: 15px;
 }
 .language-menu-mode-list .menu-language .menu-item a {
-  opacity: .3;
+  opacity: .5;
 }
 .language-menu-mode-list.language-flags-enabled.language-names-enabled .menu-language .menu-item a {
   padding: 5px 30px 5px 3px;
@@ -1459,6 +1467,10 @@ a {
 }
 .menu-blog-tags .menu-item a {
   font-size: 14px;
+}
+
+.menu-breadcrumbs .menu-item {
+  opacity: .8;
 }
 
 .site-footer {

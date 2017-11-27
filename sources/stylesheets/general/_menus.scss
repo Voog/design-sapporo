@@ -117,8 +117,6 @@
   }
 
   .menu-item {
-    opacity: .8;
-
     &:hover {
       // scss-lint:disable NestingDepth
       .page-content & {
@@ -296,7 +294,6 @@
     z-index: 1;
     display: none;
     margin-left: -5px;
-    background-color: rgba($color-white, .95);
 
     .publicmode & {
       margin-bottom: 20px;
@@ -304,6 +301,15 @@
 
     .editmode & {
       margin-bottom: 60px;
+    }
+
+    @supports not (backdrop-filter: blur(3px)) {
+      background-color: rgba($color-white, .9);
+    }
+
+    @supports (backdrop-filter: blur(3px)) {
+      background-color: rgba($color-white, .7);
+      backdrop-filter: blur(3px);
     }
   }
 
