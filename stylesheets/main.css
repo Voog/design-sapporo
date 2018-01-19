@@ -583,7 +583,7 @@ a {
 }
 @supports ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
   .header-menu-wide .menu-sub {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
   }
