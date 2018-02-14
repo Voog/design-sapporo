@@ -15,8 +15,14 @@ $color-error: #c00;
 $color-success: #409e13;
 $color-disabled: #ccc;
 
+// Sign out button
+$color-common-gray: rgb(27,33,36);
+$color-toolbar-bg: rgb(238,238,238);
+$color-silver-2: rgb(196,196,196);
+
 // Fonts
 $base-font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
+$avenir: 'Avenir Next', 'AvenirX';
 $base-font-size: 18px;
 
 // Media query breakpoints.
