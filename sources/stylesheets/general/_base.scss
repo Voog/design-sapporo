@@ -65,7 +65,7 @@ a {
 }
 
 .site-container {
-  @include transition(right .2s);
+  transition: right .2s;
   position: relative;
   right: 0;
 

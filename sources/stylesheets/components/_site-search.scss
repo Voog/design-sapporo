@@ -42,7 +42,7 @@
 }
 
 .site-search {
-  @include transition(right .2s);
+  transition: right .2s;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -107,7 +107,7 @@
   border-width: 1px;
   box-sizing: border-box;
 
-  @include placeholder() {
+  &::placeholder {
     font-weight: 400;
   }
 

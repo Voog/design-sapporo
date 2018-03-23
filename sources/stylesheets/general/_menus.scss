@@ -48,7 +48,7 @@
 }
 
 .btn-menu-back {
-  @include transform(rotate(180deg));
+  transform: rotate(180deg);
   position: absolute;
   top: 8px;
   right: 0;
@@ -188,7 +188,7 @@
   text-align: left;
 
   .header-menu-compact & {
-    @include transition(right .2s);
+    transition: right .2s;
     position: fixed;
     top: 0;
     bottom: 0;
