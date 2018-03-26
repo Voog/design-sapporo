@@ -295,7 +295,7 @@ a {
 .not-loaded .loader, .is-loaded .loader {
   margin-top: calc((20px / 2) * -1);
   margin-left: calc((20px / 2) * -1);
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   -webkit-animation: rotation .7s infinite linear;
           animation: rotation .7s infinite linear;
 }
@@ -2068,7 +2068,7 @@ a {
 .article-comments .form_field_inline {
   display: inline-block;
   width: calc(50% - 10px);
-  margin-top: 5px;
+  margin-top: 0;
   vertical-align: top;
 }
 .article-comments .form_field_inline:first-child {
