@@ -1,4 +1,5 @@
 /*!
+<<<<<<< HEAD
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
  *
@@ -10625,6 +10626,8 @@ return jQuery;
 })(jQuery, window, document);
 
 /*!
+=======
+>>>>>>> master
  * jQuery Textarea AutoSize plugin
  * Author: Javier Julio
  * Licensed under the MIT license
