@@ -18,7 +18,7 @@
         </li>
 
         {% for level_2 in level_1.visible_children %}
-          {% unless level_2.layout_title == product_layout %}
+          {% unless level_2.layout_title == product_layout or level_2.layout_title == product_list_layout %}
             <li class="menu-item">{% menulink level_2 %}</li>
           {% endunless %}
         {% endfor %}
