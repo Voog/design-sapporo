@@ -222,13 +222,9 @@ body {
 .content-area h1 {
   color: var(--headings-title-color);
 }
-.site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1, .site-header
-.content-area h1 a, .page-content
-.content-area h1 a, .site-footer
-.content-area h1 a, .site-header
-.content-area h1 a:hover, .page-content
-.content-area h1 a:hover, .site-footer
-.content-area h1 a:hover {
+.site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1,
+.site-header .content-area h1 a, .page-content .content-area h1 a, .site-footer .content-area h1 a,
+.site-header .content-area h1 a:hover, .page-content .content-area h1 a:hover, .site-footer .content-area h1 a:hover {
   font-style: var(--headings-title-font-style);
   font-weight: var(--headings-title-font-weight);
   line-height: var(--headings-title-line-height);
@@ -237,26 +233,18 @@ body {
   text-transform: var(--headings-title-text-transform);
 }
 @media screen and (min-width: 641px) {
-  .site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1, .site-header
-  .content-area h1 a, .page-content
-  .content-area h1 a, .site-footer
-  .content-area h1 a, .site-header
-  .content-area h1 a:hover, .page-content
-  .content-area h1 a:hover, .site-footer
-  .content-area h1 a:hover {
+  .site-header .content-area h1, .page-content .content-area h1, .site-footer .content-area h1,
+  .site-header .content-area h1 a, .page-content .content-area h1 a, .site-footer .content-area h1 a,
+  .site-header .content-area h1 a:hover, .page-content .content-area h1 a:hover, .site-footer .content-area h1 a:hover {
     font-size: var(--headings-title-font-size);
   }
 }
 .content-area h2:not(.comments-title) {
   color: var(--headings-heading-color);
 }
-.site-header .content-area h2:not(.comments-title), .page-content .content-area h2:not(.comments-title), .site-footer .content-area h2:not(.comments-title), .site-header
-.content-area h2:not(.comments-title) a, .page-content
-.content-area h2:not(.comments-title) a, .site-footer
-.content-area h2:not(.comments-title) a, .site-header
-.content-area h2:not(.comments-title) a:hover, .page-content
-.content-area h2:not(.comments-title) a:hover, .site-footer
-.content-area h2:not(.comments-title) a:hover {
+.site-header .content-area h2:not(.comments-title), .page-content .content-area h2:not(.comments-title), .site-footer .content-area h2:not(.comments-title),
+.site-header .content-area h2:not(.comments-title) a, .page-content .content-area h2:not(.comments-title) a, .site-footer .content-area h2:not(.comments-title) a,
+.site-header .content-area h2:not(.comments-title) a:hover, .page-content .content-area h2:not(.comments-title) a:hover, .site-footer .content-area h2:not(.comments-title) a:hover {
   font-size: var(--headings-heading-font-size);
   font-style: var(--headings-heading-font-style);
   font-weight: var(--headings-heading-font-weight);
@@ -272,40 +260,32 @@ body {
 .content-area h6 {
   color: var(--headings-subheading-color);
 }
-.site-header .content-area h3, .page-content .content-area h3, .site-footer .content-area h3, .site-header
-.content-area h3 a, .page-content
-.content-area h3 a, .site-footer
-.content-area h3 a, .site-header
-.content-area h3 a:hover, .page-content
-.content-area h3 a:hover, .site-footer
-.content-area h3 a:hover, .site-header
-.content-area h4, .page-content
-.content-area h4, .site-footer
-.content-area h4, .site-header
-.content-area h4 a, .page-content
-.content-area h4 a, .site-footer
-.content-area h4 a, .site-header
-.content-area h4 a:hover, .page-content
-.content-area h4 a:hover, .site-footer
-.content-area h4 a:hover, .site-header
-.content-area h5, .page-content
-.content-area h5, .site-footer
-.content-area h5, .site-header
-.content-area h5 a, .page-content
-.content-area h5 a, .site-footer
-.content-area h5 a, .site-header
-.content-area h5 a:hover, .page-content
-.content-area h5 a:hover, .site-footer
-.content-area h5 a:hover, .site-header
-.content-area h6, .page-content
-.content-area h6, .site-footer
-.content-area h6, .site-header
-.content-area h6 a, .page-content
-.content-area h6 a, .site-footer
-.content-area h6 a, .site-header
-.content-area h6 a:hover, .page-content
-.content-area h6 a:hover, .site-footer
-.content-area h6 a:hover {
+.site-header .content-area h3, .page-content .content-area h3, .site-footer .content-area h3,
+.site-header .content-area h3 a, .page-content .content-area h3 a, .site-footer .content-area h3 a,
+.site-header .content-area h3 a:hover, .page-content .content-area h3 a:hover, .site-footer .content-area h3 a:hover,
+.site-header .content-area h4, .page-content .content-area h4, .site-footer .content-area h4,
+.site-header
+.content-area h4 a,
+.page-content .content-area h4 a, .site-footer .content-area h4 a,
+.site-header
+.content-area h4 a:hover,
+.page-content .content-area h4 a:hover, .site-footer .content-area h4 a:hover,
+.site-header .content-area h5,
+.page-content .content-area h5, .site-footer .content-area h5,
+.site-header
+.content-area h5 a,
+.page-content .content-area h5 a, .site-footer .content-area h5 a,
+.site-header
+.content-area h5 a:hover,
+.page-content .content-area h5 a:hover, .site-footer .content-area h5 a:hover,
+.site-header .content-area h6,
+.page-content .content-area h6, .site-footer .content-area h6,
+.site-header
+.content-area h6 a,
+.page-content .content-area h6 a, .site-footer .content-area h6 a,
+.site-header
+.content-area h6 a:hover,
+.page-content .content-area h6 a:hover, .site-footer .content-area h6 a:hover {
   font-size: var(--headings-subheading-font-size);
   font-style: var(--headings-subheading-font-style);
   font-weight: var(--headings-subheading-font-weight);

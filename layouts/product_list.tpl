@@ -18,7 +18,7 @@
             {% include "menu-breadcrumbs" %}
 
             <section class="content-body">
-              <div class="content-area" {{ edy_intro_edit_text }}>{% content %}</div>
+              <div class="content-area" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
             </section>
 
             <section class="content-item-boxes">
