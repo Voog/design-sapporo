@@ -1,5 +1,5 @@
 <ul class="menu menu-horizontal menu-public menu-breadcrumbs">
-  {% if site.root_item.layout_title == product_list_layout and show_product_related_pages_in_main_menu != true %}
+  {% if site.root_item.layout_title == product_list_layout or site.root_item.layout_title == product_layout %}
     {% if page.level > 0 %}
       {% menulink site.root_item wrapper-tag="li" wrapper-class="menu-item" %}
     {% endif %}
