@@ -29,13 +29,7 @@
                   {% endif %}
                 {% endfor %}
               {% else %}
-                {% if editmode %}
-                  {% assign productListMenuItem = site.menuitems %}
-                {% else %}
-                  {% assign productListMenuItem = site.visible_menuitems %}
-                {% endif %}
-
-                {% include "product-list-loop" menu_items: productListMenuItem %}
+                {% include "product-list-loop" %}
               {% endif %}
             </section>
           </main>
