@@ -18,7 +18,7 @@
             {% include "menu-breadcrumbs" %}
 
             <section class="content-body">
-              <div class="content-area" {{ edy_intro_edit_text }}>{% content %}</div>
+              <div class="content-area" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
             </section>
 
             <section class="content-item-boxes">
@@ -43,6 +43,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
+    {% include "site-signout" %} 
     {% include "template-javascripts" %}
     {% include "template-tools" items_page: true %}
 

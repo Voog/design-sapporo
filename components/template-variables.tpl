@@ -64,6 +64,15 @@
   {% comment %}Detects current page visible childnen size.{% endcomment %}
   {% assign page_children_size = page.menuitem.visible_children | size %}
 
+  {% assign has_no_children_other_than_products = true %}
+  {% if page_children_size != 0 %}
+    {% for item in page.menuitem.visible_children %}
+      {% if item.layout_title != 'Product' and item.layout_title != 'Product list' %}
+        {% assign has_no_children_other_than_products = false %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
   {% comment %}
     Sets boolean to decide if menu level 1 is the currently active menu and
     should be active in mobile menu.
@@ -74,7 +83,7 @@
 
   {% if blog.tags and blog_tags_size > 0 %}
     {% assign menu_current = false %}
-  {% elsif page.level == 0 or page.level == 1 and page_children_size == 0 %}
+  {% elsif page.level == 0 or page.level == 1 and has_no_children_other_than_products %}
     {% assign menu_current = true %}
   {% endif %}
 
