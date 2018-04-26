@@ -35,6 +35,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
+    {% include "site-signout" %} 
     {% include "template-javascripts" %}
   </body>
 </html>

@@ -44,6 +44,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
+    {% include "site-signout" %} 
     {% include "template-javascripts" %}
     {% include "template-tools" items_page: true %}
 

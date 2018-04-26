@@ -435,7 +435,7 @@
   // ===========================================================================
   // Binds site search functionality.
   // ===========================================================================
-  var bindSiteSearch = function(searchForm, languageCode) {
+  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
     if (searchForm) {
       var search = new VoogSearch(searchForm, {
         // Results are lazy-loaded on scroll.
@@ -451,7 +451,9 @@
         // Mobile checkpoint (adds class "voog-search-mobile-mode" if <= nr).
         mobileModeWidth: 640,
         // Updates results on every keypress.
-        updateOnKeypress: true
+        updateOnKeypress: true,
+        // String for feedback if no results are found.
+        noResults: noResultsString
       });
     }
   };
