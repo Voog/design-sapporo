@@ -29,7 +29,7 @@
                   {% endif %}
                 {% endfor %}
               {% else %}
-                {% include "product-list-loop" menu_items: site.visible_menuitems %}
+                {% include "product-list-loop" %}
               {% endif %}
             </section>
           </main>
@@ -43,6 +43,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
+    {% include "site-signout" %} 
     {% include "template-javascripts" %}
     {% include "template-tools" items_page: true %}
 
