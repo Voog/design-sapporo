@@ -1,4 +1,4 @@
-{% if site.has_language_tags? %}
+{% if blog.has_tags? %}
   {% assign page_path = blog-list-tags %}
 
   {% blogcontext page_path %}
@@ -25,7 +25,7 @@
               {% assign blog_path = level_1.path %}
             {% endif %}
 
-            <a {% if current_class %}class="{{ current_class }}"{% endif %} href="/{{ blog_path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
+            <a {% if current_class %}class="{{ current_class }}"{% endif %} href="/{{ blog.page.path_with_lang }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
           </li>
         {% endfor %}
       </ul>
