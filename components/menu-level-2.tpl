@@ -13,9 +13,6 @@
   {% if editmode or has_content_sub_pages %}
     <div class="menu-sub js-menu-sub">
       <ul class="menu menu-vertical menu-level-2">
-        <li class="menu-item hidden-mobile">
-          <a class="{% if level_1.current? %} selected current{% endif %}" href="{{ level_1.url }}">{{ level_1.title }}</a>
-        </li>
 
         {% for level_2 in level_1.visible_children %}
           {% unless level_2.layout_title == product_layout %}
