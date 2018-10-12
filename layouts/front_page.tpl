@@ -21,6 +21,7 @@
 
             <section class="content-item-boxes">
               {% if editmode %}
+              {% include "blog-settings-editor" %}
                 {% for item in site.menuitems_with_hidden %}
                   {% if item.blog? %}
                     {% include "blog-list-article-add" with "item" %}
@@ -44,7 +45,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
-    {% include "site-signout" %} 
+    {% include "site-signout" %}
     {% include "template-javascripts" %}
     {% include "template-tools" items_page: true %}
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 {% include "blog-article-variables" %}
+{% include "blog-settings-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
@@ -19,14 +20,17 @@
               <header class="article-header">
                 <h1 class="item-title">{% editable article.title %}</h1>
                 {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
-
+                {% if editmode and show_article_settings_button %}
+                {% include "article-settings-editor" %}
+                {% endif %}
                 {% if article_year == current_year %}
                   {% assign article_date_format = "long_without_year" %}
                 {% else %}
                   {% assign article_date_format = "long" %}
                 {% endif %}
-
-                <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                {% if hide_article_date_on_selected_blog or hide_article_date_globally or hide_article_date_on_selected_article %}
+                    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                {% endif %}
               </header>
 
 
@@ -65,8 +69,9 @@
                 </div>
               </div>
             {% endif %}
-
+            {% if show_article_comments_globally or show_article_comments_on_selected_blog or show_article_comments_on_selected_article %}
             {% include "blog-article-comments" %}
+            {% endif %}
           </main>
 
           {% include "site-footer" %}
@@ -78,7 +83,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
-    {% include "site-signout" %} 
+    {% include "site-signout" %}
     {% include "template-javascripts" %}
   </body>
 </html>
