@@ -20,7 +20,7 @@
               <header class="article-header">
                 <h1 class="item-title">{% editable article.title %}</h1>
                 {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
-                {% if editmode and show_article_settings_button %}
+                {% if editmode %}
                 {% include "article-settings-editor" %}
                 {% endif %}
                 {% if article_year == current_year %}
@@ -28,9 +28,7 @@
                 {% else %}
                   {% assign article_date_format = "long" %}
                 {% endif %}
-                {% if hide_article_date_on_selected_blog or hide_article_date_globally or hide_article_date_on_selected_article %}
-                    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
-                {% endif %}
+                    <time class="article-date {{toggle_article_date}}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
               </header>
 
 
@@ -69,9 +67,7 @@
                 </div>
               </div>
             {% endif %}
-            {% if show_article_comments_globally or show_article_comments_on_selected_blog or show_article_comments_on_selected_article %}
             {% include "blog-article-comments" %}
-            {% endif %}
           </main>
 
           {% include "site-footer" %}

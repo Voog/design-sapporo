@@ -18,33 +18,63 @@
     });
 
     {% if article.data.article_settings %}
-      var valuesObj = {{ article.data.article_settings | json }};
+      var articleDataValues = {{ article.data.article_settings | json }};
     {% else %}
-      var valuesObj = {};
+      var articleDataValues = {}
     {% endif %};
 
+    {% if site.data.article_settings %}
+      var globalDataValues = {{ site.data.article_settings | json }};
+    {% else %}
+       var globalDataValues = {}
+    {% endif %};
+
+    var show_comments, show_date, show_author;
+
+    if (articleDataValues.show_comments != null && articleDataValues.show_comments !== '') {
+      show_comments = Boolean(articleDataValues.show_comments)
+    } else if (globalDataValues.show_comments != null && globalDataValues.show_comments !== '') {
+      show_comments = Boolean(globalDataValues.show_comments)
+    } else {
+      show_comments = true;
+    }
+
+    if (articleDataValues.show_date != null && articleDataValues.show_date !== '') {
+      show_date = Boolean(articleDataValues.show_date)
+    } else if (globalDataValues.show_date != null && globalDataValues.show_date !== '') {
+      show_date = Boolean(globalDataValues.show_date)
+    } else {
+      show_date = true;
+    }
+
+    var valuesObj = {
+      show_comments: show_comments,
+      show_date: show_date
+    }
     var articleSettingsButton = document.querySelector('.article-settings-editor');
 
     var SettingsEditor = new Edicy.SettingsEditor(articleSettingsButton, {
       menuItems: [
-        {
-          "title": "Remove article comment",
-          "type": "checkbox",
-          "key": "hide_comments",
+       {
+          "titleI18n": "comments",
+          "type": "toggle",
+          "key": "show_comments",
+          "tooltipI18n": "toggle_current_article_comments",
           "states": {
             "on": true,
             "off": false
           },
         },
-        {
-          "title": "Remove article date",
-          "type": "checkbox",
-          "key": "hide_dates",
-          "states": {
-            "on": true,
-            "off": false
-          },
+      {
+        "titleI18n": "publishing_date",
+        "type": "toggle",
+        "key": "show_date",
+        "tooltipI18n": "toggle_current_article_date",
+        "states": {
+          "on": true,
+          "off": false
         },
+      },
       ],
 
       // Binded data object which should contain custom data object.
@@ -53,7 +83,27 @@
        // Style type the button.
       buttonStyle: 'default',
       // Title for the button.
-      buttonTitle: 'Article settings',
+      buttonTitle: "article_settings",
+
+      preview: function(data) {
+       var $articleDate = $('.article-date'),
+        $articleComment =$('.article-comments');
+        if (data.show_date == true) {
+          $articleDate.removeClass('hide-article-date');
+          $articleDate.addClass('show-article-date');
+        } else if (data.show_date == false) {
+          $articleDate.removeClass('show-article-date');
+          $articleDate.addClass('hide-article-date');
+        }
+
+        if (data.show_comments == true) {
+          $articleComment.removeClass('hide-article-comment');
+          $articleComment.addClass('show-article-comment');
+        } else if (data.show_comments == false) {
+          $articleComment.removeClass('show-article-comment');
+          $articleComment.addClass('hide-article-comment');
+        }
+      },
 
       commit: function(data) {
         articleData.set('article_settings', data);

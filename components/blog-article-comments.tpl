@@ -1,4 +1,4 @@
-<section id="article-comments" class="article-comments inner content-area">
+<section id="article-comments" class="article-comments inner content-area {{toggle_article_comment}}">
   <h2 class="comments-title">{{ "replies" | lcc: article.comments_count }}</h2>
 
   <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">

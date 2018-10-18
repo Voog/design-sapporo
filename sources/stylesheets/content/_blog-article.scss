@@ -597,3 +597,27 @@
 .article-settings-wrap {
   text-align: center;
 }
+
+.blog-settings-wrap {
+  text-align: center;
+}
+
+.article-header {
+  .hide-article-date {
+    display: none !important;
+  }
+}
+
+.article-header {
+  .show-article-date {
+    display: block;
+  }
+}
+
+.hide-article-comment {
+  display: none !important;
+}
+
+.show-article-comment {
+  display: block;
+}
