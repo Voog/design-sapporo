@@ -295,7 +295,7 @@ a {
 .not-loaded .loader, .is-loaded .loader {
   margin-top: calc((20px / 2) * -1);
   margin-left: calc((20px / 2) * -1);
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
   -webkit-animation: rotation .7s infinite linear;
           animation: rotation .7s infinite linear;
 }
@@ -1227,228 +1227,263 @@ a {
   display: none;
 }
 
-.ico-flag-sq:after {
+[data-lang-code^="sq"]:after {
   background-position: 0 0;
   content: '';
 }
 
-.ico-flag-hy:after {
+[data-lang-code^="hy"]:after {
   background-position: -21px 0;
   content: '';
 }
 
-.ico-flag-bn:after {
+[data-lang-code^="bn"]:after {
   background-position: -42px 0;
   content: '';
 }
 
-.ico-flag-bg:after {
+[data-lang-code^="bg"]:after {
   background-position: -84px 0;
   content: '';
 }
 
-.ico-flag-zh:after {
+[data-lang-code^="zh"]:after {
   background-position: -105px 0;
   content: '';
 }
 
-.ico-flag-hr:after {
+[data-lang-code^="hr"]:after {
   background-position: -126px 0;
   content: '';
 }
 
-.ico-flag-da:after {
+[data-lang-code^="da"]:after {
   background-position: -147px 0;
   content: '';
 }
 
-.ico-flag-cs:after {
+[data-lang-code^="cs"]:after {
   background-position: -168px 0;
   content: '';
 }
 
-.ico-flag-et:after {
+[data-lang-code^="et"]:after {
   background-position: -189px 0;
   content: '';
 }
 
-.ico-flag-fi:after {
+[data-lang-code^="fi"]:after {
   background-position: 0 -15px;
   content: '';
 }
 
-.ico-flag-fr:after {
+[data-lang-code^="fr"]:after {
   background-position: -21px -15px;
   content: '';
 }
 
-.ico-flag-ka:after {
+[data-lang-code^="ka"]:after {
   background-position: -42px -15px;
   content: '';
 }
 
-.ico-flag-de:after {
+[data-lang-code^="de"]:after {
   background-position: -63px -15px;
   content: '';
 }
 
-.ico-flag-el:after {
+[data-lang-code^="el"]:after {
   background-position: -84px -15px;
   content: '';
 }
 
-.ico-flag-hu:after {
+[data-lang-code^="hu"]:after {
   background-position: -105px -15px;
   content: '';
 }
 
-.ico-flag-is:after {
+[data-lang-code^="is"]:after {
   background-position: -126px -15px;
   content: '';
 }
 
-.ico-flag-hi:after {
+[data-lang-code^="hi"]:after {
   background-position: -147px -15px;
   content: '';
 }
 
-.ico-flag-id:after {
+[data-lang-code^="id"]:after {
   background-position: -168px -15px;
   content: '';
 }
 
-.ico-flag-fa:after {
+[data-lang-code^="fa"]:after {
   background-position: -189px -15px;
   content: '';
 }
 
-.ico-flag-he:after {
+[data-lang-code^="he"]:after {
   background-position: 0 -30px;
   content: '';
 }
 
-.ico-flag-it:after {
+[data-lang-code^="it"]:after {
   background-position: -21px -30px;
   content: '';
 }
 
-.ico-flag-ja:after {
+[data-lang-code^="ja"]:after {
   background-position: -42px -30px;
   content: '';
 }
 
-.ico-flag-ko:after {
+[data-lang-code^="ko"]:after {
   background-position: -63px -30px;
   content: '';
 }
 
-.ico-flag-lv:after {
+[data-lang-code^="lv"]:after {
   background-position: -84px -30px;
   content: '';
 }
 
-.ico-flag-lt:after {
+[data-lang-code^="lt"]:after {
   background-position: -105px -30px;
   content: '';
 }
 
-.ico-flag-ms:after {
+[data-lang-code^="ms"]:after {
   background-position: -126px -30px;
   content: '';
 }
 
-.ico-flag-nl:after {
+[data-lang-code^="nl"]:after {
   background-position: -147px -30px;
   content: '';
 }
 
-.ico-flag-no:after {
+[data-lang-code^="no"]:after {
   background-position: -168px -30px;
   content: '';
 }
 
-.ico-flag-ur:after {
+[data-lang-code^="ur"]:after {
   background-position: -189px -30px;
   content: '';
 }
 
-.ico-flag-fil:after {
+[data-lang-code^="fil"]:after {
   background-position: 0 -45px;
   content: '';
 }
 
-.ico-flag-pl:after {
+[data-lang-code^="pl"]:after {
   background-position: -21px -45px;
   content: '';
 }
 
-.ico-flag-ro:after {
+[data-lang-code^="ro"]:after {
   background-position: -42px -45px;
   content: '';
 }
 
-.ico-flag-ru:after {
+[data-lang-code^="ru"]:after {
   background-position: -63px -45px;
   content: '';
 }
 
-.ico-flag-ar:after {
+[data-lang-code^="ar"]:after {
   background-position: -84px -45px;
   content: '';
 }
 
-.ico-flag-sk:after {
+[data-lang-code^="sk"]:after {
   background-position: -105px -45px;
   content: '';
 }
 
-.ico-flag-sl:after {
+[data-lang-code^="sl"]:after {
   background-position: -126px -45px;
   content: '';
 }
 
-.ico-flag-es:after {
+[data-lang-code^="es"]:after {
   background-position: -147px -45px;
   content: '';
 }
 
-.ico-flag-sv:after {
+[data-lang-code^="sv"]:after {
   background-position: -168px -45px;
   content: '';
 }
 
-.ico-flag-tr:after {
+[data-lang-code^="tr"]:after {
   background-position: -189px -45px;
   content: '';
 }
 
-.ico-flag-uk:after {
+[data-lang-code^="uk"]:after {
   background-position: 0 -60px;
   content: '';
 }
 
-.ico-flag-en:after {
+[data-lang-code^="en"]:after {
   background-position: -21px -60px;
   content: '';
 }
 
-.ico-flag-pt:after {
+[data-lang-code^="pt"]:after {
   background-position: -84px -60px;
   content: '';
 }
 
-.ico-flag-sr:after {
+[data-lang-code^="sr"]:after {
   background-position: -126px -60px;
   content: '';
 }
 
-.ico-flag-bn:after {
+[data-lang-code^="bn"]:after {
   background-position: -147px -60px;
   content: '';
 }
 
-.ico-flag-th:after {
+[data-lang-code^="th"]:after {
   background-position: -189px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_US"]:after {
+  background-position: -21px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_GB"]:after {
+  background-position: -63px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_AU"]:after {
+  background-position: -168px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_CA"]:after {
+  background-position: -105px -60px;
+  content: '';
+}
+
+[data-lang-code^="pt_BR"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="pt_PT"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="fr_IC"]:after {
+  background-position: -42px -60px;
   content: '';
 }
 
