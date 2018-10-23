@@ -83,7 +83,7 @@
        // Style type the button.
       buttonStyle: 'default',
       // Title for the button.
-      buttonTitle: "article_settings",
+      buttonTitleI18n: "article_settings",
 
       preview: function(data) {
        var $articleDate = $('.article-date'),

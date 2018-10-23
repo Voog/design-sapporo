@@ -46,20 +46,20 @@
     var SettingsEditor = new Edicy.SettingsEditor(siteSettingsButton, {
       menuItems: [
         {
-          "title": "comments",
+          "titleI18n": "comments",
           "type": "toggle",
           "key": "show_comments",
-          "tooltip": "toggle_current_article_comments",
+          "tooltipI18n": "toggle_current_article_comments",
           "states": {
             "on": true,
             "off": false
           },
         },
         {
-          "title": "publishing_date",
+          "titleI18n": "publishing_date",
           "type": "toggle",
           "key": "show_dates",
-          "tooltip": "toggle_current_article_dates",
+          "tooltipI18n": "toggle_current_article_dates",
           "states": {
             "on": true,
             "off": false
@@ -73,7 +73,7 @@
        // Style type the button.
       buttonStyle: 'default',
       // Title for the button.
-      buttonTitle: "blog_settings",
+      buttonTitleI18n: "blog_settings",
 
       commit: function(data) {
         siteData.set('article_settings', data);
