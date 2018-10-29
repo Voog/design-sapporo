@@ -2153,19 +2153,11 @@ a {
 }
 
 .article-header .hide-article-date {
-  display: none !important;
+  display: none;
 }
 
-.article-header .show-article-date {
-  display: block;
-}
-
-.hide-article-comment {
-  display: none !important;
-}
-
-.show-article-comment {
-  display: block;
+.blog-article-page .hide-article-comment {
+  display: none;
 }
 
 .content-area {

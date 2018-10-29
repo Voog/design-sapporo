@@ -604,20 +604,12 @@
 
 .article-header {
   .hide-article-date {
-    display: none !important;
+    display: none;
   }
 }
 
-.article-header {
-  .show-article-date {
-    display: block;
+.blog-article-page {
+  .hide-article-comment {
+    display: none;
   }
-}
-
-.hide-article-comment {
-  display: none !important;
-}
-
-.show-article-comment {
-  display: block;
 }

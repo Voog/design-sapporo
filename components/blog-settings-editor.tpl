@@ -59,7 +59,7 @@
           "titleI18n": "publishing_date",
           "type": "toggle",
           "key": "show_dates",
-          "tooltipI18n": "toggle_current_article_dates",
+          "tooltipI18n": "toggle_all_dates",
           "states": {
             "on": true,
             "off": false
