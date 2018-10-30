@@ -11,13 +11,13 @@
 {% endif %}
 
 {% if site.data.article_settings.show_comments == false and article.data.article_settings.show_comments == false %}
-  {% assign toggle_article_comment = "hide-article-comment" %}
+  {% assign toggle_article_comment = "hide-article-comments" %}
 {% elsif site.data.article_settings.show_comments == false and article.data.article_settings.show_comments == blank %}
-  {% assign toggle_article_comment = "hide-article-comment" %}
+  {% assign toggle_article_comment = "hide-article-comments" %}
 {% elsif site.data.article_settings.show_comments == true and article.data.article_settings.show_comments == false %}
-  {% assign toggle_article_comment = "hide-article-comment" %}
+  {% assign toggle_article_comment = "hide-article-comments" %}
 {% elsif site.data.article_settings.show_comments == blank and article.data.article_settings.show_comments == false %}
-  {% assign toggle_article_comment = "hide-article-comment" %}
+  {% assign toggle_article_comment = "hide-article-comments" %}
 {% else %}
-  {% assign toggle_article_comment = "show-article-comment" %}
+  {% assign toggle_article_comment = "show-article-comments" %}
 {% endif %}

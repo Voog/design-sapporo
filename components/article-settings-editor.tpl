@@ -97,11 +97,11 @@
         }
 
         if (data.show_comments == true) {
-          $articleComment.removeClass('hide-article-comment');
-          $articleComment.addClass('show-article-comment');
+          $articleComment.removeClass('hide-article-comments');
+          $articleComment.addClass('show-article-comments');
         } else if (data.show_comments == false) {
-          $articleComment.removeClass('show-article-comment');
-          $articleComment.addClass('hide-article-comment');
+          $articleComment.removeClass('show-article-comments');
+          $articleComment.addClass('hide-article-comments');
         }
       },
 
