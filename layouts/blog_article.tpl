@@ -20,15 +20,15 @@
               <header class="article-header">
                 <h1 class="item-title">{% editable article.title %}</h1>
                 {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
-                {% if editmode %}
-                {% include "article-settings-editor" %}
-                {% endif %}
                 {% if article_year == current_year %}
                   {% assign article_date_format = "long_without_year" %}
                 {% else %}
                   {% assign article_date_format = "long" %}
                 {% endif %}
                     <time class="article-date {{toggle_article_date}}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                {% if editmode %}
+                  {% include "article-settings-editor" %}
+                {% endif %}
               </header>
 
 
