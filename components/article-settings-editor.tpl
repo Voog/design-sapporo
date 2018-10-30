@@ -29,7 +29,7 @@
        var globalDataValues = {}
     {% endif %};
 
-    var show_comments, show_date, show_author;
+    var show_comments, show_date;
 
     if (articleDataValues.show_comments != null && articleDataValues.show_comments !== '') {
       show_comments = Boolean(articleDataValues.show_comments)
