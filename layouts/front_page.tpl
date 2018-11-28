@@ -31,6 +31,7 @@
               {% endif %}
 
               {% for article in site.latest_99999_articles %}
+                {% include "blog-settings-variables" %}
                 {% include "blog-list-article" %}
               {% endfor %}
             </section>

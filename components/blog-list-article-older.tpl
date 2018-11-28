@@ -10,7 +10,7 @@
         {% assign article_date_format = "long" %}
       {% endif %}
 
-      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+      <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
     </a>
   </h2>
 </div>

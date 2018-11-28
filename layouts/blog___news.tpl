@@ -26,11 +26,11 @@
               {% endif %}
 
               {% if editmode %}
-                {% include "blog-settings-editor" %}
                 {% include "blog-list-article-add" %}
               {% endif %}
 
               {% for article in articles %}
+                {% include "blog-settings-variables" %}
                 {% include "blog-list-article" %}
               {% endfor %}
             </section>
