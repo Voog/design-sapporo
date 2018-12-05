@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 {% include "blog-article-variables" %}
+{% include "blog-settings-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
@@ -19,14 +20,15 @@
               <header class="article-header">
                 <h1 class="item-title">{% editable article.title %}</h1>
                 {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
-
                 {% if article_year == current_year %}
                   {% assign article_date_format = "long_without_year" %}
                 {% else %}
                   {% assign article_date_format = "long" %}
                 {% endif %}
-
-                <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                    <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                {% if editmode %}
+                  {% include "article-settings-editor" %}
+                {% endif %}
               </header>
 
 
@@ -65,7 +67,6 @@
                 </div>
               </div>
             {% endif %}
-
             {% include "blog-article-comments" %}
           </main>
 
@@ -78,7 +79,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
-    {% include "site-signout" %} 
+    {% include "site-signout" %}
     {% include "template-javascripts" %}
   </body>
 </html>

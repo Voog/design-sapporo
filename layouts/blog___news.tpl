@@ -26,10 +26,12 @@
               {% endif %}
 
               {% if editmode %}
+                {% include "blog-settings-editor" %}
                 {% include "blog-list-article-add" %}
               {% endif %}
 
               {% for article in articles %}
+                {% include "blog-settings-variables" %}
                 {% include "blog-list-article" %}
               {% endfor %}
             </section>
@@ -43,8 +45,8 @@
     {% if show_language_menu_popover %}
       {% include "menu-language-popover" %}
     {% endif %}
-    
-    {% include "site-signout" %} 
+
+    {% include "site-signout" %}
     {% include "template-javascripts" %}
     {% include "template-tools" items_page: true %}
 

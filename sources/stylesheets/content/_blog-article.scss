@@ -593,3 +593,24 @@
     margin-top: 10px;
   }
 }
+
+.article-settings-wrap {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.blog-settings-wrap {
+  text-align: center;
+}
+
+.article-header {
+  .hide-article-date {
+    display: none;
+  }
+}
+
+.blog-article-page {
+  .hide-article-comments {
+    display: none;
+  }
+}
