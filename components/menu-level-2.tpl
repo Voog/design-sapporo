@@ -27,7 +27,7 @@
             <li class="menu-item">{% menubtn level_1.hidden_children %}</li>
           {% endif %}
 
-          <li class="menu-item">{% menuadd parent="level_1" %}</li>
+          {% include 'add-page-button', _menuItem: level_1 %}
         </ul>
       {% endif %}
     </div>
