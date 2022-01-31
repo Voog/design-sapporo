@@ -265,6 +265,10 @@ a {
   margin-bottom: 30px;
 }
 
+.items-body.pad_t-20 {
+  padding-top: 20px;
+}
+
 @media screen and (min-width: 641px) {
   .items-body {
     display: -webkit-box;
@@ -1887,6 +1891,14 @@ a {
 
 .content-item-box {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.content-item-box .item-image.image-portrait {
+  height: 100%;
+}
+
+.content-item-box .item-image.image-landscape, .content-item-box .item-image.image-square {
+  width: 100%;
 }
 
 .item-list-page .content-item-box {

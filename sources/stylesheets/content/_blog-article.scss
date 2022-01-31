@@ -39,6 +39,17 @@
 .content-item-box {
   color: rgba($color-black, .8);
 
+  & .item-image {
+    &.image-portrait {
+      height: 100%;
+    }
+    
+    &.image-landscape,
+    &.image-square {
+      width: 100%;
+    }
+  }
+
   .item-list-page & {
     padding-top: 15px;
     padding-bottom: 15px;

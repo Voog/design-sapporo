@@ -205,6 +205,9 @@ a {
 }
 
 .items-body {
+  &.pad_t-20 {
+    padding-top: 20px;
+  }
   margin-bottom: 30px;
 
   @media screen and (min-width: $mobile + 1) {
