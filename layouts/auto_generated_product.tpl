@@ -21,39 +21,44 @@
 
           <main class="page-content" role="main">
             <div class="items-body pad_t-20">
-              <div class="content-illustrations">
-                <div class="content-item-box {{ product_image_state }} product-content">
-                  <div class="item-top">
-                    {%- if product.image != blank -%}
-                    <div class="top-inner aspect-ratio-inner">
-                      {%- assign image_class = "item-image " | append: "not-cropped" -%}
-                      {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
+              <div class="flex-col mar_r-40">
+                <div class="content-illustrations">
+                  <div class="content-item-box {{ product_image_state }} product-content">
+                    <div class="item-top">
+                      {%- if product.image != blank -%}
+                      <div class="top-inner aspect-ratio-inner">
+                        {%- assign image_class = "item-image " | append: "not-cropped" -%}
+                        {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
+                      </div>
+                      {%- endif -%}
                     </div>
-                    {%- endif -%}
                   </div>
-                </div>
 
-                <div class="content-gallery content-area" data-search-indexing-allowed="true">
-                  {% content bind=product name="gallery" %}
+                  <div class="content-gallery content-area" data-search-indexing-allowed="true">
+                    {% content bind=product name="gallery" %}
+                  </div>
                 </div>
               </div>
+              <div class="flex-col">
+                <div class="content-body">
+                  <div class="product-content-right">
+                    <header class="content-header">
+                      <div class="content-item-title content-area" data-search-indexing-allowed="true">
+                        <h1>{%- editable product.name -%}</h1>
+                      </div>
+                    </header>
 
-              <div class="content-body">
-                <header class="content-header">
-                  <div class="content-item-title content-area" data-search-indexing-allowed="true">
-                    <h1>{%- editable product.name -%}</h1>
-                  </div>
-                </header>
+                    <div class="content-area area-normal" data-search-indexing-allowed="true">
+                      {%- if editmode or product.description != blank -%}
+                        <div class="content-product-description">
+                          {%- editable product.description -%}
+                        </div>
+                      {%- endif -%}
 
-                <div class="content-area area-normal" data-search-indexing-allowed="true">
-                  {%- if editmode or product.description != blank -%}
-                    <div class="content-product-description">
-                      {%- editable product.description -%}
+                      {% content bind=product %}
+                      {% include "buy-button" %}
                     </div>
-                  {%- endif -%}
-
-                  {% content bind=product %}
-                  {% include "buy-button" %}
+                  </div>
                 </div>
               </div>
             </div>

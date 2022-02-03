@@ -104,6 +104,25 @@ a {
   }
 }
 
+.flex-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .content-illustrations {
+    margin: 0;
+  }
+
+  .product-content-right {
+    position: sticky;
+    top: 64px;
+  }
+
+  &.mar_r-40 {
+    margin-right: 40px;
+  }
+}
+
 .wrap {
   flex: 1 1 100%;
   width: 100%;
