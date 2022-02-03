@@ -443,25 +443,31 @@
     {
       "content_type": "image/svg+xml",
       "file": "assets/bg-search.svg",
-      "kind": "asset",
+      "kind": "assets",
       "filename": "bg-search.svg"
     },
     {
       "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
-      "kind": "asset",
+      "kind": "assets",
       "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-placeholder.svg",
+      "kind": "assets",
+      "filename": "ico-placeholder.svg"
     },
     {
       "content_type": "image/png",
       "file": "images/ico-check-small.png",
-      "kind": "image",
+      "kind": "images",
       "filename": "ico-check-small.png"
     },
     {
       "content_type": "image/png",
       "file": "images/ico-check.png",
-      "kind": "image",
+      "kind": "images",
       "filename": "ico-check.png"
     },
     {

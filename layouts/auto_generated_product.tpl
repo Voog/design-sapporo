@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 
-{%- assign productImage = product.image -%}
-{% if productImage == blank %}
+{% if product.image == blank %}
   {% assign product_image_state = "without-image" %}
 {% else %}
   {% assign product_image_state = "with-image" %}
-
-  {% if productImage.width > productImage.height %}
-    {% assign product_image_orientation = "image-landscape" %}
-  {% elsif productImage.width == productImage.height %}
-    {% assign product_image_orientation = "image-square" %}
-  {% else %}
-    {% assign product_image_orientation = "image-portrait" %}
-  {% endif %}
 {% endif %}
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
@@ -31,13 +22,12 @@
           <main class="page-content" role="main">
             <div class="items-body pad_t-20">
               <div class="content-illustrations">
-                <div class="content-item-box {{ product_image_state }}">
+                <div class="content-item-box {{ product_image_state }} product-content">
                   <div class="item-top">
-                    {%- if productImage != blank -%}
-                    <div class="loader js-loader"></div>
+                    {%- if product.image != blank -%}
                     <div class="top-inner aspect-ratio-inner">
-                      {%- assign imageClass = "item-image " | append: "not-cropped " | append: product_image_orientation -%}
-                      {% image productImage target_width: "1280" class: imageClass loading: "lazy" %}
+                      {%- assign image_class = "item-image " | append: "not-cropped" -%}
+                      {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
                     </div>
                     {%- endif -%}
                   </div>

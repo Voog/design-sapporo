@@ -1893,12 +1893,23 @@ a {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.content-item-box .item-image.image-portrait {
-  height: 100%;
+.content-item-box.product-content.without-image .item-top {
+  background-image: url("../assets/ico-placeholder.svg");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F2F2F2;
 }
 
-.content-item-box .item-image.image-landscape, .content-item-box .item-image.image-square {
+.content-item-box.product-content .item-top .top-inner {
+  background-color: transparent;
+}
+
+.content-item-box.product-content .item-top .top-inner .item-image {
+  height: 100%;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .item-list-page .content-item-box {

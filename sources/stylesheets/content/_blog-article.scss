@@ -39,14 +39,25 @@
 .content-item-box {
   color: rgba($color-black, .8);
 
-  & .item-image {
-    &.image-portrait {
-      height: 100%;
+  &.product-content {
+    &.without-image .item-top {
+      background-image: url("../assets/ico-placeholder.svg");
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #F2F2F2;
     }
-    
-    &.image-landscape,
-    &.image-square {
-      width: 100%;
+
+    .item-top {
+      .top-inner {
+      background-color: transparent;
+
+        .item-image {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
     }
   }
 
