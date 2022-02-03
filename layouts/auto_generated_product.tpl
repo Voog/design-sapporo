@@ -36,6 +36,7 @@
           {% include "site-header" %}
 
           <main class="page-content" role="main">
+            {% include "menu-breadcrumbs-sd" %}
             <div class="items-body pad_t-20">
               <div class="flex-col mar_r-40">
                 <div class="content-illustrations">
@@ -72,7 +73,7 @@
                           {%- editable product.description -%}
                         </div>
                       {%- endif -%}
-                      
+
                       <div class="buy-btn-content js-buy-btn-content">
                         {% include "buy-button" %}
                       </div>
