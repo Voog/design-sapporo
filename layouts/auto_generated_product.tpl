@@ -13,6 +13,22 @@
   </head>
 
   <body class="item-page product-page header-menu-wide">
+    {% capture bottom_content_html %}
+      {% unless editmode %}
+        {% content bind=product name="content" %}
+      {% endunless %}
+    {% endcapture %}
+
+    {% assign bottom_content_size = bottom_content_html | strip | size %}
+
+    {% capture gallery_content_html %}
+      {% unless editmode %}
+        {% content bind=product name="gallery" %}
+      {% endunless %}
+    {% endcapture %}
+
+    {% assign gallery_content_size = gallery_content_html | strip | size %}
+
     {% include "template-svg-spritesheet" %}
     <div class="site-container">
       <div class="container-inner">
@@ -34,9 +50,11 @@
                     </div>
                   </div>
 
-                  <div class="content-gallery content-area" data-search-indexing-allowed="true">
-                    {% content bind=product name="gallery" %}
-                  </div>
+                  {% if editmode or gallery_content_size > 0 %}
+                    <div class="content-gallery content-area" data-search-indexing-allowed="true">
+                      {% content bind=product name="gallery" %}
+                    </div>
+                  {% endif %}
                 </div>
               </div>
               <div class="flex-col">
@@ -62,6 +80,14 @@
                 </div>
               </div>
             </div>
+
+            {%- if bottom_content_size > 0 or editmode -%}
+              <section
+                class="content-product-wide content-area"
+                data-search-indexing-allowed="true">
+                {% content bind=product name="content" %}
+              </section>
+            {%- endif -%}
           </main>
 
           {% include "site-footer" %}
