@@ -9,7 +9,7 @@
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% include "template-head" %}
+    {% include "template-head" with "product_page" %}
   </head>
 
   <body class="item-page product-page header-menu-wide">

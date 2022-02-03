@@ -30,6 +30,8 @@
   {% include "template-cs-headings" %}
   {% if template-head == "blog_list_page" %}
     {% include "template-cs-blog-list" %}
+  {% elsif template-head == "product_page" %}
+    {% include "template-cs-product" %}
   {% endif %}
   {% include "template-cs-content" %}
   {% include "template-cs-button" %}
