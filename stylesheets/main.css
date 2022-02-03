@@ -2047,6 +2047,10 @@ a {
   margin-bottom: 12px;
 }
 
+.product-price {
+  padding-bottom: 24px;
+}
+
 .article-add-ico {
   width: calc(100% - 225px);
   height: auto;
