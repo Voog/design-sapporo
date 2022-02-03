@@ -2841,7 +2841,8 @@ a {
   cursor: pointer;
 }
 
-.publicmode .content-area .custom-btn-disabled {
+.publicmode .content-area .custom-btn-disabled,
+.product-page .content-area .custom-btn-disabled {
   color: #cccccc;
   cursor: default;
   border-color: #cccccc;
