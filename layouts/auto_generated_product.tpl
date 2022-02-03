@@ -39,7 +39,7 @@
             <div class="items-body pad_t-20">
               <div class="flex-col mar_r-40">
                 <div class="content-illustrations">
-                  <div class="content-item-box {{ product_image_state }} product-content">
+                  <div class="content-item-box {{ product_image_state }} product-content js-content-item-box">
                     <div class="item-top">
                       {%- if product.image != blank -%}
                       <div class="top-inner aspect-ratio-inner">
@@ -51,7 +51,7 @@
                   </div>
 
                   {% if editmode or gallery_content_size > 0 %}
-                    <div class="content-gallery content-area" data-search-indexing-allowed="true">
+                    <div class="content-gallery js-product-gallery content-area" data-search-indexing-allowed="true">
                       {% content bind=product name="gallery" %}
                     </div>
                   {% endif %}
@@ -59,7 +59,7 @@
               </div>
               <div class="flex-col">
                 <div class="content-body">
-                  <div class="product-content-right">
+                  <div class="product-content-right js-product-right-content">
                     <header class="content-header">
                       <div class="content-item-title content-area" data-search-indexing-allowed="true">
                         <h1>{%- editable product.name -%}</h1>
@@ -72,9 +72,12 @@
                           {%- editable product.description -%}
                         </div>
                       {%- endif -%}
-
+                      
+                      <div class="buy-btn-content js-buy-btn-content">
+                        {% include "buy-button" %}
+                      </div>
                       {% content bind=product %}
-                      {% include "buy-button" %}
+                      
                     </div>
                   </div>
                 </div>
@@ -102,5 +105,11 @@
     {% include "site-signout" %}
     {% include "template-javascripts" %}
     {% include "template-tools" %}
+
+    <script> 
+      if (template) {
+        template.handleProductPageContent();
+      }
+    </script>
   </body>
 </html>

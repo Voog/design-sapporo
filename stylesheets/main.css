@@ -2043,6 +2043,10 @@ a {
   margin-bottom: 15px;
 }
 
+.content-product-description {
+  margin-bottom: 12px;
+}
+
 .article-add-ico {
   width: calc(100% - 225px);
   height: auto;
@@ -3192,4 +3196,8 @@ label .form_control_indicator::before {
 
 .content-area .edy-buy-button-variants .form_field_select {
   width: initial;
+}
+
+.content-area .buy-btn-content {
+  padding-bottom: 24px;
 }
