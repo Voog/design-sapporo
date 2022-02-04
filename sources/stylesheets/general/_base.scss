@@ -109,6 +109,12 @@ a {
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: $mobile) {
+    &-right {
+      max-width: 50%;
+    }
+  }
+
   .content-illustrations {
     margin: 0;
   }

@@ -58,7 +58,7 @@
                   {% endif %}
                 </div>
               </div>
-              <div class="flex-col">
+              <div class="flex-col flex-col-right">
                 <div class="content-body">
                   <div class="product-content-right js-product-right-content">
                     <header class="content-header">
