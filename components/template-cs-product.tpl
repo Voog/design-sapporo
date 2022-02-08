@@ -124,7 +124,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --product-description-size: 20px;
+  --product-description-size: 18px;
   /* VoogStyle
     "pathI18n": ["product", "description"],
     "titleI18n": "font_size",
@@ -132,12 +132,12 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      "off": "100"
     },
     "icon": "bold",
     "scope": "global"
   */
-  --product-description-font-weight: 400;
+  --product-description-font-weight: 100;
   /* VoogStyle
     "pathI18n": ["product", "description"],
     "titleI18n": "font_style",

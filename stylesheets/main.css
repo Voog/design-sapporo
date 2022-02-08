@@ -161,6 +161,7 @@ a {
 
 .flex-col .content-illustrations {
   margin: 0;
+  max-width: 100%;
 }
 
 .flex-col .product-content-right {
@@ -171,6 +172,10 @@ a {
 
 .flex-col.mar_r-40 {
   margin-right: 40px;
+}
+
+.flex-col .pad_b-20 {
+  padding-bottom: 20px;
 }
 
 .wrap {

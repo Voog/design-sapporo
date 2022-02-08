@@ -75,7 +75,7 @@
                       {{ product.price_max_with_tax | money_with_currency: product.currency -}}
                     </div>
 
-                    <div class="content-area area-normal" data-search-indexing-allowed="true">
+                    <div class="content-area area-normal pad_b-20" data-search-indexing-allowed="true">
                       {%- if editmode or product.description != blank -%}
                         <div class="content-product-description">
                           {%- editable product.description -%}

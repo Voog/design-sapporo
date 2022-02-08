@@ -117,6 +117,7 @@ a {
 
   .content-illustrations {
     margin: 0;
+    max-width: 100%;
   }
 
   .product-content-right {
@@ -126,6 +127,10 @@ a {
 
   &.mar_r-40 {
     margin-right: 40px;
+  }
+
+  .pad_b-20 {
+    padding-bottom: 20px;
   }
 }
 
