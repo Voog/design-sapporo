@@ -104,6 +104,36 @@ a {
   }
 }
 
+.flex-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $mobile) {
+    &-right {
+      max-width: 50%;
+    }
+  }
+
+  .content-illustrations {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .product-content-right {
+    position: sticky;
+    top: 64px;
+  }
+
+  &.mar_r-40 {
+    margin-right: 40px;
+  }
+
+  .pad_b-20 {
+    padding-bottom: 20px;
+  }
+}
+
 .wrap {
   flex: 1 1 100%;
   width: 100%;
@@ -205,6 +235,9 @@ a {
 }
 
 .items-body {
+  &.pad_t-20 {
+    padding-top: 20px;
+  }
   margin-bottom: 30px;
 
   @media screen and (min-width: $mobile + 1) {

@@ -39,6 +39,34 @@
 .content-item-box {
   color: rgba($color-black, .8);
 
+  &.product-content {
+    .product-image {
+      .editmode & {
+        cursor: pointer;
+      }
+    }
+
+    &.without-image .item-top {
+      background-image: url("../assets/ico-placeholder.svg");
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #F2F2F2;
+    }
+
+    .item-top {
+      .top-inner {
+      background-color: transparent;
+
+        .item-image {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
   .item-list-page & {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -124,6 +152,18 @@
 
 .content-item {
   margin-bottom: 15px;
+}
+
+.content-product-description {
+  margin-bottom: 12px;
+}
+
+.product-price {
+  padding-bottom: 24px;
+  
+  &-divider {
+    margin: 0 4px;
+  }
 }
 
 .article-add-ico {

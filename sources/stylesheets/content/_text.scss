@@ -267,7 +267,8 @@
 
     &-disabled {
       // scss-lint:disable NestingDepth
-      .publicmode & {
+      .publicmode &,
+      .product-page & {
         color: rgba($color-disabled, 1);
         cursor: default;
         border-color: rgba($color-disabled, 1);
