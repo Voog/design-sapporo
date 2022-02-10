@@ -3210,6 +3210,7 @@ label .form_control_indicator::before {
 
 .content-area .edy-buy-button-container .form_field {
   padding-top: 15px;
+  word-break: normal;
 }
 
 .content-area .edy-buy-button-variants .form_field {
