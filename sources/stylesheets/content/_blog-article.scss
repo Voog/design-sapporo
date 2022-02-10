@@ -40,6 +40,12 @@
   color: rgba($color-black, .8);
 
   &.product-content {
+    .product-image {
+      .editmode & {
+        cursor: pointer;
+      }
+    }
+
     &.without-image .item-top {
       background-image: url("../assets/ico-placeholder.svg");
       background-size: 40px;
@@ -154,6 +160,10 @@
 
 .product-price {
   padding-bottom: 24px;
+  
+  &-divider {
+    margin: 0 4px;
+  }
 }
 
 .article-add-ico {

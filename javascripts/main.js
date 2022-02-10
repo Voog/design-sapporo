@@ -769,6 +769,18 @@
   };
 
   // ===========================================================================
+  // Opens product admin view on product image click
+  // ===========================================================================
+
+  var handleProductImageClick = function(product_id) {
+    if (editmode()) {
+      $('.product-content .product-image').click(function() {
+        window.open('/admin/ecommerce/products/' + product_id, '_blank').focus();
+      });
+    }
+  };
+
+  // ===========================================================================
   // Detects design editor changes.
   // ===========================================================================
   var detectDesignEditorChanges = function() {
@@ -861,7 +873,8 @@
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,
     bindContentItemImageCropToggle: bindContentItemImageCropToggle,
     bindCustomTexteditorStyles: bindCustomTexteditorStyles,
-    handleProductPageContent: handleProductPageContent
+    handleProductPageContent: handleProductPageContent,
+    handleProductImageClick: handleProductImageClick
   });
 
   // ===========================================================================

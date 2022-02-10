@@ -41,7 +41,7 @@
               <div class="flex-col mar_r-40">
                 <div class="content-illustrations">
                   <div class="content-item-box {{ product_image_state }} product-content js-content-item-box">
-                    <div class="item-top">
+                    <div class="item-top product-image">
                       {%- if product.image != blank -%}
                         <div class="top-inner aspect-ratio-inner">
                           {%- assign image_class = "item-image " | append: "not-cropped" -%}
@@ -117,6 +117,10 @@
     <script> 
       if (template) {
         template.handleProductPageContent();
+
+        {%- if product and editmode -%}
+          template.handleProductImageClick({{ product.id }});
+        {% endif %}
       }
     </script>
   </body>
