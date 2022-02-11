@@ -168,6 +168,7 @@ a {
   position: -webkit-sticky;
   position: sticky;
   top: 64px;
+  z-index: 10601;
 }
 
 .flex-col.mar_r-40 {
