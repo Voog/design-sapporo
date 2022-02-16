@@ -478,7 +478,7 @@ body {
   border-style: var(--table-border-style);
 }
 
-.item-page .content-header h1 {
+.product-page .content-header h1 {
   font-size: var(--product-title-size);
   font-weight: var(--product-title-font-weight);
   font-style: var(--product-title-font-style);
@@ -487,7 +487,7 @@ body {
   color: var(--product-title-color);
 }
 
-.item-page .content-area .content-product-description {
+.product-page .content-area .content-product-description {
   color: var(--product-description-color);
   font-size: var(--product-description-size);
   font-weight: var(--product-description-font-weight);
@@ -496,7 +496,7 @@ body {
           text-decoration: var(--product-description-font-text-decoration);
 }
 
-.item-page .product-price {
+.product-page .product-price {
   color: var(--product-price-color);
   font-size: var(--product-price-size);
   font-weight: var(--product-price-font-weight);
