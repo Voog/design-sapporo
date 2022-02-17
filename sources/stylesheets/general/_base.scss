@@ -123,6 +123,7 @@ a {
   .product-content-right {
     position: sticky;
     top: 64px;
+    z-index: $zindex-ca-interaction-button + 1;
   }
 
   &.mar_r-40 {
