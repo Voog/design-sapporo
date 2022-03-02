@@ -422,7 +422,8 @@ body {
 }
 
 .content-area a.custom-btn,
-.content-area div.custom-btn {
+.content-area div.custom-btn,
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
   font-size: var(--content-button-font-size);
   font-style: var(--content-button-font-style);
@@ -433,7 +434,8 @@ body {
 }
 
 .content-area a.custom-btn:hover,
-.content-area div.custom-btn:hover {
+.content-area div.custom-btn:hover,
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   font-style: var(--content-button-hover-font-style);
   font-weight: var(--content-button-hover-font-weight);
   -webkit-text-decoration: var(--content-button-hover-text-decoration);
@@ -442,13 +444,15 @@ body {
 }
 
 .content-area a.custom-btn:not(.custom-btn-disabled),
-.content-area div.custom-btn:not(.custom-btn-disabled) {
+.content-area div.custom-btn:not(.custom-btn-disabled),
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:not(.custom-btn-disabled) {
   color: var(--content-button-color);
   background-color: var(--content-button-background-color);
 }
 
 .content-area a.custom-btn:not(.custom-btn-disabled):hover,
-.content-area div.custom-btn:not(.custom-btn-disabled):hover {
+.content-area div.custom-btn:not(.custom-btn-disabled):hover,
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:not(.custom-btn-disabled):hover {
   color: var(--content-button-hover-color);
   background-color: var(--content-button-hover-background-color);
 }

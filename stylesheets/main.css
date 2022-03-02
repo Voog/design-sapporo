@@ -2891,7 +2891,8 @@ a {
   max-width: 100%;
 }
 
-.content-area .custom-btn {
+.content-area .custom-btn,
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   display: inline-block;
   padding-top: 4px;
   padding-right: 20px;
@@ -2912,16 +2913,21 @@ a {
           appearance: none;
 }
 
-.content-area .custom-btn:not(.custom-btn-disabled):hover {
+.content-area .custom-btn:not(.custom-btn-disabled):hover,
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:not(.custom-btn-disabled):hover {
   border-color: rgba(0, 0, 0, 0.3);
 }
 
-.publicmode .content-area .custom-btn {
+.publicmode .content-area .custom-btn, .publicmode
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   cursor: pointer;
 }
 
 .publicmode .content-area .custom-btn-disabled,
-.product-page .content-area .custom-btn-disabled {
+.product-page .content-area .custom-btn-disabled, .publicmode
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled,
+.product-page
+.content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled {
   color: #cccccc;
   cursor: default;
   border-color: #cccccc;
