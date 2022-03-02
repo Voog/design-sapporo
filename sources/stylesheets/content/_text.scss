@@ -49,10 +49,20 @@
 
     @media screen and (max-width: $mobile) {
       text-align: center;
+      
+      .edy-product-widget-grid,
+      .edy-product-widget-list {
+        text-align: left;
+      }
     }
 
     @media screen and (min-width: $mobile + 1) {
       text-align: right;
+      
+      .edy-product-widget-grid,
+      .edy-product-widget-list {
+        text-align: left;
+      }
     }
 
     @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {

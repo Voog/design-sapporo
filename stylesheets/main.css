@@ -2662,11 +2662,19 @@ a {
   .site-footer .content-area {
     text-align: center;
   }
+  .site-footer .content-area .edy-product-widget-grid,
+  .site-footer .content-area .edy-product-widget-list {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 641px) {
   .site-footer .content-area {
     text-align: right;
+  }
+  .site-footer .content-area .edy-product-widget-grid,
+  .site-footer .content-area .edy-product-widget-list {
+    text-align: left;
   }
 }
 
