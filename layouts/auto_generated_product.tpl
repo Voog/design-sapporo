@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{%- include "template-settings" -%}
 {%- include "template-variables" -%}
 
 {%- if product.image == blank -%}

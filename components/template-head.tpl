@@ -17,7 +17,7 @@
 {% if editmode %}
   <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
 {% endif %}
-{% stylesheet_link "main.min.css?v=sapporo-2.4.1" %}
+{% stylesheet_link "main.min.css?v={{ template_settings.version }}" %}
 {% comment %}Comment out the above stylesheet and remove comments from the stylesheet below to use unminified version.{% endcomment %}
 {% comment %}{% stylesheet_link "main.css" %}{% endcomment %}
 
