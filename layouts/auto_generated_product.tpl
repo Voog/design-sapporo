@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{%- include "template-settings" -%}
 {%- include "template-variables" -%}
 
 {%- if product.image == blank -%}
@@ -45,7 +46,7 @@
                       {%- if product.image != blank -%}
                         <div class="top-inner aspect-ratio-inner">
                           {%- assign image_class = "item-image " | append: "not-cropped" -%}
-                          {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
+                          {% image product.image target_width: "600" class: image_class loading: "lazy" %}
                         </div>
                       {%- endif -%}
                     </div>

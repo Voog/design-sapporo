@@ -472,7 +472,8 @@ body {
 
   // scss-lint:disable QualifyingElement, SelectorFormat
   a.custom-btn,
-  div.custom-btn {
+  div.custom-btn,
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     padding: calc(var(--content-button-padding) - 16px) var(--content-button-padding) calc(var(--content-button-padding) - 17px);
     font-size: var(--content-button-font-size);
     font-style: var(--content-button-font-style);
@@ -489,7 +490,8 @@ body {
   }
 
   a.custom-btn,
-  div.custom-btn {
+  div.custom-btn,
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     &:not(.custom-btn-disabled) {
       color: var(--content-button-color);
       background-color: var(--content-button-background-color);
