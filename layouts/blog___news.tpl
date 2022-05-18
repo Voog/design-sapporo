@@ -18,7 +18,8 @@
 
           <main class="page-content" role="main">
             <section class="content-body">
-              <div class="content-area" {{ edy_intro_edit_text }}>{% content %}</div>
+              {%- assign content_default_title = "content" | lce -%}
+              <div class="content-area" {{ edy_intro_edit_text }}>{% content title=content_default_title %}</div>
             </section>
 
             <section class="content-item-boxes">
