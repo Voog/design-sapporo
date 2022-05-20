@@ -21,9 +21,10 @@
               <div class="content-area">{% contentblock name="content_header" publish_default_content="true" title=page_title_content_title title_tooltip=page_title_content_title_tooltip %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
             </header>
 
-            <section class="content-body" {{ edy_intro_edit_text }}>
+            <section class="content-body">
               {%- assign content_default_title = "content" | lce -%}
-              <div class="content-area area-normal inner" data-search-indexing-allowed="true">{% content title=content_default_title %}</div>
+              {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+              <div class="content-area area-normal inner" data-search-indexing-allowed="true">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</div>
 
               {%- assign bottom_content_title = "additional_content" | lce -%}
               {%- assign bottom_content_title_tooltip = "content_tooltip_additional_information" | lce -%}

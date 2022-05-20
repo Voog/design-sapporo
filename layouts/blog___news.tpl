@@ -19,7 +19,8 @@
           <main class="page-content" role="main">
             <section class="content-body">
               {%- assign content_default_title = "content" | lce -%}
-              <div class="content-area" {{ edy_intro_edit_text }}>{% content title=content_default_title %}</div>
+              {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+              <div class="content-area">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</div>
             </section>
 
             <section class="content-item-boxes">
