@@ -419,6 +419,10 @@ a {
           transform: rotate(-45deg);
 }
 
+.product-cross-page-info {
+  margin-bottom: 32px;
+}
+
 .menu-btn {
   height: 25px;
   width: 25px;

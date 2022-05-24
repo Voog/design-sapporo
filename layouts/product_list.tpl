@@ -19,7 +19,9 @@
             {% include "menu-breadcrumbs" %}
 
             <section class="content-body">
-              <div class="content-area" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
+              {%- assign content_default_title = "content" | lce -%}
+              {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+              <div class="content-area" data-search-indexing-allowed="true">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</div>
             </section>
 
             <section class="content-item-boxes">
@@ -44,7 +46,7 @@
       {% include "menu-language-popover" %}
     {% endif %}
 
-    {% include "site-signout" %} 
+    {% include "site-signout" %}
     {% include "template-javascripts" %}
     {% include "template-tools" items_page: true %}
 

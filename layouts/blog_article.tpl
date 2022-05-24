@@ -32,15 +32,17 @@
                 {% endif %}
               </header>
 
-
               <div class="inner content-area area-normal" data-search-indexing-allowed="true">
-                <div class="article-excerpt" {{ edy_intro_edit_text }}>{% editable article.excerpt %}</div>
+                <div class="article-excerpt">{% editable article.excerpt %}</div>
                 <div class="article-body">{% editable article.body %}</div>
-                <div class="article-body">{% content name="additional_body" bind="Article" %}</div>
+                {%- assign content_default_title = "content" | lce -%}
+                {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                <div class="article-body">{% content name="additional_body" bind="Article" title=content_default_title title_tooltip=content_default_title_tooltip %}</div>
               </div>
 
-              <div class="content-bottom content-area">{% content name="bottom" bind="Article" %}</div>
-
+              {%- assign bottom_content_title = "additional_content" | lce -%}
+              {%- assign bottom_content_title_tooltip = "content_tooltip_additional_information" | lce -%}
+              <div class="content-bottom content-area">{% content name="bottom" bind="Article" title=bottom_content_title title_tooltip=bottom_content_title_tooltip %}</div>
 
               {% include "blog-article-tags" %}
             </article>
