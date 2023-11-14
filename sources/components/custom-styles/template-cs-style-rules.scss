@@ -506,6 +506,17 @@ body {
   }
   // scss-lint:enable QualifyingElement, SelectorFormat
 
+  .edy-buy-button-price-container {
+    .edy-buy-button-effective-price,
+    .edy-buy-button-price-original {
+      color: var(--content-body-color);
+    }
+
+    .edy-buy-button-price-original {
+      opacity: .4;
+    }
+  }
+
   .site-header &,
   .page-content &,
   .site-footer & {
@@ -557,6 +568,10 @@ body {
   font-weight: var(--product-price-font-weight);
   font-style: var(--product-price-font-style);
   text-decoration: var(--product-price-font-text-decoration);
+
+  .product-price-original {
+    opacity: .4;
+  }
 }
 
 //==============================================================================
