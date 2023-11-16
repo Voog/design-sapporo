@@ -381,9 +381,6 @@ body {
 .content-area .edy-buy-button-price-container .edy-buy-button-price-original {
   color: var(--content-body-color);
 }
-.content-area .edy-buy-button-price-container .edy-buy-button-price-original {
-  opacity: 0.4;
-}
 .site-header .content-area table th,
 .site-header .content-area table td,
 .site-header .content-area table a,
@@ -430,9 +427,6 @@ body {
   font-style: var(--product-price-font-style);
   -webkit-text-decoration: var(--product-price-font-text-decoration);
           text-decoration: var(--product-price-font-text-decoration);
-}
-.product-page .product-price .product-price-original {
-  opacity: 0.4;
 }
 
 .form_field_textfield,

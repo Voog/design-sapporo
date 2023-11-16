@@ -803,7 +803,21 @@ a {
           transform: rotate(-45deg);
 }
 
-.product-cross-page-info {
+.product-page .content-product-description {
+  margin-bottom: 12px;
+}
+.product-page .product-price {
+  padding-bottom: 24px;
+}
+.product-page .product-price .product-price-original {
+  display: inline-block;
+  margin-right: 4px;
+  opacity: 0.4;
+}
+.product-page .product-price .product-price-final {
+  display: inline-block;
+}
+.product-page .product-cross-page-info {
   margin-bottom: 32px;
 }
 
@@ -2230,17 +2244,6 @@ a {
   margin-bottom: 15px;
 }
 
-.content-product-description {
-  margin-bottom: 12px;
-}
-
-.product-price {
-  padding-bottom: 24px;
-}
-.product-price-divider {
-  margin: 0 4px;
-}
-
 .article-add-ico {
   width: calc(100% - 225px);
   height: auto;
@@ -3255,6 +3258,9 @@ label .form_control_indicator::before {
 .content-area .edy-buy-button-container .form_field {
   padding-top: 15px;
   word-break: normal;
+}
+.content-area .edy-buy-button-container .edy-buy-button-price-container .edy-buy-button-price-original {
+  opacity: 0.4;
 }
 .content-area .edy-buy-button-variants .form_field {
   padding-top: 5px;

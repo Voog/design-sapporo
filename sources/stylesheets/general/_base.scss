@@ -332,6 +332,26 @@ a {
   }
 }
 
-.product-cross-page-info {
-  margin-bottom: 32px;
+.product-page {
+  .content-product-description {
+    margin-bottom: 12px;
+  }
+
+  .product-price {
+    padding-bottom: 24px;
+
+    .product-price-original {
+      display: inline-block;
+      margin-right: 4px;
+      opacity: .4;
+    }
+
+    .product-price-final {
+      display: inline-block;
+    }
+  }
+
+  .product-cross-page-info {
+    margin-bottom: 32px;
+  }
 }
