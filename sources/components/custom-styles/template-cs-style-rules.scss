@@ -506,6 +506,13 @@ body {
   }
   // scss-lint:enable QualifyingElement, SelectorFormat
 
+  .edy-buy-button-price-container {
+    .edy-buy-button-effective-price,
+    .edy-buy-button-price-original {
+      color: var(--content-body-color);
+    }
+  }
+
   .site-header &,
   .page-content &,
   .site-footer & {

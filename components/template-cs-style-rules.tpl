@@ -377,6 +377,10 @@ body {
   color: var(--content-button-hover-color);
   background-color: var(--content-button-hover-background-color);
 }
+.content-area .edy-buy-button-price-container .edy-buy-button-effective-price,
+.content-area .edy-buy-button-price-container .edy-buy-button-price-original {
+  color: var(--content-body-color);
+}
 .site-header .content-area table th,
 .site-header .content-area table td,
 .site-header .content-area table a,
