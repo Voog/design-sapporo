@@ -1,3 +1,3 @@
 {
-  "version": "sapporo-2.4.5"
+  "version": "sapporo-2.5.0"
 }
