@@ -2,11 +2,11 @@
 {%- include "template-settings" -%}
 {%- include "template-variables" -%}
 
-{%- if product.image == blank -%}
-  {%- assign product_image_state = "without-image" -%}
-{%- else -%}
-  {%- assign product_image_state = "with-image" -%}
-{%- endif -%}
+{%- if product.photos != blank %}
+  {% assign product_image_state = "with-images" %}
+{% else %}
+  {% assign product_image_state = "without-images" %}
+{% endif -%}
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }} {{ site_search_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
@@ -52,14 +52,11 @@
               <div class="flex-col mar_r-40">
                 <div class="content-illustrations">
                   <div class="content-item-box {{ product_image_state }} product-content js-content-item-box">
-                    <div class="item-top product-image">
-                      {%- if product.image != blank -%}
-                        <div class="top-inner aspect-ratio-inner">
-                          {%- assign image_class = "item-image " | append: "not-cropped" -%}
-                          {% image product.image target_width: "600" class: image_class loading: "lazy" %}
-                        </div>
-                      {%- endif -%}
-                    </div>
+                    {%- if product.photos == blank -%}
+                      <div class="item-top"></div>
+                    {%- else -%}
+                      {% gallery product layout="product_slider" %}
+                    {%- endif -%}
                   </div>
 
                   {%- if editmode or gallery_content_size > 0 -%}
@@ -163,10 +160,6 @@
     <script>
       if (template) {
         template.handleProductPageContent();
-
-        {%- if product and editmode -%}
-          template.handleProductImageClick({{ product.id }});
-        {% endif %}
       }
     </script>
   </body>
