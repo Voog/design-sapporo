@@ -2147,24 +2147,12 @@ a {
 .content-item-box {
   color: rgba(0, 0, 0, 0.8);
 }
-.editmode .content-item-box.product-content .product-image {
-  cursor: pointer;
-}
-.content-item-box.product-content.without-image .item-top {
+.content-item-box.product-content.without-images .item-top {
   background-image: url("../assets/ico-placeholder.svg");
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F2F2F2;
-}
-.content-item-box.product-content .item-top .top-inner {
-  background-color: transparent;
-}
-.content-item-box.product-content .item-top .top-inner .item-image {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .item-list-page .content-item-box {
   padding-top: 15px;
